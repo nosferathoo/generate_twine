@@ -127,6 +127,7 @@ VERIFY BEFORE OUTPUT:
 - No cycles without valid exits.
 """
 
+
 def build_prompt(description: str, min_passages: int) -> str:
     return f"""
 {build_common_instructions(min_passages)}
@@ -163,87 +164,167 @@ Output ONLY the missing passages.
 """.strip()
 
 
-def build_structural_fix_prompt(description: str,
-                                existing_twee: str,
-                                cycles,
-                                dead_ends,
-                                min_passages: int) -> str:
+def _patch_instructions(min_passages: int) -> str:
     """
-    Prompt asking the LLM to fix structural problems (cycles, dead ends)
-    by rewriting the whole story into a new, corrected Twee.
-    Now also includes a list of detected asymmetries (suspect source->target links).
+    Fragment wspólny dla wszystkich promptów 'patchowych'.
     """
     common = build_common_instructions(min_passages)
+    return f"""
+{common}
 
-    # Format cycles
+IMPORTANT: YOU MUST RETURN ONLY A PATCH, NOT THE FULL STORY.
+
+PATCH FORMAT:
+- For a MODIFIED or NEW passage:
+  - Output its FULL passage: header line and entire body, e.g.:
+      :: PassageName
+      (full body with text and links)
+
+- For a DELETED passage:
+  - Output ONLY its header line, e.g.:
+      :: NameOfDeletedPassage
+    with NO body (no text, no blank lines, nothing else).
+
+- For a RENAMED passage:
+  - Output one header line with the OLD name, with no body (delete):
+      :: OldPassageName
+  - AND one FULL passage with the NEW name:
+      :: NewPassageName
+      (full body)
+
+RULES FOR PATCH:
+- DO NOT output any passage that remains unchanged.
+- DO NOT output comments, markdown, or explanations.
+- Obey all naming, graph, and story rules from the common instructions.
+"""
+
+
+def build_cycles_fix_prompt(description: str,
+                            existing_twee: str,
+                            cycles,
+                            min_passages: int) -> str:
+    patch_common = _patch_instructions(min_passages)
+
     cycles_lines = []
     for i, cycle in enumerate(cycles, 1):
         arrow = " -> ".join(cycle + [cycle[0]]) if cycle else ""
         cycles_lines.append(f"- Cycle {i}: {arrow}")
     cycles_block = "\n".join(cycles_lines) if cycles_lines else "None"
 
-    # Format dead-end passages
-    dead_block = "\n".join(f"- {name}" for name in dead_ends) if dead_ends else "None"
-
-    # --- Wykrywanie asymetrii na podstawie istniejącego Twee ---
-    asym_block = "None"
-    try:
-        spans, links = parse_passages_and_links(existing_twee)
-        passages = set(name for name, _, _ in spans)
-        graph = {name: links.get(name, []) for name, _, _ in spans}
-        asymmetries = detect_asymmetries(passages, graph)
-
-        asym_lines = []
-        for target, probable, suspect in asymmetries:
-            for src in suspect:
-                asym_lines.append(f"- {src} -> {target}")
-        if asym_lines:
-            asym_block = "\n".join(asym_lines)
-    except Exception as e:
-        # W razie problemów z analizą wolimy mieć prompt bez tej sekcji
-        asym_block = f"ERROR while computing asymmetries: {e}"
-
-    prompt = f"""
-{common}
+    return f"""
+{patch_common}
 
 Description:
 \"\"\"{description.strip()}\"\"\"
 
-You previously generated the following Twine/Twee story:
-
+Current story:
 \"\"\"{existing_twee}\"\"\"
 
-
-STRUCTURAL PROBLEMS DETECTED:
-
-1) CYCLES in the graph:
+STRUCTURAL PROBLEM (CYCLES ONLY):
+- The following bad cycles were detected in the passage graph:
 {cycles_block}
 
-2) PASSAGES THAT CANNOT REACH ANY ENDING (dead-end branches):
-{dead_block}
-
-3) SUSPECT LINKS (naming-based asymmetries, likely incorrect source->target):
-{asym_block}
-
 TASK:
-- Rewrite the ENTIRE story as a NEW valid Twee story that:
-  - removes or breaks all bad cycles and dead-end-only branches,
-  - ensures EVERY passage can reach at least one Ending-,
-  - fixes ALL suspect links listed above by enforcing state consistency
-- Preserve the world, main ideas and overall tone, but you MAY:
-  - restructure passages,
-  - rename passages (respecting naming rules),
-  - change links and graph structure as needed.
-- Obey ALL rules from the common instructions, including:
-  - panel-like passages,
-  - LOCATION + STATE token naming (no '_' and no meaningless tokens),
-  - Ending- passages with no outgoing links,
-  - no variables, no macros, no scripting.
+- Fix ALL cycles listed above so that:
+  - no player can get trapped in a closed loop with no exit,
+  - every cycle has at least one way to exit toward progress and eventually reach an Ending,
+    or is completely broken and replaced by acyclic structure.
+- You MAY adjust links, rename passages, split passages, or delete them as needed.
+- You SHOULD NOT significantly change the high-level narrative, only its structure.
 
 OUTPUT:
-- ONLY the full corrected Twee story (no comments, no explanation).
-"""
-    return prompt.strip()
+- ONLY a patch (set of passage edits) in the PATCH FORMAT described above.
+""".strip()
+
+
+def build_dead_fix_prompt(description: str,
+                          existing_twee: str,
+                          dead_ends,
+                          min_passages: int) -> str:
+    patch_common = _patch_instructions(min_passages)
+
+    dead_block = "\n".join(f"- {name}" for name in dead_ends) if dead_ends else "None"
+
+    return f"""
+{patch_common}
+
+Description:
+\"\"\"{description.strip()}\"\"\"
+
+Current story:
+\"\"\"{existing_twee}\"\"\"
+
+STRUCTURAL PROBLEM (DEAD-ENDS ONLY):
+- The following passages CANNOT reach any Ending- and are not themselves endings:
+{dead_block}
+
+TASK:
+- For every passage above, modify the structure so that:
+  - the player can eventually reach at least one Ending-,
+  - non-ending passages never become terminal dead-ends.
+- You MAY:
+  - add new passages,
+  - alter or redirect links,
+  - rename or delete problematic passages,
+  - as long as you respect the global rules and keep the narrative coherent.
+
+OUTPUT:
+- ONLY a patch (set of passage edits) in the PATCH FORMAT described above.
+""".strip()
+
+
+def build_asym_fix_prompt(description: str,
+                          existing_twee: str,
+                          asymmetries,
+                          min_passages: int) -> str:
+    patch_common = _patch_instructions(min_passages)
+
+    if asymmetries:
+        lines = []
+        for target, probable, suspect in asymmetries:
+            prob_s = ", ".join(probable) if probable else "none"
+            susp_s = ", ".join(suspect) if suspect else "none"
+            lines.append(
+                f"- Target: {target}\n"
+                f"    Probable correct sources: {prob_s}\n"
+                f"    Suspect (inconsistent) sources: {susp_s}"
+            )
+        asym_block = "\n".join(lines)
+    else:
+        asym_block = "None"
+
+    return f"""
+{patch_common}
+
+Description:
+\"\"\"{description.strip()}\"\"\"
+
+Current story:
+\"\"\"{existing_twee}\"\"\"
+
+STRUCTURAL PROBLEM (ASYMMETRIC CONVERGENCE):
+- The following targets have inconsistent incoming links (naming-based asymmetries):
+{asym_block}
+
+INTERPRETATION:
+- For each target passage X, some source passages have STATE TOKENS that match X well
+  ("probable correct sources"), while others have fewer or different tokens and are
+  likely incorrect ("suspect sources").
+- This usually means that routes with different history (e.g., different companions
+  or items) incorrectly converge into a single passage that assumes the wrong state.
+
+TASK:
+- For each listed target:
+  - ensure that only compatible states converge into a given passage;
+  - redirect suspect sources to better matching passages,
+    OR create new variants of the target passage with names and text that match
+    their distinct state tokens.
+- Do NOT rely on variables or conditionals; enforce state consistency purely by
+  passage naming and link structure.
+
+OUTPUT:
+- ONLY a patch (set of passage edits) in the PATCH FORMAT described above.
+""".strip()
 
 
 # ============================================================
@@ -255,6 +336,9 @@ LINK_RE = re.compile(r"\[\[(.+?)\]\]")
 
 
 def parse_passages_and_links(twee_text: str):
+    """
+    Used for analysis only (links, graph). Works on existing_twee.
+    """
     passages = []
     for m in PASSAGE_HEADER_RE.finditer(twee_text):
         name = m.group(1).strip()
@@ -263,7 +347,7 @@ def parse_passages_and_links(twee_text: str):
 
     spans = []
     for i, (name, start) in enumerate(passages):
-        end = passages[i+1][1] if i+1 < len(passages) else len(twee_text)
+        end = passages[i + 1][1] if i + 1 < len(passages) else len(twee_text)
         spans.append((name, start, end))
 
     links = defaultdict(list)
@@ -280,6 +364,36 @@ def parse_passages_and_links(twee_text: str):
             links[name].append(target)
 
     return spans, links
+
+
+def extract_passage_spans(twee_text: str):
+    """
+    Return detailed spans including header start, body start, end.
+
+    Output: list of tuples
+      (name, header_start, body_start, end)
+    """
+    matches = list(PASSAGE_HEADER_RE.finditer(twee_text))
+    spans = []
+
+    if not matches:
+        return spans
+
+    for i, m in enumerate(matches):
+        name = m.group(1).strip()
+        header_start = m.start()
+        next_header_start = matches[i + 1].start() if i + 1 < len(matches) else len(twee_text)
+
+        newline_pos = twee_text.find("\n", header_start, next_header_start)
+        if newline_pos == -1:
+            header_line_end = next_header_start
+        else:
+            header_line_end = newline_pos
+
+        body_start = header_line_end + 1 if header_line_end < next_header_start else next_header_start
+        spans.append((name, header_start, body_start, next_header_start))
+
+    return spans
 
 
 def strongly_connected_components(graph):
@@ -332,27 +446,19 @@ def find_cycles(graph):
     - strongly connected components that actually contain a cycle
     - AND która ma wejście z zewnątrz
     - AND z żadnego węzła nie wychodzi krawędź poza komponent.
-    Innymi słowy: gracz może wejść w pętlę, ale nie może z niej wyjść.
     """
     bad_cycles = []
     sccs = strongly_connected_components(graph)
 
-    # Zbuduj pomocnicze mapy krawędzi dla szybszego sprawdzania
     for comp in sccs:
         comp_set = set(comp)
 
-        # 1) Czy w ogóle jest cykl w tej SCC?
-        #    - więcej niż 1 węzeł
-        #    - albo self-loop
         if len(comp) == 1:
             n = comp[0]
             if n not in graph.get(n, []):
-                # brak self-loop → to nie cykl
                 continue
 
-        # 2) Czy można wejść do tej SCC z zewnątrz?
         has_incoming_from_outside = False
-        # 3) Czy jest wyjście z SCC na zewnątrz?
         has_outgoing_to_outside = False
 
         for src, targets in graph.items():
@@ -364,7 +470,6 @@ def find_cycles(graph):
                 if src_in and not tgt_in:
                     has_outgoing_to_outside = True
 
-        # Zła pętla = wejście z zewnątrz jest, wyjścia brak
         if has_incoming_from_outside and not has_outgoing_to_outside:
             bad_cycles.append(comp)
 
@@ -394,33 +499,14 @@ def compute_dead_ends(passages, graph):
     dead = sorted(p for p in passages if p not in can_reach)
     return endings, dead
 
+
 def _tokens_from_name(name: str):
-    """
-    Rozbij nazwę passage na tokeny po '-', pomijając pierwszy token
-    (prawdopodobnie nazwa lokacji), i wyczyść spacje.
-    Używane do porównywania 'słów kluczowych' w nazwach.
-    Przykład:
-      'CityGate-WithLyra-HasKeycard' -> {'WithLyra', 'HasKeycard'}
-    """
     parts = [part.strip() for part in name.split("-") if part.strip()]
-    # pomijamy pierwszy element (lokacja / bazowa nazwa)
     state_parts = parts[1:] if len(parts) > 1 else []
     return set(state_parts)
 
-def detect_symmetries(passages, graph):
-    """
-    Symetria dla passage X:
-    - istnieje co najmniej 2 źródła linków do X,
-    - każde źródło ma NIEPUSTY wspólny zbiór tokenów z X,
-    - i TEN SAM zbiór 'common tokens' dla wszystkich źródeł.
 
-    Zwraca listę:
-    [
-      (target_name, [source1, source2, ...]),
-      ...
-    ]
-    """
-    # odwrotny graf: X -> [źródła, które linkują do X]
+def detect_symmetries(passages, graph):
     reverse_graph = defaultdict(list)
     for src, targets in graph.items():
         for tgt in targets:
@@ -429,7 +515,6 @@ def detect_symmetries(passages, graph):
     symmetries = []
 
     for target, sources in reverse_graph.items():
-        # symetria ma sens tylko, jeśli co najmniej 2 źródła
         if len(sources) < 2:
             continue
 
@@ -438,13 +523,11 @@ def detect_symmetries(passages, graph):
             continue
 
         common_sets = []
-
         valid = True
         for src in sources:
             src_tokens = _tokens_from_name(src)
             common = target_tokens & src_tokens
             if not common:
-                # jakiś link w ogóle nie dzieli tokenów z X → brak symetrii dla X
                 valid = False
                 break
             common_sets.append(frozenset(common))
@@ -452,32 +535,16 @@ def detect_symmetries(passages, graph):
         if not valid:
             continue
 
-        # wszystkie common_sets muszą być identyczne
         unique_common = set(common_sets)
         if len(unique_common) != 1:
-            # są różne zestawy wspólnych tokenów → brak symetrii wg Twojej definicji
             continue
 
-        # Jeśli doszliśmy tutaj − mamy symetrię: wszystkie źródła "wyglądają podobnie" względem X
         symmetries.append((target, sorted(sources)))
 
     return symmetries
-    
-def detect_asymmetries(passages, graph):
-    """
-    Asymetria dla passage X:
-    - istnieje >=2 źródła linków do X,
-    - nie wszystkie źródła wyglądają tak samo względem X (różna ilość / zestaw wspólnych tokenów),
-    - wyznaczamy:
-      * źródła z MAKSYMALNĄ liczbą wspólnych tokenów z X jako "prawdopodobnie poprawne",
-      * pozostałe jako "podejrzane" (potencjalnie błędne linki).
 
-    Zwraca listę:
-    [
-      (target_name, [probable_correct_sources], [suspect_sources]),
-      ...
-    ]
-    """
+
+def detect_asymmetries(passages, graph):
     reverse_graph = defaultdict(list)
     for src, targets in graph.items():
         for tgt in targets:
@@ -493,22 +560,18 @@ def detect_asymmetries(passages, graph):
         if not target_tokens:
             continue
 
-        # policz wspólne tokeny dla każdego źródła
-        common_map = {}  # src -> (common_tokens_set, count)
+        common_map = {}
         for src in sources:
             src_tokens = _tokens_from_name(src)
             common = target_tokens & src_tokens
             common_map[src] = (common, len(common))
 
-        # jeśli wszystkie mają ten sam zestaw (albo wszystkie 0) → brak asymetrii
         common_sets = {frozenset(v[0]) for v in common_map.values()}
         if len(common_sets) <= 1:
             continue
 
-        # znajdź maksymalną liczbę wspólnych tokenów
         max_common_size = max(count for (_, count) in common_map.values())
         if max_common_size == 0:
-            # nikt nie dzieli żadnych tokenów z X → nic sensownego nie wyłonimy
             continue
 
         probable = []
@@ -519,25 +582,22 @@ def detect_asymmetries(passages, graph):
             else:
                 suspect.append(src)
 
-        # Asymetria ma sens tylko gdy mamy kogoś "prawdopodobnie poprawnego"
-        # i kogoś "podejrzanego"
         if probable and suspect:
             asymmetries.append((target, sorted(probable), sorted(suspect)))
 
-    return asymmetries    
-    
+    return asymmetries
+
+
 def analyze_twee(text: str):
     spans, links = parse_passages_and_links(text)
     passages = set(n for n, _, _ in spans)
 
-    # wszystkie cele linków (do liczenia undefined)
     link_targets = []
     for tlist in links.values():
         link_targets.extend(tlist)
 
     undefined = sorted({t for t in link_targets if t not in passages})
 
-    # graf: passage -> lista targetów będących istniejącymi passages
     graph = {p: [] for p in passages}
     for p in passages:
         graph[p] = [t for t in links.get(p, []) if t in passages]
@@ -547,6 +607,67 @@ def analyze_twee(text: str):
     asymmetries = detect_asymmetries(passages, graph)
 
     return passages, link_targets, undefined, graph, endings, cycles, dead_ends, asymmetries
+
+
+# ============================================================
+#  APPLYING STRUCTURAL PATCHES
+# ============================================================
+
+def apply_structural_patch(current_twee: str, patch_twee: str) -> str:
+    """
+    Apply a structural patch to the current Twee story.
+
+    Patch semantics:
+    - For each passage in patch:
+      * If its body (after header) is EMPTY/whitespace -> DELETE that passage.
+      * Otherwise -> REPLACE or ADD that passage with the patch version.
+    """
+    orig_spans = extract_passage_spans(current_twee)
+
+    orig_by_name = {}
+    orig_order = []
+    for name, h_start, b_start, end in orig_spans:
+        orig_by_name[name] = (h_start, b_start, end)
+        orig_order.append(name)
+
+    patch_spans = extract_passage_spans(patch_twee)
+
+    deleted = set()
+    replacements = {}
+
+    for name, h_start, b_start, end in patch_spans:
+        body = patch_twee[b_start:end]
+        if body.strip() == "":
+            deleted.add(name)
+        else:
+            passage_text = patch_twee[h_start:end].rstrip("\n")
+            passage_text = passage_text + "\n"
+            replacements[name] = passage_text
+
+    new_parts = []
+
+    # 1) existing passages (preserve order)
+    for name in orig_order:
+        if name in deleted:
+            continue
+        if name in replacements:
+            new_parts.append(replacements[name])
+            del replacements[name]
+        else:
+            h_start, b_start, end = orig_by_name[name]
+            new_parts.append(current_twee[h_start:end])
+
+    # 2) any remaining replacements are NEW passages (names not in orig_order)
+    for name, passage_text in replacements.items():
+        if new_parts:
+            last = new_parts[-1]
+            if not last.endswith("\n\n"):
+                if not last.endswith("\n"):
+                    new_parts[-1] = last + "\n"
+                new_parts[-1] = new_parts[-1] + "\n"
+        new_parts.append(passage_text)
+
+    return "".join(new_parts)
 
 
 # ============================================================
@@ -569,7 +690,7 @@ def request(model: str, prompt: str) -> str:
 
     try:
         data = r.json()
-    except:
+    except Exception:
         print("Invalid JSON returned.", file=sys.stderr)
         return ""
 
@@ -585,12 +706,30 @@ def request_missing_passages(model, description, current, missing, min_passages,
     return request(model, prompt)
 
 
-def request_structural_fix(model, description, current, cycles, dead, min_passages, print_prompt_only):
-    prompt = build_structural_fix_prompt(description, current, cycles, dead, min_passages)
+def request_cycles_fix(model, description, current, cycles, min_passages, print_prompt_only):
+    prompt = build_cycles_fix_prompt(description, current, cycles, min_passages)
     if print_prompt_only:
         print(prompt)
-        sys.exit()        
-    print("\n--- Requesting structural fix...", file=sys.stderr)
+        sys.exit()
+    print("\n--- Requesting CYCLES structural patch...", file=sys.stderr)
+    return request(model, prompt)
+
+
+def request_dead_fix(model, description, current, dead, min_passages, print_prompt_only):
+    prompt = build_dead_fix_prompt(description, current, dead, min_passages)
+    if print_prompt_only:
+        print(prompt)
+        sys.exit()
+    print("\n--- Requesting DEAD-ENDS structural patch...", file=sys.stderr)
+    return request(model, prompt)
+
+
+def request_asym_fix(model, description, current, asymmetries, min_passages, print_prompt_only):
+    prompt = build_asym_fix_prompt(description, current, asymmetries, min_passages)
+    if print_prompt_only:
+        print(prompt)
+        sys.exit()
+    print("\n--- Requesting ASYMMETRY structural patch...", file=sys.stderr)
     return request(model, prompt)
 
 
@@ -626,7 +765,7 @@ def print_report(passages,
     if cycles:
         print("Cycles detected:", file=sys.stderr)
         for c in cycles:
-            print("  -", " -> ".join(c+[c[0]]), file=sys.stderr)
+            print("  -", " -> ".join(c + [c[0]]), file=sys.stderr)
     else:
         print("No cycles.", file=sys.stderr)
 
@@ -636,8 +775,7 @@ def print_report(passages,
             print("  -", d, file=sys.stderr)
     else:
         print("No dead-end passages.", file=sys.stderr)
-        
-    # --- Symetrie w linkach (w sensie nazw passage) ---
+
     symmetries = detect_symmetries(passages, graph)
     if symmetries:
         print("\nSymmetries (targets with multiple similarly-named incoming passages):",
@@ -646,8 +784,7 @@ def print_report(passages,
             print(f"  {target} (linked from {', '.join(sources)})", file=sys.stderr)
     else:
         print("\nNo naming-based symmetries detected.", file=sys.stderr)
-        
-    # --- Asymetrie w linkach (potencjalnie błędne przejścia) ---
+
     if asymmetries:
         print("\nAsymmetries (targets with inconsistent incoming naming; probable vs suspect links):",
               file=sys.stderr)
@@ -657,7 +794,7 @@ def print_report(passages,
                   file=sys.stderr)
     else:
         print("\nNo naming-based asymmetries detected.", file=sys.stderr)
-        
+
 
 # ============================================================
 #  MAIN
@@ -689,7 +826,6 @@ def main():
         print(f"Cannot read input description: {e}", file=sys.stderr)
         sys.exit(1)
 
-
     # Option: CONTINUE mode (skip initial generation)
     if args.continue_mode:
         print("\n--- CONTINUE MODE: Loading existing story ---", file=sys.stderr)
@@ -702,11 +838,10 @@ def main():
         # --- INITIAL GENERATION ---
         prompt = build_prompt(description, args.min_passages)
 
-        # Option: print prompt and exit
         if args.print_prompt_only:
             print(prompt)
-            return        
-        
+            return
+
         print("\n--- Generating initial story ---", file=sys.stderr)
         out_chunks = []
 
@@ -748,7 +883,7 @@ def main():
          cycles,
          dead,
          asymmetries) = analyze_twee(current)
-         
+
         print_report(
             passages,
             links,
@@ -762,7 +897,7 @@ def main():
             rnd,
         )
 
-        # Exit if everything is OK (BRAK: undefined, cycles, dead, asymmetries)
+        # Exit if everything is OK
         if not undefined and not cycles and not dead and not asymmetries:
             print("\n--- Story OK, no issues left ---", file=sys.stderr)
             break
@@ -772,7 +907,7 @@ def main():
             print("\n--- Max fix rounds reached ---", file=sys.stderr)
             break
 
-        # 1) Fix: Missing passages (lokalna łatka, bez przepisywania całości)
+        # 1) Fix: Missing passages (local patch)
         if undefined:
             fix = request_missing_passages(
                 args.model,
@@ -798,31 +933,49 @@ def main():
 
             continue
 
-        # 2) Fix: Structural rewrite (pętle, dead-endy LUB asymetrie)
-        if cycles or dead or asymmetries:
-            fix = request_structural_fix(
+        # 2) Structural fixes w rozbiciu: najpierw cykle, potem dead-endy, potem asymetrie
+        patch = ""
+        if cycles:
+            patch = request_cycles_fix(
                 args.model,
                 description,
                 current,
                 cycles,
+                args.min_passages,
+                args.print_prompt_only,
+            )
+        elif dead:
+            patch = request_dead_fix(
+                args.model,
+                description,
+                current,
                 dead,
                 args.min_passages,
                 args.print_prompt_only,
             )
-            if not fix.strip():
-                print("Structural fix returned nothing.", file=sys.stderr)
-                break
+        elif asymmetries:
+            patch = request_asym_fix(
+                args.model,
+                description,
+                current,
+                asymmetries,
+                args.min_passages,
+                args.print_prompt_only,
+            )
 
-            current = fix
+        if not patch or not patch.strip():
+            print("Structural patch returned nothing.", file=sys.stderr)
+            break
 
-            try:
-                with open(args.output, "w", encoding="utf8") as outf:
-                    outf.write(current)
-            except Exception as e:
-                print(f"Error writing structural fix: {e}", file=sys.stderr)
-                break
+        new_current = apply_structural_patch(current, patch)
+        current = new_current
 
-            continue
+        try:
+            with open(args.output, "w", encoding="utf8") as outf:
+                outf.write(current)
+        except Exception as e:
+            print(f"Error writing structural patch: {e}", file=sys.stderr)
+            break
 
     # Final report
     (passages,
@@ -846,6 +999,7 @@ def main():
         args.min_passages,
         "FINAL",
     )
+
 
 if __name__ == "__main__":
     main()
