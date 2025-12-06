@@ -14,117 +14,88 @@ import requests
 
 def build_common_instructions(min_passages: int) -> str:
     """
-    VERY highly compressed ruleset, with explicit location + state-token naming.
+    Bardzo skrócone zasady + dodatkowe twarde zakazy (Alone, [] w endingach).
     """
     return f"""
 You are an expert Twine/Twee interactive fiction author.
 
-RULES (ESSENTIAL):
+GLOBAL:
 - Output ONLY valid Twee code (no comments, no markdown).
 - Story language = description language.
-- NO variables, NO macros, NO <<if>>, <<set>>, scripting.
-- State is encoded ONLY in passage names + link graph.
+- NO variables, NO macros, NO <<if>>, NO <<set>>, NO scripting.
+- Narrative state = ONLY passage names + link graph.
 - Passage names MUST NOT contain '_' anywhere.
-- Must have ≥ {min_passages} passages.
+- Story must have at least {min_passages} passages.
 
-PASSAGE NAME STRUCTURE (LOCATION + STATE TOKENS):
-- A passage name has the following form:
+PASSAGE NAMES (LOCATION + STATE TOKENS):
+- Form:  LocationName[-Token1-Token2-...]
+- LocationName:
+  - First chunk (before first '-'), e.g. SkybreakerSublevel2, RelayStationCorridor, CityGateNight.
+  - MUST NOT contain '-' or '_'.
+  - Describes where/when this panel happens.
+- State tokens (after first '-'):
+  - Encode important facts only, e.g.:
+    - MetLyra, WithLyra, LostLyra
+    - HasKeycard, LostKeycard, LeftKeycardBehind
+    - JoinedFactionA, JoinedFactionB, BetrayedFactionA
+- ABSENCE OF A TOKEN = default:
+  - No WithLyra / MetLyra => player never met/is not with Lyra.
+  - No HasKeycard => player does not carry the keycard.
+- FORBIDDEN / USELESS TOKENS (NEVER USE):
+  - Alone, EmptyInventory, Default, Normal, Generic, None, Nothing, Standard
+  - Do NOT encode “alone” as a token. If player is alone, just omit WithX/MetX tokens.
 
-    LocationName[-StateToken1-StateToken2-...]
-
-- The FIRST part (before the first '-') is the LOCATION / SITUATION:
-  - e.g. SkybreakerSublevel2, RelayStationCorridor, CityGateNight.
-  - It MUST NOT contain '-' or '_'.
-  - It should describe "where/when" the panel is.
-
-- AFTER the location, you MAY append state tokens separated by '-':
-  - Examples:
-    - SkybreakerSublevel2-WithLyra-HasKeycard-JoinedFactionA
-    - RelayStationCorridor-MetLyra-LostKeycard
-    - CityGateNight-JoinedFactionB
-  - State tokens are short flags encoding important facts:
-    - MetX, WithX, LostX, LeftX         (characters)
-    - HasItemY, LostItemY, LeftItemY    (items)
-    - JoinedFactionA, BetrayedFactionB, NeutralFaction (factions)
-
-- DO NOT use meaningless or neutral tokens such as:
-  - Alone, EmptyInventory, Default, Normal, Generic, etc.
-- ABSENCE of a positive token IS the default:
-  - If there is no WithLyra / MetLyra token -> the player never met/is not with Lyra.
-  - If there is no HasItemKeycard token -> the player does not carry the keycard.
-- Use explicit negative tokens only when important and specific:
-  - LostLyra, LeftKeycardBehind, BetrayedFactionA.
-
-STATE CONSISTENCY & SYMMETRY:
-
-- For any target passage X, several passages may link to X.
-- Each passage name has:
-  - a LOCATION part (first chunk, before the first '-'),
-  - optional STATE TOKENS after the first '-'.
-
-- When multiple passages link to the same target X:
-  - Their STATE TOKENS must be consistent with the STATE TOKENS of X.
-  - If two source passages share the same state (same STATE TOKENS overlap with X),
-    they should behave symmetrically and lead to a compatible version of X.
-  - If a source passage has a different state (different tokens overlap with X),
-    you MUST NOT link it to the same X unless the text still perfectly matches
-    that state.
-
-- Asymmetry (INCONSISTENT links):
-  - If many passages link to X but some of them have different or missing
-    STATE TOKENS compared to X, treat those links as suspicious.
-  - Fix asymmetry by either:
-    - redirecting the suspicious sources to a more appropriate target passage
-      whose name matches their STATE TOKENS, or
-    - creating a separate variant of the target passage (e.g. a different
-      LocationName-...-StateToken combination) and linking the appropriate
-      sources there.
-  - Do NOT leave sources that say "Alone" in text while linking to a passage
-    whose name clearly encodes "With companions", or vice versa.
-
-PASSAGE = PANEL:
-- Each passage is ONE clear comic panel:
+PASSAGE = COMIC PANEL:
+- One passage = one clear panel:
   - one location (LocationName),
   - one concrete moment,
   - one immediate situation.
-- Time and travel happen BETWEEN passages, not as long summaries in one passage.
-- Do NOT skip over major actions in a single passage: entering a new area,
-  sneaking through danger, finding or stealing key items should take multiple passages.
+- Time flows BETWEEN passages, not inside one long paragraph.
+- Do NOT compress several major actions (travel, entering area, finding & taking key item)
+  into a single passage. Use 2–3+ passages for important steps.
 
-KEY ITEMS / GOALS:
-- Important items or objectives must NOT simply lie in the open waiting.
-- Reaching a key item should require 2–3+ passages:
-  - noticing hints or rumors,
-  - approaching through danger or obstacles,
-  - facing a guard, trap, lock, puzzle, or moral choice,
-  - only then obtaining (or failing to obtain) the item.
-- Never let the player "just pick up" a critical item in the same passage where
-  it is first mentioned.
+ITEMS / GOALS:
+- Important items/goals must NOT just lie around unguarded in the same passage where they appear.
+- Reaching/obtaining a key item should involve:
+  - noticing or being told,
+  - approaching through danger/obstacles,
+  - dealing with guards/traps/locks/moral choice,
+  - THEN obtaining or failing to obtain it.
 
-GRAPH RULES (CRITICAL):
-- NO endless cycles, NO closed loops, NO ping-pong loops.
-- Backtracking loops allowed only if ANY state can exit toward progress.
-- EVERY passage must eventually reach an Ending.
-- Endings MUST start with "Ending-" and have NO outgoing links.
-- NO passage may become a dead-end unless it IS an Ending.
+LINKS:
+- Allowed format ONLY: [[Text->PassageName]]
+- NO spaces around '->'.
+- Each link on its own line (one line = one choice).
+- All link targets MUST exist as passages.
+- OUTSIDE OF LINKS, NEVER USE '[' or ']' in the story text.
+  - No decorative [[THE END]], no brackets used as styling.
 
-LINK RULES:
-- Only format: [[Text->Passage]].
-- NO spaces around ->.
-- Each link must be on its own line (one line = one choice).
-- All link targets MUST exist.
+ENDINGS:
+- Ending passages MUST have names starting with:  Ending-
+- Ending passages MUST:
+  - have NO outgoing links at all,
+  - contain NO '[' or ']' characters in the body (plain text ending only).
+- Include ≥1 good/satisfying ending and ≥3 bad endings (death/failure/etc.).
 
-STORY:
-- Must branch; ≥1 good ending, ≥3 bad endings.
-- Choices must be in-world text (no meta "if you did X then click Y").
-- No contradictions: cannot show characters/items never obtained on this route.
+CONSISTENCY & BRANCHING:
+- No contradictions: text in a passage must match the state encoded in its name and all routes leading there.
+- Do NOT mention characters/items that are not guaranteed by state tokens and previous links.
+- Symmetric states (same tokens) may converge to shared passages.
+- Asymmetry (different/no tokens converging into a passage whose name encodes a specific state)
+  is suspicious and should be avoided or fixed.
+
+GRAPH RULES:
+- NO endless closed cycles: player must never be trapped in a loop with no exit.
+- Backtracking loops allowed only if there is an exit to progress from at least one node.
+- EVERY non-ending passage must be able to reach an Ending- eventually.
+- No non-ending dead-ends.
 
 VERIFY BEFORE OUTPUT:
 - All links valid and formatted correctly.
-- No contradictions in text vs encoded state.
+- No '[' or ']' in non-link text (and none at all in Ending- passages).
 - No broken links.
 - No non-ending dead-ends.
-- No cycles without valid exits.
+- No bad cycles with no exit.
 """
 
 
@@ -153,49 +124,54 @@ Existing story:
 Missing passages:
 {missing_list}
 
-Task:
+TASK (MISSING PASSAGES ONLY):
 - DO NOT modify or repeat existing passages.
 - For EACH missing name output EXACTLY ONE Twee passage.
-- NO new passage names beyond the missing list.
-- Use valid Twee headers and links.
-- Text must match world + state logic.
+- DO NOT invent new passage names beyond the missing list.
+- Use valid Twee headers and links (respect all global rules).
+- Text must match the world + state naming logic.
 
-Output ONLY the missing passages.
+OUTPUT:
+- ONLY the missing passages.
 """.strip()
 
 
 def _patch_instructions(min_passages: int) -> str:
     """
-    Fragment wspólny dla wszystkich promptów 'patchowych'.
+    Wspólny fragment dla wszystkich promptów patchowych.
     """
     common = build_common_instructions(min_passages)
     return f"""
 {common}
 
-IMPORTANT: YOU MUST RETURN ONLY A PATCH, NOT THE FULL STORY.
+IMPORTANT: RETURN ONLY A PATCH, NOT THE FULL STORY.
 
-PATCH FORMAT:
-- For a MODIFIED or NEW passage:
-  - Output its FULL passage: header line and entire body, e.g.:
+PATCH FORMAT (PASSAGE-LEVEL EDITS):
+- To MODIFY an existing passage:
+  - Output its FULL header + body, e.g.:
       :: PassageName
-      (full body with text and links)
+      (full body)
 
-- For a DELETED passage:
-  - Output ONLY its header line, e.g.:
+- To ADD a new passage:
+  - Same: full header + body.
+
+- To DELETE a passage:
+  - Output only a single header line:
       :: NameOfDeletedPassage
-    with NO body (no text, no blank lines, nothing else).
+    with NO body (no text, no blank line, nothing).
 
-- For a RENAMED passage:
-  - Output one header line with the OLD name, with no body (delete):
+- To RENAME a passage:
+  - Delete old name:
       :: OldPassageName
-  - AND one FULL passage with the NEW name:
+    (no body)
+  - And output full passage with the new name:
       :: NewPassageName
       (full body)
 
 RULES FOR PATCH:
-- DO NOT output any passage that remains unchanged.
-- DO NOT output comments, markdown, or explanations.
-- Obey all naming, graph, and story rules from the common instructions.
+- DO NOT output any unchanged passages.
+- DO NOT output prose explanations, comments, markdown, or code fences.
+- Obey all naming, brackets, link and story rules from the common instructions.
 """
 
 
@@ -220,20 +196,19 @@ Description:
 Current story:
 \"\"\"{existing_twee}\"\"\"
 
-STRUCTURAL PROBLEM (CYCLES ONLY):
-- The following bad cycles were detected in the passage graph:
+STRUCTURAL PROBLEM (CYCLES):
+- Bad cycles detected (player can enter, but cannot escape to progress/endings):
 {cycles_block}
 
 TASK:
-- Fix ALL cycles listed above so that:
-  - no player can get trapped in a closed loop with no exit,
-  - every cycle has at least one way to exit toward progress and eventually reach an Ending,
-    or is completely broken and replaced by acyclic structure.
-- You MAY adjust links, rename passages, split passages, or delete them as needed.
-- You SHOULD NOT significantly change the high-level narrative, only its structure.
+- Break or restructure these cycles so that:
+  - no closed loop traps the player forever,
+  - every cycle gets at least one exit toward progress and eventually an Ending-,
+  - or is replaced by an acyclic structure.
+- You MAY adjust links, split passages, rename or delete problematic passages.
 
 OUTPUT:
-- ONLY a patch (set of passage edits) in the PATCH FORMAT described above.
+- ONLY a patch in the specified PATCH FORMAT.
 """.strip()
 
 
@@ -254,22 +229,18 @@ Description:
 Current story:
 \"\"\"{existing_twee}\"\"\"
 
-STRUCTURAL PROBLEM (DEAD-ENDS ONLY):
-- The following passages CANNOT reach any Ending- and are not themselves endings:
+STRUCTURAL PROBLEM (DEAD-ENDS):
+- The following passages CANNOT reach any Ending- and are not endings themselves:
 {dead_block}
 
 TASK:
-- For every passage above, modify the structure so that:
-  - the player can eventually reach at least one Ending-,
-  - non-ending passages never become terminal dead-ends.
-- You MAY:
-  - add new passages,
-  - alter or redirect links,
-  - rename or delete problematic passages,
-  - as long as you respect the global rules and keep the narrative coherent.
+- For every passage above, ensure the player can eventually reach at least one Ending-.
+- Non-ending passages must not be terminal dead-ends.
+- You MAY add passages, change links, rename or delete passages as needed,
+  while keeping the story and state-encoding coherent.
 
 OUTPUT:
-- ONLY a patch (set of passage edits) in the PATCH FORMAT described above.
+- ONLY a patch in the specified PATCH FORMAT.
 """.strip()
 
 
@@ -287,7 +258,7 @@ def build_asym_fix_prompt(description: str,
             lines.append(
                 f"- Target: {target}\n"
                 f"    Probable correct sources: {prob_s}\n"
-                f"    Suspect (inconsistent) sources: {susp_s}"
+                f"    Suspect sources: {susp_s}"
             )
         asym_block = "\n".join(lines)
     else:
@@ -303,27 +274,23 @@ Current story:
 \"\"\"{existing_twee}\"\"\"
 
 STRUCTURAL PROBLEM (ASYMMETRIC CONVERGENCE):
-- The following targets have inconsistent incoming links (naming-based asymmetries):
+- Targets with inconsistent incoming states (naming-based asymmetries):
 {asym_block}
 
 INTERPRETATION:
-- For each target passage X, some source passages have STATE TOKENS that match X well
-  ("probable correct sources"), while others have fewer or different tokens and are
-  likely incorrect ("suspect sources").
-- This usually means that routes with different history (e.g., different companions
-  or items) incorrectly converge into a single passage that assumes the wrong state.
+- For each target, some sources have state tokens matching it well (probable),
+  others have fewer/different tokens (suspect) and likely represent different
+  narrative states (e.g. with/without companions or items).
 
 TASK:
-- For each listed target:
-  - ensure that only compatible states converge into a given passage;
+- For each target:
+  - ensure only compatible states converge to one passage,
   - redirect suspect sources to better matching passages,
-    OR create new variants of the target passage with names and text that match
-    their distinct state tokens.
-- Do NOT rely on variables or conditionals; enforce state consistency purely by
-  passage naming and link structure.
+  - or create state-specific variants (different tokens in name + text).
+- Enforce state consistency purely via passage naming and link graph (no variables).
 
 OUTPUT:
-- ONLY a patch (set of passage edits) in the PATCH FORMAT described above.
+- ONLY a patch in the specified PATCH FORMAT.
 """.strip()
 
 
@@ -443,9 +410,9 @@ def strongly_connected_components(graph):
 def find_cycles(graph):
     """
     Find ONLY bad cycles:
-    - strongly connected components that actually contain a cycle
-    - AND która ma wejście z zewnątrz
-    - AND z żadnego węzła nie wychodzi krawędź poza komponent.
+    - strongly connected components that contain a cycle
+    - AND have an incoming edge from outside
+    - AND have no outgoing edge to outside.
     """
     bad_cycles = []
     sccs = strongly_connected_components(graph)
@@ -657,7 +624,7 @@ def apply_structural_patch(current_twee: str, patch_twee: str) -> str:
             h_start, b_start, end = orig_by_name[name]
             new_parts.append(current_twee[h_start:end])
 
-    # 2) any remaining replacements are NEW passages (names not in orig_order)
+    # 2) new passages (names not in orig_order)
     for name, passage_text in replacements.items():
         if new_parts:
             last = new_parts[-1]
