@@ -1,0 +1,92 @@
+WORLD OVERVIEW
+In 2149 the Ashfall Cataclysm destroyed civilization after a chain of super-eruptions triggered by failed geothermal experiments. Ash clouds darkened the skies and toxic storms shaped a new wasteland world. Survivors gather in scattered settlements, each with their own rules and fears. Rumors spread of Haven-0, an old-world facility capable of cleansing the atmosphere.
+
+The Wanderer, a lone traveler of player-chosen origins, finds a burned map fragment believed to lead to Haven-0. Three more fragments exist somewhere in the wasteland.
+
+MAIN CHARACTERS
+
+The Wanderer (player):
+A lone survivor defined by a background chosen by the reader. Carries the first map fragment.
+
+Lyra “Ashwitch” Kade:
+A rogue technomancer who can predict ash storms. Exiled from the Technic Union. Her path crosses the Wanderer’s early on.
+
+Captain Bronn Hale:
+Leader of the Steel Legion, a harsh militaristic force seeking order through domination. He wants the fragments.
+
+Dr. Oren Vale:
+An old-world scientist who knows the truth of Haven-0 but suffers from instability after decades in isolation.
+
+Moth:
+A young courier of the Dustborn Nomads. Innocent, hopeful, and familiar with hidden routes.
+
+FACTIONS
+
+Steel Legion:
+A militaristic force using armored land-trains. Determined to unite the wasteland by force.
+
+Dustborn Nomads:
+Wandering tribes that travel across ash deserts using wind-driven craft.
+
+Technic Union:
+Tech-focused bunker descendants aiming to restore lost knowledge.
+
+Ash Worshippers (Ashen Choir):
+A cult devoted to the ash, believing it to be divine and rejecting any attempt to revive the old world.
+
+STORY ARC AND BRANCHING STRUCTURE
+
+ACT I: The Map Fragment
+The Wanderer escapes raiders during an ash storm and obtains the first map fragment. Encounters Moth or travels alone. Learns that three other fragments exist.
+Branch Points:
+
+Who the Wanderer chooses to trust first: Nomads, Union, Legion, or no one.
+
+Player-selected background influences flavor of choices, but not mechanics.
+
+ACT II: Factions of the Wastes
+The Wanderer enters one of several regions depending on early choices. Lyra is encountered and offers help decrypting the fragment if aided. Faction conflicts escalate.
+Branch Points:
+3. Save or abandon Lyra, which shapes future alliances.
+4. Aid a struggling settlement or refuse, affecting future appearances.
+5. Discover the location of Fragment Two, which may require choosing between multiple leads.
+
+ACT III: The Skybreaker Conflict
+The Wanderer reaches a buried city containing old-world technology. The Steel Legion attacks. Dr. Oren Vale is found in an underground facility and reveals Haven-0 is real.
+Branch Points:
+6. Rescue Vale or allow the Legion to take him.
+7. Confront the Ashen Choir through confrontation, infiltration, or negotiation.
+8. Obtain Fragment Three through one of several possible routes.
+
+ACT IV: Pilgrimage to the Edge
+The Wanderer travels through a dangerous forbidden zone. Companions may argue or betray depending on earlier moral choices. The final fragment is discovered at a ruined GeoCore vault.
+Branch Points:
+9. Choose who leads the final approach toward Haven-0.
+10. Decide moral direction: restore the world, seize control, or destroy the hope entirely.
+
+ACT V: Haven-0
+The Wanderer reaches the hidden arcology. Companions and antagonists converge for final choices and confrontations. The atmosphere purifier could change the world depending on decisions.
+Branch Points:
+11. Decide who enters Haven-0 with the Wanderer.
+12. Decide how to deal with surviving rivals or companions.
+13. Make the final world-defining choice resulting in one of several endings.
+
+POSSIBLE ENDINGS
+
+Restoration Ending:
+The atmospheric purifier is activated and the skies begin to clear.
+
+Dominion Ending:
+Haven-0 is seized, and the Wanderer or the Legion imposes harsh rule.
+
+Technocratic Ending:
+The Wanderer gives control of Haven-0 to the Technic Union.
+
+Nomad Ending:
+The Wanderer destroys Haven-0 to ensure no faction can abuse it.
+
+Ashen Ending:
+The Wanderer sides with the cult and denies the world a chance at rebirth.
+
+SUMMARY
+Ashfall: Roads of Ruin is a post-apocalyptic branching narrative about alliances, betrayals, moral choices, and the search for Haven-0. The gamebook relies entirely on story paths, character choices, and consequences, leading to multiple endings shaped by the Wanderer’s decisions.
