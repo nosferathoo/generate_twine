@@ -6,6 +6,7 @@
   <img src="https://img.shields.io/badge/Twine/Twee-supported-purple.svg" />
   <img src="https://img.shields.io/badge/Status-Research%20Project-informational.svg" />
 </p>
+
 # Symmetry-Aware LLM-Driven Generation and Repair of Twine/Twee Interactive Fiction Graphs
 
 This repository contains a research-oriented framework for **automated generation, structural analysis, and iterative repair** of interactive fiction (IF) graphs using **Large Language Models (LLMs)**.  
