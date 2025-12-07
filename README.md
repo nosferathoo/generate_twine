@@ -85,13 +85,6 @@ ollama serve
 ---
 
 ## Usage Examples
-
-Main script:
-
-```
-generate_twine.py
-```
-
 ### Basic story generation
 
 ```bash
