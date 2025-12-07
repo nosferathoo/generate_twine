@@ -1,7 +1,6 @@
 <p align="center">
   <img src="https://img.shields.io/badge/Python-3.9%2B-blue.svg" />
   <img src="https://img.shields.io/badge/Ollama-required-orange.svg" />
-  <img src="https://img.shields.io/badge/LLM-compatible-success.svg" />
   <img src="https://img.shields.io/badge/License-MIT-green.svg" />
   <img src="https://img.shields.io/badge/Twine/Twee-supported-purple.svg" />
   <img src="https://img.shields.io/badge/Status-Research%20Project-informational.svg" />
