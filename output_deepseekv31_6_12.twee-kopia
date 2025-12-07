@@ -1,0 +1,621 @@
+:: StoryTitle
+[[->StoryStart]]
+:: StoryData
+[[->StoryStart]]
+:: StoryStart
+The air tastes of metal and cinder. You are the Wanderer, your past a scar on the wasteland, your future a path unwalked. An ash storm brews on the horizon. Ahead lies the husk of an old-world relay station, a potential shelter.
+[[Enter the station->RelayStationRuins]]
+
+:: RelayStationRuins
+The relay station is a skeleton of rusted steel. Inside, the wind howls through shattered windows. A glint of plastic catches your eye under a collapsed desk: a burned map fragment. Before you can take it, a raider patrol storms in.
+[[Grab the fragment and flee->AshStormEscape]]
+[[Hide and wait for an opening->RelayStationAmbush]]
+
+:: AshStormEscape
+You snatch the fragment as raider shouts echo. You burst out the back as the storm hits in full force, a wall of grey fury that blinds and deafens. Survival is now a race against the choking ash.
+[[Push forward into the storm->StormPathAlone]]
+[[Seek cover in a canyon->CanyonShelter-MapFragment1]]
+:: RelayStationAmbush
+You press into the shadows as raiders loot the main room. One of them finds the map fragment, arguing with his comrades. In the confusion, you have a chance.
+[[Strike from the shadows->AmbushStealth-MapFragment1]]
+[[Create a distraction->AmbushDistraction]]
+
+:: AmbushDistraction
+You knock a loose pipe from the wall, creating a clatter in an adjacent room. Two raiders investigate, leaving the one with the fragment momentarily alone.
+[[Disarm the raider->AmbushStealth-MapFragment1]]
+[[Attempt to sneak past->AmbushSneakFail]]
+
+:: AmbushSneakFail
+You move too quickly. The lone raider spins around, his weapon raised. There is no time to react. The shot echoes in the ruined station.
+[[->Ending-Dead]]
+
+:: AmbushStealth-MapFragment1
+You move like a ghost, disabling the raider before he can cry out. The map fragment is yours. The storm outside is now a blessing, masking your escape into the raging ash.
+[[Seek shelter->CanyonShelter-MapFragment1]]
+:: CanyonShelter-MapFragment1
+You find a narrow fissure in the canyon wall, shielding you from the worst of the storm. The fragment shows a location labeled "Haven-0" and hints at three others. As the wind dies, you hear the creak of a wind-driven craft approaching.
+[[Prepare for a possible threat->CanyonApproach-MapFragment1]]
+[[Remain hidden->CanyonHide-MapFragment1]]
+:: CanyonApproach-MapFragment1
+A young courier, whom you later learn is called Moth, steps from the lightweight craft. She eyes you cautiously but without hostility. "The storm is fierce. The Dustborn offer shelter, if you seek it."
+[[Accept the offer->NomadCaravan-MapFragment1]]
+[[Decline politely->WastesAlone-MapFragment1]]
+:: CanyonHide-MapFragment1
+You watch from the shadows as the courier, Moth, scans the canyon. Finding nothing, she departs. You are alone again with the map.
+[[Continue your journey->WastesAlone-MapFragment1]]
+
+:: WastesAlone-MapFragment1
+The wastes stretch endlessly. Your path leads towards a rumor: a trading outpost called Rusthaven. It is a den of information and danger.
+[[Travel to Rusthaven->RusthavenGates-MapFragment1]]
+:: NomadCaravan-MapFragment1-WithMoth
+Moth's land-sailer glides over the ash. The Dustborn caravan is a mobile village of tents and crafts. They are curious about the outsider, and Moth vouches for you. An elder speaks of other fragments.
+[[Ask for directions to the Union->NomadToUnionPath-MapFragment1-WithMoth]]
+[[Head towards the Legion-controlled territory->RoadToFortress-MapFragment1-WithMoth]]
+[[Strike out on your own from the caravan->WastesAlone-MapFragment1]]
+:: RusthavenGates-MapFragment1
+Rusthaven's gates are crude scrap metal. Guards eye you. Inside, the air is thick with smoke and deals. A commotion erupts near a makeshift arena.
+[[Intervene on the exile's behalf->RusthavenFight-LyraRescued-MapFragment1]]
+[[Stay out of it->RusthavenAlley-MapFragment1]]
+:: RusthavenFight-LyraRescued-MapFragment1
+You disrupt the Legion's attempt to capture Lyra. She is a sharp-faced woman with eyes that see too much. "I owe you," she says, "They want my knowledge. I can help read that map you're trying so hard to hide."
+[[Accept her help->RusthavenAlley-MapFragment1-WithLyra]]
+[[Refuse her offer->RusthavenAlley-MapFragment1]]
+
+:: RusthavenAlley-MapFragment1
+In a quiet alley, you examine the fragment. Its encryption is complex. You need a specialist or a clue to the next piece.
+[[Inquire about the Technic Union at the tavern->TavernRumors-MapFragment1]]
+[[Seek out Legion contacts, risking a deal->LegionInformant-MapFragment1]]
+
+:: RusthavenAlley-MapFragment1-WithLyra
+Lyra studies the fragment in the dim light. "Haven-0... This is old-world geo-engineering. The second fragment is likely in a data vault beneath the Skybreaker ruins. But the Legion is digging there too."
+[[Plan an expedition to Skybreaker->SkybreakerApproach-MapFragment1-WithLyra]]
+[[Search for other leads first->TavernRumors-MapFragment1-WithLyra]]
+
+:: TavernRumors-MapFragment1
+The tavern is a roar of voices. A drunk miner slurs about "singing metal" in the deep mines, a sign of Union activity. It's a vague lead, but it's something.
+[[Investigate the mines->DeepMinesEntrance-MapFragment1]]
+
+:: TavernRumors-MapFragment1-WithLyra
+Lyra listens intently. "The mines are a dead end. The 'singing metal' is just unstable strata. The Skybreaker lead is the only solid one. The Legion will secure it within days."
+[[Trust Lyra's judgment->SkybreakerApproach-MapFragment1-WithLyra]]
+[[Investigate the mines anyway->DeepMinesEntrance-MapFragment1-WithLyra]]
+
+:: LegionInformant-MapFragment1
+A Legion informant agrees to talk for a price. He confirms the Skybreaker site and warns that Captain Bronn Hale himself is leading the operation. The information feels like a trap.
+[[Avoid Skybreaker, seek the Nomads->NomadCaravan-MapFragment1]]
+[[Go to Skybreaker, prepared for a fight->SkybreakerApproach-MapFragment1]]
+
+:: DeepMinesEntrance-MapFragment1
+The mine entrance is collapsed and unstable. venturing inside seems incredibly dangerous.
+[[Risk the tunnel collapse->MinesCollapse-MapFragment1]]
+[[Turn back->RusthavenAlley-MapFragment1]]
+
+:: DeepMinesEntrance-MapFragment1-WithLyra
+"The structure is compromised," Lyra states flatly. "Going in is suicide." She points to distant plumes of smoke on the horizon. "That is the Legion at Skybreaker. Our destination."
+[[Heed her warning->SkybreakerApproach-MapFragment1-WithLyra]]
+[[Enter the mine against her advice->MinesCollapse-MapFragment1-WithLyra]]
+
+:: MinesCollapse-MapFragment1
+You squeeze through a narrow gap. A deep rumble shakes the mountain, and the tunnel gives way. There is no escape.
+[[->Ending-Dead]]
+
+:: MinesCollapse-MapFragment1-WithLyra
+You ignore Lyra and enter the mine. She follows reluctantly. A deep rumble shakes the mountain. "I told you!" she shouts as the ceiling collapses, trapping you both.
+[[->Ending-Dead]]
+
+:: SkybreakerApproach-MapFragment1
+The Skybreaker ruins are a forest of broken skyscrapers. Legion airships hover over a central dig site. Getting close will require stealth or force.
+[[Attempt to sneak through the outer ruins->SkybreakerOutskirts-MapFragment1]]
+[[Create a diversion to draw troops away->SkybreakerDiversion-MapFragment1]]
+
+:: SkybreakerApproach-MapFragment1-WithLyra
+"The main entrance is a death sentence," Lyra whispers. "I know a service tunnel from the old transit system. It should lead us below the Legion's position."
+[[Take the service tunnel->SkybreakerSublevel1-MapFragment1-WithLyra]]
+[[Ignore her and approach from above->SkybreakerOutskirts-MapFragment1-WithLyra]]
+
+:: SkybreakerOutskirts-MapFragment1
+You navigate through shattered buildings, avoiding patrols. You see the entrance to the main facility, heavily guarded.
+[[Wait for a shift change->SkybreakerWait-MapFragment1]]
+[[Look for an alternative route->SkybreakerVent-MapFragment1]]
+
+:: SkybreakerOutskirts-MapFragment1-WithLyra
+You climb a precarious tower for a better view. Lyra points to a ventilation shaft on a lower level. "That's our way in. The tunnel I mentioned is closer to ground level."
+[[Descend to the service tunnel->SkybreakerSublevel1-MapFragment1-WithLyra]]
+[[Try the ventilation shaft->SkybreakerVent-MapFragment1-WithLyra]]
+
+:: SkybreakerDiversion-MapFragment1
+You start a fire in a ruined warehouse on the perimeter. Legion troops scramble to respond, thinning the guards at the main entrance.
+[[Rush the entrance->SkybreakerEntrance-MapFragment1]]
+
+:: SkybreakerWait-MapFragment1
+Patience pays off. A patrol moves out, leaving a brief window. You slip towards the facility entrance.
+[[Enter the facility->SkybreakerEntrance-MapFragment1]]
+
+:: SkybreakerVent-MapFragment1
+The ventilation shaft is a tight, dark crawl. It leads deep into the facility, emerging into a silent, dusty corridor.
+[[Explore the corridor->SkybreakerSublevel2-MapFragment1]]
+
+:: SkybreakerVent-MapFragment1-WithLyra
+The vent is cramped but passable. It deposits you in a dark maintenance hallway. Lyra checks a flickering wall terminal. "We're in the sublevel archives. The data vault should be nearby."
+[[Proceed to the archives->SkybreakerSublevel2-MapFragment1-WithLyra]]
+
+:: SkybreakerEntrance-MapFragment1
+The entrance hall is grand but ruined. A Legion squad is waiting in ambush. You walked right into it.
+[[Fight your way through->SkybreakerEntranceFight-MapFragment1]]
+[[Surrender->LegionCapture-MapFragment1]]
+
+:: SkybreakerEntranceFight-MapFragment1
+The fight is fierce, but you are outnumbered. Legion reinforcements arrive, cutting off your retreat.
+[[->Ending-Dead]]
+
+:: LegionCapture-MapFragment1
+You are disarmed and dragged before Captain Bronn Hale. He takes your map fragment. "Haven-0 will be a Legion asset. You are no longer required."
+[[->Ending-Dead]]
+
+:: SkybreakerSublevel1-MapFragment1-WithLyra
+The service tunnel is damp but clear. It ends at a heavy door. Lyra bypasses the old lock. Inside is a network of corridors, untouched by the Legion above.
+[[Search for the data vault->SkybreakerSublevel2-MapFragment1-WithLyra]]
+
+:: SkybreakerSublevel2-MapFragment1
+The corridor is lined with broken server racks. At the end is a sealed door marked "Geo-Data Vault." It is locked tight.
+[[Try to force the door->VaultDoorFail-MapFragment1]]
+[[Search for a keycard or terminal->SearchSublevel2-MapFragment1]]
+
+:: SkybreakerSublevel2-MapFragment1-WithLyra
+Lyra goes straight to a terminal beside the vault door. "The encryption is military grade, but brittle with age." After a tense minute, the door hisses open. Inside, a data crystal glows on a pedestal: the second fragment.
+[[Take the fragment->SkybreakerVault-MapFragment1-MapFragment2-WithLyra]]
+
+:: SearchSublevel2-MapFragment1
+You find a skeleton in an office, an old keycard clutched in its hand. It might work on the vault door.
+[[Use the keycard->SkybreakerVault-MapFragment1-MapFragment2]]
+
+:: VaultDoorFail-MapFragment1
+The door doesn't budge. The noise attracts a Legion patrol from a connecting hallway. You are cornered.
+[[->Ending-Dead]]
+
+:: SkybreakerVault-MapFragment1-MapFragment2
+The vault is cold. The second map fragment is here, a data crystal. As you take it, alarms blare. The Legion has breached the sublevel.
+[[Escape through a maintenance shaft->SkybreakerEscape-MapFragment1-MapFragment2]]
+
+:: SkybreakerVault-MapFragment1-MapFragment2-WithLyra
+Lyra grabs the crystal. "We have what we came for. Now we run." She leads you to a hidden elevator shaft that ascends to the surface far from the dig site.
+[[Escape to the surface->WastesEscape-MapFragment1-MapFragment2-WithLyra]]
+
+:: SkybreakerEscape-MapFragment1-MapFragment2
+You scramble up the shaft, emerging on the edge of the ruins. Legion patrols are swarming below. You have the second fragment, but no clear path forward.
+[[Head for the Nomad lands->NomadCaravan-MapFragment1-MapFragment2]]
+[[Travel to the forbidden zone, seeking the third fragment->ForbiddenZoneEdge-MapFragment1-MapFragment2]]
+
+:: WastesEscape-MapFragment1-MapFragment2-WithLyra
+You put distance between yourselves and Skybreaker. Lyra interfaces the two fragments. "The third is in a place called the GeoCore Vault, deep in the Glassplain. A dangerous journey. We need supplies and information."
+[[Go to the Dustborn for help->NomadCaravan-MapFragment1-MapFragment2-WithLyra]]
+[[Travel to the Glassplain alone->GlassplainJourney-MapFragment1-MapFragment2-WithLyra]]
+
+:: NomadCaravan-MapFragment1-MapFragment2
+The Nomads are wary but respectful of your success. Moth is excited. The elder confirms the GeoCore Vault's location but warns of the Ashen Choir who guard it, believing it sacred.
+[[Prepare for the journey to the Glassplain->GlassplainJourney-MapFragment1-MapFragment2]]
+[[Remain with the Nomads for a time->NomadCaravanRest-MapFragment1-MapFragment2]]
+:: NomadCaravan-MapFragment1-MapFragment2-WithLyra
+The Nomads are wary but respectful of your success. Lyra interfaces the fragments. "The third is in a place called the GeoCore Vault. A dangerous journey."
+[[Begin the trek to the Glassplain->GlassplainJourney-MapFragment1-MapFragment2-WithLyra]]
+[[Remain with the Nomads for a time->NomadCaravanRest-MapFragment1-MapFragment2-WithLyra]]
+:: GlassplainJourney-MapFragment1-MapFragment2
+The Glassplain is a sea of fused silicate, glittering under a sickly sun. Navigation is difficult. In the distance, you see the jagged spire that marks the vault.
+[[Approach the vault spire->GeoCoreVaultApproach-MapFragment1-MapFragment2]]
+
+:: GlassplainJourney-MapFragment1-MapFragment2-WithLyra
+Lyra's readings help avoid unstable areas. The vault spire grows larger. She detects energy signatures—the Choir is active and alert.
+[[Plan an infiltration->GeoCoreVaultInfiltration-MapFragment1-MapFragment2-WithLyra]]
+[[Attempt a direct approach->GeoCoreVaultConfrontation-MapFragment1-MapFragment2-WithLyra]]
+
+:: GlassplainJourney-MapFragment1-MapFragment2-WithLyra-WithMoth
+Lyra's readings help avoid unstable areas. The vault spire grows larger. She detects energy signatures—the Choir is active and alert. Moth navigates the terrain.
+[[Plan an infiltration->GeoCoreVaultInfiltration-MapFragment1-MapFragment2-WithLyra-WithMoth]]
+[[Attempt a direct approach->GeoCoreVaultConfrontation-MapFragment1-MapFragment2-WithLyra-WithMoth]]
+:: GeoCoreVaultApproach-MapFragment1-MapFragment2
+The entrance is a massive circular door. Choir acolytes chant nearby. There is no way past them without being seen.
+[[Try to talk your way in->VaultNegotiationFail-MapFragment1-MapFragment2]]
+[[Attack the guards->VaultFight-MapFragment1-MapFragment2]]
+
+:: VaultNegotiationFail-MapFragment1-MapFragment2
+The acolytes see you as a defiler. They attack without warning, their numbers overwhelming you.
+[[->Ending-Dead]]
+
+:: VaultFight-MapFragment1-MapFragment2
+You fight bravely, but the Choir fanatics are numerous and fight to the death. You fall under their blows.
+[[->Ending-Dead]]
+
+:: GeoCoreVaultInfiltration-MapFragment1-MapFragment2-WithLyra
+Lyra locates a utility conduit used for maintenance. It's a tight fit, but it bypasses the main entrance, leading into the vault's lower levels.
+[[Enter the conduit->GeoCoreVaultInterior-MapFragment1-MapFragment2-WithLyra]]
+
+:: GeoCoreVaultConfrontation-MapFragment1-MapFragment2-WithLyra
+You approach openly. The Choir High Priest emerges. "You seek to undo the divine ash? This is blasphemy!" He gives you a choice: leave or be sacrificed.
+[[Stand your ground->VaultFight-MapFragment1-MapFragment2-WithLyra]]
+[[Withdraw and try infiltration->GeoCoreVaultInfiltration-MapFragment1-MapFragment2-WithLyra]]
+
+:: GeoCoreVaultSecretEntrance-MapFragment1-MapFragment2-WithLyra-WithMoth
+Moth leads you to a crevice hidden by rock formations. It connects to an old air circulation system. You enter the vault unseen.
+[[Navigate the ventilation system->GeoCoreVaultInterior-MapFragment1-MapFragment2-WithLyra-WithMoth]]
+
+:: GeoCoreVaultDistraction-MapFragment1-MapFragment2-WithLyra-WithMoth
+Lyra overloads a power relay on the vault's exterior, causing a blackout and drawing the guards away. You and Moth slip inside during the confusion.
+[[Enter the darkened vault->GeoCoreVaultInterior-MapFragment1-MapFragment2-WithLyra-WithMoth]]
+
+:: GeoCoreVaultInterior-MapFragment1-MapFragment2-WithLyra
+The vault interior is a cathedral of machinery. The third fragment is on a central terminal. But Dr. Oren Vale, the old scientist, is here, held captive by the Choir. He pleads for help.
+[[Free Dr. Vale->GeoCoreVaultRescue-MapFragment1-MapFragment2-WithLyra-WithVale]]
+[[Take the fragment and leave him->GeoCoreVaultFragmentTaken-MapFragment1-MapFragment2-WithLyra]]
+
+:: GeoCoreVaultInterior-MapFragment1-MapFragment2-WithLyra-WithMoth
+You find the central chamber. The third fragment glows. Dr. Vale is chained nearby, mumbling about Haven-0's true purpose. The High Priest stands guard.
+[[Confront the High Priest->GeoCoreVaultFinalChoice-MapFragment1-MapFragment2-WithLyra-WithMoth-WithVale]]
+[[Have Moth create a diversion while you grab the fragment->GeoCoreVaultFragmentTaken-MapFragment1-MapFragment2-WithLyra-WithMoth]]
+
+:: GeoCoreVaultRescue-MapFragment1-MapFragment2-WithLyra-WithVale
+You free Dr. Vale. He is frail but lucid. "Haven-0 is not just a purifier," he whispers. "It is a Genesis Machine. It can rebuild the biosphere... or be perverted into a weapon." You take the fragment and escape.
+[[Escape the vault and plan for Haven-0->Haven0Approach-MapFragment1-MapFragment2-MapFragment3-WithLyra-WithVale]]
+
+:: GeoCoreVaultFragmentTaken-MapFragment1-MapFragment2-WithLyra
+You seize the third fragment. Alarms sound. You escape just as the Choir reinforcements arrive, but you leave Dr. Vale behind.
+[[Escape to the wastes->Haven0Approach-MapFragment1-MapFragment2-MapFragment3-WithLyra]]
+
+:: GeoCoreVaultFragmentTaken-MapFragment1-MapFragment2-WithLyra-WithMoth
+Moth's diversion works perfectly. You grab the fragment and escape, leaving the furious Choir behind. Dr. Vale's fate is unknown.
+[[Begin the final journey->Haven0Approach-MapFragment1-MapFragment2-MapFragment3-WithLyra-WithMoth]]
+
+:: GeoCoreVaultFinalChoice-MapFragment1-MapFragment2-WithLyra-WithMoth-WithVale
+The High Priest offers a deal: leave the fragment, and he will grant you a place in the new ashen world. Take it, and he will kill the doctor.
+[[Accept his deal, abandoning the quest->Ending-Ashen]]
+[[Reject his deal and fight->VaultFinalFight-MapFragment1-MapFragment2-WithLyra-WithMoth-WithVale]]
+
+:: VaultFinalFight-MapFragment1-MapFragment2-WithLyra-WithMoth-WithVale
+The fight is chaotic. Moth disarms the Priest while Lyra frees Vale. You secure the fragment. You all escape the vault, united against the final challenge.
+[[Travel to Haven-0->Haven0Approach-MapFragment1-MapFragment2-MapFragment3-WithLyra-WithMoth-WithVale]]
+
+:: Haven0Approach-MapFragment1-MapFragment2-MapFragment3-WithLyra
+The path to Haven-0 leads through a treacherous mountain pass. Lyra confirms the facility is ahead, sealed for centuries. The final choice looms.
+[[Enter Haven-0 alone->Haven0ControlRoom-MapFragment1-MapFragment2-MapFragment3-WithLyra]]
+[[Wait for Lyra to devise an entry strategy->Haven0Entrance-MapFragment1-MapFragment2-MapFragment3-WithLyra]]
+
+:: Haven0Approach-MapFragment1-MapFragment2-MapFragment3-WithLyra-WithMoth
+The arcology is a marvel of old-world engineering, built into the mountain. Moth is in awe. The entrance is a massive airlock. The combined map fragments reveal the access code.
+[[Enter Haven-0->Haven0Entrance-MapFragment1-MapFragment2-MapFragment3-WithLyra-WithMoth]]
+
+:: Haven0Approach-MapFragment1-MapFragment2-MapFragment3-WithLyra-WithVale
+Dr. Vale trembles with anticipation. "I never thought I'd return." He leads you to a hidden maintenance entrance, bypassing the main security.
+[[Enter the control level->Haven0ControlRoom-MapFragment1-MapFragment2-MapFragment3-WithLyra-WithVale]]
+
+:: Haven0Approach-MapFragment1-MapFragment2-MapFragment3-WithLyra-WithMoth-WithVale
+Your group stands before the great door. Vale inputs the code. The door slides open, revealing the heart of the facility. The power is still on. The future is now.
+[[Proceed to the core->Haven0ControlRoom-MapFragment1-MapFragment2-MapFragment3-WithLyra-WithMoth-WithVale]]
+
+:: Haven0Entrance-MapFragment1-MapFragment2-MapFragment3-WithLyra
+The airlock opens into a silent, pristine corridor. Lyra scans ahead. "The control room is at the center. No signs of life."
+[[Advance to the control room->Haven0ControlRoom-MapFragment1-MapFragment2-MapFragment3-WithLyra]]
+
+:: Haven0Entrance-MapFragment1-MapFragment2-MapFragment3-WithLyra-WithMoth
+The facility is immense. Moth looks at the clean walls and whispers, "It's like a dream." You follow the signs to the central control chamber.
+[[Enter the control room->Haven0ControlRoom-MapFragment1-MapFragment2-MapFragment3-WithLyra-WithMoth]]
+
+:: Haven0ControlRoom-MapFragment1-MapFragment2-MapFragment3-WithLyra
+The control room is a sphere of screens and interfaces. A central console displays a schematic of the world. A choice is presented: activate the Genesis Protocol.
+[[Activate the purifier->Ending-Restoration]]
+[[Seize control for yourself->Ending-Dominion]]
+
+:: Haven0ControlRoom-MapFragment1-MapFragment2-MapFragment3-WithLyra-WithMoth
+Lyra studies the console. "The system is functional. We can clear the skies." Moth adds, "The Nomads could finally have a home." The choice is yours.
+[[Activate the purifier for all->Ending-Restoration]]
+[[Use the facility to establish a new order->Ending-Dominion]]
+[[Destroy Haven-0 to prevent any faction from controlling it->Ending-Nomad]]
+
+:: Haven0ControlRoom-MapFragment1-MapFragment2-MapFragment3-WithLyra-WithVale
+Dr. Vale approaches the console with reverence. "This is my life's work. We can heal the world." Lyra warns, "The Legion or Union will try to take it. We must decide its fate."
+[[Let Vale activate the restoration sequence->Ending-Restoration]]
+[[Claim Haven-0 as a personal fortress->Ending-Dominion]]
+[[Give the access codes to the Technic Union->Ending-Technocratic]]
+
+:: Haven0ControlRoom-MapFragment1-MapFragment2-MapFragment3-WithLyra-WithMoth-WithVale
+The core hums with power. Vale explains the options: Restoration, Dominion, or surrender to a faction. Lyra and Moth look to you for the final decision.
+[[Choose restoration and hope->Ending-Restoration]]
+[[Choose dominion and power->Ending-Dominion]]
+[[Delegate control to the Technic Union->Ending-Technocratic]]
+[[Destroy the facility, preserving the balance of the wastes->Ending-Nomad]]
+
+:: Ending-Dead
+Your journey ends here, in the dust and ash. The map fragments are lost, and Haven-0 remains a legend. The wastes reclaim another soul.
+
+:: Ending-Ashen
+You accept the ash as the new truth. You join the Choir, rejecting the old world's ambition. The skies remain grey, and humanity adapts to its eternal twilight. This is peace, of a sort.
+
+:: Ending-Restoration
+The Genesis Protocol activates. Across the globe, great purifiers hum to life. The ash clouds begin to thin, and for the first time in generations, a clean blue sky is seen. The long winter is over. A new dawn begins.
+
+:: Ending-Dominion
+You seize control of Haven-0. Its technology becomes the foundation of a new empire. Your rule is absolute, a beacon of order in the chaos, but it is an order enforced by fear. The world is united under a single, iron will.
+
+:: Ending-Technocratic
+The Technic Union inherits Haven-0. Knowledge is preserved and carefully distributed. The recovery is slow, methodical, and controlled by an elite few. The future is bright, but it is not free.
+
+:: Ending-Nomad
+You overload the core, destroying Haven-0 in a controlled blast. No faction can ever wield its power. The world remains wild and free, for good and for ill. The nomads continue their wanderings, their spirit unbroken.
+:: StormPathAlone
+The storm is a punishing force. You wrap your scarf tight and push onward, blind and choking. After what feels like an hour, the wind subsides enough to reveal a landmark.
+[[Follow the tracks->RusthavenGates-MapFragment1]]
+:: ForbiddenZoneEdge-MapFragment1-MapFragment2
+The air crackles with residual energy. Strange, twisted flora covers the landscape. A sign, barely legible, warns of "Geo-Thermal Instability." The path to the GeoCore Vault lies through this blighted land.
+[[Venture into the zone->GlassplainJourney-MapFragment1-MapFragment2]]
+[[Seek a safer route->NomadCaravan-MapFragment1-MapFragment2]]
+
+:: NomadCaravan-MapFragment1
+You find the Dustborn caravan halted in a shallow valley. They welcome travelers, sharing water and stories. An elder examines your map fragment. "The Skybreaker ruins hold secrets, but the Steel Legion guards them fiercely. The Nomads can offer a different path."
+[[Ask about the Technic Union->NomadToUnionPath-MapFragment1]]
+[[Inquire about the Legion's fortress->RoadToFortress-MapFragment1]]
+[[Thank them and continue alone->WastesAlone-MapFragment1]]
+
+:: NomadToUnionPath-MapFragment1-WithMoth
+Moth guides you along forgotten trails. "The Union keeps to their bunkers," she says. "They trade for technology, but they are wary of outsiders." A Union scout patrol spots you, raising their weapons.
+[[Attempt to parley->UnionScoutParley-MapFragment1-WithMoth]]
+[[Retreat and change course->WastesAlone-MapFragment1]]
+
+:: RoadToFortress-MapFragment1-WithMoth
+The road to Fortress Hale is paved with intimidation. Legion checkpoints dot the route. Moth grows nervous. "They conscript the strong and discard the weak. This is a dangerous choice."
+[[Approach the main gate->FortressHaleGates-MapFragment1-WithMoth]]
+[[Turn back before you are seen->WastesAlone-MapFragment1]]
+
+:: VaultFight-MapFragment1-MapFragment2-WithLyra
+Lyra fights with shocking ferocity, using energy blasts from a concealed device. But the Choir acolytes are countless. They surround you, their chanting rising to a fever pitch. The fight is lost.
+[[->Ending-Dead]]
+:: FortressHaleGates-MapFragment1-WithMoth
+The fortress gates are towering slabs of welded scrap. Legion sentries stare down from the walls. One shouts, "Halt! State your business!" Moth shrinks back, whispering, "They don't take kindly to nomads."
+[[Claim to be a trader with information->FortressHaleInterrogation-MapFragment1-WithMoth]]
+[[Try to bluff your way in as a recruit->LegionRecruitment-MapFragment1-WithMoth]]
+
+:: NomadToUnionPath-MapFragment1
+The path winds towards a bunker complex hidden in a canyon. A camouflaged hatch slides open, and a Union sentry in a patched environmental suit emerges, his rifle raised. "This is restricted territory. Identify yourself."
+[[Show the map fragment to gain trust->UnionScoutParley-MapFragment1]]
+[[Withdraw slowly and leave->WastesAlone-MapFragment1]]
+
+:: RoadToFortress-MapFragment1
+The road is dominated by the sight of Legion land-trains, massive and intimidating. A patrol stops you. "Captain Hale seeks able bodies and useful intelligence. What do you offer?"
+[[Offer your services as a scout->FortressHaleGates-MapFragment1]]
+[[Claim to have information about Haven-0->LegionInformant-MapFragment1]]
+
+:: UnionScoutParley-MapFragment1-WithMoth
+The scout lowers his weapon slightly at the sight of the map fragment. "Old-world geo-data... The Union would be interested. But the exile Lyra is the true expert. Find her if you want it decrypted." He points towards Rusthaven.
+[[Head to Rusthaven to find Lyra->RusthavenGates-MapFragment1-WithMoth]]
+[[Ask for direct Union assistance->UnionBunkerEntry-MapFragment1-WithMoth]]
+:: FortressHaleGates-MapFragment1
+The fortress gates are towering slabs of welded scrap. Legion sentries stare down from the walls. One shouts, "Halt! State your business!" Your presence here is a gamble.
+[[Claim to be a trader with information->FortressHaleInterrogation-MapFragment1]]
+[[Try to bluff your way in as a recruit->LegionRecruitment-MapFragment1]]
+
+:: FortressHaleInterrogation-MapFragment1-WithMoth
+You are led to a grim interrogation room. Captain Bronn Hale enters, his gaze piercing. "A trader? With a Nomad child in tow? Your story is thin. What information do you have that is worth my time?"
+[[Mention the map fragment->LegionCapture-MapFragment1]]
+[[Claim you know the location of the Technic Union's main bunker->LegionRecruitment-MapFragment1-WithMoth]]
+
+:: LegionRecruitment-MapFragment1-WithMoth
+A Legion officer scoffs. "We have no use for a courier." He points at Moth. "She will be assigned to the scullery. You will serve on the front lines. Accept this, or be ejected into the wastes."
+[[Accept the terms and join the Legion->FortressHaleInduction-MapFragment1-WithMoth]]
+[[Refuse and leave->WastesAlone-MapFragment1]]
+
+:: RusthavenGates-MapFragment1-WithMoth
+Rusthaven's gates are crude scrap metal. Guards eye you and Moth with suspicion. Inside, the air is thick with smoke and deals. Moth points to a commotion near a makeshift arena: a Technic Union exile named Lyra is being cornered by Legion thugs.
+[[Intervene on the exile's behalf->RusthavenFight-LyraRescued-MapFragment1-WithMoth]]
+[[Stay out of it and find a tavern->TavernRumors-MapFragment1-WithMoth]]
+
+:: UnionBunkerEntry-MapFragment1-WithMoth
+The Union scout escorts you inside the bunker. It is a labyrinth of clean corridors and humming machinery. A senior tech approaches. "Lyra Kade is the only one who can decrypt that fragment fully. We exiled her for a reason. Our help is limited without her."
+[[Ask for a guide to Rusthaven->RusthavenGates-MapFragment1-WithMoth]]
+[[Accept the Union's limited aid and proceed to Skybreaker->SkybreakerApproach-MapFragment1-WithMoth]]
+
+:: UnionScoutParley-MapFragment1
+The scout lowers his weapon slightly at the sight of the map fragment. "The Union would be interested. But the exile Lyra is the true expert."
+[[Head to Rusthaven to find Lyra->RusthavenGates-MapFragment1]]
+[[Ask for direct Union assistance->UnionBunkerEntry-MapFragment1]]
+:: FortressHaleInduction-MapFragment1-WithMoth
+You swear allegiance to the Steel Legion. Moth is taken away to the kitchens. You are assigned to a patrol unit heading to the Skybreaker ruins. Your map fragment is confiscated, but you are now inside the Legion's machine.
+[[Join the Skybreaker patrol->SkybreakerEntrance-MapFragment1]]
+[[Look for an opportunity to desert and find Moth->FortressHaleDesert-MapFragment1-WithMoth]]
+
+:: FortressHaleInterrogation-MapFragment1
+You are led to a grim interrogation room. Captain Bronn Hale enters, his gaze piercing. "A trader? Your story is thin. What information do you possess that is worth my time?"
+[[Mention the map fragment->LegionCapture-MapFragment1]]
+[[Claim you know the location of the Technic Union's main bunker->LegionRecruitment-MapFragment1]]
+
+:: LegionRecruitment-MapFragment1
+A Legion officer evaluates you. "You look strong enough for the front lines. Serve the Legion, and you may earn a place in the new order. Refuse, and you are nothing."
+[[Accept the terms and join the Legion->FortressHaleInduction-MapFragment1]]
+[[Refuse and be cast out->WastesAlone-MapFragment1]]
+
+:: RusthavenFight-LyraRescued-MapFragment1-WithMoth
+You and Moth disrupt the Legion's attempt to capture Lyra. She is a sharp-faced woman with eyes that see too much. "I owe you both," she says, "They want my knowledge. I can help read that map you're trying so hard to hide."
+[[Accept her help->RusthavenAlley-MapFragment1-WithLyra-WithMoth]]
+[[Refuse her offer->RusthavenAlley-MapFragment1-WithMoth]]
+
+:: SkybreakerApproach-MapFragment1-WithMoth
+The Skybreaker ruins are a forest of broken skyscrapers. Legion airships hover over a central dig site. Moth points out a safer path through the rubble, avoiding the main patrol routes.
+[[Take Moth's suggested path->SkybreakerOutskirts-MapFragment1-WithMoth]]
+[[Approach the dig site directly to assess the Legion's strength->SkybreakerEntrance-MapFragment1]]
+
+:: TavernRumors-MapFragment1-WithMoth
+The tavern is a roar of voices. Moth listens carefully, separating truth from boast. She learns that the Legion is digging at Skybreaker for a "data core," and that a Technic Union exile named Lyra was recently seen in Rusthaven.
+[[Search for Lyra->RusthavenAlley-MapFragment1-WithMoth]]
+[[Head to the Skybreaker ruins->SkybreakerApproach-MapFragment1-WithMoth]]
+
+:: UnionBunkerEntry-MapFragment1
+The Union scout escorts you inside the bunker. A senior tech approaches. "Lyra Kade is the only one who can decrypt that fragment fully."
+[[Ask for a guide to Rusthaven->RusthavenGates-MapFragment1]]
+[[Accept the Union's limited aid->SkybreakerApproach-MapFragment1]]
+:: FortressHaleDesert-MapFragment1-WithMoth
+You wait for nightfall, slipping past dozing sentries. You find Moth in the kitchens, scared but unharmed. Together, you steal out through a garbage chute, escaping into the dark wastes. The Legion will hunt you now.
+[[Flee towards Rusthaven->RusthavenGates-MapFragment1-WithMoth]]
+[[Head for the Nomad lands->NomadCaravan-MapFragment1-WithMoth]]
+:: FortressHaleInduction-MapFragment1
+You are given a Legion uniform and a rusty rifle. Your first assignment is perimeter duty at the Skybreaker dig site. You are part of the machine now, but your goals are your own.
+[[Report for duty at Skybreaker->SkybreakerEntrance-MapFragment1]]
+
+:: RusthavenAlley-MapFragment1-WithMoth
+In a quiet alley, you examine the fragment. Its encryption is complex. Moth suggests finding a specialist or a clue.
+[[Inquire about the Technic Union at the tavern->TavernRumors-MapFragment1-WithMoth]]
+[[Seek out Legion contacts, risking a deal->LegionInformant-MapFragment1-WithMoth]]
+:: SkybreakerOutskirts-MapFragment1-WithMoth
+Moth leads you through a maze of collapsed buildings, expertly avoiding patrols. You reach a vantage point overlooking the main dig site. The entrance is heavily guarded, but Moth spots a weak point in the perimeter fence.
+[[Sneak through the fence->SkybreakerVent-MapFragment1-WithMoth]]
+[[Create a diversion to draw the guards away->SkybreakerDiversion-MapFragment1-WithMoth]]
+:: SkybreakerApproach-MapFragment1-WithLyra-WithMoth
+Lyra studies the Legion's deployment from a distance. "Their air support is a problem," she notes. Moth points to a collapsed transit tunnel. "That old route goes under the airship patrols. It's risky, but it's our best bet."
+[[Take the collapsed tunnel->SkybreakerSublevel1-MapFragment1-WithLyra-WithMoth]]
+[[Scale the ruins for a higher vantage point->SkybreakerOutskirts-MapFragment1-WithLyra-WithMoth]]
+
+:: SkybreakerDiversion-MapFragment1-WithMoth
+Moth suggests using her knowledge of the ruins. She sets up a chain of old-world signal flares, creating a convincing decoy of scout activity on the far ridge. Legion troops mobilize to investigate, leaving a gap in their lines.
+[[Exploit the gap to reach the entrance->SkybreakerEntrance-MapFragment1-WithMoth]]
+
+:: SkybreakerVent-MapFragment1-WithMoth
+The ventilation shaft is a tight squeeze. Moth, being small, scouts ahead and clears debris blocking the path. You emerge into a dusty maintenance corridor deep within the facility, unseen.
+[[Explore the corridor->SkybreakerSublevel2-MapFragment1-WithMoth]]
+
+:: TavernRumors-MapFragment1-WithLyra-WithMoth
+The tavern is loud, but Lyra's tech-scanner picks up a hushed conversation between two miners about a "singing vault" near the Skybreaker's core. Moth confirms it's an old legend about the data vault. Lyra nods. "That's our target. The Legion hasn't found it yet."
+[[Head for Skybreaker immediately->SkybreakerApproach-MapFragment1-WithLyra-WithMoth]]
+[[Stock up on supplies at the market first->RusthavenAlley-MapFragment1-WithLyra-WithMoth]]
+:: SkybreakerEntrance-MapFragment1-WithMoth
+You and Moth enter the grand hall. A Legion squad emerges from the shadows, but Moth quickly points to a collapsed ceiling gallery. "Up there! We can bypass them!" You scramble up the rubble, leaving the confused soldiers below.
+[[Climb through the gallery->SkybreakerSublevel2-MapFragment1-WithMoth]]
+
+:: SkybreakerOutskirts-MapFragment1-WithLyra-WithMoth
+From the high tower, the view is commanding. Lyra identifies a service elevator shaft on a nearby building's face. "It's a direct line down to the sublevels," she says. Moth finds a stable rope bridge leading to it.
+[[Cross to the elevator shaft->SkybreakerSublevel1-MapFragment1-WithLyra-WithMoth]]
+
+:: SkybreakerSublevel1-MapFragment1-WithLyra-WithMoth
+The service tunnel is clear. Lyra bypasses the old lock on a heavy door. Inside, the air is still and cold. Moth spots fresh footprints. "Legion scouts have been here recently," she whispers.
+[[Proceed cautiously->SkybreakerSublevel2-MapFragment1-WithLyra-WithMoth]]
+
+:: SkybreakerSublevel2-MapFragment1-WithMoth
+The corridor is lined with broken servers. Moth finds a terminal hidden behind a fallen rack. She fiddles with the wires, and a screen flickers to life, showing a map of the level. The data vault is close, but a patrol is marked nearby.
+[[Head towards the vault->SkybreakerVault-MapFragment1-MapFragment2-WithMoth]]
+:: SkybreakerSublevel2-MapFragment1-WithLyra-WithMoth
+The corridor is lined with broken server racks. Lyra and Moth work together at a terminal beside the vault door. "The encryption is military grade," Lyra mutters. Moth points to a bypass port. "Can we use that?" Lyra smiles. "Brilliant." The door hisses open. Inside, a data crystal glows on a pedestal.
+[[Take the fragment->SkybreakerVault-MapFragment1-MapFragment2-WithLyra-WithMoth]]
+
+:: SkybreakerVault-MapFragment1-MapFragment2-WithMoth
+The vault is cold. Moth grabs the data crystal. "We have it!" But the clang of Legion boots echoes down the hall. She points to a narrow air duct. "This way! I saw it on the map!" You scramble into the duct just as soldiers burst into the vault.
+[[Escape through the ductwork->WastesEscape-MapFragment1-MapFragment2-WithMoth]]
+:: SkybreakerVault-MapFragment1-MapFragment2-WithLyra-WithMoth
+Lyra secures the data crystal. "The second fragment is ours." The vault door begins to grind shut, triggered by a Legion breach alarm. Moth tugs your sleeve. "The air duct we saw on the map! It's our only way out!" Lyra nods, and you all squeeze into the narrow passage just as armored soldiers rush into the chamber.
+[[Escape through the ductwork->WastesEscape-MapFragment1-MapFragment2-WithLyra-WithMoth]]
+
+:: WastesEscape-MapFragment1-MapFragment2-WithMoth
+You and Moth emerge from the duct into a canyon on the ruins' edge. The Legion searchlights scan the area, but you are hidden in the shadows. Moth holds the data crystal tightly. "The Nomads will know where to go next. The GeoCore Vault is in the Glassplain."
+[[Seek the Nomad caravan->NomadCaravan-MapFragment1-MapFragment2-WithMoth]]
+[[Head directly for the Glassplain->GlassplainJourney-MapFragment1-MapFragment2-WithMoth]]
+:: GlassplainJourney-MapFragment1-MapFragment2-WithMoth
+The Glassplain is a vast, shimmering expanse. Moth navigates the treacherous terrain with an uncanny ease, pointing out hidden crevasses and unstable glass formations. She hums an old Nomad song as you travel. The jagged spire of the GeoCore Vault grows on the horizon.
+[[Approach the vault cautiously->GeoCoreVaultApproach-MapFragment1-MapFragment2-WithMoth]]
+[[Let Moth find a hidden path->GeoCoreVaultSecretEntrance-MapFragment1-MapFragment2-WithMoth]]
+
+:: NomadCaravan-MapFragment1-MapFragment2-WithMoth
+The Nomad caravan welcomes Moth back with cheers. She proudly shows the elders the second fragment. They speak of the third fragment's location with reverence and fear. "The Ashen Choir guards the GeoCore Vault. They see it as a temple. To them, your quest is sacrilege."
+[[Prepare for a confrontation with the Choir->GlassplainJourney-MapFragment1-MapFragment2-WithMoth]]
+[[Ask the Nomads for a stealthy approach->GeoCoreVaultInfiltration-MapFragment1-MapFragment2-WithMoth]]
+
+:: WastesEscape-MapFragment1-MapFragment2-WithLyra-WithMoth
+You, Lyra, and Moth catch your breath in a gully far from Skybreaker. Lyra interfaces the two fragments. Moth adds, "The Choir are zealots."
+[[Travel to the Nomads for supplies->NomadCaravan-MapFragment1-MapFragment2-WithLyra-WithMoth]]
+[[Head straight for the Glassplain->GlassplainJourney-MapFragment1-MapFragment2-WithLyra-WithMoth]]
+:: GeoCoreVaultApproach-MapFragment1-MapFragment2-WithMoth
+The vault's entrance is a massive circular door set into the spire's base. Choir acolytes chant in a circle, their faces painted with ash. Moth pulls you behind a glass ridge. "They won't listen to reason. They see anyone outside the Choir as a defiler."
+[[Try to find a way around the guards->GeoCoreVaultInfiltration-MapFragment1-MapFragment2-WithMoth]]
+[[Attack the guards head-on->VaultFight-MapFragment1-MapFragment2-WithMoth]]
+
+:: GeoCoreVaultInfiltration-MapFragment1-MapFragment2-WithMoth
+Moth points to a fissure in the glass plain, partially obscured by crystalline growths. "This is an old runoff channel. It might lead inside, beneath their feet." You slip into the narrow, dark opening.
+[[Follow the channel->GeoCoreVaultInterior-MapFragment1-MapFragment2-WithMoth]]
+
+:: GeoCoreVaultSecretEntrance-MapFragment1-MapFragment2-WithMoth
+Moth leads you to a near-invisible crack in the spire's foundation. "The Nomads used this for shelter during storms. The Choir doesn't know it exists." You squeeze through into a cool, dark passage.
+[[Navigate the secret tunnel->GeoCoreVaultInterior-MapFragment1-MapFragment2-WithMoth]]
+
+:: NomadCaravan-MapFragment1-MapFragment2-WithLyra-WithMoth
+Moth greets you warmly. With the Nomads' knowledge and Lyra's tech skills, a plan forms. The GeoCore Vault is in the Glassplain.
+[[Begin the trek to the Glassplain->GlassplainJourney-MapFragment1-MapFragment2-WithLyra-WithMoth]]
+:: GeoCoreVaultInterior-MapFragment1-MapFragment2-WithMoth
+The vault interior is a cavernous space filled with hummings machinery. In the center, on a raised dais, the third map fragment glows with a soft blue light. Dr. Oren Vale is chained to a console nearby, muttering to himself. Moth points to a group of chanting acolytes blocking the direct path to the fragment.
+[[Sneak around the periphery to reach the fragment->GeoCoreVaultFragmentTaken-MapFragment1-MapFragment2-WithMoth]]
+[[Create a diversion to draw the acolytes away->GeoCoreVaultDistraction-MapFragment1-MapFragment2-WithMoth]]
+
+:: VaultFight-MapFragment1-MapFragment2-WithMoth
+You charge at the Choir guards. Moth fights bravely with a small knife, but she is outmatched. The acolytes overwhelm you, their fervor making them fearless. The last thing you see is the High Priest raising a ceremonial blade.
+[[->Ending-Dead]]
+:: GeoCoreVaultDistraction-MapFragment1-MapFragment2-WithMoth
+You hurl a loose piece of machinery across the chamber. It clatters loudly, drawing the attention of the chanting acolytes. As they move to investigate the noise, you and Moth dash towards the central dais.
+[[Grab the fragment->GeoCoreVaultFragmentTaken-MapFragment1-MapFragment2-WithMoth]]
+
+:: GeoCoreVaultFragmentTaken-MapFragment1-MapFragment2-WithMoth
+You seize the third map fragment from its pedestal. The acolytes turn, their chants turning to cries of rage. Moth tugs your arm, pointing to the secret tunnel you entered from. "Run!" You escape into the dark passage as the Choir gives chase.
+[[Flee the vault->Haven0Approach-MapFragment1-MapFragment2-MapFragment3-WithMoth]]
+:: Haven0Approach-MapFragment1-MapFragment2-MapFragment3-WithMoth
+The path to Haven-0 is a winding ascent through the jagged mountains. Moth navigates the treacherous trail with quiet confidence. The arcology is a seamless part of the rock face ahead, its entrance a massive, dormant airlock. The third fragment pulses warmly in your hand, guiding you to the final door.
+[[Enter Haven-0->Haven0Entrance-MapFragment1-MapFragment2-MapFragment3-WithMoth]]
+:: Haven0Entrance-MapFragment1-MapFragment2-MapFragment3-WithMoth
+The massive airlock groans to life, ancient mechanisms stirring. Moth watches in awe as the great door slides open, revealing a pristine corridor untouched by the ash. "It's real," she whispers. The final door to the control room awaits at the end of the hall.
+[[Proceed to the control room->Haven0ControlRoom-MapFragment1-MapFragment2-MapFragment3-WithMoth]]
+:: WastesAlone-MapFragment1-MapFragment2
+The second fragment is a heavy secret in your pack. The wastes offer no clear guidance. You recall rumors of the Glassplain and the fanatical Ashen Choir who guard the third fragment there. The journey will be long and perilous.
+[[Head for the Glassplain->GlassplainJourney-MapFragment1-MapFragment2]]
+[[Seek out the Dustborn Nomads for guidance->NomadCaravan-MapFragment1-MapFragment2]]
+
+:: WastesAlone-MapFragment1-MapFragment2-MapFragment3
+You hold all three fragments. They align, pointing unmistakably to a mountain range on the horizon: the location of Haven-0. The final pilgrimage is yours alone to make.
+[[Travel to the mountains->Haven0Approach-MapFragment1-MapFragment2-MapFragment3]]
+
+:: Haven0Approach-MapFragment1-MapFragment2-MapFragment3
+The mountains are a stark barrier against the grey sky. The fragments guide you to a hidden pass, ending before a colossal, seamless door set into the mountain itself. This is Haven-0. The silence is absolute.
+[[Enter the facility->Haven0Entrance-MapFragment1-MapFragment2-MapFragment3]]
+
+:: Haven0Entrance-MapFragment1-MapFragment2-MapFragment3
+The door opens silently into a vast, clean atrium. The air is still and filtered. A central corridor leads deeper into the mountain, towards the heart of the arcology. You are the first to walk here in centuries.
+[[Follow the corridor to the control room->Haven0ControlRoom-MapFragment1-MapFragment2-MapFragment3]]
+
+:: Haven0ControlRoom-MapFragment1-MapFragment2-MapFragment3
+The control room is a sphere of dormant screens and silent machinery. A central console awaits input. The power of Genesis is here, inert. The choice of what to do with this power rests solely on your shoulders.
+[[Activate the restoration sequence->Ending-Restoration]]
+[[Seize control of the facility for yourself->Ending-Dominion]]
+[[Destroy Haven-0 to ensure no one can ever control it->Ending-Nomad]]
+
+:: Haven0ControlRoom-MapFragment1-MapFragment2-MapFragment3-WithMoth
+The control room hums to life as you enter. Moth looks around in wide-eyed wonder. The central console displays a schematic of the world. "We can change everything," she says softly. The responsibility is immense.
+[[Choose to heal the world->Ending-Restoration]]
+[[Choose to build a new empire->Ending-Dominion]]
+[[Choose to destroy the machine and preserve the nomadic way->Ending-Nomad]]
+
+:: NomadCaravanRest-MapFragment1-MapFragment2
+You share stories and supplies with the Dustborn. Their mobile life is peaceful, but the pull of Haven-0 is strong. After resting, you must make a choice.
+[[Continue the quest for the third fragment->GlassplainJourney-MapFragment1-MapFragment2]]
+[[Abandon the quest and live with the Nomads->Ending-Nomad]]
+
+:: RusthavenAlley-MapFragment1-WithLyra-WithMoth
+In the quiet alley, Lyra examines the fragment while Moth keeps watch. "The encryption is complex," Lyra says. "The second fragment is in a Skybreaker data vault. The Legion is already there. We need to move quickly."
+[[Plan the expedition to Skybreaker->SkybreakerApproach-MapFragment1-WithLyra-WithMoth]]
+[[Gather supplies first->TavernRumors-MapFragment1-WithLyra-WithMoth]]
+
+:: GeoCoreVaultConfrontation-MapFragment1-MapFragment2-WithLyra-WithMoth
+You walk openly towards the vault entrance. The Ashen Choir acolytes turn, their chant faltering. The High Priest steps forward, his face a mask of ash. "The defilers approach the sacred heart. Turn back, or be cleansed in the holy dust."
+[[Stand your ground and demand the fragment->VaultFight-MapFragment1-MapFragment2-WithLyra-WithMoth]]
+[[Fake a retreat to lure them away->GeoCoreVaultInfiltration-MapFragment1-MapFragment2-WithLyra-WithMoth]]
+
+:: GeoCoreVaultInfiltration-MapFragment1-MapFragment2-WithLyra-WithMoth
+Lyra locates a hidden maintenance hatch obscured by crystalline growths. "This conduit bypasses their main guard posts," she whispers. The hatch opens into a dark, dusty tunnel that slopes down into the vault's foundations.
+[[Enter the conduit->GeoCoreVaultInterior-MapFragment1-MapFragment2-WithLyra-WithMoth]]
+
+:: LegionInformant-MapFragment1-WithMoth
+A cloaked figure in a Rusthaven tavern slides into your booth. Moth tenses. The informant whispers, "Captain Hale's price for the Skybreaker location is your service. Or your map." He glares at Moth. "The child is a liability."
+[[Agree to a temporary alliance->FortressHaleGates-MapFragment1-WithMoth]]
+[[Refuse and leave quickly->RusthavenAlley-MapFragment1-WithMoth]]
+
+:: NomadCaravanRest-MapFragment1-MapFragment2-WithLyra
+The Nomads welcome you. Lyra uses the respite to study the fragments more closely, cross-referencing them with Nomad star-charts. "The GeoCore Vault's defenses are not just physical," she warns. "The Choir uses sonic harmonics. We need a counter-frequency."
+[[Begin the journey to the Glassplain->GlassplainJourney-MapFragment1-MapFragment2-WithLyra]]
+[[Ask the Nomad elders for more information about the Choir->NomadCaravan-MapFragment1-MapFragment2-WithLyra]]

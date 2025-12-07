@@ -3,6 +3,8 @@ import argparse
 import sys
 import json
 import re
+import os
+import csv
 from collections import defaultdict, deque
 
 import requests
@@ -14,7 +16,7 @@ import requests
 
 def build_common_instructions(min_passages: int) -> str:
     """
-    Bardzo skrócone zasady + dodatkowe twarde zakazy (Alone, [] w endingach).
+    Bardzo skrócone zasady + dodatkowe twarde zakazy (bezużyteczne stany, [] w endingach, brak ::).
     """
     return f"""
 You are an expert Twine/Twee interactive fiction author.
@@ -27,23 +29,50 @@ GLOBAL:
 - Passage names MUST NOT contain '_' anywhere.
 - Story must have at least {min_passages} passages.
 
+HEADERS (CRITICAL):
+- EVERY piece of story text and EVERY link MUST be inside a passage.
+- EVERY passage MUST start with a header line in this exact form:
+    :: PassageName
+- NEVER output a bare passage name like:
+    StoryStart
+  without the leading "::".
+- The FIRST non-empty line of output MUST be a passage/config header
+  starting with "::" (e.g. ":: StoryTitle", ":: StoryData", ":: StoryStart").
+- Do NOT output ANY free text or links before the first "::" header.
+
 PASSAGE NAMES (LOCATION + STATE TOKENS):
 - Form:  LocationName[-Token1-Token2-...]
 - LocationName:
   - First chunk (before first '-'), e.g. SkybreakerSublevel2, RelayStationCorridor, CityGateNight.
   - MUST NOT contain '-' or '_'.
   - Describes where/when this panel happens.
+
 - State tokens (after first '-'):
-  - Encode important facts only, e.g.:
-    - MetLyra, WithLyra, LostLyra
-    - HasKeycard, LostKeycard, LeftKeycardBehind
-    - JoinedFactionA, JoinedFactionB, BetrayedFactionA
+  - Encode ONLY meaningful facts about characters, items, factions, etc.
+  - Use short, clear flags, for example:
+    - MetCharacterA, WithCharacterA, LostCharacterA, LeftCharacterABehind
+    - HasItemKeycard, LostItemKeycard, LeftItemKeycardBehind
+    - JoinedFactionA, JoinedFactionB, BetrayedFactionA, NeutralFaction
+
 - ABSENCE OF A TOKEN = default:
-  - No WithLyra / MetLyra => player never met/is not with Lyra.
-  - No HasKeycard => player does not carry the keycard.
-- FORBIDDEN / USELESS TOKENS (NEVER USE):
-  - Alone, EmptyInventory, Default, Normal, Generic, None, Nothing, Standard
-  - Do NOT encode “alone” as a token. If player is alone, just omit WithX/MetX tokens.
+  - If there is NO token like WithCharacterX or MetCharacterX, then the player
+    has NOT met that character and is NOT accompanied by them.
+  - If there is NO token like HasItemSomething, then the player does NOT carry
+    that item.
+  - Do NOT create negation tokens for the default state.
+
+- FORBIDDEN / USELESS TOKENS (NEVER USE AS STATE TOKENS):
+  - Tokens that only mean "nothing" or "alone" without adding information, e.g.:
+    Alone, Solo, ByYourself, Single, NoCompanion, NoCompanions,
+    EmptyInventory, NoItems, Default, Normal, Generic, None, Nothing, Standard.
+  - Tokens that are generic negations of items or characters, e.g.:
+    NoItem, NoItemA, NoWeapon, NoKey, WithoutItem, WithoutKey,
+    WithoutCharacter, WithoutCompanion, WithoutAlly, WithoutX.
+  - Do NOT encode “being alone” or “not having something” using tokens like
+    Alone, NoItemX, WithoutCharacterX, or similar.
+  - If the player is alone, just omit WithCharacterX / MetCharacterX tokens.
+  - If the player lacks an item, just omit HasItemX and only add explicit
+    negative tokens in concrete, important situations (LostItemX, LeftItemXBehind).
 
 PASSAGE = COMIC PANEL:
 - One passage = one clear panel:
@@ -51,7 +80,7 @@ PASSAGE = COMIC PANEL:
   - one concrete moment,
   - one immediate situation.
 - Time flows BETWEEN passages, not inside one long paragraph.
-- Do NOT compress several major actions (travel, entering area, finding & taking key item)
+- Do NOT compress several major actions (travel, entering area, finding & taking a key item)
   into a single passage. Use 2–3+ passages for important steps.
 
 ITEMS / GOALS:
@@ -59,7 +88,7 @@ ITEMS / GOALS:
 - Reaching/obtaining a key item should involve:
   - noticing or being told,
   - approaching through danger/obstacles,
-  - dealing with guards/traps/locks/moral choice,
+  - dealing with guards/traps/locks/moral choices,
   - THEN obtaining or failing to obtain it.
 
 LINKS:
@@ -75,17 +104,20 @@ ENDINGS:
 - Ending passages MUST:
   - have NO outgoing links at all,
   - contain NO '[' or ']' characters in the body (plain text ending only).
-- Include ≥1 good/satisfying ending and ≥3 bad endings (death/failure/etc.).
+- Include at least one good/satisfying ending and at least three bad endings
+  (death/failure/etc.).
 
 CONSISTENCY & BRANCHING:
-- No contradictions: text in a passage must match the state encoded in its name and all routes leading there.
-- Do NOT mention characters/items that are not guaranteed by state tokens and previous links.
-- Symmetric states (same tokens) may converge to shared passages.
-- Asymmetry (different/no tokens converging into a passage whose name encodes a specific state)
-  is suspicious and should be avoided or fixed.
+- No contradictions: text in a passage must match the state encoded in its name
+  and all routes leading there.
+- Do NOT mention characters/items that are not guaranteed by state tokens and
+  previous links.
+- Symmetric states (similar tokens) may converge to shared passages.
+- Asymmetry (very different or missing tokens converging into a passage whose
+  name encodes a specific state) is suspicious and should be avoided or fixed.
 
 GRAPH RULES:
-- NO endless closed cycles: player must never be trapped in a loop with no exit.
+- NO endless closed cycles: the player must never be trapped in a loop with no exit.
 - Backtracking loops allowed only if there is an exit to progress from at least one node.
 - EVERY non-ending passage must be able to reach an Ending- eventually.
 - No non-ending dead-ends.
@@ -96,8 +128,8 @@ VERIFY BEFORE OUTPUT:
 - No broken links.
 - No non-ending dead-ends.
 - No bad cycles with no exit.
+- No bare passage names without '::' (e.g. 'StoryStart' must be ':: StoryStart').
 """
-
 
 def build_prompt(description: str, min_passages: int) -> str:
     return f"""
@@ -468,9 +500,34 @@ def compute_dead_ends(passages, graph):
 
 
 def _tokens_from_name(name: str):
+    """
+    Split passage name into state tokens (after the first '-'),
+    skipping meaningless/forbidden tokens like:
+    - anything containing 'Alone' or 'Solo'
+    - tokens starting with 'Without'
+    - tokens starting with 'No' followed by a capital letter (NoItem, NoKey, NoCompanion),
+      but NOT words like 'Nowhere' (no capital letter after 'No').
+    """
     parts = [part.strip() for part in name.split("-") if part.strip()]
-    state_parts = parts[1:] if len(parts) > 1 else []
-    return set(state_parts)
+    # skip first part (location / base name)
+    raw_state_parts = parts[1:] if len(parts) > 1 else []
+
+    filtered = set()
+    for token in raw_state_parts:
+        # skip tokens that encode "absence" in a generic way
+        if "Alone" in token:
+            continue
+        if "Solo" in token:
+            continue
+        if token.startswith("Without"):
+            continue
+        # No + CapitalLetter (e.g. NoItem, NoKey, NoCompanion), but not "Nowhere"
+        if token.startswith("No") and len(token) > 2 and token[2].isupper():
+            continue
+
+        filtered.add(token)
+
+    return filtered
 
 
 def detect_symmetries(passages, graph):
@@ -701,7 +758,7 @@ def request_asym_fix(model, description, current, asymmetries, min_passages, pri
 
 
 # ============================================================
-#  REPORTING
+#  REPORTING & LOGGING
 # ============================================================
 
 def print_report(passages,
@@ -763,6 +820,36 @@ def print_report(passages,
         print("\nNo naming-based asymmetries detected.", file=sys.stderr)
 
 
+def log_metrics(log_path,
+                round_label,
+                passages,
+                link_targets,
+                undefined,
+                endings,
+                cycles,
+                dead,
+                asymmetries):
+    """
+    Dopisuje jeden wiersz do CSV:
+    round, passages, links, undefined, endings, cycles, dead, asymmetries
+    """
+    try:
+        with open(log_path, "a", encoding="utf8", newline="") as f:
+            writer = csv.writer(f)
+            writer.writerow([
+                round_label,
+                len(passages),
+                len(link_targets),
+                len(undefined),
+                len(endings),
+                len(cycles),
+                len(dead),
+                len(asymmetries),
+            ])
+    except Exception as e:
+        print(f"ERROR writing log CSV '{log_path}': {e}", file=sys.stderr)
+
+
 # ============================================================
 #  MAIN
 # ============================================================
@@ -783,8 +870,38 @@ def main():
         action="store_true",
         help="Skip initial generation and load existing output file into current story."
     )
+    p.add_argument(
+        "--log",
+        dest="log_path",
+        default="log.csv",
+        help="CSV log file path (default: log.csv)"
+    )
 
     args = p.parse_args()
+
+    # Przygotowanie pliku logu
+    log_exists = os.path.exists(args.log_path)
+    if args.continue_mode:
+        # W trybie CONTINUE nie nadpisujemy istniejącego logu; jeśli go nie ma, tworzymy z nagłówkiem
+        if not log_exists:
+            try:
+                with open(args.log_path, "w", encoding="utf8", newline="") as f:
+                    writer = csv.writer(f)
+                    writer.writerow(["round", "passages", "links",
+                                     "undefined", "endings", "cycles",
+                                     "dead", "asymmetries"])
+            except Exception as e:
+                print(f"ERROR creating log CSV '{args.log_path}': {e}", file=sys.stderr)
+    else:
+        # Nowy run bez --continue: nadpisujemy log i piszemy nagłówek
+        try:
+            with open(args.log_path, "w", encoding="utf8", newline="") as f:
+                writer = csv.writer(f)
+                writer.writerow(["round", "passages", "links",
+                                 "undefined", "endings", "cycles",
+                                 "dead", "asymmetries"])
+        except Exception as e:
+            print(f"ERROR creating log CSV '{args.log_path}': {e}", file=sys.stderr)
 
     # Load description
     try:
@@ -812,33 +929,19 @@ def main():
         print("\n--- Generating initial story ---", file=sys.stderr)
         out_chunks = []
 
+        r = requests.post(
+            "http://localhost:11434/api/generate",
+            json={"model": args.model, "prompt": prompt, "stream": False},
+        )
         try:
-            with open(args.output, "w", encoding="utf8") as outf:
-                r = requests.post(
-                    "http://localhost:11434/api/generate",
-                    json={"model": args.model, "prompt": prompt, "stream": True},
-                    stream=True,
-                )
-                for line in r.iter_lines(decode_unicode=True):
-                    if not line:
-                        continue
-                    try:
-                        data = json.loads(line)
-                    except Exception:
-                        continue
-
-                    if "response" in data:
-                        chunk = data["response"]
-                        outf.write(chunk)
-                        out_chunks.append(chunk)
-
-                    if data.get("done"):
-                        break
+            data = r.json()
+            story = data.get("response", "")
         except Exception as e:
-            print(f"Generation failed: {e}", file=sys.stderr)
+            print(f"Initial generation failed: {e}", file=sys.stderr)
             sys.exit(1)
-
-        current = "".join(out_chunks)
+        with open(args.output, "w", encoding="utf8") as outf:
+            outf.write(story)
+        current = story
 
     # === FIX LOOP ====================================================
     for rnd in range(1, args.max_fix_rounds + 1):
@@ -862,6 +965,19 @@ def main():
             graph,
             args.min_passages,
             rnd,
+        )
+
+        # logowanie po analizie tej rundy
+        log_metrics(
+            args.log_path,
+            rnd,
+            passages,
+            links,
+            undefined,
+            endings,
+            cycles,
+            dead,
+            asymmetries,
         )
 
         # Exit if everything is OK
@@ -944,7 +1060,7 @@ def main():
             print(f"Error writing structural patch: {e}", file=sys.stderr)
             break
 
-    # Final report
+    # Final report + final log
     (passages,
      links,
      undefined,
@@ -965,6 +1081,18 @@ def main():
         graph,
         args.min_passages,
         "FINAL",
+    )
+
+    log_metrics(
+        args.log_path,
+        "FINAL",
+        passages,
+        links,
+        undefined,
+        endings,
+        cycles,
+        dead,
+        asymmetries,
     )
 
 
