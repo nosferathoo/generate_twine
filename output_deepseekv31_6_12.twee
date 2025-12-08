@@ -1,7 +1,3 @@
-:: StoryTitle
-[[->StoryStart]]
-:: StoryData
-[[->StoryStart]]
 :: StoryStart
 The air tastes of metal and cinder. You are the Wanderer, your past a scar on the wasteland, your future a path unwalked. An ash storm brews on the horizon. Ahead lies the husk of an old-world relay station, a potential shelter.
 [[Enter the station->RelayStationRuins]]
