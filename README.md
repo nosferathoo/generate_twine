@@ -71,7 +71,7 @@ ollama serve
 Example:
 
 ```bash
-ollama pull llama3.1
+ollama pull deepseek-v3.1:671b-cloud
 ```
 
 ---
@@ -96,25 +96,25 @@ ollama serve
 ### Basic story generation
 
 ```bash
-python3 generate_twine.py llama3.1 gamebook_description.txt -o output.twee
+python3 generate_twine.py deepseek-v3.1:671b-cloud gamebook_description.txt -o output.twee
 ```
 
 ### Continue mode (skip initial generation)
 
 ```bash
-python3 generate_twine.py llama3.1 gamebook_description.txt --continue
+python3 generate_twine.py deepseek-v3.1:671b-cloud gamebook_description.txt --continue
 ```
 
 ### Increase number of repair rounds
 
 ```bash
-python3 generate_twine.py llama3.1 gamebook_description.txt --max-fix-rounds 10
+python3 generate_twine.py deepseek-v3.1:671b-cloud gamebook_description.txt --max-fix-rounds 10
 ```
 
 ### Debug mode — print only the prompt
 
 ```bash
-python3 generate_twine.py llama3.1 gamebook_description.txt --print-prompt-only
+python3 generate_twine.py deepseek-v3.1:671b-cloud gamebook_description.txt --print-prompt-only
 ```
 
 ---
