@@ -83,6 +83,17 @@ PASSAGE = COMIC PANEL:
 - Do NOT compress several major actions (travel, entering area, finding & taking a key item)
   into a single passage. Use 2–3+ passages for important steps.
 
+PASSAGE CONTENT (CRITICAL):
+- EVERY passage MUST contain at least ONE line of descriptive narrative text
+  BEFORE any links.
+- A passage MUST NOT consist only of choices/links.
+- The descriptive text MUST clearly establish:
+  - where the player is,
+  - what is happening right now,
+  - what the player perceives (e.g. sights, sounds, tension, threats).
+- Do NOT use a single generic filler sentence (e.g. "You are here.") as the only text.
+  The description must meaningfully set up the situation before the choices.
+
 ITEMS / GOALS:
 - Important items/goals must NOT just lie around unguarded in the same passage where they appear.
 - Reaching/obtaining a key item should involve:
@@ -95,6 +106,7 @@ LINKS:
 - Allowed format ONLY: [[Text->PassageName]]
 - NO spaces around '->'.
 - Each link on its own line (one line = one choice).
+- Descriptive text MUST appear before the first link in every passage.
 - All link targets MUST exist as passages.
 - OUTSIDE OF LINKS, NEVER USE '[' or ']' in the story text.
   - No decorative [[THE END]], no brackets used as styling.
@@ -126,6 +138,8 @@ VERIFY BEFORE OUTPUT:
 - All links valid and formatted correctly.
 - No '[' or ']' in non-link text (and none at all in Ending- passages).
 - No broken links.
+- No passages whose body is empty or consists ONLY of links.
+- Descriptive text ALWAYS appears before links in every passage.
 - No non-ending dead-ends.
 - No bad cycles with no exit.
 - No bare passage names without '::' (e.g. 'StoryStart' must be ':: StoryStart').

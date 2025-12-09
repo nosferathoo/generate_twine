@@ -1,0 +1,1709 @@
+:: StoryTitle
+Ashfall: Roads of Ruin
+
+:: StoryData
+{"ifid":"ASHFALL-ROADS-OF-RUIN","format":"SugarCube","format-version":"2.36.1"}
+
+:: StoryStart
+The wind howls, flinging grit against your visor. You huddle in the lee of a rusted husk that was once a transport truck. The storm is an ashfall, thick and choking, reducing the world to a grey-orange haze. Your fingers trace the edge of the charred parchment tucked inside your coat—the first fragment of a map to a myth. You need to find shelter, and fast.
+[[Push forward into the storm->Outskirts-FirstShelter]]
+
+:: Outskirts-FirstShelter
+A low, reinforced structure emerges from the gloom, a pre-Cataclysm fallout shelter with a steel door slightly ajar. The groaning wind muffles all other sound. Something glints on the ground near the entrance—a discarded ration tin, recently opened.
+[[Enter the shelter->ShelterInterior-MetMoth]]
+[[Investigate the discarded tin->ShelterExterior-FoundTin]]
+
+:: ShelterExterior-FoundTin
+The tin is empty, but the lid is sharp. Scuffmarks in the ash lead away from the door, not inside. Someone was here moments ago and chose not to enter. They headed towards the jagged outlines of a ruined overpass.
+[[Follow the tracks->OverpassRuins-MetMoth]]
+[[Enter the shelter anyway->ShelterInterior-Alone]]
+
+:: ShelterInterior-MetMoth
+A young face peeks from behind a stack of crates, eyes wide. "Shhh! They're right outside," a voice whispers. It's a youth clad in patched fabrics, a courier's satchel slung across their chest. "The Legion's patrol. I barely slipped past." They introduce themselves as Moth.
+[[Ask about the Legion->ShelterInterior-MetMoth-LearnLegion]]
+[[Ask about the map fragment->ShelterInterior-MetMoth-LearnFragments]]
+
+:: ShelterInterior-MetMoth-LearnLegion
+Moth shudders. "Captain Bronn's men. They roll in on their land-trains, take what they want. They're looking for something... old tech, maps. They've been questioning everyone." The sound of heavy engines rumbles faintly through the walls.
+[[Ask about the map fragment->ShelterInterior-MetMoth-LearnFragments]]
+
+:: ShelterInterior-MetMoth-LearnFragments
+Your fingers brush your map fragment. Moth's eyes follow the movement. "You have one? The Haven-0 shard?" they breathe. "They say there are three others. The Nomads whisper about them. The Legion wants them all." The engine sounds grow louder.
+[[Suggest hiding until the patrol passes->ShelterInterior-WithMoth-Wait]]
+[[Suggest making a run for it now->ShelterEscape-WithMoth]]
+
+:: ShelterInterior-WithMoth-Wait
+You and Moth press into the shadows as the steel door grinds open. Two Legion soldiers in scarred armor enter, flashlight beams cutting the dust. "Clear," one grunts. "Just vermin den." They leave, and the door clangs shut. You are safe for now.
+[[Plan your next move with Moth->Crossroads-WithMoth]]
+
+:: ShelterEscape-WithMoth
+You burst from the shelter, Moth at your heels. The ash storm has eased slightly, revealing the hulking form of a Legion land-train idling nearby. Shouts ring out. "There! The courier and another!" A shot cracks past your head.
+[[Run towards the ruined overpass->OverpassRuins-WithMoth-Chased]]
+[[Try to lose them in a canyon of wrecked buildings->CanyonRuins-WithMoth-Chased]]
+
+:: OverpassRuins-MetMoth
+You find the courier, Moth, pressed against a concrete pylon, trying to light a small signal fire. They startle at your approach. "You... you're not Legion. I saw their patrol. I think they're looking for map fragments like yours." They seem anxious but hopeful.
+[[Offer to travel together->Crossroads-MetMoth]]
+[[Decide to go alone->Crossroads-Alone]]
+:: ShelterInterior-Alone
+The shelter is empty, cold, and silent. Dust motes dance in the slivers of light. You find a stale but edible protein bar in a broken locker. The rumble of engines fades into the distance. You are alone with your map and your thoughts.
+[[Continue your journey->Crossroads-Alone]]
+
+:: Crossroads-WithMoth
+The storm has passed, leaving a world bleached grey. Moth points to three distinct paths. "West leads to Dustborn trails. East, the Technic Union outpost. North... that's Legion territory, but also the quickest route to the buried city the maps mention." The choices loom.
+[[Head West toward the Nomads->NomadOutskirts-WithMoth]]
+[[Head East toward the Technic Union->UnionOutpost-WithMoth]]
+[[Risk the North route->LegionPatrol-WithMoth]]
+
+:: Crossroads-Alone
+The ash-laden air is still. Before you, the wasteland splits. A sign, half-buried, points west to "Dustborn Caravan Routes." To the east, a broken tower suggests a Technic Union relay. The northern road is scarred with tank treads. You must choose your path alone.
+[[Head West toward the Nomads->NomadOutskirts-Alone]]
+[[Head East toward the Technic Union->UnionOutpost-Alone]]
+[[Risk the North route->LegionPatrol-Alone]]
+
+:: NomadOutskirts-WithMoth
+Wind-driven sand-skiffs glide over the dunes, their sails patched with vibrant cloth. Moth is recognized by a scout, who signals the caravan to halt. An elder named Kael approaches. "Moth! And you bring a stranger. Do you seek passage, or trouble?"
+[[Ask for information on the map fragments->NomadCamp-WithMoth-LearnFragments]]
+[[Offer to trade for supplies->NomadCamp-WithMoth-Trade]]
+
+:: NomadOutskirts-Alone
+A lone sand-skiff approaches, its rider wary. You stand your ground, hands visible. The rider, an elder named Kael, circles you. "You travel alone through the ash. A brave or foolish thing. The Dustborn offer trade to those who mean no harm. What is your business?"
+[[Ask for information on the map fragments->NomadCamp-Alone-LearnFragments]]
+[[Ask for safe passage->NomadCamp-Alone-Passage]]
+
+:: UnionOutpost-WithMoth
+A geodesic dome hums with power, surrounded by a fence of energized pylons. A voice crackles from a speaker. "Identify yourselves and your business." Moth speaks up. "Courier Moth, with a traveler. We seek knowledge." The gate slides open.
+[[Enter the outpost->UnionLab-WithMoth-MetLyra]]
+
+:: UnionOutpost-Alone
+The Technic Union outpost is a stark contrast to the wastes. Clean lines and humming machinery. You are scanned at the gate before being admitted to a sparse reception area. A woman with intricate facial circuitry observes you coolly from a balcony.
+[[Address the woman->UnionLab-Alone-MetLyra]]
+
+:: LegionPatrol-WithMoth
+You haven't gone a mile before a armored buggy skids to a halt, blocking the road. Two Steel Legion soldiers level rifles. "Halt! By order of Captain Hale. You will be searched." They glance at Moth's courier satchel with particular interest.
+[[Submit to the search->LegionCheckpoint-WithMoth-Searched]]
+[[Try to bluff your way past->LegionCheckpoint-WithMoth-Bluff]]
+
+:: LegionPatrol-Alone
+The tread-marked road is eerily quiet. Suddenly, a spotlight hits you from a watchtower ahead. "You! Stop where you are!" a voice barks. A gate swings open, revealing a Legion checkpoint. Resistance seems futile.
+[[Comply with their orders->LegionCheckpoint-Alone-Searched]]
+[[Attempt to flee->LegionCheckpoint-Alone-Flee]]
+
+:: NomadCamp-WithMoth-LearnFragments
+Elder Kael studies your fragment by firelight. "This script... it matches tales of the Skybreaker, the buried city. The second fragment was said to be held by an exile—a technomancer called Lyra. She is hunted by the Union and the Legion both." He points northeast. "She hides near the canyons."
+[[Ask for a guide to the canyons->CanyonApproach-WithMoth-Guided]]
+[[Set out immediately alone->CanyonApproach-WithMoth]]
+
+:: UnionLab-WithMoth-MetLyra
+The woman on the balcony descends. "I am Lyra Kade. The Union exiled me for my... predictions." Her gaze falls on the map fragment in your hand. "You have a shard of the old world. I can help you read it, but not here. The Legion is coming. Meet me at the Relay Station." She slips you a datachip.
+[[Follow Lyra's suggestion->RelayStationExterior-WithMoth]]
+[[Stay and deal with the Union->UnionLab-WithMoth-Stay]]
+:: LegionCheckpoint-WithMoth-Searched
+The soldiers find your map fragment. "Captain Hale will want to see this," one says, grabbing it. They take Moth's satchel too. "You're both coming with us." You are disarmed and forced onto their transport, heading deeper into Legion territory.
+[[The journey to Legion HQ->LegionFortress-WithMoth-Captured]]
+
+:: CanyonApproach-WithMoth-Guided
+A Nomad guide leads you swiftly through hidden paths, avoiding ash sinks and Legion patrols. You arrive at the mouth of a deep canyon where the air crackles with static. "Lyra's place is in there," the guide says, nodding toward a cave entrance before turning back.
+[[Enter the cave->LyraHideout-WithMoth-MetLyra]]
+
+:: RelayStationExterior-WithMoth
+The relay station is a skeleton of old-world comms towers, swaying in the wind. Lyra is there, working on a terminal. "Good. You came. The Union thinks I'm a rogue. The Legion thinks I'm a prize. But I know where the second fragment is—in the Skybreaker's core. We'll need the third to get there."
+[[Agree to work with Lyra->RelayStation-WithMoth-LyraJoined]]
+[[Demand more information first->RelayStation-WithMoth-Question]]
+
+:: LyraHideout-WithMoth-MetLyra
+Lyra Kade is surrounded by flickering holoscreens showing weather patterns. She looks up, startled but not surprised. "Moth. And you have the first fragment. I have the second." She points to a screen displaying a complex schematic. "The Legion is digging at Skybreaker. We don't have much time."
+[[Propose an alliance->LyraHideout-WithMoth-LyraJoined]]
+[[Ask for the fragment outright->LyraHideout-WithMoth-Refused]]
+
+:: RelayStation-WithMoth-LyraJoined
+Lyra integrates your fragment with her data. "The third fragment is likely with Dr. Oren Vale, the scientist who designed Haven-0. He's in Skybreaker, if he's still alive. The Legion will be there in force. Our only chance is to get there first." She packs a gear bag, ready to follow.
+[[Travel to the Skybreaker foothills->SkybreakerFoothills-WithMoth-LyraJoined]]
+
+:: LyraHideout-WithMoth-LyraJoined
+Lyra hands you the second map fragment. It seamlessly joins with yours, revealing more of the path. "Together, we might just reach Skybreaker before Bronn Hale turns it into a fortress," she says. "The final approach is through a valley the Ashen Choir controls."
+[[Begin the trek to Skybreaker->SkybreakerFoothills-WithMoth-LyraJoined]]
+
+:: SkybreakerFoothills-WithMoth-LyraJoined
+The buried city is a series of geometric shapes protruding from the ash like broken teeth. Legion excavation equipment swarms around the main entrance. Lyra points to a ventilation shaft on a cliff face. "That's our way in. Unconsecrated ground. The Choir won't guard it."
+[[Ascend to the ventilation shaft->SkybreakerVent-WithMoth-LyraJoined]]
+
+:: SkybreakerVent-WithMoth-LyraJoined
+You squeeze into the dark, metal shaft, descending into the heart of the city. The air grows cold and stale. Below, you hear voices—not Legion, but chanting. You drop into a forgotten atrium where figures in grey robes circle a glowing console. The Ashen Choir.
+[[Attempt to sneak past->SkybreakerAtrium-WithMoth-LyraJoined-Sneak]]
+[[Confront the cultists->SkybreakerAtrium-WithMoth-LyraJoined-Fight]]
+
+:: SkybreakerAtrium-WithMoth-LyraJoined-Sneak
+You slip past the chanting cultists, finding a stairwell leading deeper down. Lyra whispers, "This leads to the old labs. Vale should be there." You emerge into a corridor lined with sealed doors. One door is slightly ajar, light spilling out. A faint sobbing comes from within.
+[[Enter the room->ValesLab-WithMoth-LyraJoined-MetVale]]
+
+:: SkybreakerAtrium-WithMoth-LyraJoined-Fight
+The cultists turn, their eyes glowing with fanaticism. "Defilers!" they shriek. A brutal melee ensues. You and your companions fight your way through, but the noise alerts Legion patrols deeper in the facility. You reach a lab door as alarms begin to blare.
+[[Break into the lab->ValesLab-WithMoth-LyraJoined-MetVale-Alerted]]
+
+:: ValesLab-WithMoth-LyraJoined-MetVale
+An old man in a stained lab coat huddles over a terminal, muttering to himself. He jumps at your entrance. "Oren Vale?" Lyra asks. He nods, terrified. "They're coming for my work. For Haven-0. It's real, but it's a choice... a terrible choice." He holds up the third fragment.
+[[Convince Vale to join you->ValesLab-WithMoth-LyraJoined-ValeJoined]]
+[[Take the fragment and leave him->ValesLab-WithMoth-LyraJoined-FragmentTaken]]
+
+:: ValesLab-WithMoth-LyraJoined-MetVale-Alerted
+Dr. Vale shrieks at the sound of alarms. "Too late! Hale is here!" The door bursts open, revealing Captain Bronn himself, flanked by soldiers. "The map, and the scientist. Now," he demands, weapon raised. You are surrounded.
+[[Surrender the fragments->LegionVictory-Betrayed]]
+[[Make a stand->LabConfrontation-FightHale]]
+
+:: LabConfrontation-FightHale
+The fight is chaotic. Vale is hit in the crossfire. Lyra manages to override a door lock, revealing an emergency exit tunnel. "This way!" she yells. You grab the third fragment from Vale's desk as Moth provides covering fire. You escape into the tunnels, but Hale's forces are in pursuit.
+[[Escape into the deep tunnels->GeoCoreTunnels-WithMoth-LyraJoined-Fragment3-Pursued]]
+:: GeoCoreTunnels-WithMoth-LyraJoined-Fragment3
+The tunnels are hot, filled with the thrum of geothermal energy. This is the path to Haven-0. Lyra combines the three fragments on her wrist-comp. The full map appears, leading to a massive vault door ahead. "The final barrier," she says. "The purifier is inside."
+[[Approach the vault door->Haven0Entrance-WithMoth-LyraJoined]]
+
+:: Haven0Entrance-WithMoth-LyraJoined
+The vault door is immense, covered in warning placards. As you approach, figures emerge from the shadows—Bronn Hale and his elites, having found another route. "It ends here," Hale snarls. "Give me the facility." From another passage, Ashen Choir fanatics appear, chanting for destruction.
+[[Stand with Lyra and Moth to activate the purifier->Ending-Restoration]]
+[[Side with Hale to seize control->Ending-Dominion]]
+[[Give the facility to the Technic Union->Ending-Technocratic]]
+[[Destroy the control console to prevent anyone from having it->Ending-Nomad]]
+[[Join the Choir in their reverence for the ash->Ending-Ashen]]
+
+:: Ending-Restoration
+You fight a desperate rearguard action while Lyra works at the console. With a final, thunderous hum, the atmospheric purifier activates. A great wind begins to cycle through the arcology. High above, through a viewport, you see the thick ash clouds begin to thin, allowing a sliver of true sunlight to touch the earth for the first time in decades. The long winter is over.
+
+:: Ending-Dominion
+You lower your weapon and nod to Hale. His soldiers swiftly overwhelm the remaining cultists. The Legion seizes control of Haven-0. Bronn Hale places a hand on your shoulder. "You made the right choice. Order will be restored. Our order." The purifier is activated not to cleanse, but to control, dispensing clean air only to those who swear fealty.
+
+:: Ending-Technocratic
+You throw the access codes to Lyra. "The Union should have it," you shout. She inputs the sequence, and blast shields seal the Legion and the Choir out. Technic Union personnel pour in from hidden portals. The world will be saved, but only through the strict, unfeeling application of their science. Humanity is saved, but perhaps not its soul.
+
+:: Ending-Nomad
+You remember the words of the Dustborn, that some power is too great for any one hand. As Hale and the Choir clash, you smash the main console with the butt of your rifle. Sparks fly. Alarms wail. The systems go dark. Haven-0 is dead. The world remains poisoned, but free.
+
+:: Ending-Ashen
+The chanting of the Choir fills your ears, making sense for the first time. The ash is not a curse, but a testament to nature's power. You turn your weapon on Lyra's console, destroying it. The fanatics embrace you as one of their own. You walk out into the eternal fall, embracing the silence of the ruined world.
+:: CanyonApproach-WithMoth
+The canyon walls rise steeply around you, carved by ancient floods. The air is still and heavy with the smell of ozone. Moth points to faint scorch marks on the rock. "Lyra's tech leaves traces," they whisper. A narrow path leads upward toward a cave mouth, partially concealed by a rockfall.
+[[Climb to the cave entrance->LyraHideout-WithMoth-MetLyra]]
+[[Search the canyon floor for other clues->CanyonApproach-WithMoth-Search]]
+
+:: CanyonApproach-WithMoth-Search
+You scour the base of the cliff, finding discarded power cells and a shattered dataslate. Moth examines the fragments. "This is Union tech, but modified. She's close." A low hum emanates from behind a curtain of vines, revealing a hidden hatch instead of the cave above.
+[[Enter through the hidden hatch->LyraHideout-WithMoth-MetLyra]]
+
+:: CanyonRuins-WithMoth-Chased
+Legion shouts echo through the narrow passages between collapsed buildings. You and Moth dart through skeletal frameworks, ash stirring with every step. A dead end looms—a wall of twisted rebar and concrete slabs. The only way is up, via a precarious-looking fire escape.
+[[Ascend the fire escape->Rooftops-WithMoth-Chased]]
+[[Try to hide in the rubble->CanyonHiding-WithMoth-Chased]]
+
+:: CanyonHiding-WithMoth-Chased
+You squeeze into a gap under a fallen girder, pulling Moth in after you. Legion boots crunch past, so close you can smell their lubricants. "Lost them," a soldier grunts. After a tense minute, the sounds fade. You emerge into an eerie silence, the patrol gone.
+[[Continue toward the canyon->CanyonApproach-WithMoth]]
+
+:: LegionCheckpoint-Alone-Flee
+You spin and sprint back down the road. A shot rings out, kicking up ash near your feet. More shouts join the first. A Legion skimmer emerges from a side alley, its engine whining as it gives chase. The open wastes offer little cover ahead.
+[[Dive into a drainage culvert->CulvertEscape-Alone]]
+[[Try to outrun the skimmer on the open road->RoadEscape-Alone]]
+
+:: CulvertEscape-Alone
+The culvert is dark and choked with debris, but it swallows you whole. The skimmer screeches to a halt above, unable to follow. You crawl through the muck, emerging far from the checkpoint into a scrub-filled ravine. You are safe, but off-course.
+[[Reorient yourself and continue->Crossroads-Alone]]
+
+:: LegionCheckpoint-Alone-Searched
+The soldiers pat you down with brutal efficiency. They find the map fragment. "Captain Hale's prize," one mutters, seizing it. You are shackled and thrown into the back of an armored transport. The vehicle lurches forward, taking you to the heart of Legion power.
+[[The journey to the fortress->LegionFortress-Alone-Captured-NoMoth]]
+:: LegionCheckpoint-WithMoth-Bluff
+You step forward, projecting confidence. "Captain Hale is expecting us. We have information on Union movements." The soldiers hesitate, exchanging uncertain glances. One lowers his rifle slightly. "Is that so? The Captain didn't notify us of any informants."
+[[Press the advantage->LegionCheckpoint-WithMoth-BluffSuccess]]
+[[The bluff fails->LegionCheckpoint-WithMoth-Searched]]
+
+:: LegionCheckpoint-WithMoth-BluffSuccess
+"Check your comms," you insist. The soldier turns to his vehicle. In that moment of distraction, Moth gestures to a gap in the fence. You both slip through and melt into the ruins behind the checkpoint before they realize the deception.
+[[Escape into the northern ruins->NorthernRuins-WithMoth]]
+
+:: LegionFortress-WithMoth-Captured
+The fortress is a converted pre-Cataclysm dam, bristling with guns. You and Moth are marched into a stark interrogation room. Captain Bronn Hale enters, a mountain of a man in polished armor. He places your map fragment on the table. "Now," he says. "Tell me where the others are."
+[[Remain silent->LegionFortress-WithMoth-Interrogation]]
+[[Try to bargain->LegionFortress-WithMoth-Bargain]]
+
+:: LegionVictory-Betrayed
+You serve the Legion in the new order, a ghost of your former self. You watch as the skies darken further under Hale's control. The purifier is a tool of oppression. Your name is forgotten, your hope extinguished. The ash falls eternal.
+[[The world under the Legion->Ending-Dominion]]
+:: LyraHideout-WithMoth-Refused
+"You think you can just take it?" Lyra snaps, stepping between you and the fragment. "I didn't survive out here by being naive." Her hand goes to a device on her belt. The holoscreens flicker and die. "Get out. Before I make you."
+[[Leave the hideout->CanyonApproach-WithMoth-Refused]]
+[[Apologize and try again->LyraHideout-WithMoth-MetLyra]]
+
+:: CanyonApproach-WithMoth-Refused
+You retreat down the path, Lyra's glare burning into your back. The opportunity is lost. Moth looks at you, disappointed. "What now? We need that fragment." The path to Skybreaker seems much longer without Lyra's knowledge.
+[[Return to the Nomads for another plan->NomadCamp-WithMoth-LearnFragments]]
+[[Press on to Skybreaker without the second fragment->SkybreakerFoothills-WithMoth]]
+
+:: NomadCamp-Alone-LearnFragments
+Elder Kael listens intently as you describe your quest. He draws symbols in the sand. "The second fragment is sought by many. The Ashwitch, Lyra, may have it. She is not friendly, but she is just. Find her near the iron canyons. Do not go as a thief."
+[[Ask for directions to the canyons->CanyonApproach-Alone]]
+[[Thank him and leave->NomadCamp-Alone-Passage]]
+
+:: NomadCamp-Alone-Passage
+Kael gives a sharp whistle. A skiff is brought forward. "This will take you to the canyon's edge. No further. The winds are treacherous." You board the lightweight craft, and the Nomad pilot expertly navigates the dunes, leaving you at the mouth of the great chasm.
+[[Enter the canyon->CanyonApproach-Alone]]
+
+:: NomadCamp-WithMoth-Trade
+Moth negotiates skillfully, trading salvaged components from their satchel for fresh water, filters, and information. "The Legion is digging at the buried city," a trader mentions casually. "They say an old man was seen there, a scientist." The fragment's destination becomes clearer.
+[[Ask about the scientist->NomadCamp-WithMoth-LearnFragments]]
+[[Prepare to depart for the buried city->SkybreakerFoothills-WithMoth]]
+
+:: OverpassRuins-WithMoth-Chased
+You scramble over broken concrete, Legion bullets pinging off the steel supports. Moth leads you to a collapsed section that forms a narrow bridge over a gully. "It's unstable, but it's our only chance!" they yell, already starting across.
+[[Cross the unstable bridge->GullyEscape-WithMoth]]
+[[Find another way down->OverpassDescent-WithMoth]]
+
+:: GullyEscape-WithMoth
+The bridge groans ominously but holds your weight. You reach the other side as the Legion soldiers stop at the edge, unwilling to follow. You slide down the gully's slope into a deep ravine, finally out of sight and out of range.
+[[Catch your breath in the ravine->Ravine-WithMoth]]
+
+:: RelayStation-WithMoth-Question
+"I need to know what you're getting out of this," you demand. Lyra sighs. "The Union exiled me for predicting the Cataclysm. They called it heresy. I want to see the sky clear to prove I was right. And I want the Union to see it." Her motive seems genuine, if proud.
+[[Accept her explanation->RelayStation-WithMoth-LyraJoined]]
+[[Remain suspicious->RelayStation-WithMoth-Doubt]]
+
+:: RelayStation-WithMoth-Doubt
+"Words are cheap," you say. Lyra's face hardens. "Then go your own way. Try to find Skybreaker alone." She turns back to her terminal, shutting you out. The chance for an alliance evaporates in the static-filled air.
+[[Leave the relay station->RelayStationExterior-WithMoth-Alone]]
+
+:: UnionLab-Alone-MetLyra
+The woman descends the stairs, her movements precise. "I am Lyra Kade. The Union monitors all travelers. You carry something of interest." Her eyes dart to a sensor display showing the energy signature of your map fragment. "That relic is dangerous. The Legion will kill for it."
+[[Ask for her help->UnionLab-Alone-MetLyra-Help]]
+[[Deny having anything of value->UnionLab-Alone-MetLyra-Deny]]
+
+:: UnionLab-Alone-MetLyra-Help
+Lyra leans closer, her voice dropping. "I can help you, but not here. The Prefect suspects me. Meet me at the abandoned Relay Station to the north. Come alone." She slips a small tracker into your hand. "It will guide you." She turns and walks away.
+[[Follow Lyra's instructions->RelayStationExterior-Alone]]
+:: UnionLab-WithMoth-Stay
+"We should deal with the Union directly," you tell Moth. You approach a uniformed technician. "We wish to speak to your leader about the map fragments." The technician eyes you coldly. "The Prefect will see you now. But your weapons stay here." You are led to a secure chamber.
+[[Enter the Prefect's chamber->UnionPrefect-WithMoth]]
+
+:: UnionPrefect-WithMoth
+The Prefect is a severe woman surrounded by data streams. "The Haven-0 fragments are Union property. You will surrender them for study." Armed guards step from the walls. "Resistance is pointless. The technology must be controlled for the good of all." There is no negotiation.
+[[Surrender the fragments->UnionCustody-WithMoth]]
+[[Attempt to fight your way out->UnionLabEscape-WithMoth]]
+
+:: ValesLab-WithMoth-LyraJoined-FragmentTaken
+You snatch the fragment from Vale's trembling hand. "Please, don't leave me with them!" he pleads. You ignore him, turning for the door. Lyra looks at you with disapproval but says nothing. As you leave, Vale's sobs fade behind you, alone with the approaching Legion.
+[[Escape the lab->SkybreakerCorridor-WithMoth-LyraJoined-Fragment3]]
+
+:: ValesLab-WithMoth-LyraJoined-ValeJoined
+"We all go, or no one goes," you tell Vale. He nods shakily, gathering a few data drives. Lyra helps him to his feet. "The service tunnels," she says, leading the way. The four of you—Wanderer, Moth, Lyra, and Vale—disappear into the depths just as Legion boots echo in the hall.
+[[Escape into the tunnels->GeoCoreTunnels-WithMoth-LyraJoined-ValeJoined-Fragment3]]
+:: CanyonApproach-Alone
+The canyon looms before you, a deep gash in the earth. The silence is profound, broken only by the skittering of ash-rats. Following Elder Kael's directions, you spot a narrow path winding up the cliff face, leading to a dark cave mouth. The air smells of ozone and decay.
+[[Climb the path to the cave->LyraHideout-Alone-MetLyra]]
+[[Search the canyon floor for another entrance->CanyonApproach-Alone-Search]]
+:: GeoCoreTunnels-WithMoth-LyraJoined-ValeJoined-Fragment3
+The geothermal tunnels are humid and loud, the air thick with the smell of sulfur. Dr. Vale clings to Lyra, unnerved by the primal energy. Moth scouts ahead, returning to report. "The vault door is just around the next bend. No signs of Legion or Choir yet." The final approach is clear.
+[[Approach the Haven-0 vault->Haven0Entrance-WithMoth-LyraJoined-ValeJoined]]
+
+:: LegionFortress-Alone-Captured
+The fortress gates close behind you. Lyra is taken to a high-security cell. You are given a sterile room and a Legion uniform. Captain Hale grants you a title: "Liaison to Technical Assets." It is a hollow victory.
+[[Serve the Legion->Ending-Dominion]]
+:: LegionFortress-WithMoth-Bargain
+"We can take you to the second fragment," you tell Hale. "The technomancer, Lyra, has it. But we need to be free to act as bait." Hale studies you, his expression unreadable. "A risky gambit," he says. "If you betray me, your death will be slow. But I am willing to gamble."
+[[Accept the terms->LegionFortress-WithMoth-Released]]
+[[Retract the offer->LegionFortress-WithMoth-Interrogation]]
+
+:: LegionFortress-WithMoth-Interrogation
+The interrogation is brutal, but you and Moth hold firm. During a transfer between cells, a distant explosion rocks the fortress—a Nomad sabotage raid. In the chaos, you break free from your guards and dive into a ventilation shaft, pulling Moth after you.
+[[Escape in the chaos->LegionFortressEscape-WithMoth]]
+:: NorthernRuins-WithMoth
+You hide in the skeleton of a shattered library, shelves of rotting books tilting precariously. Moth checks the perimeter. "The Legion patrols are thinning out here. We can circle back toward the canyons or try for the Relay Station Lyra mentioned." The path is yours to choose.
+[[Head for the canyons->CanyonApproach-WithMoth]]
+[[Head for the Relay Station->RelayStationExterior-WithMoth]]
+
+:: OverpassDescent-WithMoth
+You find a precarious route down a twisted support beam, sliding into a gully filled with soft ash. The Legion fire goes high, missing you completely. You are safe for the moment, hidden in the deep shadow of the overpass. Moth signs, "Clear. Which way now?"
+[[Continue toward the canyon->CanyonApproach-WithMoth]]
+[[Head north toward the Relay Station->NorthernRuins-WithMoth]]
+
+:: Ravine-WithMoth
+You crouch in the deep ravine, listening as the Legion patrol moves away above. A small stream of brackish water trickles along the bottom. Moth catches their breath. "That was too close. We need to get off the main roads." The canyon lies to the east, the Relay Station to the north.
+[[Go east toward the canyon->CanyonApproach-WithMoth]]
+[[Go north toward the Relay Station->NorthernRuins-WithMoth]]
+
+:: RelayStationExterior-Alone
+The relay station stands silent on the windy ridge. Lyra is gone. A note is pinned to the door with a shard of metal: 'Opportunity offered is opportunity lost. The path is yours to walk.' Your chance for an alliance with the technomancer has vanished.
+[[Return to the crossroads->Crossroads-Alone]]
+:: RelayStationExterior-WithMoth-Alone
+The relay station stands silent on the windy ridge. Lyra is gone. A note is pinned to the door with a shard of metal: 'Opportunity offered is opportunity lost. The path is yours to walk.' Your chance for an alliance with the technomancer has vanished.
+[[Return to the crossroads->Crossroads-WithMoth]]
+:: RoadEscape-Alone
+You pump your legs, sprinting down the scarred road. The skimmer quickly closes the distance, its engine whining. A shot grazes your shoulder, spinning you around. You fall, ash filling your mouth, as the skimmer skids to a halt beside you. The world fades to black.
+[[You are captured->LegionFortress-Alone-Captured-NoMoth]]
+:: Rooftops-WithMoth-Chased
+You emerge onto a flat roof littered with communication debris. The Legion soldiers are climbing the fire escape behind you. A wide gap separates this roof from the next. Moth points to a sagging gutter pipe. "We can swing across!"
+[[Swing across the gap->RooftopEscape-WithMoth]]
+[[Make a stand on the roof->RooftopFight-WithMoth]]
+
+:: SkybreakerCorridor-WithMoth-LyraJoined-Fragment3
+The corridor outside Vale's lab is empty, but alarms begin to blare further down the hall. "They've found Vale," Lyra says grimly. "We have to move." You clutch the three combined fragments. A service hatch at the end of the corridor offers a way down into the geothermal tunnels.
+[[Enter the service hatch->GeoCoreTunnels-WithMoth-LyraJoined-Fragment3]]
+
+:: SkybreakerFoothills-WithMoth
+The foothills are treacherous, a slope of loose scree and hidden crags. Legion activity is heavy around the main entrance to the buried city. Without Lyra's knowledge, finding an alternative way in seems impossible. A patrolling Legion squad spots you from a ridge.
+[[Attempt to hide->SkybreakerFoothills-WithMoth-Hide]]
+[[Prepare to fight->SkybreakerFoothills-WithMoth-Fight]]
+
+:: UnionCustody-WithMoth
+You are disarmed and led to a sterile detention cell. The Prefect observes you through a wall of glass. "The fragments will be decoded. Your cooperation is noted. You will be assigned a role in the new order, under Union supervision." The door seals with a hiss. Your quest is over.
+[[The Union's new order->Ending-Technocratic]]
+
+:: UnionLab-Alone-MetLyra-Deny
+"I have nothing of value," you insist. Lyra's eyes narrow. "The scanner does not lie." She signals two guards. "Search them." They find the fragment immediately. "Take them to holding," Lyra orders, her tone cold. "The Prefect will decide their fate."
+[[You are taken into custody->UnionCustody-Alone]]
+:: UnionLabEscape-WithMoth
+You lunge at the nearest guard, grabbing their weapon. Moth creates a distraction, overturning a console. Shots ring out in the confined space. You fight your way back toward the entrance, the Prefect's shouts echoing behind you. The main gate is just ahead.
+[[Escape into the wastes->UnionOutpostEscape-WithMoth]]
+:: CanyonApproach-Alone-Search
+You push through thick, thorny brush at the canyon's base, your boots crunching on brittle bones and ancient debris. Behind a waterfall of petrified vines, you find a metal hatch, its surface scarred but sealed. A faint hum vibrates through the metal. It seems to be Lyra's back door.
+[[Open the hatch->LyraHideout-Alone-MetLyra]]
+:: Haven0Entrance-WithMoth-LyraJoined-ValeJoined
+The massive vault door is a wall of brushed metal, covered in fading biohazard symbols. Vale gasps, pointing a trembling finger. "The failsafe... it requires a voice key." Before he can speak, Bronn Hale and his elites emerge from a side tunnel. Simultaneously, grey-robed Ashen Choir fanatics pour from another, their chanting drowning the geothermal hum.
+[[Activate the purifier with your allies->Ending-Restoration]]
+[[Side with Hale to establish control->Ending-Dominion]]
+[[Let Vale transfer control to the Union->Ending-Technocratic]]
+[[Destroy the console to keep Haven-0 free->Ending-Nomad]]
+[[Embrace the Choir's vision of ash->Ending-Ashen]]
+
+:: LegionFortress-Alone-Interrogation
+The torture breaks your body, but not your will. In a moment of carelessness, a guard leaves your cell door ajar while delivering a meal. Summoning your last strength, you overpower them and take their weapon. The corridor outside is clear, leading to a service air duct.
+[[Escape through the air duct->LegionFortressEscape-Alone]]
+:: LegionFortress-WithMoth-Broken
+After days of torment, you and Moth are discarded in your cells. One night, a sympathetic guard, a former waster who despises Hale, slips a key under your door. "The motor pool is unguarded during the shift change," a whispered voice says. "Take a skimmer and go."
+[[Take the chance to escape->LegionFortressEscape-WithMoth]]
+:: LegionFortress-WithMoth-Released
+You and Moth are given your gear back under the watchful eyes of Legion guards. "Find the technomancer," Hale orders. "My scouts will be observing. Do not fail." You are escorted out of the fortress gates and released into the wastes, your freedom a tenuous and dangerous gift.
+[[Head for the canyons under watch->CanyonApproach-WithMoth-Guarded]]
+:: RelayStation-Alone-MetLyra
+Inside the shack, Lyra works at a jury-rigged terminal. She doesn't look up. "Your fragment and mine are two parts of a whole. The third is with Oren Vale in Skybreaker. The Legion is already there. We can work together, but I lead. My knowledge is the key." She finally turns, awaiting your answer.
+[[Agree to her terms->RelayStation-Alone-LyraJoined]]
+[[Refuse and leave->RelayStationExterior-Alone-Alone]]
+
+:: RooftopEscape-WithMoth
+You grab the rusty gutter pipe. It groans but holds as you swing across the yawning gap, landing hard on the adjacent roof. Moth follows just as the pipe shears away from the wall, falling into the alley below. The Legion soldiers are stranded, shouting in frustration. You have a moment's respite.
+[[Descend into the new building->NorthernRuins-WithMoth]]
+
+:: RooftopFight-WithMoth
+You turn, weapons ready. The first Legion soldier crests the roof edge. You fire, hitting them in the shoulder. They stagger back. Moth tackles the second, sending both tumbling down the fire escape. But more are coming. You are pinned, with no escape route left.
+[[Make a last stand->RooftopFight-WithMoth-Overwhelmed]]
+
+:: SkybreakerFoothills-WithMoth-Fight
+You stand back-to-back with Moth as the Legion squad advances. You take down the first soldier with a clean shot, but their comrades return fire, pinning you behind a rock. Moth cries out, hit in the leg. You are surrounded, outgunned, and capture is inevitable.
+[[You are overwhelmed->LegionFortress-WithMoth-Captured]]
+
+:: SkybreakerFoothills-WithMoth-Hide
+You pull Moth down into a fissure in the scree, holding your breath. The Legion patrol passes directly overhead, their boots scattering pebbles onto you. They continue their sweep, never glancing down. You wait until the sounds fade completely before crawling out, unharmed but shaken.
+[[Continue the search for an entrance->SkybreakerFoothills-WithMoth]]
+
+:: UnionCustody-Alone
+The cell is cold, white, and silent. A slot opens in the door, and a nutrient paste bar is shoved through. The Prefect's voice comes over an intercom. "Your fragment will be decoded. Your defiance is noted. You will be re-educated to serve the Union's goals." The slot closes. Your journey ends here.
+[[The Union's cold future->Ending-Technocratic]]
+
+:: UnionOutpostEscape-WithMoth
+You burst out of the outpost gates into the open ash, Union shouts and laser fire following you. You dive behind a dune, then another, putting distance between you and the energized fence. The pursuit eventually breaks off, unwilling to venture far into the uncontrolled wastes. You are free, but marked.
+[[Head for the crossroads to regroup->Crossroads-WithMoth]]
+:: CanyonApproach-WithMoth-Guarded
+The canyon walls loom, their shadows deepened by the presence of Legion scouts watching from the ridges above. Moth walks beside you, their usual optimism gone. "They're watching. If we deviate, they'll shoot." The path to Lyra's hideout feels like a march to an execution.
+[[Continue to the hideout under watch->LyraHideout-WithMoth-Guarded]]
+[[Try to signal a warning to Lyra->CanyonSignal-WithMoth-Guarded]]
+:: LegionFortress-Alone-Broken
+You are left to rot in your cell. Days blur together. One morning, the door opens. A Legion guard tosses in a stale ration. "Captain Hale secured the fragments. The world will change under the Legion's boot. You will witness it from here." Your journey ends in captivity, a footnote in the Legion's history.
+[[The Legion's future->Ending-Dominion]]
+:: LyraHideout-Alone-Refused
+"You think you can demand anything here?" Lyra snaps, stepping between you and the fragment. "I survived by being smarter than that." Her hand goes to a device on her belt. The holoscreens flicker and die. "Get out. Before I decide you're more trouble than you're worth."
+[[Retreat from the hideout->CanyonApproach-Alone-Refused]]
+:: RelayStation-Alone-LyraJoined
+"Fine. You lead," you agree. Lyra gives a curt nod. "Smart. The Legion is digging at Skybreaker. We need to move fast." She hands you the second fragment, which merges with yours. "The final piece is with Vale. We go to the foothills immediately. No delays."
+[[Set out for Skybreaker->SkybreakerFoothills-Alone-LyraJoined]]
+
+:: RelayStationExterior-Alone-Alone
+The wind bites harder on the ridge. Lyra is gone, and with her, the best chance of understanding the map. You are alone again, with two fragments but no key to use them. The path to Skybreaker is dangerous and unclear without her guidance.
+[[Head for the buried city alone->SkybreakerFoothills-Alone]]
+
+:: RooftopFight-WithMoth-Overwhelmed
+More Legion soldiers pour onto the roof, surrounding you and Moth. Your weapons are knocked from your hands. Moth is wrestled to the ground. A soldier presses a boot into your back, securing bindings on your wrists. "The Captain will be pleased," a voice says. The sky above is a uniform grey.
+[[You are captured->LegionFortress-WithMoth-Captured]]
+:: CanyonApproach-Alone-Refused
+You retreat down the path, Lyra's glare burning into your back. The opportunity is lost. The path to Skybreaker seems much longer without Lyra's knowledge.
+[[Return to the Nomads for another plan->NomadCamp-Alone-LearnFragments]]
+[[Press on to Skybreaker without the second fragment->SkybreakerFoothills-Alone]]
+:: CanyonEscape-Alone-Guarded
+You shove the lead soldier, sending him stumbling over the edge. The second soldier fires, but you are already sprinting back down the trail. Shots ring out, but they go wide. You disappear into the canyon's maze, free from your guards but hunted.
+[[Flee deeper into the canyon->CanyonApproach-Alone]]
+:: CanyonSignal-WithMoth-Guarded
+You catch Moth's eye and subtly point to a shiny piece of wreckage on a high ledge. They nod in understanding. As you walk, you pretend to stumble, sending a cascade of rocks clattering down the slope. The noise is small, but the glint of metal is clear. You hope it is enough of a warning for the wary technomancer.
+[[Continue the approach->LyraHideout-WithMoth-Guarded]]
+:: LyraHideout-Alone-LyraJoined-Doubt
+"I need to know this is a real partnership," you say, holding back. Lyra scowls. "There is no time for this. Trust is earned on the road, not in a cave." She grabs her gear. "I am going to Skybreaker. You can follow, or you can stay here and doubt. Your choice." She strides toward the exit.
+[[Follow her->SkybreakerFoothills-Alone-LyraJoined]]
+[[Let her go->LyraHideout-Alone-Abandoned]]
+
+:: LyraHideout-WithMoth-Guarded
+You enter the cave with the two Legion soldiers flanking you. Lyra is waiting, her face a mask of cold fury. "So," she spits, her hand on her pistol. "You led them here. A coward's bargain." Moth stands beside you, caught in the middle. The soldiers raise their rifles. "By order of Captain Hale, you are all to come with us." The cave is a powder keg, ready to explode.
+[[Attempt to de-escalate the situation->LyraHideout-WithMoth-Deescalate]]
+[[Stand back and let the confrontation unfold->LyraHideout-WithMoth-Fight]]
+:: SkybreakerFoothills-Alone
+The foothills are a treacherous slope of shifting ash and rock. Legion excavation machines swarm around the main entrance to the buried city, a controlled chaos. Without Lyra's knowledge of alternate routes, the task seems impossible. A solitary vigil is a dangerous path.
+[[Search for a hidden way in->SkybreakerFoothills-Alone-Search]]
+[[Approach the main entrance directly->SkybreakerFoothills-Alone-Approach]]
+
+:: SkybreakerFoothills-Alone-LyraJoined
+The massive shapes of Skybreaker protrude from the earth. Lyra points to a sheer cliff face away from the Legion's main operation. "There. A maintenance shaft. It's a difficult climb, but unguarded." She checks the combined map fragments. "It leads straight to the inner corridors. We can avoid the Legion's front door."
+[[Ascend to the shaft->SkybreakerVent-Alone-LyraJoined]]
+:: LyraHideout-Alone-Abandoned
+Lyra disappears into the canyon's gloom without a backward glance. The cave is silent now, save for the hum of dormant machinery. You are alone with the first fragment, its secrets still locked. The path to Skybreaker is long and fraught with peril, and you have alienated the one person who could have made it clear.
+[[Venture out toward the buried city->SkybreakerFoothills-Alone]]
+[[Seek other allies in the wastes->Crossroads-Alone]]
+
+:: LyraHideout-Alone-Captive
+You awake with a pounding headache, bound to a chair with polymer straps. Lyra paces before you, her face a mask of cold fury. "You brought the Legion to my door. That is an unforgivable sin." She holds up a data-slate showing the scouts you led here. "Your usefulness is at an end. Your fate is mine to decide."
+[[Plead for your life->LyraHideout-Alone-Plea]]
+[[Accept your fate->LyraHideout-Alone-Execution]]
+
+:: LyraHideout-WithMoth-Confrontation
+"It wasn't by choice!" you snap, keeping your hands visible. "Hale captured us. This was the only way to get free." Moth nods vigorously. "He's watching us right now from the ridge." Lyra's glare softens marginally as she processes this. "A coerced betrayal is still a threat. But perhaps... not a terminal one."
+[[Propose a plan to escape the scouts->LyraHideout-WithMoth-EscapePlan]]
+[[Ask for her help against the Legion->LyraHideout-WithMoth-Alliance]]
+:: LyraHideout-WithMoth-Fight
+The lead soldier ignores your attempt at peace and fires at Lyra. She ducks behind a console, returning fire with her pistol. The cave erupts in laser bolts and the smell of ozone. You, Moth, and Lyra are caught in a close-quarters gunfight.
+[[Fight alongside Lyra against the soldiers->LyraHideout-WithMoth-Fight-Subdued]]
+[[Use the chaos to escape the cave->CanyonEscape-WithMoth-Fleeing]]
+:: SkybreakerFoothills-Alone-Approach
+You walk openly down the main access road, your hands raised. Legion sentries train their rifles on you immediately. A sergeant steps forward. "Halt! State your business!" You declare you have information on the map fragments. They disarm you and lead you at gunpoint toward the excavation site's command tent.
+[[Enter the Legion camp->LegionExcavationSite-Alone-Captured]]
+
+:: SkybreakerFoothills-Alone-Search
+You skirt the perimeter of the Legion's operation, keeping to the shadows of rubble and wrecked machinery. You find a collapsed ventilation grate, too small for their armored troops. It's a tight, dark squeeze, but it might offer a way in, unseen. The air from the shaft smells of damp metal and age.
+[[Squeeze into the ventilation shaft->SkybreakerVent-Alone]]
+
+:: SkybreakerVent-Alone-LyraJoined
+You and Lyra ascend the cliff face, finding the hidden maintenance shaft. It's a tight, verticle drop into darkness. Lyra rappels down first, her glow-stick illuminating the rusted rungs. You follow, descending into the silent, pressurized heart of the buried city, far from the Legion's clamor.
+[[Reach the bottom of the shaft->SkybreakerSublevel2-Alone-LyraJoined]]
+:: LegionExcavationSite-Alone-Captured
+You are marched through a chaotic camp of earth-movers and prefab structures. Captain Bronn Hale stands before a large topographic map of Skybreaker. He turns, his eyes narrowing. "The wanderer who slipped through our net. You come to me bearing... information? Or is this a surrender?" His tone is dangerously calm.
+[[Offer your knowledge->LegionExcavationSite-Alone-Bargain]]
+[[Remain silent->LegionExcavationSite-Alone-Defiant]]
+
+:: LyraHideout-Alone-Execution
+The shot rings out. The world goes black. Your story ends here, in a silent cave, for a betrayal you were forced to make. The ash continues to fall outside, uncaring.
+[[Your story ends->Ending-Ashen]]
+:: LyraHideout-Alone-Plea
+"Killing me serves nothing," you urge, your voice steady despite the bindings. "The Legion is the real enemy. I can fight them. I have the first fragment. Together, we are stronger than apart." Lyra pauses, the pistol wavering slightly. She studies you, weighing your words against the evidence of your betrayal.
+[[Your plea is accepted->LyraHideout-Alone-Pardoned]]
+[[Your plea is rejected->LyraHideout-Alone-Execution]]
+
+:: LyraHideout-WithMoth-Alliance
+"The Legion is the common enemy," you state firmly. "We can turn this around. Use their scouts as bait. Lure them into a trap within the canyon." Lyra considers this, her eyes flicking to the distant figures on the ridge. A grim smile touches her lips. "A counter-ambush. Risky. But perhaps the only way to salvage this."
+[[Set the trap->CanyonAmbush-WithMoth-LyraJoined]]
+[[Abort and retreat immediately->CanyonRetreat-WithMoth-LyraJoined]]
+
+:: LyraHideout-WithMoth-Combat
+The fight is chaotic. You, Moth, and Lyra grapple in the dim cave as Legion shots continue to ricochet at the entrance.
+[[Disarm Lyra and subdue her->LyraHideout-WithMoth-Subdued]]
+[[Break away and flee the cave->CanyonApproach-WithMoth-Underfire]]
+:: LyraHideout-WithMoth-EscapePlan
+"The canyon has a maze of old mining tunnels," you explain quickly. "If we can reach the western fork, we can lose them. Their buggies can't follow." Lyra nods, already moving toward a stack of supplies. "I know the route. We go now. But if this is another trick..." She leaves the threat hanging, handing you a gas grenade.
+[[Execute the escape->CanyonEscape-WithMoth-LyraJoined]]
+
+:: SkybreakerSublevel2-Alone-LyraJoined
+You drop onto a grated catwalk high above a vast, dark chamber. The air is cold and smells of ozone and rust. Far below, faint lights pulse around a central core. "The old reactor level," Lyra whispers. "The lab complexes are on the other side of this chasm. We need to cross silently."
+[[Cross the main catwalk->SkybreakerBridge-Alone-LyraJoined]]
+[[Descend to a lower service walkway->SkybreakerService-Alone-LyraJoined]]
+
+:: SkybreakerVent-Alone
+The shaft is a tight, claustrophobic squeeze, lined with sharp edges that tear at your clothes. You descend slowly into utter blackness, the sounds of the Legion camp fading above. After a long climb down, your feet touch solid metal. A faint light filters from a crack in the wall ahead, and the sound of dripping water echoes.
+[[Investigate the light source->SkybreakerSublevel1-Alone]]
+:: CanyonAmbush-WithMoth-LyraJoined
+Lyra leads you and Moth through a narrow crevice behind a waterfall of petrified vines. "The scouts will follow," she whispers, priming a series of electromagnetic pulse mines. "When they enter this choke point, the EMP will disable their gear. Then we strike." You take cover behind a rock, watching the entrance. The first Legion scout steps cautiously into the trap.
+[[Trigger the EMP->CanyonAmbush-WithMoth-LyraJoined-Triggered]]
+[[Wait for the entire patrol to enter->CanyonAmbush-WithMoth-LyraJoined-Patient]]
+
+:: CanyonEscape-WithMoth-LyraJoined
+Lyra blows a charge that collapses part of the cave entrance, blocking the Legion's line of fire. "This way!" she yells, leading you down a steep tunnel into the canyon's depths. The air grows damp and cold. You emerge into a vast underground cavern where a subterranean river flows swiftly. A Nomad skiff is tied to a stalagmite, left for emergencies.
+[[Board the skiff and follow the river->SubterraneanRiver-WithMoth-LyraJoined]]
+
+:: CanyonFlank-WithMoth-Underfire
+You gesture for Moth to provide covering fire while you scramble up a rocky incline, circling around the Legion scouts' position. From above, you have a clear shot. You take aim, disabling the lead scout's rifle with a well-placed shot. The others scatter, confused. This breaks their formation and gives you an opening to retreat.
+[[Press the advantage and drive them back->CanyonAmbush-WithMoth-LyraJoined]]
+[[Use the confusion to escape down the canyon->CanyonRetreat-WithMoth-Underfire]]
+
+:: CanyonRetreat-WithMoth-LyraJoined
+Lyra shakes her head. "No trap. Not enough time. We run. Now." She tosses a smoke grenade, filling the cave mouth with thick grey clouds. You, Moth, and Lyra sprint down the canyon path, using the cover to put distance between you and the scouts. The Legion fire is wild and inaccurate in the smoke. You reach a fork in the canyon where the path splits.
+[[Take the left fork toward the Relay Station->NorthernRuins-WithMoth-LyraJoined]]
+[[Take the right fork toward the Nomad trails->NomadOutskirts-WithMoth-LyraJoined]]
+
+:: CanyonRetreat-WithMoth-Underfire
+You grab Moth and sprint down the slope, leaping from rock to rock as laser bolts sear the air around you. You reach the relative cover of a dried-up riverbed at the canyon floor. The scouts don't follow immediately, likely regrouping. You have a brief moment to catch your breath and plan your next move.
+[[Hide in the riverbed->CanyonHiding-WithMoth-Underfire]]
+[[Continue running toward the open wastes->Crossroads-WithMoth]]
+
+:: LegionExcavationSite-Alone-Defiant
+You stand silent, your jaw set. Hale's smile vanishes. "Another fool with misplaced pride." He gestures to his guards. "Take them to the interrogation pit. We will extract the location the hard way." You are dragged away from the map, into the dark, noisy bowels of the excavation site, where hope is a scarce commodity.
+[[Face interrogation->LegionFortress-Alone-Interrogation]]
+
+:: LyraHideout-Alone-Pardoned
+Lyra lowers the pistol, a conflicted look in her eyes. She cuts your bonds. "One chance. That's all you get. Betray me again, and the bullet won't miss." She hands you your gear back. "Now, we have a common enemy to deal with. The Legion scouts outside are still a problem."
+[[Propose a plan to deal with the scouts->CanyonAmbush-Alone-LyraJoined]]
+:: SkybreakerBridge-Alone-LyraJoined
+The main catwalk is a wide, grated bridge spanning the immense reactor chasm. It creaks ominously under your weight. Halfway across, a figure steps from the shadows on the far side—a Steel Legion sniper, their rifle aimed. "Halt! Intruders!" they shout, their voice echoing in the vast space.
+[[Rush the sniper->SkybreakerBridge-Alone-LyraJoined-Charge]]
+[[Dive for cover and return fire->SkybreakerBridge-Alone-LyraJoined-Fight]]
+
+:: SkybreakerService-Alone-LyraJoined
+You descend a rusted ladder to a lower, narrower service walkway that clings to the chamber wall. It's darker and more precarious, but hidden from the main bridge above. You move silently, hugging the wall. Below, you see a door marked "LAB ACCESS." It seems unguarded and intact.
+[[Approach the lab access door->SkybreakerCorridor-Alone-LyraJoined]]
+
+:: SkybreakerSublevel1-Alone
+The terminal is dead, the crawlspace is a dead end. The only way is the sealed door. You force it open, stepping into a corridor. At the end, a sign points down: "TO GEO-CORE & HAVEN-0 ACCESS." A stairwell descends into echoing darkness, the path clear if perilous.
+[[Descend the stairwell->GeoCoreTunnels-Alone]]
+:: CanyonAmbush-WithMoth-LyraJoined-Patient
+You hold your breath, counting the scouts as they file into the narrow crevice. Four in total. The last one steps over the tripwire for the EMP mines. Lyra gives the signal. You press the trigger. A silent wave of electromagnetic energy pulses out, disabling their rifle optics and comms units. The scouts stagger, confused and blinded by their own malfunctioning gear. You emerge from cover, weapons ready.
+[[Disarm and capture the scouts->CanyonAmbush-WithMoth-LyraJoined-Captured]]
+[[Use the confusion to slip past them->CanyonAmbush-WithMoth-LyraJoined-Escape]]
+
+:: CanyonAmbush-WithMoth-LyraJoined-Triggered
+The moment the first scout crosses the threshold, you trigger the EMP. The blast fries the electronics in his armor, sending him spasming to the ground. The other scouts outside the kill zone recoil, taking cover and opening fire. The element of surprise is lost, but their leader is down. The fight is on.
+[[Return fire from your ambush position->CanyonAmbush-WithMoth-LyraJoined-Firefight]]
+[[Fall back to a secondary position->CanyonAmbush-WithMoth-LyraJoined-Fallback]]
+
+:: CanyonHiding-WithMoth-Underfire
+You and Moth press into a narrow fissure in the riverbank, the damp clay cool against your backs. Legion boots crunch on the gravel above, their voices frustrated. "They've gone to ground. Search the area!" A flashlight beam sweeps over your hiding spot but misses the deep shadow. After a tense minute, the search moves on.
+[[Wait until it's completely silent->CanyonHiding-WithMoth-Underfire-Safe]]
+[[Move out cautiously->CanyonRetreat-WithMoth-Underfire]]
+
+:: LyraHideout-WithMoth-Hostage
+You keep Lyra restrained, a knife at her back. "We're walking out of here," you tell the advancing Legion scouts. "Stand down or she dies." The scouts hesitate, lowering their rifles. Lyra stiffens, her voice a venomous whisper. "This is a mistake. They don't care if I live or die. They just want the fragment."
+[[Use the distraction to make a break for it->LyraHideout-WithMoth-HostageEscape]]
+[[Call their bluff and demand passage->LyraHideout-WithMoth-HostageBluff]]
+:: NomadOutskirts-WithMoth-LyraJoined
+The Nomad sentries on their sand-skiffs tense as you, Moth, and Lyra approach. Elder Kael rides forward, his expression unreadable. "Moth. The Ashwitch. And the wanderer. An unusual trio. The Legion hunts you all. Why bring that trouble to our gates?"
+[[Explain the situation and ask for sanctuary->NomadCamp-WithMoth-LyraJoined]]
+[[Ask for supplies and information only->NomadCamp-WithMoth-LyraJoined-Trade]]
+
+:: NorthernRuins-WithMoth-LyraJoined
+You reach the ruins of the old library, now a temporary sanctuary. Lyra checks her wrist-comp for Legion comms traffic. "They're concentrated at Skybreaker. This area is clear for now." She points northeast. "The GeoCore vents are a day's travel from here. That's our way into the deep tunnels toward Haven-0."
+[[Rest and plan the final journey->NorthernRuins-WithMoth-LyraJoined-Rest]]
+[[Push on immediately toward the vents->GeoCoreApproach-WithMoth-LyraJoined]]
+
+:: SkybreakerBridge-Alone-LyraJoined-Charge
+You sprint across the groaning bridge, a moving target. The sniper fires, the shot ricocheting off the grating by your feet. Lyra lays down covering fire with her pistol. You close the distance, tackling the sniper before they can chamber another round. The struggle is brief and silent, ending with the sniper unconscious at your feet.
+[[Secure the far side of the bridge->SkybreakerCorridor-Alone-LyraJoined]]
+
+:: SkybreakerBridge-Alone-LyraJoined-Fight
+You shove Lyra behind a support pillar as the sniper's shot rings out. You return fire, your own shots sparking against the far wall. It becomes a stalemate, a duel across the chasm. Lyra taps her temple. "I'm jamming their comms. They can't call for backup. But we can't stay here forever."
+[[Make a coordinated rush under covering fire->SkybreakerBridge-Alone-LyraJoined-Charge]]
+[[Try to find another way around->SkybreakerService-Alone-LyraJoined]]
+
+:: SkybreakerCorridor-Alone-LyraJoined
+The lab access door opens into a dim, sterile corridor lined with sealed doors. Emergency lighting casts a pale glow. Lyra consults the combined map. "Vale's lab is at the end of this hall. The life signs are faint... but present." The silence is heavy, broken only by the hum of distant machinery.
+[[Move quietly down the corridor->ValesLab-Alone-LyraJoined]]
+
+:: SkybreakerSublevel1-Alone-Crawlspace
+You push up a loose ceiling panel and haul yourself into a tight, dusty crawlspace. You crawl on your belly through the darkness, the sound of your own breathing loud in your ears. After a long, claustrophobic journey, you see a sliver of light ahead—another access panel overlooking a larger, empty corridor.
+[[Drop down into the corridor->SkybreakerCorridor-Alone]]
+
+:: SkybreakerSublevel1-Alone-Terminal
+You wipe dust from the terminal screen and attempt to power it. The screen flickers, displaying a corrupted boot sequence. A single line of text appears: "VALE LAB: SECTOR 7-G. BIOHAZARD PROTOCOL ACTIVE." Then the screen dies completely. The information is cryptic, but it gives a direction.
+[[Force the sealed door open->SkybreakerSublevel1-Alone-ForcedDoor]]
+[[Return to the crawlspace option->SkybreakerSublevel1-Alone-Crawlspace]]
+
+:: SubterraneanRiver-WithMoth-LyraJoined
+The skiff glides silently on the dark, swift current, the cavern ceiling glittering with phosphorescent fungi. Lyra navigates with a handheld sonar. "This river flows deep under the forbidden zone. It should emerge near the GeoCore thermal vents. We'll be ahead of everyone." The journey is peaceful, a strange respite from the surface world's chaos.
+[[Continue the subterranean journey->GeoCoreTunnels-WithMoth-LyraJoined]]
+:: CanyonAmbush-WithMoth-LyraJoined-Captured
+The four Legion scouts are disoriented and helpless, their advanced gear now useless metal. You and Moth quickly disarm them while Lyra secures them with polymer bonds. "They'll have a long walk back to their fort," she says with grim satisfaction. "And no story to tell that won't bring them shame." You now hold a tactical advantage, with prisoners and time.
+[[Question the scouts for intelligence->CanyonAmbush-WithMoth-LyraJoined-Interrogation]]
+[[Leave them tied up and continue your journey->CanyonAmbush-WithMoth-LyraJoined-Depart]]
+
+:: CanyonAmbush-WithMoth-LyraJoined-Escape
+While the scouts are distracted by their malfunctioning equipment, you, Lyra, and Moth slip past them like ghosts through the narrow crevice. You emerge on the other side of the ambush point, leaving the confused soldiers behind. The path ahead is clear, leading deeper into the canyon's safe zones.
+[[Follow the path toward the Relay Station->NorthernRuins-WithMoth-LyraJoined]]
+[[Head for the Nomad trails->NomadOutskirts-WithMoth-LyraJoined]]
+
+:: CanyonAmbush-WithMoth-LyraJoined-Fallback
+The Legion scouts return fire from outside the EMP zone, their shots pinging off the rock around you. Lyra gestures to a rear exit. "Secondary position! Now!" You fall back through a tight tunnel, emerging onto a high ledge overlooking the canyon. The scouts cannot follow easily, and you have a commanding view.
+[[Snipe at the scouts from the high ground->CanyonAmbush-WithMoth-LyraJoined-Sniper]]
+[[Use the height to plan your next move->CanyonAmbush-WithMoth-LyraJoined-Plan]]
+
+:: CanyonAmbush-WithMoth-LyraJoined-Firefight
+A fierce exchange of laser fire fills the narrow canyon. You are pinned behind your rock, while Lyra uses her tech to create dazzling holographic decoys. Moth's accurate shots keep the scouts' heads down. One scout falls, then another. The remaining two break and retreat, leaving their comrades behind.
+[[Secure the area and check the fallen->CanyonAmbush-WithMoth-LyraJoined-Secure]]
+[[Pursue the retreating scouts->CanyonAmbush-WithMoth-LyraJoined-Pursuit]]
+
+:: CanyonHiding-WithMoth-Underfire-Safe
+You wait for what feels like an hour until the sounds of search completely vanish, replaced by the lonely whisper of the wind through the canyon. You emerge from the fissure into an eerie silence. The Legion patrol is gone, likely assuming you escaped further downriver. You are safe, for now.
+[[Continue toward your original destination->CanyonApproach-WithMoth]]
+[[Change course and head for the ruins->NorthernRuins-WithMoth]]
+
+:: GeoCoreApproach-WithMoth-LyraJoined
+The landscape slopes downward into a region of hissing fumaroles and bubbling mud pools. The air is thick with sulfur. Lyra checks a radiation sensor. "The GeoCore vents are just ahead. The energy readings are high, but stable. This is the back door to Haven-0." A massive geothermal plume erupts in the distance, a testament to the raw power below.
+[[Approach the vent entrance->GeoCoreTunnels-WithMoth-LyraJoined]]
+
+:: GeoCoreTunnels-WithMoth-LyraJoined
+The tunnel entrance is a gaping maw in the side of a thermal mound, exhaling warm, moist air. Inside, the passage is lined with glowing crystalline formations. The thrum of geothermal energy is a constant physical sensation. Lyra leads the way, her map illuminating the safest path through the naturally unstable tunnels.
+[[Follow the main tunnel->GeoCoreTunnels-WithMoth-LyraJoined-Deeper]]
+[[Explore a side branch for shortcuts->GeoCoreTunnels-WithMoth-LyraJoined-SideTunnel]]
+
+:: LyraHideout-WithMoth-HostageBluff
+"Lower your weapons and provide us a vehicle!" you demand, pressing the knife closer to Lyra. The lead scout laughs, a harsh, grating sound. "Hale said take the fragment. He didn't say anything about keeping the witch breathing." He raises his rifle. Your bluff has failed catastrophically.
+[[Drop Lyra and fight->LyraHideout-WithMoth-HostageBluff-Fight]]
+[[Use Lyra as a human shield and retreat->LyraHideout-WithMoth-HostageBluff-Shield]]
+
+:: LyraHideout-WithMoth-HostageEscape
+In the moment of hesitation from the scouts, you shove Lyra forward into them, creating a tangle of bodies. You and Moth spin and sprint for the cave's rear exit. Shots ring out behind you, but you dive into a narrow passage, sliding down a steep slope into darkness, leaving the confrontation behind.
+[[Find your way in the dark->CanyonEscape-WithMoth-LyraJoined]]
+
+:: NomadCamp-WithMoth-LyraJoined
+Elder Kael listens gravely as you explain the Legion's pursuit and the quest for Haven-0. The Nomads around the fire murmur amongst themselves. "The Ashwitch is not our friend," Kael says, eyeing Lyra. "But the Legion is a threat to all. You may rest here tonight. One night only."
+[[Accept the shelter and rest->NomadCamp-WithMoth-LyraJoined-Rest]]
+[[Politely decline and ask for supplies->NomadCamp-WithMoth-LyraJoined-Trade]]
+
+:: NomadCamp-WithMoth-LyraJoined-Trade
+You ask for supplies, not sanctuary. Kael nods, understanding the need for speed. The Nomads provide you with fresh water, food packs, and information. "The GeoCore vents are active," a scout reports. "The path is dangerous, but clear of Legion patrols." You are resupplied and ready to move.
+[[Head for the GeoCore vents->GeoCoreApproach-WithMoth-LyraJoined]]
+
+:: NorthernRuins-WithMoth-LyraJoined-Rest
+You barricade yourselves in a relatively intact room within the shattered library. Lyra sets up a portable alarm system. Moth distributes food rations. For a few hours, there is peace. The constant tension eases, allowing you to sleep in shifts. You wake refreshed, ready for the final push.
+[[Begin the journey to the GeoCore vents->GeoCoreApproach-WithMoth-LyraJoined]]
+
+:: SkybreakerCorridor-Alone
+You push the laboratory doors open. The room inside is a wreck. Dr. Vale is gone, but the third map fragment rests on a central terminal, seemingly abandoned. You take it. As the fragments merge, alarms sound. A service hatch in the floor glows red—an emergency exit to the lower levels.
+[[Enter the hatch->GeoCoreTunnels-Alone-Fragment3]]
+:: SkybreakerSublevel1-Alone-ForcedDoor
+You put your shoulder to the sealed door, and with a groan of protesting metal, it slides open a foot. You squeeze through into another corridor, identical to the first but with signs of recent passage—fresh scuff marks on the dusty floor. The path to Vale's lab is now clear, but so is the evidence that you are not alone down here.
+[[Follow the scuff marks->SkybreakerCorridor-Alone]]
+
+:: ValesLab-Alone-LyraJoined
+The lab is a chaos of overturned tables and shattered glassware. Dr. Oren Vale is curled in a corner, rocking back and forth. He looks up as you enter, his eyes wide with terror. "They're coming for me! Hale's men!" Lyra steps forward, her voice calm. "Doctor Vale. We are here for the fragment. And for you."
+[[Calm Vale and offer protection->ValesLab-Alone-LyraJoined-ValeJoined]]
+[[Focus only on obtaining the fragment->ValesLab-Alone-LyraJoined-FragmentTaken]]
+:: CanyonAmbush-WithMoth-LyraJoined-Depart
+You leave the four bound Legion scouts in the narrow crevice, their muffled protests fading behind you. Lyra leads the way up a winding path out of the canyon. "They'll free themselves in a few hours," she says. "But by then, we'll be long gone. The GeoCore vents are our priority now." The path opens onto a high ridge with a view of the hellish geothermal landscape ahead.
+[[Descend toward the vents->GeoCoreApproach-WithMoth-LyraJoined]]
+
+:: CanyonAmbush-WithMoth-LyraJoined-Interrogation
+The lead scout, his armor still flickering, spits at your feet. "Hale will flay you alive." Lyra kneels, holding a neural stimulator to his temple. "Where is Hale's main force concentrated? How many at the Skybreaker excavation?" The scout's eyes roll back, and he babbles coordinates and troop numbers—the Legion is stretched thin, focused entirely on the buried city.
+[[Use the intelligence to plan your route->CanyonAmbush-WithMoth-LyraJoined-Plan]]
+
+:: CanyonAmbush-WithMoth-LyraJoined-Plan
+From the high ledge, you survey the canyon and the lands beyond. Lyra cross-references the scout's information with her map. "Hale's strength is at Skybreaker. The path to the GeoCore vents is relatively clear. We can bypass the main conflict entirely." She points to a route skirting the badlands. "It's a longer journey, but safer."
+[[Take the safer, longer route->NorthernRuins-WithMoth-LyraJoined]]
+[[Risk the direct path through the badlands->GeoCoreApproach-WithMoth-LyraJoined]]
+
+:: CanyonAmbush-WithMoth-LyraJoined-Pursuit
+You chase the two retreating scouts down the canyon. They are panicked, stumbling over the rocky terrain. You corner them in a box canyon. They throw down their weapons, hands raised. "Mercy!" one pleads. You now have two more prisoners, but the sound of the firefight may have drawn more Legion attention.
+[[Take them prisoner and retreat->CanyonAmbush-WithMoth-LyraJoined-Captured]]
+[[Disarm them and let them go->CanyonAmbush-WithMoth-LyraJoined-Depart]]
+
+:: CanyonAmbush-WithMoth-LyraJoined-Secure
+The two fallen scouts are dead, their armor pierced by laser fire. You search the bodies, finding ammunition and a data-slate with simplified schematics of Skybreaker's upper levels. Lyra examines it. "This confirms the ventilation shaft we saw. It's our best way in." The immediate threat is neutralized, but you are now deeper in Legion territory.
+[[Move out quickly before reinforcements arrive->NorthernRuins-WithMoth-LyraJoined]]
+
+:: CanyonAmbush-WithMoth-LyraJoined-Sniper
+From your high vantage point, you have a clear field of fire. Lyra hands you a scoped rifle. You take careful aim, disabling the scouts' communication antenna first. Your next shots are warning shots at their feet, forcing them to retreat back down the canyon slope without further casualties. The route is clear without needing to kill.
+[[Descend and continue your journey->CanyonAmbush-WithMoth-LyraJoined-Depart]]
+
+:: GeoCoreTunnels-WithMoth-LyraJoined-Deeper
+The main tunnel widens into a colossal cavern where a lake of molten rock bubbles far below, casting a hellish orange glow. A narrow, reinforced walkway spans the abyss. Lyra tests it cautiously. "It's stable. This is the direct route. The heat is intense, but it's the fastest way to the vault." The walkway creaks underfoot, a fragile thread over oblivion.
+[[Cross the molten lake->Haven0Entrance-WithMoth-LyraJoined]]
+
+:: GeoCoreTunnels-WithMoth-LyraJoined-SideTunnel
+You take a smaller side branch, which twists and turns through tighter passages. The air is cooler here, and the walls are covered in strange, bioluminescent fungi that provide a soft blue light. The path descends gradually, eventually opening into a quiet, spherical chamber with a single, ornate metal door at its center—an old service entrance to Haven-0.
+[[Approach the service door->Haven0Entrance-WithMoth-LyraJoined]]
+
+:: LyraHideout-WithMoth-HostageBluff-Fight
+[[Break away and flee the cave->CanyonApproach-WithMoth-Fight-Fleeing]]
+:: LyraHideout-WithMoth-HostageBluff-Shield
+[[Escape into the tunnels->CanyonEscape-WithMoth-LyraJoined]]
+:: NomadCamp-WithMoth-LyraJoined-Rest
+The Nomads give you a tent at the edge of their camp. The night is cold, but the sense of temporary safety is a palpable relief. Around a low fire, Lyra and Moth discuss the final approach to Haven-0. You get a few hours of uninterrupted sleep, waking at dawn feeling restored and focused for the final challenge.
+[[Depart at first light->GeoCoreApproach-WithMoth-LyraJoined]]
+
+:: ValesLab-Alone-LyraJoined-FragmentTaken
+You ignore Vale's pleas and take the fragment. Lyra gives you a look of pure contempt but follows you out. Alarms blare. She points to a service hatch. "The geothermal tunnels. It's our only escape." You drop into the oppressive heat, the moral cost of your success weighing heavily.
+[[Enter the tunnels->GeoCoreTunnels-Alone-LyraJoined-FragmentTaken]]
+:: ValesLab-Alone-LyraJoined-ValeJoined
+"We're not leaving anyone behind," you tell Vale, helping him to his feet. He clings to you, trembling. Lyra nods, a flicker of respect in her eyes. "The service tunnels are this way. We can be in the geothermal ducts before the Legion knows we're gone." The three of you—Wanderer, Lyra, and a shaky Dr. Vale—slip into the depths of Skybreaker.
+[[Escape into the tunnels->GeoCoreTunnels-Alone-LyraJoined-ValeJoined]]
+:: GeoCoreTunnels-Alone-LyraJoined-ValeJoined
+The journey through the geothermal tunnels is tense. Vale whimpers at every sound, but Lyra's guidance is sure. Finally, the tunnel opens into a vast cavern. There, standing before the immense vault door of Haven-0, is Captain Bronn Hale, a squad of his finest soldiers, and a contingent of chanting Ashen Choir fanatics. All eyes turn to you.
+[[Face the final convergence->Haven0Entrance-Alone-LyraJoined-ValeJoined]]
+:: SkybreakerCorridor-Alone-LyraJoined-FragmentTaken
+Lyra shakes her head in disgust but leads the way to the service hatch. "This leads to the geothermal tunnels. It's our only path forward now." You drop down into the hot, thrumming darkness, the completed map in your hand feeling like a curse.
+[[Descend into the tunnels->GeoCoreTunnels-Alone-LyraJoined-FragmentTaken]]
+
+:: LegionFortressEscape-Alone
+You crawl through the cramped, grease-stained air ducts, emerging into a deserted maintenance bay. A lone, unguarded Legion skimmer sits near an open bay door. The night outside is dark, offering cover. You start the skimmer's engine and accelerate into the wasteland, free once more.
+[[Head for the GeoCore vents->GeoCoreApproach-Alone]]
+[[Head for the Nomad camps->NomadOutskirts-Alone]]
+
+:: LegionFortressEscape-WithMoth
+You and Moth crawl through the ducts, dropping into a storage room. You find civilian clothes and, in a nearby garage, a beat-up ground-car with the keys still in it. You drive out of the fortress gates under the cover of the ongoing distraction, disappearing into the ash-filled night.
+[[Regroup and head for the vents->GeoCoreApproach-WithMoth]]
+[[Seek sanctuary with the Nomads->NomadOutskirts-WithMoth]]
+
+:: GeoCoreTunnels-Alone-LyraJoined-FragmentTaken
+The tunnels are a oppressive, steaming maze. Lyra walks several paces ahead, her silence a wall between you. The map glows, pointing the way. After hours of travel, you round a bend and see it: the massive vault door of Haven-0. It is unguarded. The final choice is yours alone.
+[[Approach the vault->Haven0Entrance-Alone-LyraJoined]]
+
+:: GeoCoreTunnels-Alone-Fragment3
+The stairwell descends deep into the earth, ending in a hot, humid tunnel. The thrum of geothermal energy is deafening. You follow the tunnel, the completed map a beacon. After a long walk, you see a light ahead—the vault door of Haven-0, standing unguarded in a cavern.
+[[Approach the vault->Haven0Entrance-Alone]]
+
+:: Haven0Entrance-Alone
+The vault door is a monolith of brushed metal. You are alone. The console beside it is active. The choice is yours. Do you activate the purifier for all? Seize it for yourself? Or deny the world this power?
+[[Activate the purifier->Ending-Restoration]]
+[[Seize control for yourself->Ending-Dominion]]
+[[Destroy the console->Ending-Nomad]]
+
+:: Haven0Entrance-Alone-LyraJoined
+The vault door is immense. Lyra works at the console. "The system is intact. The choice is ours. But we must be quick. We won't be alone for long."
+[[Activate the purifier with Lyra->Ending-Restoration]]
+[[Side with Lyra to give control to the Union->Ending-Technocratic]]
+[[Seize control for yourself->Ending-Dominion]]
+[[Destroy the console->Ending-Nomad]]
+:: Haven0Entrance-Alone-LyraJoined-ValeJoined
+"You!" Hale snarls. "You bring me the scientist and the final key." The Choir's chanting grows louder, a wall of sound. Vale hides behind you. Lyra readies her weapon. The final confrontation for the fate of the world begins now.
+[[Fight alongside your allies to activate the purifier->Ending-Restoration]]
+[[Side with Hale to impose order->Ending-Dominion]]
+[[Let Vale transfer control to the Technic Union->Ending-Technocratic]]
+[[Destroy the console to prevent any faction from winning->Ending-Nomad]]
+[[Join the Ashen Choir in their reverent destruction->Ending-Ashen]]
+
+:: GeoCoreApproach-Alone
+The ground slopes into a hellish landscape of steaming fumaroles and bubbling mud pots. The air reeks of sulfur, and the heat is oppressive. A massive geothermal plume erupts in the distance, a column of superheated steam punching into the ash-choked sky. The path to the GeoCore vents is a narrow, treacherous ridge between pools of boiling water. You are completely alone.
+[[Descend the ridge toward the tunnel entrance->GeoCoreTunnels-Alone]]
+[[Search for a safer, alternate route->GeoCoreApproach-Alone-Search]]
+
+:: GeoCoreApproach-WithMoth
+The sulfurous smell is overwhelming as you and Moth approach the geothermal field. Pools of acidic mud bubble and pop. Moth points to a wide vent, its opening like a dark mouth in the side of a thermal mound. "That's the entrance Lyra mentioned. It looks... unstable." The path down is a slippery slope of loose scree.
+[[Approach the vent entrance together->GeoCoreTunnels-WithMoth]]
+[[Scout the area for dangers first->GeoCoreApproach-WithMoth-Scout]]
+
+:: GeoCoreTunnels-Alone
+The tunnel entrance exhales a warm, moist breath. Inside, the passage is narrow, the walls glittering with strange, sharp crystals that catch the faint red light from deep within. The thrum of the earth is a constant, vibrating hum that you feel in your bones. The air is thick and hard to breathe. There is only one way forward: deeper into the mountain's heart.
+[[Follow the tunnel downward->GeoCoreTunnels-Alone-Deeper]]
+[[Pause to listen for signs of pursuit->GeoCoreTunnels-Alone-Listen]]
+:: GeoCoreApproach-Alone-Search
+You skirt the edge of the geothermal field, keeping your distance from the hissing fumaroles. A path of more solid ground appears to the west, winding up and around the worst of the thermal activity. It will take longer, but the ridge looks stable and offers a commanding view of the approach to the vents. You see no signs of life, only the raw, untamed power of the earth.
+[[Take the longer, safer path along the ridge->GeoCoreTunnels-Alone]]
+[[Risk the direct descent into the vents->GeoCoreTunnels-Alone]]
+
+:: GeoCoreApproach-WithMoth-Scout
+You and Moth climb a nearby rock spire to get a better view. From above, the geothermal field is a chaotic mosaic of danger. The main vent entrance is clear, but you also spot a smaller, less obvious opening further north, partially concealed by a mineral deposit. The area immediately around the main vent shows signs of recent rockfall.
+[[Head for the smaller, hidden entrance->GeoCoreTunnels-WithMoth]]
+[[Stick to the main entrance, carefully navigating the rockfall->GeoCoreTunnels-WithMoth]]
+
+:: GeoCoreTunnels-Alone-Deeper
+The tunnel slopes ever downward, the air growing hotter and thicker. Strange, phosphorescent fungi cling to the walls, casting a sickly green light. The path forks ahead. The left branch seems to follow the main geothermal thrum, wide and echoing. The right branch is narrower, cooler, and smells of stagnant water.
+[[Take the left, hotter branch->Haven0Entrance-Alone]]
+[[Take the right, cooler branch->GeoCoreTunnels-Alone-Listen]]
+
+:: GeoCoreTunnels-Alone-Listen
+You stop, holding your breath. The deep thrum of the earth is constant, but you hear something else—a faint, rhythmic scraping, like metal on stone, coming from further down the main tunnel. It could be machinery, or it could be something else. The silence of the side branch is suddenly more appealing.
+[[Investigate the scraping sound->Haven0Entrance-Alone]]
+[[Take the silent side branch to avoid the noise->Haven0Entrance-Alone]]
+
+:: GeoCoreTunnels-WithMoth
+The heat inside the vent is intense, a palpable wall of damp air. Moth fans their face, looking uneasy. The tunnel splits quickly. One path is wide and smooth, clearly carved by machinery, leading downward. The other is a natural fissure, tight and twisting, but a cooler breeze seems to emanate from it.
+[[Take the wide, machine-carved path->GeoCoreTunnels-WithMoth-NoLyra]]
+[[Squeeze into the natural fissure->GeoCoreTunnels-WithMoth-NoLyra]]
+
+:: Crossroads-MetMoth
+The storm has passed, leaving a world bleached grey. Moth points to three distinct paths. "West leads to Dustborn trails. East, the Technic Union outpost. North... that's Legion territory, but also the quickest route to the buried city the maps mention." You have just met, and trust is yet to be built.
+[[Head West toward the Nomads->NomadOutskirts-MetMoth]]
+[[Head East toward the Technic Union->UnionOutpost-MetMoth]]
+[[Risk the North route->LegionPatrol-MetMoth]]
+
+:: LyraHideout-Alone-MetLyra-Alliance
+You propose a plan to deal with the Legion scouts watching the canyon.
+[[Set the trap->CanyonAmbush-Alone-LyraJoined]]
+[[Abort and retreat immediately->CanyonRetreat-Alone-LyraJoined-Fleeing]]
+:: GeoCoreTunnels-WithMoth-NoLyra
+The journey is difficult without Lyra's expertise, but you and Moth press on. The tunnels are hot and confusing. Eventually, you find a path that leads downward, following the thrum of geothermal energy. After a long, arduous trek, you see a light ahead—the vault door of Haven-0.
+[[Approach the vault->Haven0Entrance-WithMoth]]
+
+:: GeoCoreTunnels-WithMoth-LyraJoined-Fragment3-Pursued
+The tunnels are hot, filled with the thrum of geothermal energy and the distant echoes of Legion pursuit. Lyra combines the three fragments on her wrist-comp. The full map appears, leading to a massive vault door ahead. "The final barrier," she says. "We must be quick."
+[[Approach the vault door->Haven0Entrance-WithMoth-LyraJoined-Pursued]]
+
+:: Haven0Entrance-WithMoth-LyraJoined-Pursued
+The vault door is immense, covered in warning placards. As you approach, figures emerge from the shadows—Bronn Hale and his elites, having found another route. "It ends here," Hale snarls. "Give me the facility." From another passage, Ashen Choir fanatics appear, chanting for destruction. Legion troops are closing in from behind.
+[[Stand with Lyra and Moth to activate the purifier->Ending-Restoration]]
+[[Side with Hale to seize control->Ending-Dominion]]
+[[Give the facility to the Technic Union->Ending-Technocratic]]
+[[Destroy the control console to prevent anyone from having it->Ending-Nomad]]
+[[Join the Choir in their reverence for the ash->Ending-Ashen]]
+
+:: CanyonAmbush-Alone-LyraJoined
+You and Lyra take positions behind a jagged rock outcrop. The Legion scouts you led here are advancing cautiously up the canyon path. Lyra primes a small EMP charge. "When they pass that marker," she whispers, "their comms will die. Then we move." The trap is set.
+[[Spring the ambush->CanyonAmbush-Alone-LyraJoined-Triggered]]
+[[Wait to see if more soldiers appear->CanyonAmbush-Alone-LyraJoined-Patient]]
+:: Haven0Entrance-WithMoth
+The vault door is a monolith of brushed metal, standing silent in the cavern. You and Moth are alone. The console beside it is active. The weight of the choice is heavy. Moth looks at you, their expression a mixture of hope and fear. "This is it. What do we do?"
+[[Activate the purifier->Ending-Restoration]]
+[[Seize control for yourselves->Ending-Dominion]]
+[[Destroy the console to keep it free->Ending-Nomad]]
+
+:: LegionPatrol-MetMoth
+You haven't gone a mile before an armored buggy skids to a halt, blocking the road. Two Steel Legion soldiers level rifles. "Halt! By order of Captain Hale. You will be searched." They glance at Moth's courier satchel with particular interest. You have only just met, and this is a dangerous test.
+[[Submit to the search->LegionCheckpoint-MetMoth-Searched]]
+[[Try to bluff your way past->LegionCheckpoint-MetMoth-Bluff]]
+
+:: NomadOutskirts-MetMoth
+Wind-driven sand-skiffs glide over the dunes, their sails patched with vibrant cloth. A scout signals the caravan to halt. An elder named Kael approaches. "Moth! And you bring a stranger. Do you seek passage, or trouble?" He studies you, his gaze wary.
+[[Ask for information on the map fragments->NomadCamp-MetMoth-LearnFragments]]
+[[Offer to trade for supplies->NomadCamp-MetMoth-Trade]]
+
+:: UnionOutpost-MetMoth
+A geodesic dome hums with power, surrounded by a fence of energized pylons. A voice crackles from a speaker. "Identify yourselves and your business." Moth speaks up. "Courier Moth, with a traveler. We seek knowledge." The gate slides open. You enter, unsure of the welcome you will receive.
+[[Enter the outpost->UnionLab-MetMoth-MetLyra]]
+:: CanyonAmbush-Alone-LyraJoined-Patient
+You hold your position. A third soldier, a sergeant, joins the two scouts. Lyra tenses. "Three of them."
+[[Spring the ambush now->CanyonAmbush-Alone-LyraJoined-Triggered]]
+[[Let them pass and find another way->CanyonRetreat-Alone-LyraJoined]]
+:: CanyonAmbush-Alone-LyraJoined-Triggered
+The moment the sergeant steps past the tree, Lyra triggers the EMP. A silent wave disables their gear. The soldiers cry out in shock. You and Lyra emerge from cover, weapons raised. The sergeant glares, his helmet display flickering.
+[[Disarm and question the squad->CanyonAmbush-Alone-LyraJoined-Captured]]
+[[Use the confusion to escape->CanyonAmbush-Alone-LyraJoined-Escape]]
+:: LegionCheckpoint-MetMoth-Bluff
+You step forward, projecting a confidence you don't feel. "Captain Hale is expecting a report from the southern sector. We are his eyes." The soldiers exchange skeptical glances. One lowers his rifle slightly. "The Captain didn't mention any southern scouts. Your ident codes?" He holds out a scanner.
+[[Attempt to provide fake codes->LegionCheckpoint-MetMoth-BluffSuccess]]
+[[The bluff fails->LegionCheckpoint-MetMoth-Searched]]
+
+:: LegionCheckpoint-MetMoth-Searched
+The soldiers pat you down with rough efficiency. They find the map fragment. "Hale's prize," one mutters, seizing it. They take Moth's satchel too. "You're both coming with us for questioning." You are disarmed and forced onto a transport, heading deeper into Legion-controlled territory.
+[[The journey to the fortress->LegionFortress-MetMoth-Captured]]
+
+:: NomadCamp-MetMoth-LearnFragments
+Elder Kael studies your fragment by the firelight. "This script... it is old. It speaks of the Skybreaker. The second fragment is said to be with an exile, a technomancer called Lyra. She hides near the iron canyons, a place of sharp rocks and static storms." He points northeast. "She is hunted, but not evil."
+[[Ask for a guide to the canyons->CanyonApproach-MetMoth-Guided]]
+[[Set out alone for the canyons->CanyonApproach-MetMoth]]
+
+:: NomadCamp-MetMoth-Trade
+Moth negotiates skillfully, trading small trinkets from their satchel for fresh water and information. "The Legion is digging at the buried city," a trader mentions. "They say an old man was seen there, a scientist who knows the old ways." The destination on your fragment becomes clearer.
+[[Ask about the scientist->NomadCamp-MetMoth-LearnFragments]]
+[[Prepare to leave for Skybreaker->SkybreakerFoothills-MetMoth]]
+
+:: NomadOutskirts-Alone-LyraJoined
+A lone sand-skiff approaches. The rider, Elder Kael, circles you. "The Ashwitch and the wanderer. The Legion hunts you. Why bring their wrath to our trails?"
+[[Explain your quest and ask for help->NomadCamp-Alone-LyraJoined]]
+[[Ask only for safe passage onward->NomadCamp-Alone-LyraJoined-Passage]]
+:: NorthernRuins-Alone-LyraJoined
+You reach the ruins of the old library. Lyra checks her wrist-comp. "They're concentrated at Skybreaker. This area is clear." She points northeast. "The GeoCore vents are a day's travel from here."
+[[Rest and plan the final journey->NorthernRuins-Alone-LyraJoined-Rest]]
+[[Push on immediately toward the vents->GeoCoreApproach-Alone-LyraJoined]]
+:: UnionLab-MetMoth-MetLyra
+The woman on the balcony descends. "I am Lyra Kade. The Union exiled me for my predictions." Her gaze falls on the map fragment in your hand. "You have a shard of the old world. I can help you read it, but not here. The Legion is coming. Meet me at the Relay Station." She slips you a datachip. Moth looks at you, waiting for your decision.
+[[Agree to meet Lyra->RelayStationExterior-MetMoth]]
+[[Stay and deal with the Union->UnionLab-MetMoth-Stay]]
+:: CanyonAmbush-Alone-LyraJoined-Captured
+The three Legion soldiers are disoriented. You and Lyra quickly disarm them, securing them with bindings. The sergeant glares. Lyra searches their data-slates. "Hale's main force is at Skybreaker. This sector is thin. We have a clear path."
+[[Question the sergeant for more details->CanyonAmbush-Alone-LyraJoined-Interrogation]]
+[[Leave them tied up and continue->CanyonAmbush-Alone-LyraJoined-Depart]]
+:: CanyonAmbush-Alone-LyraJoined-Escape
+While the stunned soldiers are fumbling, you and Lyra slip past them silently, disappearing into a narrow side canyon. The path winds upward, leaving the ambush site behind.
+[[Head for the geothermal field->GeoCoreApproach-Alone-LyraJoined]]
+:: CanyonApproach-MetMoth
+The canyon walls rise around you, steep and silent. Moth points to peculiar scorch marks on the rock face. "Lyra's signature," they whisper. A narrow, winding path leads up toward a dark cave mouth. The air is heavy and still, carrying a faint hum of energy. Your new companion seems knowledgeable but untested.
+[[Climb the path to the cave->LyraHideout-MetMoth-MetLyra]]
+[[Search the canyon base for another entrance->CanyonApproach-MetMoth-Search]]
+
+:: CanyonApproach-MetMoth-Guided
+A Nomad guide leads you and Moth swiftly through hidden trails, avoiding ash sinks and patrols. The guide stops at the canyon's edge, pointing to a cave high on the cliff. "Lyra's place. We go no further. Good luck." They melt back into the landscape, leaving you and Moth at the mouth of the great chasm.
+[[Approach the cave entrance->LyraHideout-MetMoth-MetLyra]]
+
+:: GeoCoreApproach-Alone-LyraJoined
+The ground slopes into a hellish landscape of steaming fumaroles. The air reeks of sulfur. Lyra checks a sensor. "The GeoCore vents are just ahead. This is the back door to Haven-0."
+[[Approach the vent entrance->GeoCoreTunnels-Alone-LyraJoined]]
+:: LegionCheckpoint-MetMoth-BluffSuccess
+You present a convincing story about being Hale's scouts. The soldier with the scanner hesitates, then nods. "Codes check out. Proceed." He waves you through the checkpoint. You and Moth walk calmly past the barriers, not looking back until you are safely within the ruins beyond. The deception worked.
+[[Continue into the northern ruins->NorthernRuins-MetMoth]]
+
+:: LegionFortress-MetMoth-Captured
+The fortress is a formidable structure of concrete and steel. You and Moth are marched into an interrogation room. Captain Bronn Hale enters, his presence filling the space. He places your map fragment on the table. "A courier and a wanderer. You have something I want. Tell me about the other fragments."
+[[Remain silent->LegionFortress-MetMoth-Interrogation]]
+[[Try to bargain for your freedom->LegionFortress-MetMoth-Bargain]]
+
+:: NomadCamp-Alone-LyraJoined
+Elder Kael listens intently. His eyes flick to Lyra. "The Ashwitch's presence is concerning. But the Legion is a greater threat. You may rest here for a night. No longer."
+[[Accept the offer of shelter->NomadCamp-Alone-LyraJoined-Rest]]
+[[Ask for supplies and continue immediately->NomadCamp-Alone-LyraJoined-Trade]]
+:: NomadCamp-Alone-LyraJoined-Passage
+Kael gives a sharp whistle. A skiff is brought forward. You board the craft, and the Nomad pilot navigates the dunes, leaving you at the edge of the geothermal badlands.
+[[Arrive at the badlands->GeoCoreApproach-Alone-LyraJoined]]
+:: NorthernRuins-Alone-LyraJoined-Rest
+You barricade yourselves in a relatively intact room. Lyra sets up an alarm. For a few hours, there is peace. You wake refreshed.
+[[Begin the journey to the GeoCore vents->GeoCoreApproach-Alone-LyraJoined]]
+:: RelayStationExterior-MetMoth
+The relay station is a skeletal cluster of towers on a windswept ridge. Lyra is waiting, her face grim. "You came with the courier. I am hunted by the Union and the Legion. I have the second fragment, but trust must be built. Will you work with me, or seek your own path?"
+[[Enter the relay station to discuss an alliance->RelayStation-MetMoth-MetLyra]]
+[[Decline and leave->RelayStationExterior-MetMoth-Alone]]
+:: SkybreakerFoothills-MetMoth
+The buried city of Skybreaker looms in the distance, a series of angular shapes thrusting from the ash. Legion excavation equipment swarms around its base. Moth looks worried. "That's a lot of Legion. We need Lyra's knowledge to find another way in." The direct approach seems suicidal.
+[[Search for an alternate route->SkybreakerFoothills-MetMoth-Search]]
+[[Approach the Legion camp under a flag of parley->LegionExcavationSite-MetMoth]]
+
+:: UnionLab-MetMoth-Stay
+"We should speak with the Union leaders," you tell Moth. You approach a technician. "We wish to discuss the map fragments with your Prefect." The technician eyes you coldly. "The Prefect will see you. But your weapons remain here." You are led away from Lyra, deeper into the Union complex.
+[[Enter the Prefect's chamber->UnionPrefect-MetMoth]]
+:: CanyonAmbush-Alone-LyraJoined-Depart
+You leave the three bound scouts behind. Lyra leads the way up a path out of the canyon. "They'll free themselves in a few hours. By then, we'll be at the vents."
+[[Descend toward the vents->GeoCoreApproach-Alone-LyraJoined]]
+:: CanyonAmbush-Alone-LyraJoined-Interrogation
+Lyra applies a neural stimulator. The sergeant convulses. "Hale's main force... at Skybreaker... only patrols here..." he slurs. The information confirms your path is clear.
+[[Continue toward the GeoCore vents->GeoCoreApproach-Alone-LyraJoined]]
+:: CanyonApproach-MetMoth-Search
+You and Moth scour the canyon's base, finding discarded power cells and a cracked dataslate. Moth examines the fragments. "Union tech, but modified. She's definitely here." A low hum draws your attention to a curtain of thick vines clinging to the cliff wall. Behind it, you find a sealed metal hatch, not the cave above.
+[[Enter through the hidden hatch->LyraHideout-MetMoth-MetLyra]]
+
+:: GeoCoreTunnels-Alone-LyraJoined
+The tunnel entrance exhales warm, moist air. Inside, the passage glitters with sharp crystals. Lyra checks her sensors. "The main geothermal flow is this way. It's the most direct route."
+[[Follow the main tunnel->GeoCoreTunnels-Alone-LyraJoined-Deeper]]
+:: LegionExcavationSite-MetMoth
+You approach the Legion camp with your hands raised. Sentries escort you to a large command tent. Captain Bronn Hale stands before a topographic map of Skybreaker. "A wanderer and a courier," he says, his voice dangerously calm. "You walk into my camp. That is either very brave or very foolish. Speak."
+[[Offer your knowledge of the fragments->LegionExcavationSite-MetMoth-Bargain]]
+[[Remain defiant->LegionExcavationSite-MetMoth-Defiant]]
+
+:: LegionFortress-MetMoth-Bargain
+"We can take you to the second fragment," you tell Hale. "The technomancer, Lyra, has it. But we need to be free to act as bait." Hale studies you, his expression unreadable. "A risky gambit," he says. "If you betray me, your death will be slow. But I am willing to gamble."
+[[Accept the terms->CanyonApproach-MetMoth-Guarded]]
+:: LegionFortress-MetMoth-Interrogation
+The questioning is harsh, but you and Moth reveal nothing. During a shift change, an explosion rocks the fortress—a distraction. In the chaos, you overpower a guard and steal their key. You free Moth, and together you slip into a ventilation shaft, leaving the sounds of alarm behind.
+[[Escape into the ducts->LegionFortressEscape-MetMoth]]
+
+:: LyraHideout-MetMoth-MetLyra
+The cave is a makeshift tech lab, holoscreens flickering with weather data. Lyra Kade spins around, a pistol in her hand. "Moth. And a stranger with a map shard." Her eyes are sharp, assessing. "The Legion is hours away. Why should I trust you with the second fragment? What do you offer besides trouble?"
+[[Propose an alliance->LyraHideout-MetMoth-LyraJoined]]
+[[Demand the fragment->LyraHideout-MetMoth-Refused]]
+
+:: NomadCamp-Alone-LyraJoined-Rest
+The night is cold, but the sense of temporary safety is a relief. You get a few hours of sleep, waking at dawn ready for the final challenge.
+[[Depart at first light->GeoCoreApproach-Alone-LyraJoined]]
+:: NomadCamp-Alone-LyraJoined-Trade
+You ask for supplies, not sanctuary. Kael nods. The Nomads provide you with fresh water, food, and information. "The GeoCore vents are active. The path is dangerous, but clear."
+[[Head for the GeoCore vents->GeoCoreApproach-Alone-LyraJoined]]
+:: NorthernRuins-MetMoth
+You and Moth hide in the skeleton of a pre-Cataclysm library, shelves of rotten books tilting around you. Moth checks the perimeter. "The Legion presence is light here. We can circle back toward the canyons or try for the Relay Station." The choice of path will define your next ally.
+[[Head for the canyons->CanyonApproach-MetMoth]]
+[[Head for the Relay Station->RelayStationExterior-MetMoth]]
+
+:: RelayStation-MetMoth-MetLyra
+Inside the shack, Lyra works at a terminal. "Your fragment and mine are two parts of a whole," she says without looking up. "The third is with Dr. Vale in Skybreaker. The Legion is already digging. We can work together, but we must move now." She finally turns, her gaze intense, awaiting your decision.
+[[Agree to the alliance->RelayStation-MetMoth-LyraJoined]]
+[[Refuse and leave->RelayStationExterior-MetMoth-Alone]]
+
+:: SkybreakerFoothills-MetMoth-Search
+You and Moth skirt the Legion's perimeter, keeping to the shadows of rubble and wrecked machinery. You find a collapsed ventilation grate, too small for armored troops. It's a tight, dark squeeze into the earth. "It might lead inside," Moth whispers, peering into the blackness.
+[[Squeeze into the vent->SkybreakerVent-MetMoth]]
+
+:: UnionPrefect-MetMoth
+The Prefect is a severe woman surrounded by data streams. "The Haven-0 fragments are legacy technology. They belong under Union control for the good of humanity. You will surrender them." Armed guards step from the walls. There is no room for negotiation in her cold, logical world.
+[[Surrender the fragments->UnionCustody-MetMoth]]
+[[Attempt to fight your way out->UnionLabEscape-MetMoth]]
+:: GeoCoreTunnels-Alone-LyraJoined-Deeper
+The main tunnel slopes steeply, opening into a vast cavern. A lake of molten rock bubbles below. A narrow walkway spans the abyss. Lyra tests it. "This is the most direct route. The heat is punishing."
+[[Cross the walkway->Haven0Entrance-Alone-LyraJoined]]
+[[Look for an alternative path->GeoCoreTunnels-Alone-LyraJoined-SideTunnel]]
+:: LegionExcavationSite-MetMoth-Bargain
+"You want the second fragment? The technomancer Lyra has it," you tell Hale. "We can lead you to her hideout in the canyons. But we need to appear as willing collaborators, not prisoners." Hale studies you, his expression unreadable. "A risky gambit. My scouts will observe. Betray me, and your deaths will be slow. But I am willing to gamble."
+[[Accept the terms->CanyonApproach-MetMoth-Guarded]]
+:: LegionExcavationSite-MetMoth-Defiant
+You stand silent, your jaw set. Hale's expression darkens. "Another waster with misplaced pride." He gestures to his guards. "Take them to the holding pit. We will extract the location of the other fragments through persuasion." You and Moth are dragged away from the command tent, into the noisy, grim depths of the excavation site.
+[[Face interrogation->LegionFortress-MetMoth-Captured]]
+
+:: LegionFortress-MetMoth-Released
+You and Moth are given your gear back under the watchful eyes of Legion guards. "Find the technomancer," Hale orders. "My scouts will be observing. Do not fail." You are escorted out of the fortress gates and released into the wastes, your freedom a tenuous and dangerous gift.
+[[Head for the canyons under watch->CanyonApproach-MetMoth-Guarded]]
+:: LegionFortressEscape-MetMoth
+You and Moth crawl through the stifling air ducts, emerging into a deserted storage bay. You find grimy coveralls and a maintenance skimmer with its ignition key still in place. You start the engine and drive out through an open service gate, the chaos of the fortress fading behind you in the ash-filled night.
+[[Head for the GeoCore vents->GeoCoreApproach-MetMoth]]
+[[Seek refuge with the Nomads->NomadOutskirts-MetMoth]]
+
+:: LyraHideout-MetMoth-LyraJoined
+Lyra lowers her pistol, a calculating look in her eyes. "An alliance? With a courier and a stranger? Perhaps. I need distractions while I work. The Legion is closing in. Together, we might reach Skybreaker." She gestures to the second fragment, glowing on a pedestal. "But we move on my schedule, by my routes."
+[[Accept her terms->LyraHideout-MetMoth-LyraJoined-Agreed]]
+[[Hesitate, asking for more certainty->LyraHideout-MetMoth-LyraJoined-Doubt]]
+
+:: LyraHideout-MetMoth-Refused
+"You think you can demand anything here?" Lyra snaps, stepping between you and the fragment. "I survived the Union and the Legion by being smarter than that." Her hand goes to a device on her belt. The holoscreens flicker and die. "Get out. Before I decide you're more trouble than you're worth."
+[[Retreat from the hideout->CanyonApproach-MetMoth-Refused]]
+[[Apologize and try to reason->LyraHideout-MetMoth-MetLyra]]
+
+:: RelayStation-MetMoth-LyraJoined
+"Fine. We work together," you agree. Lyra gives a curt nod. "Good. The Legion is hours from Skybreaker. We have no time to waste." She hands you the second fragment, which clicks into place with your own. "The final piece is with Vale. We leave for the foothills immediately."
+[[Set out for Skybreaker->SkybreakerFoothills-MetMoth-LyraJoined]]
+
+:: RelayStationExterior-MetMoth-Alone
+The relay station stands silent on the windy ridge. Lyra is gone. A note is pinned to the door with a shard of metal: 'Opportunity offered is opportunity lost. The path is yours to walk.' Your chance for an alliance with the technomancer has vanished.
+[[Return to the crossroads->Crossroads-MetMoth]]
+
+:: SkybreakerVent-MetMoth
+The vent is a tight, vertical drop into darkness. You and Moth descend slowly, climbing down rusted rungs that groan under your weight. The air grows cold and stale. Below, you hear the faint sound of chanting. You drop into a forgotten atrium where grey-robed figures circle a glowing console. The Ashen Choir.
+[[Attempt to sneak past them->SkybreakerAtrium-MetMoth-Sneak]]
+[[Prepare to confront them->SkybreakerAtrium-MetMoth-Fight]]
+
+:: UnionCustody-MetMoth
+You are disarmed and led to a sterile detention cell. The Prefect observes you through a transparent wall. "The fragments will be decoded. Your cooperation is noted. You will be assigned a role in the new order, under Union supervision." The door seals with a final hiss. Your quest ends here.
+[[The Union's future->Ending-Technocratic]]
+
+:: UnionLabEscape-MetMoth
+You lunge at the nearest guard, seizing their weapon. Moth creates a diversion, overturning a console. Shots ring out in the confined space. You fight your way back toward the entrance, the Prefect's shouts echoing behind you. You burst out of the outpost gates into the open ash.
+[[Escape into the wastes->UnionOutpostEscape-MetMoth]]
+:: CanyonApproach-MetMoth-Guarded
+The canyon walls loom, their shadows deepened by the presence of Legion scouts watching from the ridges above. Moth walks beside you, their usual energy subdued. "They're following every move," they whisper. The path to Lyra's cave feels like a death march, your freedom a fragile illusion. The air is thick with tension and the smell of dry rock.
+[[Lead the scouts to the cave->LyraHideout-MetMoth-Guarded]]
+[[Try to signal a warning to Lyra->CanyonSignal-MetMoth-Guarded]]
+:: CanyonApproach-MetMoth-Refused
+You retreat down the winding path, Lyra's distrust burning like a brand. Moth looks at you, a mixture of disappointment and fear in their eyes. "She was our best chance. What do we do now?" The canyon seems deeper, the path to Skybreaker longer and more perilous without the second fragment or the technomancer's knowledge.
+[[Return to the Nomads for another plan->NomadCamp-MetMoth-LearnFragments]]
+[[Press on to Skybreaker without Lyra->SkybreakerFoothills-MetMoth]]
+
+:: GeoCoreApproach-MetMoth
+The land falls away into a treacherous expanse of hissing fumaroles and bubbling mud. The air reeks of sulfur, and the heat is a physical force. Moth points to a dark opening in the side of a thermal mound. "That's the vent entrance. It looks unstable." Without Lyra's guidance, the path seems even more dangerous, a gamble into the earth's fiery heart.
+[[Approach the vent entrance->GeoCoreTunnels-MetMoth-NoLyra]]
+[[Scout the area for a safer path->GeoCoreApproach-MetMoth-Scout]]
+
+:: LyraHideout-MetMoth-LyraJoined-Agreed
+"We have a deal," you say. Lyra's posture relaxes minutely. She picks up the second fragment and hands it to you. It merges with yours, the map glowing brighter, revealing more of the path. "Good. We leave now. The Legion's patrols are increasing. Skybreaker awaits." She shoulders a pack and leads the way out of the cave.
+[[Begin the journey to the buried city->SkybreakerFoothills-MetMoth-LyraJoined]]
+
+:: LyraHideout-MetMoth-LyraJoined-Doubt
+"I need to know this is a real partnership," you say, holding back. Lyra scowls. "There is no time for guarantees. Trust is earned on the road." She grabs her gear. "I am going to Skybreaker. You can follow, or you can stay here and doubt. Your choice." She strides toward the cave exit without looking back.
+[[Follow her->SkybreakerFoothills-MetMoth-LyraJoined]]
+[[Let her go->LyraHideout-MetMoth-Abandoned]]
+
+:: SkybreakerAtrium-MetMoth-Fight
+The grey-robed cultists turn as one, their eyes glowing with fanatic light. "Defilers!" they shriek, raising curved blades. You and Moth stand back-to-back, weapons ready. The fight is brutal and swift in the echoing atrium. You defeat them, but the noise of combat echoes through the ancient corridors, a beacon to any other inhabitants.
+[[Search for a way deeper into the facility->SkybreakerCorridor-MetMoth]]
+
+:: SkybreakerAtrium-MetMoth-Sneak
+You press against the cold wall, sliding through the shadows as the cultists chant, oblivious. Moth moves like a ghost beside you. You find a recessed stairwell leading down into deeper darkness. The chanting fades above as you descend into the silent, pressurized heart of the buried city, your presence undetected.
+[[Descend the stairwell->SkybreakerSublevel1-MetMoth]]
+
+:: SkybreakerFoothills-MetMoth-LyraJoined
+The foothills are a treacherous slope of loose scree. Lyra points to a sheer cliff face away from the Legion's main operation. "There. A maintenance shaft. It's a difficult climb, but unguarded." She checks the combined map. "It leads straight to the inner corridors. We can avoid the Legion's front door."
+[[Ascend to the shaft->SkybreakerVent-MetMoth-LyraJoined]]
+
+:: UnionOutpostEscape-MetMoth
+You and Moth burst from the outpost gates into the open ash, Union shouts and the crackle of laser fire following you. You dive behind a dune, then another, putting distance between you and the energized fence. The pursuit eventually breaks off, unwilling to venture far into the uncontrolled wastes. You are free, but marked by the Union.
+[[Head for the crossroads to regroup->Crossroads-MetMoth]]
+:: CanyonSignal-MetMoth-Guarded
+You subtly tap Moth's arm and point to a reflective piece of wreckage on a high ledge. They nod in understanding. As you walk, you deliberately kick a loose stone, sending it clattering down the slope. The noise is small, but the flash of light from the reflection is clear. You hope this crude signal is enough warning for the wary technomancer in her hideout above.
+[[Continue the approach toward the cave->LyraHideout-MetMoth-Guarded]]
+:: GeoCoreApproach-MetMoth-Scout
+You and Moth climb a jagged rock formation to get a better view of the geothermal field. From this vantage, you see that the main vent entrance is surrounded by recent rockfalls. A smaller, darker opening is visible further north, partially obscured by a mineral cascade. The direct path is clearly hazardous.
+[[Head for the smaller, hidden entrance->GeoCoreTunnels-MetMoth-NoLyra]]
+[[Navigate the rockfall to the main entrance->GeoCoreTunnels-MetMoth-NoLyra]]
+
+:: GeoCoreTunnels-MetMoth-NoLyra
+The heat inside the vent is oppressive, a damp wall of air that makes breathing difficult. The tunnel forks almost immediately. One path is wide and smooth, clearly cut by machinery, descending steadily. The other is a narrow, twisting fissure, from which a slightly cooler draft emanates.
+[[Take the wide, machine-carved tunnel->GeoCoreTunnels-MetMoth-NoLyra-Deeper]]
+[[Squeeze into the natural fissure->GeoCoreTunnels-MetMoth-NoLyra-Fissure]]
+
+:: LyraHideout-MetMoth-Abandoned
+Lyra disappears into the canyon's gloom without a backward glance. The cave is silent now, save for the hum of dormant machinery. You and Moth are left with only the first fragment, its secrets still locked. The path to Skybreaker is long and fraught with peril, and you have alienated the one person who could have made it clear.
+[[Venture out toward the buried city->SkybreakerFoothills-MetMoth]]
+[[Seek other allies in the wastes->Crossroads-MetMoth]]
+
+:: LyraHideout-MetMoth-Guarded
+You enter the cave with the two Legion soldiers flanking you. Lyra is waiting, her face a mask of cold fury. "So," she spits, her hand on her pistol. "You lead them here. A coward's bargain." The soldiers raise their rifles. "By order of Captain Hale, you are to come with us, Kade." The cave is a powder keg, ready to explode.
+[[Attempt to de-escalate the situation->LyraHideout-MetMoth-Deescalate]]
+[[Stand back and let the confrontation unfold->LyraHideout-MetMoth-Fight]]
+:: SkybreakerCorridor-MetMoth
+The stairwell opens into a dim, sterile corridor lined with sealed laboratory doors. The air is cold and smells of antiseptic and dust. At the far end, a door labeled "DR. VALE - SECTOR 7-G" is slightly ajar, a faint light spilling from within. The sound of quiet sobbing echoes down the hall.
+[[Approach the lab door quietly->ValesLab-MetMoth-MetVale]]
+[[Search the nearby rooms first->SkybreakerCorridor-MetMoth-Search]]
+
+:: SkybreakerSublevel1-MetMoth
+You descend into a low-ceilinged service level, the air thick with the smell of oil and stagnant water. A dead terminal sits in a corner, its screen dark. A sealed door marked "AUXILIARY POWER" blocks one path, while a loose ceiling panel suggests a crawlspace.
+[[Attempt to power the terminal->SkybreakerSublevel1-MetMoth-Terminal]]
+[[Investigate the crawlspace->SkybreakerSublevel1-MetMoth-Crawlspace]]
+
+:: SkybreakerVent-MetMoth-LyraJoined
+You and Lyra ascend the sheer cliff face, finding the hidden maintenance shaft. It's a tight, vertical drop into the mountain's heart. Lyra rappels down first, her glow-stick illuminating the rusted rungs. You and Moth follow, descending into the pressurized silence of the buried city, far from the Legion's clamor above.
+[[Reach the bottom of the shaft->SkybreakerSublevel2-MetMoth-LyraJoined]]
+:: GeoCoreTunnels-MetMoth-NoLyra-Deeper
+The wide tunnel descends smoothly, but the heat intensifies with every step. Strange, humming machinery is set into the walls, vibrating with latent power. Moth wipes sweat from their brow. "This feels... industrial. Like it's still maintained." The tunnel ends at a massive, locked blast door. A control panel beside it glows with a soft red light, asking for an access code you do not have.
+[[Retreat and try the fissure->GeoCoreTunnels-MetMoth-NoLyra-Fissure]]
+[[Attempt to bypass the door's lock->GeoCoreTunnels-MetMoth-NoLyra-Bypass]]
+
+:: GeoCoreTunnels-MetMoth-NoLyra-Fissure
+The fissure is a tight, twisting squeeze, but the air is noticeably cooler. You and Moth crawl through the narrow passage, which opens into a small cavern. A underground stream trickles through the center, and the walls are covered in soft, blue bioluminescent moss. The path continues on the other side of the stream, leading downward into darkness.
+[[Cross the stream and continue->Haven0Entrance-MetMoth]]
+[[Follow the stream upstream to see where it leads->GeoCoreTunnels-MetMoth-NoLyra-Stream]]
+
+:: LyraHideout-MetMoth-Confrontation
+"It wasn't our choice!" you snap, keeping your hands visible. "Hale captured us. Leading them here was the price of our freedom." Moth nods vigorously. "They're watching us right now from the ridge." Lyra's glare softens marginally as she processes this. "A coerced betrayal is still a threat. But perhaps... not a terminal one." Her hand moves away from the device on her belt.
+[[Propose a plan to escape the scouts->LyraHideout-MetMoth-EscapePlan]]
+[[Ask for her help against the Legion->LyraHideout-MetMoth-Alliance]]
+:: LyraHideout-MetMoth-Fight
+The lead soldier ignores your attempt at peace and fires at Lyra. She ducks behind a console, returning fire with her pistol. The cave erupts in laser bolts and the smell of ozone. You and Moth are caught in the middle, forced to choose a side in the close-quarters gunfight.
+[[Fight alongside Lyra against the soldiers->LyraHideout-MetMoth-Fight-Subdued]]
+[[Use the chaos to escape the cave->CanyonEscape-MetMoth-Fleeing]]
+:: SkybreakerCorridor-MetMoth-Search
+You cautiously try the handle of a door marked "STORAGE." It opens into a room filled with dusty crates and broken equipment. Searching yields little: some old rations, a few power cells, but no useful information about Dr. Vale or the third fragment. The only way forward is the slightly ajar lab door at the end of the hall.
+[[Return to the corridor and approach the lab->ValesLab-MetMoth-MetVale]]
+
+:: SkybreakerSublevel1-MetMoth-Crawlspace
+You push up the loose ceiling panel and haul yourself into a tight, dusty crawlspace. You crawl on your belly through the darkness, the sound of your own breathing loud in your ears. After a long, claustrophobic journey, you see a sliver of light ahead—another access panel overlooking a larger, empty corridor.
+[[Drop down into the corridor->SkybreakerCorridor-MetMoth]]
+
+:: SkybreakerSublevel1-MetMoth-Terminal
+You wipe dust from the terminal screen and attempt to power it. The screen flickers, displaying a corrupted boot sequence. A single line of text appears: "VALE LAB: SECTOR 7-G. BIOHAZARD PROTOCOL ACTIVE." Then the screen dies completely. The information is cryptic, but it gives a direction. The sealed "AUXILIARY POWER" door seems the only viable path.
+[[Force the sealed door open->SkybreakerCorridor-MetMoth]]
+
+:: SkybreakerSublevel2-MetMoth-LyraJoined
+You drop onto a grated catwalk high above a vast, dark chamber. The air is cold and smells of ozone and rust. Far below, faint lights pulse around a central core. "The old reactor level," Lyra whispers. "The lab complexes are on the other side of this chasm. We need to cross silently." Moth points to a lower, narrower service walkway along the wall.
+[[Cross the main catwalk->SkybreakerBridge-MetMoth-LyraJoined]]
+[[Descend to the service walkway->SkybreakerService-MetMoth-LyraJoined]]
+
+:: ValesLab-MetMoth-MetVale
+The lab is a chaos of overturned tables and shattered glassware. Dr. Oren Vale is curled in a corner, rocking back and forth. He looks up as you enter, his eyes wide with terror. "They're coming for me! Hale's men!" Moth steps forward, their voice gentle. "Doctor Vale? We're here for the map fragment. We can protect you."
+[[Calm Vale and offer protection->ValesLab-MetMoth-ValeJoined]]
+[[Focus only on obtaining the fragment->ValesLab-MetMoth-FragmentTaken]]
+:: GeoCoreTunnels-MetMoth-NoLyra-Bypass
+You examine the blast door's control panel. The locking mechanism is complex, but a maintenance hatch at its base looks vulnerable. Moth finds a heavy metal bar among the debris. You pry the hatch open, revealing a nest of glowing cables. With a sharp tug, you sever the primary power conduit. The door gives a groaning shudder and slides open a foot, just enough to squeeze through. The chamber beyond is dark and vast, the air humming with immense power.
+[[Enter the chamber->Haven0Entrance-MetMoth]]
+
+:: GeoCoreTunnels-MetMoth-NoLyra-Stream
+You follow the gentle stream upstream, the blue moss providing an eerie light. The passage narrows, then opens into a domed cavern where the stream emerges from a crack in the rock wall. The air is fresh and cool. Carved into the cavern wall is a simple metal door, unmarked and seemingly ancient. It is unlocked. This is a forgotten back entrance.
+[[Open the door->Haven0Entrance-MetMoth]]
+
+:: Haven0Entrance-MetMoth
+The vault door of Haven-0 is a colossal circle of brushed metal, standing silent in a cavern of polished stone. You and Moth are completely alone. A central console glows with soft light, awaiting input. The weight of the choice is immense. Moth looks at you, their face full of hope and fear. "This is it. The fate of the world is here. What do we do?"
+[[Activate the purifier for all->Ending-Restoration]]
+[[Seize control for yourselves->Ending-Dominion]]
+[[Destroy the console to keep it free->Ending-Nomad]]
+
+:: LyraHideout-MetMoth-Alliance
+"The Legion is the common enemy," you state firmly. "We can turn this around. Lure their scouts into a trap within the canyon." Lyra considers this, her eyes flicking to the distant figures on the ridge. A grim smile touches her lips. "A counter-ambush. Risky. But perhaps the only way to salvage this." She gestures to a stack of gear. "I have explosives."
+[[Set the trap->CanyonAmbush-MetMoth-LyraJoined]]
+[[Abort and retreat immediately->CanyonRetreat-MetMoth-LyraJoined]]
+
+:: LyraHideout-MetMoth-EscapePlan
+"The canyon has old mining tunnels on the western face," you explain quickly. "If we can reach them, we can lose the scouts. Their vehicles can't follow." Lyra nods, already moving toward a stack of supplies. "I know the route. We go now. But if this is another trick..." She leaves the threat hanging, handing you a smoke grenade.
+[[Execute the escape->CanyonEscape-MetMoth-LyraJoined]]
+
+:: SkybreakerBridge-MetMoth-LyraJoined
+The main catwalk is a wide, grated bridge spanning the immense reactor chasm. It groans under your combined weight. Halfway across, a figure steps from the shadows on the far side—a Steel Legion sentry, their rifle aimed. "Halt! Intruders in the core!" they shout, their voice echoing.
+[[Rush the sentry->SkybreakerBridge-MetMoth-LyraJoined-Charge]]
+[[Dive for cover and return fire->SkybreakerBridge-MetMoth-LyraJoined-Fight]]
+
+:: SkybreakerService-MetMoth-LyraJoined
+You descend a rusted ladder to a lower, narrower service walkway that clings to the chamber wall. It's darker and more precarious, but hidden from the main bridge above. You move silently, hugging the cold metal. Below, you see a door marked "LAB ACCESS." It seems unguarded.
+[[Approach the lab access door->SkybreakerCorridor-MetMoth-LyraJoined]]
+
+:: CanyonAmbush-MetMoth-LyraJoined
+You and Lyra take positions behind a jagged rock outcrop. Moth scouts the Legion scouts advancing cautiously up the canyon path. Lyra primes a small electromagnetic pulse charge. "When they pass the dead tree," she whispers, pointing, "their gear will die. Then we move." The trap is set for the soldiers you were forced to lead here.
+[[Spring the ambush now->CanyonAmbush-MetMoth-LyraJoined-Triggered]]
+[[Wait to see if the entire patrol enters the kill zone->CanyonAmbush-MetMoth-LyraJoined-Patient]]
+
+:: CanyonApproach-MetMoth-Underfire
+Laser bolts scar the rock face around the cave entrance as you and Moth retreat down the narrow path. You dive behind a large boulder, catching your breath. The scouts are advancing down the slope, their shots keeping you pinned.
+[[Attempt to flank the scouts to break their formation->CanyonFlank-MetMoth-Underfire]]
+[[Fall back to the canyon floor and run for cover->CanyonRetreat-MetMoth-Underfire]]
+:: CanyonEscape-MetMoth-LyraJoined
+Lyra triggers a small charge that collapses part of the cave entrance, blocking the Legion's line of fire. "This way!" she yells, leading you and Moth down a steep tunnel into the canyon's depths. The air grows damp and cold. You emerge into a vast underground cavern where a subterranean river flows swiftly. A small, sturdy raft is tied to a rock, left for emergencies.
+[[Board the raft and follow the river->SubterraneanRiver-MetMoth-LyraJoined]]
+
+:: CanyonRetreat-MetMoth-LyraJoined
+Lyra shakes her head. "No trap. Not enough time. We run. Now." She tosses a smoke grenade, filling the area with thick grey clouds. You, Moth, and Lyra sprint down the canyon path, using the cover to put distance between you and the scouts. The Legion fire is wild and inaccurate in the smoke. You reach a fork in the canyon where the path splits.
+[[Take the left fork toward the Relay Station->NorthernRuins-MetMoth-LyraJoined]]
+[[Take the right fork toward the Nomad trails->NomadOutskirts-MetMoth-LyraJoined]]
+
+:: LabConfrontation-MetMoth-FightHale
+The fight is chaotic. Vale is hit in the crossfire. Lyra manages to override a door lock, revealing an emergency exit tunnel. "This way!" she yells. You grab the third fragment from Vale's desk as Moth provides covering fire. You escape into the tunnels, but Hale's forces are in pursuit.
+[[Escape into the deep tunnels->GeoCoreTunnels-MetMoth-LyraJoined-Fragment3-Pursued-Legion]]
+:: LegionVictory-MetMoth-Betrayed
+You hand the fragment to Captain Hale, a hollow feeling in your chest. He smiles coldly. "A wise choice." You and Moth are taken into Legion custody, forced to serve in the new order. You watch as the skies darken further under Hale's iron rule. Your name is forgotten, your hope extinguished.
+[[The world under the Legion->Ending-Dominion]]
+
+:: SkybreakerBridge-MetMoth-LyraJoined-Charge
+You sprint across the groaning bridge, a moving target. The Legion sentry fires, the shot ricocheting off the grating by your feet. Lyra lays down covering fire with her pistol. You close the distance, tackling the sentry before they can fire again. The struggle is brief and silent, ending with the sentry disarmed and unconscious.
+[[Secure the far side of the bridge->SkybreakerCorridor-MetMoth-LyraJoined]]
+
+:: SkybreakerBridge-MetMoth-LyraJoined-Fight
+You shove Moth and Lyra behind a support pillar as the sentry's shot rings out. You return fire, your shots sparking against the far wall. It becomes a stalemate across the chasm. Lyra taps her temple. "I'm jamming their comms. They can't call for backup. But we can't stay here forever."
+[[Make a coordinated rush under covering fire->SkybreakerBridge-MetMoth-LyraJoined-Charge]]
+[[Try to find another way around via the service walkway->SkybreakerService-MetMoth-LyraJoined]]
+
+:: SkybreakerCorridor-MetMoth-LyraJoined
+The lab access door opens into a dim, sterile corridor lined with sealed doors. Emergency lighting casts a pale glow. Lyra consults the combined map. "Vale's lab is at the end of this hall. The life signs are faint... but present." The silence is heavy, broken only by the hum of distant machinery and your own cautious footsteps.
+[[Move quietly down the corridor toward the lab->ValesLab-MetMoth-LyraJoined]]
+:: CanyonAmbush-MetMoth-LyraJoined-Patient
+You hold your breath, counting the Legion scouts as they file into the narrow crevice. Three in total. The last one steps over the concealed tripwire for Lyra's EMP mines. She gives you a sharp nod. You press the trigger. A silent wave of electromagnetic energy pulses out, disabling their rifle optics and comms units. The scouts stagger, confused and blinded by their own malfunctioning gear. You emerge from cover, weapons ready.
+[[Disarm and capture the scouts->CanyonAmbush-MetMoth-LyraJoined-Captured]]
+[[Use the confusion to slip past them->CanyonAmbush-MetMoth-LyraJoined-Escape]]
+
+:: CanyonAmbush-MetMoth-LyraJoined-Triggered
+The moment the first scout crosses the threshold, you trigger the EMP. The blast fries the electronics in his armor, sending him spasming to the ground. The other scouts outside the kill zone recoil, taking cover and opening fire. The element of surprise is lost, but their leader is down. The fight is on.
+[[Return fire from your ambush position->CanyonAmbush-MetMoth-LyraJoined-Firefight]]
+[[Fall back to a secondary position->CanyonAmbush-MetMoth-LyraJoined-Fallback]]
+
+:: CanyonFlank-MetMoth-Underfire
+You gesture for Moth to provide covering fire while you scramble up a rocky incline, circling around the Legion scouts' position. From above, you have a clear shot. You take aim, disabling the lead scout's rifle with a well-placed shot. The others scatter, confused. This breaks their formation and gives you an opening to retreat.
+[[Press the advantage and drive them back->CanyonAmbush-MetMoth-LyraJoined]]
+[[Use the confusion to escape down the canyon->CanyonRetreat-MetMoth-Underfire]]
+
+:: CanyonRetreat-MetMoth-Underfire
+You grab Moth and sprint down the slope, leaping from rock to rock as laser bolts sear the air around you. You reach the relative cover of a dried-up riverbed at the canyon floor. The scouts don't follow immediately, likely regrouping. You have a brief moment to catch your breath and plan your next move.
+[[Hide in the riverbed->CanyonHiding-MetMoth-Underfire]]
+[[Continue running toward the open wastes->Crossroads-MetMoth]]
+
+:: Haven0Entrance-MetMoth-LyraJoined-ValeJoined
+The massive vault door is a wall of brushed metal, covered in fading biohazard symbols. Vale gasps, pointing a trembling finger. "The failsafe... it requires a voice key." Before he can speak, Bronn Hale and his elites emerge from a side tunnel. Simultaneously, grey-robed Ashen Choir fanatics pour from another, their chanting drowning the geothermal hum.
+[[Activate the purifier with your allies->Ending-Restoration]]
+[[Side with Hale to establish control->Ending-Dominion]]
+[[Let Vale transfer control to the Union->Ending-Technocratic]]
+[[Destroy the console to keep Haven-0 free->Ending-Nomad]]
+[[Embrace the Choir's vision of ash->Ending-Ashen]]
+
+:: LyraHideout-MetMoth-Hostage
+You keep Lyra restrained, a knife at her back. "We're walking out of here," you tell the advancing Legion scouts. "Stand down or she dies." The scouts hesitate, lowering their rifles. Lyra stiffens, her voice a venomous whisper. "This is a mistake. They don't care if I live or die. They just want the fragment."
+[[Use the distraction to make a break for it->LyraHideout-MetMoth-HostageEscape]]
+[[Call their bluff and demand passage->LyraHideout-MetMoth-HostageBluff]]
+:: NomadOutskirts-MetMoth-LyraJoined
+The Nomad sentries on their sand-skiffs tense as you, Moth, and Lyra approach. Elder Kael rides forward, his expression unreadable. "Moth. The Ashwitch. And the wanderer. An unusual trio. The Legion hunts you all. Why bring that trouble to our gates?"
+[[Explain the situation and ask for sanctuary->NomadCamp-MetMoth-LyraJoined]]
+[[Ask for supplies and information only->NomadCamp-MetMoth-LyraJoined-Trade]]
+
+:: NorthernRuins-MetMoth-LyraJoined
+You reach the ruins of the old library, now a temporary sanctuary. Lyra checks her wrist-comp for Legion comms traffic. "They're concentrated at Skybreaker. This area is clear for now." She points northeast. "The GeoCore vents are a day's travel from here. That's our way into the deep tunnels toward Haven-0."
+[[Rest and plan the final journey->NorthernRuins-MetMoth-LyraJoined-Rest]]
+[[Push on immediately toward the vents->GeoCoreApproach-MetMoth-LyraJoined]]
+
+:: SubterraneanRiver-MetMoth-LyraJoined
+The raft glides silently on the dark, swift current, the cavern ceiling glittering with phosphorescent fungi. Lyra navigates with a handheld sonar. "This river flows deep under the forbidden zone. It should emerge near the GeoCore thermal vents. We'll be ahead of everyone." The journey is peaceful, a strange respite from the surface world's chaos.
+[[Continue the subterranean journey->GeoCoreTunnels-MetMoth-LyraJoined]]
+
+:: ValesLab-MetMoth-LyraJoined
+The lab is a chaos of overturned tables and shattered glassware. Dr. Oren Vale is curled in a corner, rocking back and forth. He looks up as you enter, his eyes wide with terror. "They're coming for me! Hale's men!" Lyra steps forward, her voice calm. "Doctor Vale. We are here for the fragment. And for you."
+[[Calm Vale and offer protection->ValesLab-MetMoth-LyraJoined-ValeJoined]]
+[[Focus only on obtaining the fragment->ValesLab-MetMoth-LyraJoined-FragmentTaken]]
+:: CanyonAmbush-MetMoth-LyraJoined-Captured
+The three Legion scouts are disoriented, their gear fried by the EMP blast. You and Moth quickly disarm them while Lyra secures them with polymer bonds. The lead scout glares, a silent promise of revenge in his eyes. Lyra searches their data-slates. "Hale's main force is still at Skybreaker. This sector is thin. We have a clear path to the vents." The immediate threat is neutralized.
+[[Question the sergeant for more details->CanyonAmbush-MetMoth-LyraJoined-Interrogation]]
+[[Leave them tied up and continue your journey->CanyonAmbush-MetMoth-LyraJoined-Depart]]
+
+:: CanyonAmbush-MetMoth-LyraJoined-Escape
+While the stunned soldiers are fumbling with their dead equipment, you, Moth, and Lyra slip past them silently, disappearing into a narrow side canyon. The path winds upward, leaving the ambush site and its confused occupants behind. The route to the GeoCore vents is now open, and you have a significant head start.
+[[Head for the geothermal field->GeoCoreApproach-MetMoth-LyraJoined]]
+
+:: CanyonAmbush-MetMoth-LyraJoined-Fallback
+The Legion scouts outside the EMP zone return fire, their shots pinging off the rock around you. Lyra gestures to a rear exit. "Secondary position! Now!" You fall back through a tight tunnel, emerging onto a high ledge overlooking the canyon. The scouts cannot follow easily, and you have a commanding view of their frustrated movements below.
+[[Snipe at the scouts from the high ground->CanyonAmbush-MetMoth-LyraJoined-Sniper]]
+[[Use the height to plan your next move->CanyonAmbush-MetMoth-LyraJoined-Plan]]
+
+:: CanyonAmbush-MetMoth-LyraJoined-Firefight
+A fierce exchange of laser fire fills the narrow canyon. You are pinned behind your rock cover while Lyra uses her tech to create dazzling holographic decoys. Moth's accurate shots keep the scouts' heads down. One scout falls, then another. The remaining two break and retreat, leaving their comrades behind. The immediate path is clear but the noise may have drawn attention.
+[[Secure the area and check the fallen->CanyonAmbush-MetMoth-LyraJoined-Secure]]
+[[Pursue the retreating scouts->CanyonAmbush-MetMoth-LyraJoined-Pursuit]]
+
+:: CanyonHiding-MetMoth-Underfire
+You and Moth press into a narrow fissure in the riverbank, the damp clay cool against your backs. Legion boots crunch on the gravel above, their voices frustrated. "They've gone to ground. Search the area!" A flashlight beam sweeps over your hiding spot but misses the deep shadow. After a tense minute, the search moves on.
+[[Wait until it's completely silent->CanyonHiding-MetMoth-Underfire-Safe]]
+[[Move out cautiously->CanyonRetreat-MetMoth-Underfire]]
+
+:: GeoCoreApproach-MetMoth-LyraJoined
+The ground slopes downward into a region of hissing fumaroles and bubbling mud pools. The air is thick with sulfur. Lyra checks a radiation sensor. "The GeoCore vents are just ahead. The energy readings are high, but stable. This is the back door to Haven-0." A massive geothermal plume erupts in the distance, a testament to the raw power below.
+[[Approach the vent entrance->GeoCoreTunnels-MetMoth-LyraJoined]]
+
+:: GeoCoreTunnels-MetMoth-LyraJoined
+The tunnel entrance is a gaping maw in the side of a thermal mound, exhaling warm, moist air. Inside, the passage is lined with glowing crystalline formations. The thrum of geothermal energy is a constant physical sensation. Lyra leads the way, her map illuminating the safest path through the naturally unstable tunnels.
+[[Follow the main tunnel->GeoCoreTunnels-MetMoth-LyraJoined-Deeper]]
+[[Explore a side branch for shortcuts->GeoCoreTunnels-MetMoth-LyraJoined-SideTunnel]]
+
+:: LyraHideout-MetMoth-HostageBluff
+"Lower your weapons and provide us a vehicle!" you demand, pressing the knife closer to Lyra. The lead scout laughs, a harsh, grating sound. "Hale said take the fragment. He didn't say anything about keeping the witch breathing." He raises his rifle. Your bluff has failed catastrophically.
+[[Drop Lyra and fight->LyraHideout-MetMoth-HostageBluff-Fight]]
+[[Use Lyra as a human shield and retreat->LyraHideout-MetMoth-HostageBluff-Shield]]
+
+:: LyraHideout-MetMoth-HostageEscape
+In the moment of hesitation from the scouts, you shove Lyra forward into them, creating a tangle of bodies. You and Moth spin and sprint for the cave's rear exit. Shots ring out behind you, but you dive into a narrow passage, sliding down a steep slope into darkness, leaving the confrontation behind.
+[[Find your way in the dark->CanyonEscape-MetMoth-LyraJoined]]
+
+:: NomadCamp-MetMoth-LyraJoined
+Elder Kael listens gravely as you explain the Legion's pursuit and the quest for Haven-0. The Nomads around the fire murmur amongst themselves. "The Ashwitch is not our friend," Kael says, eyeing Lyra. "But the Legion is a threat to all. You may rest here tonight. One night only."
+[[Accept the shelter and rest->NomadCamp-MetMoth-LyraJoined-Rest]]
+[[Politely decline and ask for supplies->NomadCamp-MetMoth-LyraJoined-Trade]]
+
+:: NomadCamp-MetMoth-LyraJoined-Trade
+You ask for supplies, not sanctuary. Kael nods, understanding the need for speed. The Nomads provide you with fresh water, food packs, and information. "The GeoCore vents are active," a scout reports. "The path is dangerous, but clear of Legion patrols." You are resupplied and ready to move.
+[[Head for the GeoCore vents->GeoCoreApproach-MetMoth-LyraJoined]]
+
+:: NorthernRuins-MetMoth-LyraJoined-Rest
+You barricade yourselves in a relatively intact room within the shattered library. Lyra sets up a portable alarm system. Moth distributes food rations. For a few hours, there is peace. The constant tension eases, allowing you to sleep in shifts. You wake refreshed, ready for the final push.
+[[Begin the journey to the GeoCore vents->GeoCoreApproach-MetMoth-LyraJoined]]
+:: CanyonAmbush-MetMoth-LyraJoined-Depart
+You leave the three bound Legion scouts in the narrow crevice, their muffled threats fading behind you. Lyra leads the way up a winding path out of the canyon. "They'll free themselves in a few hours," she says. "But by then, we'll be at the vents." The path opens onto a high ridge with a view of the geothermal landscape below, its vents steaming under the grey sky.
+[[Descend toward the vents->GeoCoreApproach-MetMoth-LyraJoined]]
+
+:: CanyonAmbush-MetMoth-LyraJoined-Interrogation
+Lyra applies a neural stimulator to the sergeant's temple. He convulses, his eyes glazing over. "Hale's main force... at Skybreaker... only patrols here..." he slurs. "Vents... unguarded..." The information confirms your path is clear. Lyra stands, wiping her hands. "We have what we need."
+[[Continue toward the GeoCore vents->GeoCoreApproach-MetMoth-LyraJoined]]
+
+:: CanyonAmbush-MetMoth-LyraJoined-Plan
+From the high ledge, you survey the canyon and the lands beyond. Lyra cross-references the scout's information with her map. "Hale's strength is at Skybreaker. The path to the GeoCore vents is clear. We can bypass the main conflict." She points to a route skirting the badlands.
+[[Take the safer route->NorthernRuins-MetMoth-LyraJoined]]
+[[Risk the direct path->GeoCoreApproach-MetMoth-LyraJoined]]
+
+:: CanyonAmbush-MetMoth-LyraJoined-Pursuit
+You chase the two retreating scouts down the canyon. They are panicked, stumbling over the rocky terrain. You corner them in a box canyon. They throw down their weapons, hands raised. "Mercy!" one pleads. You now have two more prisoners, but the sound of the firefight may have drawn more Legion attention.
+[[Take them prisoner and retreat->CanyonAmbush-MetMoth-LyraJoined-Captured]]
+[[Disarm them and let them go->CanyonAmbush-MetMoth-LyraJoined-Depart]]
+
+:: CanyonAmbush-MetMoth-LyraJoined-Secure
+The two fallen scouts are dead. You search the bodies, finding ammunition and a data-slate with Skybreaker schematics. Lyra examines it. "This confirms the ventilation shaft. It's our best way in." The immediate threat is neutralized, but you are now deeper in Legion territory.
+[[Move out quickly->NorthernRuins-MetMoth-LyraJoined]]
+
+:: CanyonAmbush-MetMoth-LyraJoined-Sniper
+From your high vantage point, you have a clear field of fire. Lyra hands you a scoped rifle. You take careful aim, disabling the scouts' communication antenna first. Your next shots are warning shots at their feet, forcing them to retreat. The route is clear without further bloodshed.
+[[Descend and continue->CanyonAmbush-MetMoth-LyraJoined-Depart]]
+
+:: CanyonHiding-MetMoth-Underfire-Safe
+You wait for what feels like an hour until the sounds of search completely vanish, replaced by the lonely whisper of the wind. You emerge from the fissure into an eerie silence. The Legion patrol is gone. You are safe, for now.
+[[Continue toward your destination->CanyonApproach-MetMoth]]
+[[Change course->NorthernRuins-MetMoth]]
+
+:: GeoCoreTunnels-MetMoth-LyraJoined-Deeper
+The main tunnel widens into a colossal cavern where a lake of molten rock bubbles far below, casting a hellish orange glow. A narrow walkway spans the abyss. Lyra tests it. "It's stable. This is the direct route. The heat is intense, but it's the fastest way." The walkway creaks underfoot.
+[[Cross the molten lake->Haven0Entrance-MetMoth-LyraJoined]]
+
+:: GeoCoreTunnels-MetMoth-LyraJoined-SideTunnel
+You take a smaller side branch, which twists through tighter passages. The air is cooler, and the walls are covered in bioluminescent fungi. The path descends, opening into a quiet chamber with a single, ornate metal door at its center—an old service entrance to Haven-0.
+[[Approach the service door->Haven0Entrance-MetMoth-LyraJoined]]
+
+:: LyraHideout-MetMoth-HostageBluff-Fight
+[[Break away and flee the cave->CanyonApproach-MetMoth-Fight-Fleeing]]
+:: LyraHideout-MetMoth-HostageBluff-Shield
+[[Escape into the tunnels->CanyonEscape-MetMoth-LyraJoined]]
+:: NomadCamp-MetMoth-LyraJoined-Rest
+The Nomads give you a tent at the edge of their camp. The night is cold, but the sense of safety is a relief. Around a low fire, Lyra and Moth discuss the final approach. You get a few hours of sleep, waking at dawn refreshed.
+[[Depart at first light->GeoCoreApproach-MetMoth-LyraJoined]]
+:: Haven0Entrance-MetMoth-LyraJoined
+The vault door is immense, covered in fading warning placards. Lyra works at the console, her face illuminated by its glow. Moth stands guard, watching the tunnels behind you. For now, you are alone. The thrum of geothermal energy vibrates through the floor. Lyra looks up, her expression grim. "The system is intact. The choice is ours to make. But we must be quick. We won't be alone for long."
+[[Activate the purifier with your allies->Ending-Restoration]]
+[[Side with Lyra to give control to the Union->Ending-Technocratic]]
+[[Seize control for yourselves->Ending-Dominion]]
+[[Destroy the console to prevent any faction from winning->Ending-Nomad]]
+
+:: CanyonApproach-WithMoth-Underfire
+Laser fire scars the rock around the cave entrance as you and Moth retreat down the path. You dive behind a large boulder, catching your breath. The scouts are advancing down the slope, their shots keeping you pinned.
+[[Attempt to flank the scouts->CanyonFlank-WithMoth-Underfire]]
+[[Fall back to the canyon floor and run->CanyonRetreat-WithMoth-Underfire]]
+
+:: ValesLab-MetMoth-ValeJoined
+The lab is a chaos of overturned tables and shattered glassware. You help the terrified Dr. Vale to his feet. "We all go," you insist. Moth supports his other side. Lyra nods. The four of you slip into the service tunnels just as bootsteps echo outside.
+[[Escape into the tunnels->GeoCoreTunnels-MetMoth-LyraJoined-ValeJoined-Fragment3]]
+:: ValesLab-MetMoth-FragmentTaken
+You snatch the third fragment from Vale's desk, ignoring his pleading sobs. Lyra looks at you with pure contempt but says nothing. Moth seems horrified. As you turn to leave, the lab door bursts open—Legion soldiers pour in, alerted by the noise.
+[[Fight your way out->LabConfrontation-MetMoth-FightHale]]
+[[Surrender the fragment->LegionVictory-MetMoth-Betrayed]]
+
+:: ValesLab-MetMoth-LyraJoined-FragmentTaken
+You snatch the fragment from Vale's trembling hand. "Please, don't leave me with them!" he pleads. You ignore him, turning for the door. Lyra looks at you with deep disapproval but says nothing. Moth seems shocked by your callousness. As you leave, Vale's sobs fade behind you, alone with the approaching Legion. Alarms begin to blare further down the hall.
+[[Escape down the corridor->SkybreakerCorridor-MetMoth-LyraJoined-FragmentTaken]]
+
+:: ValesLab-MetMoth-LyraJoined-ValeJoined
+The lab is a wreck of overturned equipment. Dr. Vale is terrified but unharmed. "We all go, or no one goes," you tell the trembling scientist, helping him to his feet. He clings to you. Lyra nods. The four of you slip into the service tunnels just as bootsteps echo outside.
+[[Escape into the tunnels->GeoCoreTunnels-MetMoth-LyraJoined-ValeJoined]]
+:: SkybreakerCorridor-MetMoth-LyraJoined-FragmentTaken
+You clutch the three combined fragments, the cost of abandoning Vale heavy in the air. Lyra points to a service hatch. "The geothermal tunnels. It's our only escape now." You drop into the oppressive heat, the sounds of Legion pursuit growing louder behind you.
+[[Enter the service hatch->GeoCoreTunnels-MetMoth-LyraJoined-Fragment3-Pursued]]
+:: LyraHideout-WithMoth-Subdued
+You wrestle the pistol from Lyra's grasp, pinning her arms. She struggles, then goes still, her eyes burning with fury. "This is a mistake," she spits. "The Legion is the real enemy." Outside, the scouts' shouts grow closer. Moth looks from you to Lyra, uncertain.
+[[Use Lyra as a bargaining chip with the approaching scouts->LyraHideout-WithMoth-HostageBluff]]
+[[Release her and propose a truce against the Legion->LyraHideout-WithMoth-Confrontation]]
+:: CanyonApproach-MetMoth-Fleeing-Underfire
+You stumble down the canyon path, laser shots still pinging off the rocks around you. Moth keeps pace, their breathing ragged. The Legion scouts are no longer pursuing, likely occupied with securing Lyra's hideout.
+[[Continue toward the Relay Station->NorthernRuins-MetMoth]]
+[[Head for the Nomad trails->NomadOutskirts-MetMoth]]
+
+:: GeoCoreTunnels-MetMoth-LyraJoined-ValeJoined-Fragment3
+The geothermal tunnels are humid and loud, the air thick with the smell of sulfur. Dr. Vale clings to Lyra, unnerved by the primal energy. Moth scouts ahead, returning to report. "The vault door is just around the next bend. No signs of Legion or Choir yet." The final approach to Haven-0 is clear for your unusual quartet.
+[[Approach the Haven-0 vault->Haven0Entrance-MetMoth-LyraJoined-ValeJoined]]
+
+:: CanyonApproach-WithMoth-Fleeing-Underfire
+You stumble down the canyon path, laser shots still pinging off the rocks around you. Moth keeps pace, their breathing ragged. The Legion scouts are no longer pursuing, likely occupied with securing Lyra's hideout.
+[[Continue toward the Relay Station->NorthernRuins-WithMoth]]
+[[Head for the Nomad trails->NomadOutskirts-WithMoth]]
+
+:: CanyonRetreat-Alone-LyraJoined-Fleeing
+The canyon path is narrow and winding. Smoke fills the air. You and Lyra run from a failed confrontation, the sound of pursuit fading.
+[[Take the left fork toward the Relay Station->NorthernRuins-Alone-LyraJoined]]
+[[Take the right fork toward the Nomad trails->NomadOutskirts-Alone-LyraJoined]]
+:: CanyonRetreat-Alone-LyraJoined
+Lyra shakes her head. "No trap. Not enough time. We run. Now." She tosses a smoke grenade. You and Lyra sprint down the canyon path, using the cover to escape.
+[[Take the left fork toward the Relay Station->NorthernRuins-Alone-LyraJoined]]
+[[Take the right fork toward the Nomad trails->NomadOutskirts-Alone-LyraJoined]]
+:: GeoCoreTunnels-MetMoth-LyraJoined-Fragment3-Pursued
+The tunnels are oppressively hot, the air thick with sulfur. The thrum of geothermal energy is constant, but now underscored by the echo of heavy boots and shouted orders. Legion pursuit is closing in. Lyra checks the combined map. "The vault is close. We have to run."
+[[Run for the vault door->Haven0Entrance-MetMoth-LyraJoined]]
+:: GeoCoreTunnels-MetMoth-LyraJoined-ValeJoined
+The geothermal tunnels are humid and loud. Dr. Vale whimpers, clinging to Lyra's arm as you press forward. Moth scouts ahead, returning with a tense report. "The vault door is just ahead. The path is clear for now, but I can hear... chanting. The Ashen Choir might be near." The final approach is fraught with tension.
+[[Approach the Haven-0 vault->Haven0Entrance-MetMoth-LyraJoined-ValeJoined]]
+
+:: GeoCoreTunnels-MetMoth-LyraJoined-Fragment3-Pursued-Legion
+The geothermal tunnels echo with the shouts of Legion soldiers and the clatter of their armor. The heat is stifling, and the air tastes of sulfur and ozone. Lyra pushes forward, the combined map glowing on her wrist. "The vault is just ahead," she gasps, "but they're right behind us!" A laser bolt sizzles past your head, striking the tunnel wall and sending sparks flying. Moth fires a wild shot back into the darkness to slow the pursuit.
+[[Run for the vault door->Haven0Entrance-MetMoth-LyraJoined]]
+
+:: LyraHideout-MetMoth-HostageBluff-Fight-Subdued
+You wrestle the pistol from Lyra's grasp, pinning her arms. She struggles, then goes still, her eyes burning with fury. "This is a mistake," she spits. "The Legion is the real enemy." Outside, the scouts' shouts grow closer. Moth looks from you to Lyra, uncertain.
+[[Use Lyra as a bargaining chip with the approaching scouts->LyraHideout-MetMoth-Hostage]]
+:: CanyonApproach-MetMoth-Fight-Fleeing
+You stumble down the canyon path, pulling Moth after you. Laser shots scar the rock face around the cave entrance as you retreat. The Legion scouts do not pursue beyond the cave, focused on securing Lyra's hideout. You catch your breath in the relative safety of the canyon floor, the immediate threat gone but your alliance shattered.
+[[Continue toward the Relay Station->NorthernRuins-MetMoth]]
+[[Head for the Nomad trails->NomadOutskirts-MetMoth]]
+
+:: CanyonApproach-WithMoth-Fight-Fleeing
+You stumble down the canyon path, pulling Moth after you. Laser shots scar the rock face around the cave entrance as you retreat. The Legion scouts do not pursue beyond the cave, focused on securing Lyra's hideout. You catch your breath in the relative safety of the canyon floor, the immediate threat gone but your alliance shattered.
+[[Continue toward the Relay Station->NorthernRuins-WithMoth]]
+[[Head for the Nomad trails->NomadOutskirts-WithMoth]]
+
+:: LyraHideout-Alone-Recruited-Offer
+[[Propose the Legion's offer->LyraHideout-Alone-Recruited-MeetHale]]
+:: LyraHideout-Alone-Recruited-Warn
+[[Escape in the confusion->CanyonEscape-Alone-Recruited]]
+:: CanyonEscape-Alone-LyraJoined
+[[Head for the vents->GeoCoreApproach-Alone-LyraJoined]]
+:: LegionFortress-Alone-LyraCaptured-Arrival
+The fortress gates close behind you. Lyra is taken to a high-security cell. You are given a sterile room and a Legion uniform. Captain Hale grants you a title: "Liaison to Technical Assets." It is a hollow victory. You witness Lyra's knowledge being coerced from her, used to tighten the Legion's grip on the wastes. The sky remains grey.
+[[Serve the Legion->Ending-Dominion]]
+:: LyraHideout-Alone-LyraJoined-Agreed
+"A partnership, then," Lyra says, her posture relaxing. She hands you the second fragment. It merges with yours, revealing more of the path. "We leave immediately. The Legion's patrols are increasing." She shoulders her pack.
+[[Set out for the Skybreaker foothills->SkybreakerFoothills-Alone-LyraJoined]]
+:: LyraHideout-Alone-MetLyra
+The cave is a stark contrast to the wastes outside, filled with the hum of active machinery and the glow of holoscreens. Lyra Kade turns from her consoles, a pistol held loosely but ready. Her eyes assess you. "You're alone. And you have the first fragment. I can feel its energy signature." She gestures to a second, matching piece on a stand. "The Legion is coming. An alliance is the only logical path forward."
+[[Propose an alliance->LyraHideout-Alone-MetLyra-LyraJoined]]
+[[Demand the fragment outright->LyraHideout-Alone-Refused]]
+:: LyraHideout-Alone-MetLyra-LyraJoined
+"A partnership, then," Lyra says, her posture relaxing marginally. She picks up the second map fragment and hands it to you. It merges with yours, the lines glowing brighter. "Good. We leave immediately. The Legion's patrols are increasing." She shoulders a pack, ready to follow you.
+[[Set out for the Skybreaker foothills->SkybreakerFoothills-Alone-LyraJoined]]
+:: LyraHideout-Alone-LyraJoined
+The hidden hatch groans open, revealing a steep ladder descending into a chamber lit by holoscreens. Lyra Kade is there, working at a terminal. She turns, wary. "You found my secondary entrance. You have the first fragment. I have the second. An alliance is our only logical path."
+[[Agree to the alliance->LyraHideout-Alone-LyraJoined-Agreed]]
+[[Demand the fragment->LyraHideout-Alone-Refused]]
+:: LyraHideout-MetMoth-Deescalate
+"Stand down!" you yell, stepping between Lyra and the soldiers with your hands raised. "Hale wants her alive and cooperative. Firing in here could bring the whole cliff down on us." The soldiers hesitate, their rifles wavering. Lyra's eyes narrow, calculating. "He's right," she says, her voice dangerously calm. "You want my knowledge? Then lower your weapons and talk."
+[[Negotiate a tense truce->LyraHideout-MetMoth-MeetHale]]
+[[The tension breaks into violence->LyraHideout-MetMoth-Fight]]
+
+:: LyraHideout-WithMoth-Deescalate
+"Stand down!" you yell, stepping between Lyra and the soldiers with your hands raised. "Hale wants her alive and cooperative. Firing in here could bring the whole cliff down on us." The soldiers hesitate, their rifles wavering. Lyra's eyes narrow, calculating. "He's right," she says, her voice dangerously calm. "You want my knowledge? Then lower your weapons and talk."
+[[Negotiate a tense truce->LyraHideout-WithMoth-MeetHale]]
+[[The tension breaks into violence->LyraHideout-WithMoth-Fight]]
+
+:: CanyonEscape-MetMoth-Fleeing
+You shove Moth toward the cave's rear exit as laser bolts fill the air. You dive into a narrow passage, sliding down a steep slope into darkness. The sounds of the gunfight fade above. You find yourselves in a maze of old mining tunnels, free but alone.
+[[Find your way through the tunnels->CanyonApproach-MetMoth]]
+
+:: CanyonEscape-WithMoth-Fleeing
+You shove Moth toward the cave's rear exit as laser bolts fill the air. You dive into a narrow passage, sliding down a steep slope into darkness. The sounds of the gunfight fade above. You find yourselves in a maze of old mining tunnels, free but alone.
+[[Find your way through the tunnels->CanyonApproach-WithMoth]]
+
+:: LyraHideout-MetMoth-MeetHale
+The sergeant lowers his rifle slightly. "Captain Hale wishes to... negotiate," he says, the word foreign on his tongue. Lyra slowly emerges from behind cover, her pistol still in hand but not aimed. "Negotiate? Or imprison?" she asks. "You will be brought to him under escort," the sergeant replies. "Your... associates will accompany us." The immediate threat of violence is over, replaced by the cold certainty of a meeting with the Legion's leader.
+[[Accompany the escort to the fortress->LegionFortress-MetMoth-LyraCaptured]]
+
+:: LyraHideout-WithMoth-MeetHale
+The sergeant lowers his rifle slightly. "Captain Hale wishes to... negotiate," he says, the word foreign on his tongue. Lyra slowly emerges from behind cover, her pistol still in hand but not aimed. "Negotiate? Or imprison?" she asks. "You will be brought to him under escort," the sergeant replies. "Your... associates will accompany us." The immediate threat of violence is over, replaced by the cold certainty of a meeting with the Legion's leader.
+[[Accompany the escort to the fortress->LegionFortress-WithMoth-LyraCaptured]]
+
+:: LyraHideout-MetMoth-Fight-Subdued
+You grab the sergeant's rifle barrel, forcing it upward as he fires, the shot tearing into the cave ceiling. Lyra shoots the other soldier in the leg, disabling him. You wrestle the sergeant to the ground, disarming him. Lyra stands over the pair, her pistol steady. "Fools," she says, but her aim shifts to you. "And you. You led them here. Explain. Quickly."
+[[Explain it was a coerced bargain->LyraHideout-MetMoth-Deescalate]]
+[[Apologize and offer to help her escape->LyraHideout-MetMoth-Pardoned]]
+
+:: LyraHideout-WithMoth-Fight-Subdued
+You grab the sergeant's rifle barrel, forcing it upward as he fires, the shot tearing into the cave ceiling. Lyra shoots the other soldier in the leg, disabling him. You wrestle the sergeant to the ground, disarming him. Lyra stands over the pair, her pistol steady. "Fools," she says, but her aim shifts to you. "And you. You led them here. Explain. Quickly."
+[[Explain it was a coerced bargain->LyraHideout-WithMoth-Deescalate]]
+[[Apologize and offer to help her escape->LyraHideout-WithMoth-Pardoned]]
+
+:: LyraHideout-MetMoth-Pardoned
+Lyra lowers the pistol, a conflicted look in her eyes. She cuts your bonds with a vibro-knife. "One chance. That's all you get. Betray me again, and the bullet won't miss." She hands you your gear back. "Now, we have a common enemy to deal with. The Legion scouts outside are still a problem."
+[[Propose a plan to deal with the scouts->CanyonAmbush-MetMoth-LyraJoined]]
+
+:: LyraHideout-WithMoth-Pardoned
+Lyra lowers the pistol, a conflicted look in her eyes. She cuts your bonds with a vibro-knife. "One chance. That's all you get. Betray me again, and the bullet won't miss." She hands you your gear back. "Now, we have a common enemy to deal with. The Legion scouts outside are still a problem."
+[[Propose a plan to deal with the scouts->CanyonAmbush-WithMoth-LyraJoined]]
+
+:: LegionFortress-MetMoth-LyraCaptured
+The fortress gates close behind you. Lyra is taken to a high-security cell. You and Moth are given sterile rooms and Legion uniforms. Captain Hale grants you a title: "Liaison to Technical Assets." It is a hollow victory. You witness Lyra's knowledge being coerced from her, used to tighten the Legion's grip on the wastes. The sky remains grey.
+[[Serve the Legion->Ending-Dominion]]
+
+:: LegionFortress-WithMoth-LyraCaptured
+The fortress gates close behind you. Lyra is taken to a high-security cell. You and Moth are given sterile rooms and Legion uniforms. Captain Hale grants you a title: "Liaison to Technical Assets." It is a hollow victory. You witness Lyra's knowledge being coerced from her, used to tighten the Legion's grip on the wastes. The sky remains grey.
+[[Serve the Legion->Ending-Dominion]]
+
+:: CanyonApproach-Alone-Captured-Signal
+The narrow canyon path offers little cover. The two Legion soldiers march close behind you. You spot a shiny piece of wreckage on a ledge ahead. As you pass, you "accidentally" kick a loose rock, sending it skittering into the metal. The sharp clatter and flash of reflected light are small, but you hope it serves as a warning to the wary Lyra.
+[[Continue toward the cave->LyraHideout-Alone-Captured]]
+
+:: CanyonEscape-Alone-Captured-Fleeing
+You spin and shove the nearest soldier, creating confusion. You leap from the path into thorny brush, scrambling down a steep slope. Shots ring out above but go wide. You slide into a gully, out of sight, and begin running through the canyon's maze.
+[[Flee deeper into the canyon->CanyonApproach-Alone]]
+
+:: CanyonApproach-Alone-Fleeing
+The canyon path is narrow and treacherous. You scramble down the trail, leaping from rock to rock. Shots ring out behind you but quickly fade. You are free from your guards but hunted.
+[[Flee deeper into the canyon->CanyonApproach-Alone]]
+[[Head for the Relay Station->NorthernRuins-Alone]]
+
+:: GeoCoreTunnels-Alone-LyraJoined-SideTunnel
+You take a smaller side branch. The air is cooler. The path descends, opening into a quiet chamber with a single metal door.
+[[Approach the service door->Haven0Entrance-Alone-LyraJoined]]
+
+:: CanyonEscape-Alone-Recruited
+The tunnel is dark and narrow. You crawl forward, the sounds of conflict fading behind you. After a long, disorienting journey, you emerge into a wider canyon, far from Lyra's hideout. You are alone, free from the immediate confrontation, but the chance for an alliance is gone.
+[[Head for the GeoCore vents->GeoCoreApproach-Alone]]
+[[Seek refuge with the Nomads->NomadOutskirts-Alone]]
+
+:: NorthernRuins-Alone
+The ruins of the pre-Cataclysm library stand silent, shelves of rotten books tilting in the ash-filled wind. You are alone. The path splits here: one leads toward the canyons and the elusive Lyra, the other toward the Relay Station she once suggested. Your map fragment feels heavy in your pocket.
+[[Head for the canyons->CanyonApproach-Alone]]
+[[Head for the Relay Station->RelayStationExterior-Alone]]
+
+:: CanyonEscape-Alone-Captured-Fleeing-NoMoth
+You spin and shove the nearest soldier, creating confusion. You leap from the path into thorny brush, scrambling down a steep slope. Shots ring out above but go wide. You slide into a gully, out of sight, and begin running through the canyon's maze.
+[[Flee deeper into the canyon->CanyonApproach-Alone]]
+
+:: LegionFortress-Alone-Captured-NoMoth
+The fortress gates close behind you. The cell is cold and bare. You are given a Legion uniform. Captain Hale grants you a title: "Technical Asset." It is a hollow victory. You serve, watching as the sky remains grey under the Legion's rule.
+[[Serve the Legion->Ending-Dominion]]
+
+:: LyraHideout-Alone-Guarded-Fight
+The lead soldier ignores your attempt at peace and fires at Lyra. She ducks behind a console, returning fire with her pistol. The cave erupts in laser bolts and the smell of ozone. You are caught in the middle.
+[[Fight alongside Lyra against the soldiers->LyraHideout-Alone-Guarded-Fight-Subdued]]
+[[Use the chaos to escape the cave->CanyonEscape-Alone-Guarded-Fleeing]]
+:: LyraHideout-Alone-Guarded-Fight-Subdued
+You grab the sergeant's rifle barrel, forcing it upward as he fires. Lyra shoots the other soldier in the leg. You wrestle the sergeant to the ground, disarming him. Lyra stands over the pair, her pistol steady. "Fools," she says, but her aim shifts to you. "Explain. Quickly."
+[[Explain it was a coerced bargain->LyraHideout-Alone-Guarded-Deescalate]]
+[[Apologize and offer to help her escape->LyraHideout-Alone-Pardoned]]
+:: CanyonEscape-Alone-Guarded-Fleeing
+You spin and shove the nearest soldier, creating confusion. You leap from the path into thorny brush, scrambling down a steep slope. Shots ring out above but go wide. You slide into a gully, out of sight, and begin running through the canyon's maze.
+[[Flee deeper into the canyon->CanyonApproach-Alone]]
+
+:: CanyonEscape-Alone-ScoutEscort-Fleeing
+You shove past the soldier, knocking him off balance as Lyra's return fire fills the cave with lightning-bright flashes. You dive for the rear tunnel, scrambling down a steep, rocky slope into utter blackness. The sounds of combat fade above, replaced by the drip of water and your own ragged breathing. You are alone in the dark, free from the immediate confrontation but having shattered any chance of alliance.
+[[Find your way out of the tunnels->CanyonApproach-Alone]]
+
+:: LyraHideout-Alone-ScoutEscort-Fight-Subdued-NoMoth
+You lunge at the soldier, grabbing his rifle barrel and forcing it upward. A wild shot cracks against the cave ceiling. Lyra moves with precision, shooting the soldier in the shoulder. He cries out, dropping the weapon. You pin him to the ground as he writhes in pain. Lyra stands over you both, her pistol aimed at your head. "Now," she says, her voice icy. "Why did you bring him here? Your life depends on the answer."
+[[Explain it was a coerced bargain->LyraHideout-Alone-ScoutEscort-Deescalate]]
+:: LyraHideout-Alone-Captured
+You enter the cave with two Legion soldiers flanking you. Lyra is waiting, her face a mask of cold fury. "So," she spits, her hand on her pistol. "You lead them here. A coward's bargain." The soldiers raise their rifles. "By order of Captain Hale, you are to come with us, Kade." The cave is a powder keg, ready to explode.
+[[Attempt to de-escalate the situation->LyraHideout-Alone-Captured-Deescalate]]
+[[Stand back and let the confrontation unfold->LyraHideout-Alone-Captured-Fight]]
+:: LyraHideout-Alone-Captured-Deescalate
+"Stand down!" you yell, stepping between Lyra and the soldiers with your hands raised. "Hale wants her alive and cooperative. Firing in here could bring the whole cliff down on us." The soldiers hesitate, their rifles wavering. Lyra's eyes narrow, calculating. "He's right," she says, her voice dangerously calm. "You want my knowledge? Then lower your weapons and talk."
+[[Negotiate a tense truce->LyraHideout-Alone-Captured-MeetHale]]
+[[The tension breaks into violence->LyraHideout-Alone-Captured-Fight]]
+:: LyraHideout-Alone-Captured-Fight
+The lead soldier ignores your attempt at peace and fires at Lyra. She ducks behind a console, returning fire with her pistol. The cave erupts in laser bolts and the smell of ozone. You are caught in the middle, forced to choose a side.
+[[Fight alongside Lyra against the soldiers->LyraHideout-Alone-Captured-Fight-Subdued]]
+[[Use the chaos to escape the cave->CanyonEscape-Alone-Captured-Fleeing]]
+:: LyraHideout-Alone-Captured-Fight-Subdued
+You grab the sergeant's rifle barrel, forcing it upward as he fires. Lyra shoots the other soldier in the leg. You wrestle the sergeant to the ground, disarming him. Lyra stands over the pair, her pistol steady. "Fools," she says, but her aim shifts to you. "And you. You led them here. Explain. Quickly."
+[[Explain it was a coerced bargain->LyraHideout-Alone-Captured-Deescalate]]
+[[Apologize and offer to help her escape->LyraHideout-Alone-Pardoned]]
+:: LyraHideout-Alone-Guarded
+You enter the cave with two Legion soldiers flanking you. Lyra is waiting, her face a mask of cold fury. "So," she spits, her hand on her pistol. "You lead them here." The soldiers raise their rifles. "By order of Captain Hale, you are to come with us, Kade."
+[[Attempt to de-escalate the situation->LyraHideout-Alone-Guarded-Deescalate]]
+[[Stand back and let the confrontation unfold->LyraHideout-Alone-Guarded-Fight]]
+:: LyraHideout-Alone-ScoutEscort-Fight
+The soldier ignores your plea and fires at Lyra. She dives behind a console, her pistol already barking in response. The cave erupts into a storm of laser fire. You are caught between them.
+[[Fight alongside Lyra to subdue the soldier->LyraHideout-Alone-ScoutEscort-Fight-Subdued]]
+[[Use the chaos to escape the cave->CanyonEscape-Alone-ScoutEscort-Fleeing]]
+:: LyraHideout-Alone-ScoutEscort-Fight-Subdued
+You lunge at the soldier, grabbing his rifle barrel and forcing it upward. A wild shot cracks against the cave ceiling. Lyra moves with precision, shooting the soldier in the shoulder. He cries out, dropping the weapon. You pin him to the ground as he writhes in pain. Lyra stands over you both, her pistol aimed at your head. "Now," she says, her voice icy. "Why did you bring him here? Your life depends on the answer."
+[[Explain it was a coerced bargain->LyraHideout-Alone-ScoutEscort-Deescalate]]
+:: CanyonApproach-Alone-ScoutEscort
+The canyon walls loom, their shadows deepened by the presence of a single Legion scout marching close behind you. His gaze is fixed on your back, his finger resting near his rifle's trigger. The path to Lyra's hideout feels like a march to a betrayal, every step watched and judged.
+[[Continue to the hideout under watch->LyraHideout-Alone-ScoutEscort]]
+:: LyraHideout-Alone-ScoutEscort
+You enter the cave with a single Legion soldier flanking you. Lyra is waiting, her face a mask of cold fury. "So," she spits, her hand on her pistol. "You lead them here." The soldier raises his rifle. "By order of Captain Hale, you are to come with us, Kade." The cave is tense, the balance of power precarious.
+[[Attempt to de-escalate the situation->LyraHideout-Alone-ScoutEscort-Deescalate]]
+[[Stand back and let the confrontation unfold->LyraHideout-Alone-ScoutEscort-Fight]]
+:: CanyonApproach-Alone-Guarded-LyraCaptured
+The narrow canyon path winds between high cliffs, their shadows deepened by the presence of Legion scouts watching from the ridges above. You march under their watchful eyes, a hollow feeling in your chest. Lyra walks beside you, her silence a wall of cold fury. The air is heavy with the scent of dry rock and tension. The path to her former hideout feels like a march to an execution, every step a betrayal.
+[[Continue to the hideout->LyraHideout-Alone-LyraCaptured]]
+:: LegionExcavationSite-Alone-Bargain
+The lead soldier lowers his rifle slightly. "Captain Hale wishes to... negotiate," he says, the word foreign on his tongue. Lyra slowly emerges from behind cover, her pistol still in hand but not aimed. "Negotiate? Or imprison?" she asks. "You will be brought to him under escort," the soldier replies. The immediate threat of violence is over, replaced by the cold certainty of a meeting with the Legion's leader.
+[[Accompany the escort to the fortress->LegionFortress-Alone-LyraCaptured]]
+:: LegionFortress-Alone-Bargain
+"We can take you to the second fragment," you tell Hale. "The technomancer, Lyra, has it. But I need to be free to act as bait." Hale studies you, his expression unreadable. "A risky gambit," he says. "If you betray me, your death will be slow. But I am willing to gamble."
+
+[[Accept the terms->CanyonApproach-Alone-Guarded]]
+:: LyraHideout-Alone-LyraCaptured
+You enter the cave with Legion soldiers flanking you. Lyra is waiting, her face a mask of cold fury. "So," she spits, her hand on her pistol. "You lead them here. A coward's bargain." The soldiers raise their rifles. "By order of Captain Hale, you are to come with us, Kade." The cave is a powder keg, ready to explode.
+[[Attempt to de-escalate the situation->LyraHideout-Alone-LyraCaptured-Deescalate]]
+[[Stand back and let the confrontation unfold->LyraHideout-Alone-LyraCaptured-Fight]]
+
+:: LyraHideout-Alone-LyraCaptured-Deescalate
+"Stand down!" you yell, stepping between Lyra and the soldiers with your hands raised. "Hale wants her alive and cooperative. Firing in here could bring the whole cliff down on us." The soldiers hesitate, their rifles wavering. Lyra's eyes narrow, calculating. "He's right," she says, her voice dangerously calm. "You want my knowledge? Then lower your weapons and talk."
+[[Negotiate a tense truce->LyraHideout-Alone-LyraCaptured-MeetHale]]
+[[The tension breaks into violence->LyraHideout-Alone-LyraCaptured-Fight]]
+
+:: LyraHideout-Alone-LyraCaptured-Fight
+The lead soldier ignores your attempt at peace and fires at Lyra. She ducks behind a console, returning fire with her pistol. The cave erupts in laser bolts and the smell of ozone. You are caught in the middle, forced to choose a side.
+[[Fight alongside Lyra against the soldiers->LyraHideout-Alone-LyraCaptured-Fight-Subdued]]
+[[Use the chaos to escape the cave->CanyonEscape-Alone-LyraCaptured-Fleeing]]
+
+:: LyraHideout-Alone-LyraCaptured-Fight-Subdued
+You grab the sergeant's rifle barrel, forcing it upward as he fires. Lyra shoots the other soldier in the leg. You wrestle the sergeant to the ground, disarming him. Lyra stands over the pair, her pistol steady. "Fools," she says, but her aim shifts to you. "And you. You led them here. Explain. Quickly."
+[[Explain it was a coerced bargain->LyraHideout-Alone-LyraCaptured-Deescalate]]
+[[Apologize and offer to help her escape->LyraHideout-Alone-LyraCaptured-Pardoned]]
+
+:: LyraHideout-Alone-LyraCaptured-MeetHale
+The sergeant lowers his rifle slightly. "Captain Hale wishes to... negotiate," he says. Lyra slowly emerges from behind cover. "Negotiate? Or imprison?" she asks. "You will be brought to him under escort," the sergeant replies. The immediate threat of violence is over. You and Lyra are escorted out of the cave by the Legion soldiers.
+[[The journey to the fortress->LegionFortress-Alone-LyraCaptured-Arrival]]
+
+:: LyraHideout-Alone-LyraCaptured-Pardoned
+Lyra lowers the pistol, a conflicted look in her eyes. She hands you your gear back. "One chance. That's all you get. Betray me again, and the bullet won't miss." She gestures to the rear exit. "Now, we have a common enemy to deal with. The Legion scouts outside are still a problem."
+[[Propose a plan to deal with the scouts->CanyonAmbush-Alone-LyraJoined]]
+
+:: CanyonEscape-Alone-LyraCaptured-Fleeing
+You spin and shove the nearest soldier, creating confusion. You leap from the path into thorny brush, scrambling down a steep slope. Shots ring out above but go wide. You slide into a gully, out of sight, and begin running through the canyon's maze. Lyra's fate is unknown.
+[[Flee deeper into the canyon->CanyonApproach-Alone]]
+
+:: LegionFortress-Alone-LyraCaptured
+The fortress gates close behind you. Lyra is taken to a high-security cell. You are given a sterile room and a Legion uniform. Captain Hale grants you a title: "Liaison to Technical Assets." It is a hollow victory. You witness Lyra's knowledge being coerced from her, used to tighten the Legion's grip on the wastes. The sky remains grey.
+[[Serve the Legion->Ending-Dominion]]
+
+:: LegionFortress-Alone-LyraCaptured-Arrived
+The fortress gates close behind you. Lyra is taken to a high-security cell. You are given a sterile room and a Legion uniform. Captain Hale grants you a title: "Liaison to Technical Assets." It is a hollow victory. You witness Lyra's knowledge being coerced from her, used to tighten the Legion's grip on the wastes. The sky remains grey.
+[[Serve the Legion->Ending-Dominion]]
+
+:: CanyonApproach-Alone-ScoutEscort-Single
+The canyon walls loom, their shadows deepened by the presence of a single Legion scout marching close behind you. His gaze is fixed on your back, his finger resting near his rifle's trigger. The path to Lyra's hideout feels like a march to a betrayal, every step watched and judged.
+[[Continue to the hideout under watch->LyraHideout-Alone-ScoutEscort]]
+
+:: LyraHideout-Alone-Captured-MeetHale
+The sergeant lowers his rifle slightly. "Captain Hale wishes to... negotiate," he says. Lyra slowly emerges from behind cover. "Negotiate? Or imprison?" she asks. "You will be brought to him under escort," the sergeant replies. The immediate threat of violence is over. You and Lyra are escorted out of the cave by the Legion soldiers.
+[[The journey to the fortress->LegionFortress-Alone-LyraCaptured-Arrived]]
+
+:: LyraHideout-Alone-Guarded-Deescalate
+"Stand down!" you yell, stepping between Lyra and the soldiers with your hands raised. "Hale wants her alive and cooperative. Firing in here could bring the whole cliff down on us." The soldiers hesitate, their rifles wavering. Lyra's eyes narrow, calculating. "He's right," she says, her voice dangerously calm. "You want my knowledge? Then lower your weapons and talk."
+[[Negotiate a tense truce->LyraHideout-Alone-Guarded-MeetHale]]
+:: LyraHideout-Alone-Recruited-MeetHale
+The cave is silent except for the hum of machinery and the tense breathing of the Legion soldiers. You slowly lower your hands, addressing Lyra. "Captain Hale wants to talk. Not fight. He knows your value." Lyra's eyes flick from you to the soldiers, her pistol still held ready. "Talk? The Legion only knows force." The sergeant gestures toward the cave entrance. "The Captain awaits at the fortress. You will come with us, peacefully or otherwise."
+[[Accompany the escort to the fortress->LegionFortress-Alone-LyraCaptured-Arrived]]
+
+:: LyraHideout-Alone-ScoutEscort-Deescalate
+"Stand down!" you yell, stepping between Lyra and the soldier with your hands raised. "Hale wants her alive and cooperative. Firing in here could bring the whole cliff down on us." The soldier hesitates, his rifle wavering. Lyra's eyes narrow, calculating. "He's right," she says, her voice dangerously calm. "You want my knowledge? Then lower your weapon and talk."
+[[Negotiate a tense truce->LegionFortress-Alone-LyraCaptured-Arrived]]
+
+:: LyraHideout-Alone-Guarded-MeetHale
+The sergeant lowers his rifle slightly. "Captain Hale wishes to... negotiate," he says. Lyra slowly emerges from behind cover. "Negotiate? Or imprison?" she asks. "You will be brought to him under escort," the sergeant replies. The immediate threat of violence is over. You and Lyra are escorted out of the cave by the Legion soldiers.
+[[The journey to the fortress->LegionFortress-Alone-LyraCaptured-Arrived]]
+
+
+:: CanyonApproach-Alone-Guarded
+The canyon walls loom high, their jagged peaks cutting into the grey sky. The crunch of your boots on the gravel path is the only sound, save for the distant whine of a Legion skimmer high on the ridge. Two soldiers march behind you, their rifles held ready, their gazes fixed on your back. Every step feels like a betrayal, a forced march to deliver Lyra into the Legion's hands. The air is thick with the scent of dry stone and tension.
+[[Continue to the hideout under watch->LyraHideout-Alone-Guarded]]
