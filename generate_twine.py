@@ -569,6 +569,22 @@ def detect_symmetries(passages, graph):
 
 
 def detect_asymmetries(passages, graph):
+    """
+    Detect naming-based asymmetries.
+
+    Two kinds of issues are reported:
+
+    1) Mixed overlap with target tokens (old behaviour):
+       - For a given target, different sources have different-size overlaps
+         with target's token set (some "probable", some "suspect").
+
+    2) New case: shared source tokens missing in target:
+       - All incoming sources share at least one token X
+       - but the target's name does NOT contain X.
+       This means the target's state under-specifies or contradicts what
+       is guaranteed by all incoming branches.
+       NOTE: this new case is NOT applied to targets whose name starts with "Ending-".
+    """
     reverse_graph = defaultdict(list)
     for src, targets in graph.items():
         for tgt in targets:
@@ -577,51 +593,96 @@ def detect_asymmetries(passages, graph):
     asymmetries = []
 
     for target, sources in reverse_graph.items():
+        # At least two incoming sources needed to talk about convergence
         if len(sources) < 2:
             continue
 
         target_tokens = _tokens_from_name(target)
-        if not target_tokens:
-            continue
+        src_tokens_map = {src: _tokens_from_name(src) for src in sources}
 
-        common_map = {}
-        for src in sources:
-            src_tokens = _tokens_from_name(src)
-            common = target_tokens & src_tokens
-            common_map[src] = (common, len(common))
+        recorded = False  # avoid double-reporting the same target
 
-        common_sets = {frozenset(v[0]) for v in common_map.values()}
-        if len(common_sets) <= 1:
-            continue
+        # ----------------------------------------------------------
+        # 1) ORIGINAL CASE: heterogeneous overlap with target tokens
+        # ----------------------------------------------------------
+        if target_tokens:
+            common_map = {}
+            for src, src_tokens in src_tokens_map.items():
+                common = target_tokens & src_tokens
+                common_map[src] = (common, len(common))
 
-        max_common_size = max(count for (_, count) in common_map.values())
-        if max_common_size == 0:
-            continue
+            # Sets of common tokens (with target) across sources
+            common_sets = {frozenset(v[0]) for v in common_map.values()}
 
-        probable = []
-        suspect = []
-        for src, (common, cnt) in common_map.items():
-            if cnt == max_common_size and cnt > 0:
-                probable.append(src)
-            else:
-                suspect.append(src)
+            # If everyone has exactly the same overlap, no asymmetry of this kind
+            if len(common_sets) > 1:
+                max_common_size = max(count for (_, count) in common_map.values())
+                # If nobody shares anything with the target, this particular
+                # asymmetry type doesn't apply
+                if max_common_size > 0:
+                    probable = []
+                    suspect = []
+                    for src, (common, cnt) in common_map.items():
+                        if cnt == max_common_size and cnt > 0:
+                            probable.append(src)
+                        else:
+                            suspect.append(src)
 
-        if probable and suspect:
-            asymmetries.append((target, sorted(probable), sorted(suspect)))
+                    if probable and suspect:
+                        asymmetries.append((target, sorted(probable), sorted(suspect)))
+                        recorded = True
+
+        # ----------------------------------------------------------
+        # 2) NEW CASE: sources share tokens that target does NOT have
+        #    (skipping Ending- targets)
+        # ----------------------------------------------------------
+        # Only look for this if we haven't already recorded target above
+        # and if target is NOT an ending.
+        if not recorded and not target.startswith("Ending-"):
+            shared_tokens = None
+            for src, toks in src_tokens_map.items():
+                if shared_tokens is None:
+                    shared_tokens = set(toks)
+                else:
+                    shared_tokens &= toks
+
+            # shared_tokens = tokens present in *all* sources
+            if shared_tokens:
+                # Tokens guaranteed by all sources but missing in target
+                missing_in_target = shared_tokens - target_tokens
+                if missing_in_target:
+                    # Here all sources are "probable" (they agree on state),
+                    # and the target under-specifies / contradicts that state.
+                    asymmetries.append((target, [], sorted(sources)))
 
     return asymmetries
 
 
+SPECIAL_META_PASSAGES = {"StoryTitle", "StoryData"}
+
 def analyze_twee(text: str):
     spans, links = parse_passages_and_links(text)
-    passages = set(n for n, _, _ in spans)
 
+    # Wszystkie znalezione nagłówki
+    all_passages = set(n for n, _, _ in spans)
+
+    # Wywalamy meta–passages z analizy strukturalnej
+    meta = SPECIAL_META_PASSAGES
+    passages = all_passages - meta
+
+    # Zbieramy link-targety, ale ignorujemy meta–passages
     link_targets = []
     for tlist in links.values():
-        link_targets.extend(tlist)
+        for t in tlist:
+            if t in meta:
+                continue
+            link_targets.append(t)
 
-    undefined = sorted({t for t in link_targets if t not in passages})
+    # Do undefined nie zaliczamy meta–passages
+    known = passages | meta
+    undefined = sorted({t for t in link_targets if t not in known})
 
+    # Budujemy graf tylko na "normalnych" passages
     graph = {p: [] for p in passages}
     for p in passages:
         graph[p] = [t for t in links.get(p, []) if t in passages]
@@ -631,7 +692,6 @@ def analyze_twee(text: str):
     asymmetries = detect_asymmetries(passages, graph)
 
     return passages, link_targets, undefined, graph, endings, cycles, dead_ends, asymmetries
-
 
 # ============================================================
 #  APPLYING STRUCTURAL PATCHES
