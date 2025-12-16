@@ -111,11 +111,29 @@ python3 generate_twine.py deepseek-v3.1:671b-cloud gamebook_description.txt --co
 python3 generate_twine.py deepseek-v3.1:671b-cloud gamebook_description.txt --max-fix-rounds 10
 ```
 
-### Debug mode — print only the prompt
+### Debug mode — print the prompt
 
 ```bash
-python3 generate_twine.py deepseek-v3.1:671b-cloud gamebook_description.txt --print-prompt-only
+python3 generate_twine.py deepseek-v3.1:671b-cloud gamebook_description.txt --print-prompt
 ```
+
+Prints the generated prompt(s) to stdout (useful for logging or prompt audits). The script still continues with generation/repair unless you stop it.
+
+### Debug mode — print raw LLM responses
+
+```bash
+python3 generate_twine.py deepseek-v3.1:671b-cloud gamebook_description.txt --print-response
+```
+
+Prints the raw response returned by Ollama for the initial generation and any subsequent fix requests, while still writing the resulting `.twee` file(s).
+
+### Optional analysis — detect weak symmetries
+
+```bash
+python3 generate_twine.py deepseek-v3.1:671b-cloud gamebook_description.txt --detect-weak-symmetries
+```
+
+Enables additional asymmetry checks that flag targets whose incoming sources all share at least one state token that the target name does not include (excluding `Ending-` passages).
 
 ---
 
