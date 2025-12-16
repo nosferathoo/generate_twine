@@ -1,0 +1,1477 @@
+:: StoryTitle
+Ashfall: Roads of Ruin
+
+:: StoryData
+{"ifid":"ASHFALL-ROADS-OF-RUIN","format":"SugarCube","format-version":"2.36.1"}
+
+:: StoryStart
+The air tastes of grit and ozone. An ash-laden wind howls through the skeletal remains of what was once a town. You clutch your mask tighter, the Wanderer, a soul defined by the road. Tucked against your chest is a leather-wrapped bundle. Inside, a burned map fragment whispers of a place called Haven-0.
+A low rumble echoes—not thunder, but engines. Raiders, drawn by your trail.
+[[Scramble into the collapsed subway tunnel->SubwayTunnel]]
+[[Make a desperate run for the rust-hulled freighter on the ridge->RidgeFreighter]]
+
+:: SubwayTunnel
+Darkness swallows you, the roar of the storm muted. You slide down a debris pile into stagnant water. A faint, phosphorescent fungus provides the only light, painting the tunnel walls in ghostly hues. The raiders' shouts fade behind you. Ahead, the tunnel splits.
+[[Follow the faded maintenance signs->MaintenanceTunnel]]
+[[Venture into the deeper, flooded section->FloodedTunnel]]
+
+:: RidgeFreighter
+The ascent is treacherous, sharp metal and loose scree tearing at your gear. You reach the freighter's carcass, its hull breached and open to the sky. Inside, the wind screams through twisted beams. A glint of metal catches your eye—a sealed storage locker, surprisingly intact. The raiders are climbing the ridge behind you.
+[[Try to force the locker open->FreighterLocker]]
+[[Hide amidst the wreckage and hope they pass->FreighterHide]]
+
+:: FreighterLocker
+You wedge your crowbar into the locker's seam, the metal groaning in protest. With a final shove, it pops open. Inside, nestled among moldering rags, is a pristine water filtration unit. A valuable find. But the noise has given away your position. Boots scrape on metal nearby.
+[[Grab the unit and flee deeper into the ship->FreighterDeck]]
+[[Abandon the prize and find a new hiding spot->FreighterHide]]
+
+:: FreighterHide
+You squeeze into a crevice between a collapsed bulkhead and the outer hull, holding your breath. The raiders clamber aboard, their voices gruff and impatient. They argue, kicking debris, before one spots the open locker. With curses, they descend back down the ridge, believing their quarry has fled with the prize. You are safe, for now.
+[[Exit the freighter and continue your journey->AshPlains]]
+
+:: FreighterDeck
+[[Risk the jump->AshPlains-Injured-Alone]]
+:: FreighterConfront
+You drop the filtration unit, raising your weapon. Three raiders emerge from the hatch, their faces scarred and hungry. The leader laughs, a harsh sound. "One last fight, scrapper?" They fan out, blocking your escape.
+[[Charge the leader->Ending-Death]]
+[[Try to reason with them->FreighterReason]]
+
+:: FreighterReason
+"Wait," you shout, holding up empty hands. "The locker was empty. I found nothing." The lead raider sneers, but hesitates. His comrade gestures toward the valley. "Legion patrols are out there. We're wasting time." With a final, hateful glare, they retreat. You are alone again.
+[[Descend cautiously into the valley->AshPlains]]
+
+:: AshPlains
+The ash plains stretch before you, a gray sea under a bruised sky. The wind is a constant, abrasive whisper. In the distance, you see the moving lights of a Dustborn caravan, their wind-sails billowing. To the east, plumes of smoke suggest a settlement. Your map fragment feels heavy, a secret burning a hole in your pack.
+[[Head toward the Dustborn caravan->DustbornCaravan]]
+[[Make for the settlement->OutpostScrapwall]]
+
+:: AshPlains-Injured
+You land hard, your ankle twisting with a sickening pop. Pain lances up your leg. You've escaped the raiders, but you are now injured and exposed on the open plains. Sheltering under a rocky overhang, you bind your ankle. Movement is slow and painful.
+[[Press on toward the distant settlement->OutpostScrapwall-Injured]]
+[[Signal the Dustborn caravan for help->DustbornCaravan-Injured]]
+:: OutpostScrapwall
+Scrapwall is a vertical shantytown built into the hulls of ancient construction mechs. The air hums with generators and the cacophony of trade. At the gates, a stern guard from the local militia eyes you. "State your business. We've had trouble with Legion scouts."
+[[Show the map fragment discreetly->ScrapwallGate-MapShown]]
+[[Keep the map hidden and talk your way in->ScrapwallGate]]
+
+:: OutpostScrapwall-Injured
+Your limp is noticeable. The guard at Scrapwall's gate looks you over with pity more than suspicion. "Looks like the wastes got you good, traveler. The sawbones in the lower level might help you, for a price." He waves you through into the crowded, noisy streets.
+[[Seek out the medic->ScrapwallClinic]]
+[[Head to the tavern to gather information->ScrapwallTavern-Injured]]
+
+:: ScrapwallGate
+You spin a tale of being a simple scavenger. The guard seems unconvinced but bored. He takes a handful of scrap metal as a "toll" and lets you pass. Inside, the settlement is a chaotic maze of metal and humanity.
+[[Find a place to rest and learn more->ScrapwallTavern]]
+
+:: ScrapwallGate-MapShown
+You carefully show the corner of the burned map. The guard's eyes widen. He leans in close. "You're hunting the legend? The Union rep in the tech bazaar has been asking about such things. Be careful who you trust." He lets you through, his demeanor now respectful.
+[[Go to the tech bazaar->ScrapwallBazaar-HasMap]]
+[[Head to the tavern first->ScrapwallTavern-HasMap]]
+
+:: ScrapwallTavern
+The Tavern of Broken Gears is loud and hazy. You find a corner table and listen. Talk is of increased Legion activity and a rogue technomancer, an "Ashwitch," who was run out of town for predicting a storm that never came.
+[[Ask about the Ashwitch->ScrapwallTavern-AshwitchRumor]]
+[[Inquire about old-world facilities->ScrapwallTavern-HavenRumor]]
+
+:: ScrapwallTavern-Injured
+The tavern is a welcome shelter. You ease into a seat, your ankle throbbing. A young courier with bright eyes notices your plight and brings you a clean rag and some water. "The name's Moth. The wastes are rough on everyone. You heading somewhere specific?"
+[[Trust Moth and mention the map->ScrapwallTavern-MetMoth-MapShown]]
+[[Be evasive and thank them for the help->ScrapwallTavern-MetMoth]]
+
+:: ScrapwallTavern-HasMap
+You listen carefully. The rumors are the same: Legion, Ashwitch, Haven. But with the map fragment in your possession, the words carry more weight. A woman in a patched Union jacket is watching you from the bar.
+[[Confront the Union observer->ScrapwallBazaar-HasMap-UnionAttention]]
+[[Leave quietly and try to find the Ashwitch->ScrapwallAlley-HasMap]]
+:: ScrapwallTavern-MetMoth
+Moth smiles, not offended by your caution. "Suit yourself. If you need a guide who knows the hidden paths, ask for me at the courier's lodge. Good luck." They move off to another table. You are alone with your thoughts and the map.
+[[Go to the courier's lodge->ScrapwallCourierLodge-MetMoth]]
+[[Head to the tech bazaar->ScrapwallBazaar-HasMap]]
+
+:: ScrapwallTavern-MetMoth-MapShown
+You decide to trust the kind courier, showing a corner of the map. Moth's breath catches. "Haven-0... I've heard stories from the elders. They say a second fragment is kept by the Nomads at their seasonal gathering at the Salt Flats. I could take you there."
+[[Accept Moth's offer->ScrapwallCourierLodge-WithMoth-HasMap]]
+[[Politely decline for now->ScrapwallCourierLodge-MetMoth]]
+
+:: ScrapwallClinic
+The clinic is a clean, stark room. The medic, a tired-looking woman, examines your ankle. "A bad sprain. I can strap it, but you need rest." She does a quick, professional job. "Payment?" she asks.
+[[Offer scrap or a trade item->ScrapwallClinic-PatchedUp]]
+[[Mention the map as collateral->ScrapwallClinic-MapShown]]
+
+:: ScrapwallClinic-PatchedUp
+You pay with a handful of scavenged circuitry. The medic nods. "You're fit to walk, but don't run any marathons. Watch out for the Legion; they're conscripting able-bodied folks." You leave the clinic, your movement much easier.
+[[Head to the tavern->ScrapwallTavern]]
+[[Go to the tech bazaar->ScrapwallBazaar]]
+
+:: ScrapwallClinic-MapShown
+You show the map fragment. The medic's eyes narrow with recognition. "So it's true. Listen, the Steel Legion Captain, Bronn Hale, is in town. He'd pay a fortune for that, or just take it. You should leave Scrapwall. Now." She finishes your ankle and ushers you out, refusing payment.
+[[Flee Scrapwall immediately->AshPlains-HaleAttention]]
+[[Seek out Captain Hale directly->ScrapwallLegionGarrison-HasMap]]
+
+:: ScrapwallBazaar
+The tech bazaar is a wonder of salvaged electronics. A man with a Technic Union insignia on his coat is examining a broken drone. He looks up as you approach. "You have the look of someone who's seen things. Perhaps we can trade in more than just scrap."
+[[Ask about map fragments->ScrapwallBazaar-MapInquiry]]
+[[Browse the stalls cautiously->ScrapwallBazaar-Stalls]]
+
+:: ScrapwallBazaar-HasMap
+The Union man spots you. "Ah, the traveler with a secret. I am Aris. We know of your find. The Union could help you decipher it. Haven-0 is a project from our own archives." His offer seems genuine, but his eyes are calculating.
+[[Agree to go with Aris->UnionBunker-HasMap]]
+[[Refuse and leave the bazaar->ScrapwallAlley-HasMap]]
+:: ScrapwallBazaar-HasMap-UnionAttention
+The woman from the tavern approaches you directly. "Aris is too blunt. I am Lyra. The Union exiled me for believing Haven-0 was real. I can read your fragment, but not here. Hale's men are watching. Meet me at the old relay station at moonrise." She slips away.
+[[Follow Lyra's suggestion->RelayStationNight-HasMap]]
+[[Ignore her and go to the Union->UnionBunker-HasMap]]
+:: ScrapwallAlley-HasMap
+You duck into a narrow alley. A door creaks open nearby, and Lyra Kade gestures you inside. "Quickly. They're coming for you."
+[[Enter the hideout->AshwitchHideout-HasMap-MetLyra-Entry]]
+:: AshwitchHideout-HasMap-MetLyra
+Lyra's hideout is a cluttered nest of wires and old books. "Your map is a key," she says, "but it's coded. The other fragments are held by the Legion, the Nomads, and... the Ashen Choir. I can decode this, but I need access to a working terminal. The Skybreaker ruins."
+[[Agree to go to Skybreaker->RoadToSkybreaker-HasMap-WithLyra]]
+[[Ask for more information first->AshwitchHideout-Questions]]
+:: RoadToSkybreaker-HasMap-WithLyra
+The journey to the mountains is long. Lyra predicts the ash storms with uncanny accuracy. The massive arcology of Skybreaker appears on the horizon.
+[[Approach the main entrance->SkybreakerEntrance-HasMap-WithLyra]]
+[[Look for a hidden way in->SkybreakerVent-HasMap-WithLyra]]
+:: SkybreakerEntrance-HasMap-WithLyra
+The main entrance is a colossal door, sealed for a century. Lyra scans it with a device. "No power. But... recent foot traffic. Legion boots." As she speaks, a hatch opens high above and a rope ladder tumbles down. A figure waves frantically.
+[[Climb the ladder->SkybreakerSublevel1-HasMap-WithLyra-MetOren]]
+[[Suspect a trap and retreat->SkybreakerVent-HasMap-WithLyra]]
+
+:: SkybreakerSublevel1-HasMap-WithLyra-MetOren
+You climb into a dark corridor. The man who helped you is elderly, with wild eyes. "Dr. Oren Vale," he whispers. "They've been keeping me here. The Legion... they want Haven-0 to control the water, not cleanse the sky! You must stop them!" The clang of armored feet echoes from below.
+[[Hide and let the patrol pass->SkybreakerCorridor-HasMap-WithLyra-MetOren]]
+[[Prepare to ambush the Legion soldiers->SkybreakerAmbush-HasMap-WithLyra-MetOren]]
+
+:: SkybreakerCorridor-HasMap-WithLyra-MetOren
+You press into a service closet. The Legion patrol marches past, never glancing your way. Dr. Vale breathes a shaky sigh of relief. "The central terminal is on Sublevel 2. I can guide you, but we must be quick. Hale himself is here."
+[[Proceed to Sublevel 2->SkybreakerSublevel2-HasMap-WithLyra-MetOren]]
+:: SkybreakerAmbush-HasMap-WithLyra-MetOren
+You leap out as the two soldiers pass. The fight is short and brutal. You stand over the bodies, but the noise has alerted others. An alarm begins to blare. "We've lost the element of surprise!" Lyra shouts.
+[[Run for the sublevel->SkybreakerSublevel2-HasMap-WithLyra-MetOren-Alert]]
+[[Try to find another route->SkybreakerDucts-HasMap-WithLyra-MetOren]]
+
+:: SkybreakerSublevel2-HasMap-WithLyra-MetOren
+The terminal room on Sublevel 2 is a cathedral of dead machines. Dr. Vale points nervously at the large console. "This is the central control." Lyra gets to work, connecting cables. "The data is fragmented... but I see it! The locations of the other pieces! One is here, in a vault."
+[[Head to the vault immediately->SkybreakerVault-HasMap-WithLyra-MetOren-Entry]]
+[[Focus on downloading all other data first->SkybreakerEscape-HasMap-WithLyra-MetOren-Data]]
+:: SkybreakerVault-Fight
+Hale is a formidable fighter. The clash is violent and desperate. Lyra tries to help, but a Legion soldier grabs her. Vale cowers in the corner. You land a solid blow, but Hale's armor deflects it. He disarms you and presses his advantage.
+[[Ending-Death]]
+
+:: SkybreakerVault-Negotiation
+"Hale," you say, lowering your weapon. "Haven-0 shouldn't be a weapon. It can restore the world." He laughs coldly. "Restore? The world is broken. It needs strength. Order. Join me. With the fragments, we can build an empire." He offers a gloved hand.
+[[Accept Hale's offer->SkybreakerVault-JoinedLegion]]
+[[Refuse and make a grab for the fragment->SkybreakerVault-Fight]]
+
+:: SkybreakerVault-JoinedLegion
+[[Travel to Haven-0 with the Legion->Haven0Approach-Legion-Joined]]
+:: SaltFlatsApproach-WithLyra-MetOren-Data
+The Salt Flats are a vast, white expanse. The Nomad gathering is a colorful cluster of land-sailers and tents. As you approach, you are greeted by a familiar face: Moth. "You returned! And you brought friends? The elders have been expecting you." They lead you to a large tent.
+[[Enter the elder's tent->SaltFlatsElder-WithLyra-MetOren-Data-MetMoth]]
+:: SaltFlatsElder-WithLyra-MetOren-Data-MetMoth
+The elder's tent is filled with the scent of spice-tea. She studies your map fragment and the data slate from Skybreaker, her fingers tracing the holographic lines. "You have walked a long road and learned much. Lyra Kade walks with you. This gives me hope. But hope is not enough. What will you build with this power, Wanderer?"
+[[Promise to use Haven-0 to restore the sky for all->SaltFlatsElder-PromiseKept-WithLyra-MetOren-Data]]
+[[State that you will decide when you have the power->SaltFlatsElder-PromiseBroken-Data]]
+:: SaltFlatsElder-PromiseKept
+The elder smiles. "The Dustborn believe in you." She hands you the third fragment.
+[[Accept the fragment and Moth's help->RoadToHaven0-WithMoth-HasTwoFragments]]
+[[Accept the fragment but travel light->RoadToHaven0-HasTwoFragments]]
+:: RoadToHaven0-WithLyra-MetOren-WithMoth-HasTwoFragments
+The journey is long. Moth's guidance is invaluable, avoiding the worst of the toxic storms. Lyra and Vale work on deciphering the complete map. Trust grows between you all. Finally, you crest a ridge. Below, shielded by a mountain range, lies the gleaming arcology of Haven-0.
+[[Approach the main gate->Haven0Entrance-WithLyra-MetOren-WithMoth-HasTwoFragments]]
+:: Haven0Entrance-WithLyra-MetOren-WithMoth-HasTwoFragments
+The gate is massive and sealed. But Hale is already here. His Legion forces are arrayed before the entrance, and he holds up the final fragment. "It ends here, Wanderer! Join me, or be crushed!" From another direction, the robed figures of the Ashen Choir emerge, chanting.
+[[Stand with your companions against Hale->Haven0FinalShowdown]]
+[[Attempt to reason with the Ashen Choir->Haven0ChoirNegotiation]]
+
+:: Haven0FinalShowdown
+A three-way battle erupts. Lyra uses her tech to disrupt Legion communications. Moth helps Vale find a way to bypass the gate's security. You face Hale directly. It is a brutal contest of ideals and strength. You manage to disarm him, holding the final fragment.
+[[Unite the fragments and enter Haven-0->Haven0ControlRoom-AllFragments]]
+
+:: Haven0ChoirNegotiation
+You step toward the chanting cultists. "The ash is not a blessing," you yell. "It is a sickness! Haven-0 can cure it!" The High Priestess steps forward. "You seek to undo the divine punishment. We will not allow it." They attack, forcing you to fight on two fronts.
+[[Fight your way to the gate->Haven0FinalShowdown]]
+
+:: Haven0ControlRoom-AllFragments
+The control room is pristine, a monument to a lost age. Vale activates the console. The map fragments slot into place. A hologram of the world appears, showing the atmospheric purifier ready for activation. Lyra, Moth, and Vale look to you for the final command.
+[[Activate the purifier for restoration->Ending-Restoration]]
+[[Seize control for yourself->Ending-Dominion]]
+[[Give control to the Technic Union->Ending-Technocratic]]
+[[Destroy the system to prevent abuse->Ending-Nomad]]
+
+:: Haven0Approach-Legion
+You arrive at Haven-0 at the head of a Legion column. Hale gives the order to breach the gate. Inside, you find the control room. Vale is forced to activate the system at gunpoint. Hale turns to you. "The world is ours to command. What is your first order, Commander?"
+[[Order the purifier activated for Legion rule->Ending-Dominion]]
+[[Turn on Hale and free Vale->Haven0ControlRoom-BetrayLegion]]
+
+:: Haven0ControlRoom-BetrayLegion
+You draw your weapon on Hale. "This ends now." The room explodes into chaos. You and Hale fight amid the flashing consoles. It is a close thing, but you emerge victorious, though wounded. The system is yours to command, with a Legion army leaderless outside.
+[[Activate the purifier->Ending-Restoration]]
+[[Use the facility as a bargaining chip->Ending-Technocratic]]
+
+:: Ending-Restoration
+You initiate the startup sequence. A low hum fills the room, growing to a gentle roar. On the hologram, you watch as the great purifiers begin to pull the ash from the sky. For the first time in a century, a patch of blue appears. It will take years, but the healing has begun. You have given the world a future.
+
+:: Ending-Dominion
+You command the system to activate, but you key it to the Legion's control codes. The ash clears, but now clean water and clean air are privileges granted by your new regime. Order is enforced with an iron fist. The world is saved from the ash, but enslaved to your will.
+
+:: Ending-Technocratic
+You hand the controls over to Lyra and the Technic Union. They pledge to use the technology wisely, for the betterment of all. A new age of reason and technology dawns, though some whisper that the Union's definition of "betterment" is cold and calculating.
+
+:: Ending-Nomad
+Remembering the Nomad elder's warning, you make a choice. You overload the core. Alarms blare as you and your companions flee. Behind you, Haven-0 explodes in a silent, brilliant flash. The hope for a quick fix is gone, but so is the tool for tyranny. The world's fate is returned to the hands of its people.
+
+:: Ending-Death
+The raider's blade finds its mark. The world fades to gray, then to black. The map fragment, and the hope it carried, are lost to the ash. Your journey ends here.
+
+:: DustbornCaravan
+The caravan is a beautiful sight: massive land-sailers gliding silently across the ash, their colorful fabrics billowing in the toxic wind. You are greeted by a group of Nomads, their faces friendly but cautious. A woman with intricate facial tattoos steps forward. "The wastes are harsh. You are welcome to travel with us, but all must contribute. What skills do you offer?"
+[[Offer to scout or hunt->DustbornCaravan-Scout]]
+[[Offer to help with repairs->DustbornCaravan-Repair]]
+
+:: DustbornCaravan-Injured
+Your injured state earns you sympathy. The Nomads help you onto one of their sailers, providing a salve for your ankle.
+[[Ask directly about map fragments->DustbornCaravan-MapAsk-Injured]]
+[[Rest and recover first->DustbornCaravan-Rest-Injured]]
+:: FloodedTunnel
+The water is chest-deep and freezing. You wade cautiously, the glow-fungus reflecting eerily on the surface. Something brushes against your leg—a tangled mass of cables, or perhaps something else. A distant scraping sound echoes from the darkness ahead.
+[[Press forward into the deeper darkness->FloodedTunnel-Deep]]
+[[Turn back and take the other tunnel->MaintenanceTunnel]]
+
+:: MaintenanceTunnel
+The tunnel is dry and lined with rusted pipes. Faded signs point towards a "Primary Reactor" and "Archive Wing." A faint, steady dripping is the only sound. One door hangs ajar, revealing a small maintenance room with an old locker.
+[[Search the maintenance room->MaintenanceTunnel-Room]]
+[[Continue toward the Archive Wing->MaintenanceTunnel-Archive]]
+
+:: RelayStationNight-HasMap
+The relay station is a skeletal tower against the starless sky. Lyra is waiting inside. "Good. You came."
+[[Agree to travel together->RoadToSkybreaker-HasMap-WithLyra]]
+[[Ask why she was exiled->RelayStationNight-Questions]]
+:: RoadToHaven0-WithLyra-MetOren-HasTwoFragments
+The journey through the Forbidden Zone is tense. Lyra's predictions are your only shield against the violent storms. Vale grows more withdrawn, haunted by memories of this place. When Haven-0 finally appears, it is a silent, gleaming promise amid the desolation.
+[[Approach the main gate->Haven0Entrance-WithLyra-MetOren-HasTwoFragments]]
+:: SaltFlatsElder-PromiseBroken
+Your hesitation speaks volumes. The elder's face hardens. "You seek power, not healing. The fragment stays with us."
+[[Leave the Salt Flats->AshPlains-NoNomadFragment]]
+:: ScrapwallBazaar-MapInquiry
+You mention old maps. The Union man, Aris, leans in with keen interest. "Fragments, you say? The Union archives speak of a quartet of keys. If you have one, we have the means to read it. Our bunker is secure. We could be powerful allies."
+[[Accept his offer to see the archives->UnionBunker]]
+[[Be non-committal and browse further->ScrapwallBazaar-Stalls]]
+:: ScrapwallBazaar-Stalls
+You move away from Aris, examining the stalls. One vendor sells dried fungus, another offers refurbished energy cells. You overhear two scavengers arguing about a "sky tomb" and a "witch who talks to storms." It seems Lyra's reputation precedes her.
+[[Circle back to the Union representative->ScrapwallBazaar-MapInquiry]]
+[[Go find the source of the Ashwitch rumors->ScrapwallTavern-AshwitchRumor]]
+
+:: ScrapwallCourierLodge-MetMoth
+The lodge is a small, tidy building filled with message tubes and maps. Moth is there, sorting packages. They smile when they see you. "Changed your mind about a guide? The routes I know are safe from Legion patrols and the worst ash blows."
+[[Hire Moth as a guide->ScrapwallCourierLodge-WithMoth-HasMap]]
+[[Ask about the Salt Flats gathering->ScrapwallCourierLodge-SaltFlatsInfo]]
+
+:: ScrapwallCourierLodge-WithMoth-HasMap
+Moth packs a light kit efficiently. "The Salt Flats are a few days' journey. We'll travel by night to avoid the heat and the Legion's eyes." They lead you to a hidden canyon exit from Scrapwall, leaving the noisy outpost behind. The open wastes await.
+[[Begin the journey to the Nomads->SaltFlatsApproach-WithMoth-HasMap]]
+:: ScrapwallLegionGarrison-HasMap
+The garrison is a fortified compound of repurposed metal. Captain Hale is a broad, imposing man in scarred armor. He doesn't wait for you to speak. "The medic sent you. Smart. I know what you carry. Give me the fragment and you can serve in the Legion. Refuse, and you will be conscripted anyway."
+[[Hand over the fragment->ScrapwallGarrison-JoinedLegion]]
+[[Refuse and try to fight your way out->ScrapwallGarrison-Fight]]
+
+:: ScrapwallTavern-AshwitchRumor
+You ask about the technomancer. The bartender scoffs. "Lyra? She caused a panic for nothing. Said a super-storm was coming. It didn't. The Union threw her out. Some say she's hiding near the old relay station, luring fools with promises." The information feels like a lead.
+[[Investigate the relay station->RelayStationNight]]
+:: ScrapwallTavern-HavenRumor
+You ask about old-world facilities. An old miner at the bar chuckles. "Haven? A fairy tale. But if you're hunting ghosts, talk to the Union. Or the Ashwitch. She's crazy, but she knows her history." The pieces of the puzzle are scattered, but they point a direction.
+[[Seek out the Technic Union->ScrapwallBazaar-MapInquiry]]
+[[Look for the Ashwitch->ScrapwallAlley]]
+:: SkybreakerVent-HasMap-WithLyra
+You find a rusted vent cover loose on its bolts. You pry it open and slip into a tight, dusty air shaft. Lyra follows. It's a slow, claustrophobic climb upward, but it bypasses the main entrance entirely. You drop out into a dark, silent corridor deep within the ruins.
+[[Explore the corridor->SkybreakerSublevel1-HasMap-WithLyra]]
+:: UnionBunker-HasMap
+The Union bunker is a marvel of clean lines and humming machines. Aris leads you to a scanning chamber. "Place the fragment here." The machine whirs to life, projecting a complex pattern of light. "Fascinating. The encryption is military-grade. It will take time to break. You are our guest now."
+[[Wait for the results->UnionBunker-Decoding]]
+[[Grow impatient and demand the fragment back->UnionBunker-Conflict]]
+:: AshPlains-HaleAttention
+You hurry away from Scrapwall, the medic's warning ringing in your ears. A Legion skiff appears on the horizon, kicking up a plume of ash. It's heading your way. You have a lead on Haven-0, but now you have the Steel Legion's attention.
+[[Run for the canyons to lose them->AshPlains-Canyons]]
+[[Stand your ground and prepare to talk->AshPlains-LegionConfront]]
+
+:: AshPlains-Canyons
+You dash toward a fissure in the earth, a maze of red rock canyons. The Legion skiff slows, unable to follow into the narrow passages. You lose them in the twisting corridors, but the way forward is unknown. The canyons are silent, save for the wind and the distant cry of a carrion bird.
+[[Follow the canyon north->CanyonNorth]]
+[[Follow the canyon south->CanyonSouth]]
+
+:: AshPlains-LegionConfront
+You stand your ground as the Legion skiff skids to a halt. Two soldiers jump out, weapons raised. Their leader, a sergeant, barks at you. "Halt by order of Captain Hale! You were seen in Scrapwall. Empty your pack."
+[[Comply with the search->AshPlains-LegionSearch]]
+[[Make a break for it->AshPlains-LegionChase]]
+
+:: AshPlains-NoNomadFragment
+You ride away from the Salt Flats, the elder's dismissal heavy upon you. You have Lyra and Vale, and one fragment, but Hale has one and the Nomads have the third. The path to Haven-0 is clear, but you are outnumbered and outgunned. Your only hope is a desperate, direct approach.
+[[Travel to the Forbidden Zone alone->RoadToHaven0-WithLyra-MetOren-HasTwoFragments-Desperate]]
+:: DustbornCaravan-MapAsk-Injured
+Despite your injury, you ask the tattooed woman about map fragments. Her expression becomes guarded. "The elder at the Salt Flats is the keeper of that lore. Rest now. You are in no condition for such a quest."
+[[Heed her advice and rest->DustbornCaravan-Rest-Injured]]
+[[Press for more information->DustbornCaravan-MapPushed-Injured]]
+:: DustbornCaravan-Repair
+You offer your skill with machines. The Nomads lead you to a land-sailer with a jammed steering mechanism. You work patiently, clearing grit and realigning gears. They are impressed with your efficiency. "You have a place with us, if you want it," the craft-master says.
+[[Accept the offer to travel with them->DustbornCaravan-Joined]]
+[[Politely decline, stating your own mission->DustbornCaravan-Mission]]
+
+:: DustbornCaravan-Scout
+You offer to scout ahead. The Nomads provide you with a dust-covered cloak for camouflage. You range forward, your eyes scanning the horizon. You spot a Legion patrol moving parallel to the caravan's path, but they haven't seen the Nomads yet. You can warn them.
+[[Return to warn the caravan->DustbornCaravan-LegionWarning]]
+[[Attempt to divert the patrol yourself->DustbornCaravan-PatrolDiversion]]
+
+:: FloodedTunnel-Deep
+The water grows deeper, up to your neck. The scraping sound is closer now, rhythmic and metallic. A current pulls at your legs. Just ahead, a collapsed section creates a whirlpool. Something long and pale drifts in the water—a bone?—before being sucked down.
+[[Swim through the whirlpool->FloodedTunnel-Whirlpool]]
+[[Turn back while you still can->MaintenanceTunnel]]
+
+:: Haven0Entrance-WithLyra-MetOren-HasTwoFragments
+The entrance to Haven-0 is a seamless wall of composite alloy. Vale points to a nearly invisible panel. "The master control. But it requires all three fragments to open." Hale's forces are digging in for a siege, and the Ashen Choir is building a pyre for a ritual. You are stuck outside.
+[[Have Lyra try to hack the panel->Haven0Entrance-HackAttempt]]
+[[Search for another entrance->Haven0Entrance-Search]]
+
+:: MaintenanceTunnel-Archive
+The Archive Wing door is sealed shut, but a crack in the wall leads to a ventilation shaft. You squeeze through into a cavernous room. Rows of data servers stand silent, coated in thick dust. One terminal flickers with a faint, dying light.
+[[Approach the active terminal->MaintenanceTunnel-Terminal]]
+[[Search the physical archives->MaintenanceTunnel-Stacks]]
+
+:: MaintenanceTunnel-Room
+The maintenance room is small and cluttered. The locker contains a set of rusted tools and a dusty but intact hazard suit. A faded schematic on the wall shows the tunnel system, with one route marked "GeoCore Access" in red.
+[[Take the hazard suit->MaintenanceTunnel-HasSuit]]
+[[Study the schematic->MaintenanceTunnel-MapFound]]
+
+:: RelayStationNight-Questions
+You voice your doubts about her theory. Lyra's shoulders slump. "If you don't believe in the truth, then you are wasting my time and risking your life for a fairy tale. Keep your fragment. I cannot help someone who will not see." She extinguishes her lantern and leaves you in the dark.
+[[Leave the relay station->AshPlains-Alone]]
+:: SaltFlatsApproach-WithMoth-HasMap
+[[Enter the gathering->SaltFlatsElder-WithMoth-HasMap]]
+:: ScrapwallCourierLodge-SaltFlatsInfo
+Moth unrolls a map on the counter. "The Salt Flats gathering happens under the full moon. The Nomads trade stories and goods there. Their elder is a keeper of ancient routes and old-world secrets. It's a dangerous journey, but I know the way." Their eyes gleam with excitement.
+[[Hire Moth for the journey->ScrapwallCourierLodge-WithMoth-HasMap]]
+[[Decide to go alone->AshPlains-ToSaltFlats]]
+
+:: ScrapwallGarrison-Fight
+You reach for your weapon, but Hale is faster. He signals his guards. They overpower you in seconds, disarming you and pinning you to the ground. Hale stands over you, his face a mask of contempt. "A foolish choice. You'll serve the Legion as a laborer until you break."
+[[Ending-Captured]]
+
+:: ScrapwallGarrison-JoinedLegion
+You hand the fragment to Hale. He takes it without a word of thanks. "Report to the quartermaster for gear. You are now a Scout of the Steel Legion. Your first duty is to lead a patrol to find this 'Ashwitch.' Your personal quest is over. The Legion's quest begins."
+[[Begin your Legion service->LegionPatrol-HasMap]]
+
+:: SkybreakerSublevel1-HasMap-WithLyra
+The corridor is dark and silent. Lyra uses her device to scan. "No life signs nearby. This level seems abandoned. According to the schematics, the central terminal is below us, but the main stairwell is likely watched." A side passage beckons, marked "Environmental Control."
+[[Head for Environmental Control->SkybreakerEnvironmental-HasMap-WithLyra]]
+[[Risk the main stairwell->SkybreakerStairs-HasMap-WithLyra]]
+
+:: UnionBunker-Conflict
+You demand your fragment back. Aris's friendly demeanor vanishes. "The fragment is Union property now. You are a guest, not an owner." Two guards step into the room, blocking the exit. You are trapped in the bunker, your freedom and your map taken from you.
+[[Try to fight your way out->UnionBunker-Fight]]
+[[Submit to their authority->UnionBunker-Prisoner]]
+
+:: UnionBunker-Decoding
+You wait as the machine whirs and clicks. Hours pass. Aris brings you food. "The encryption is complex, but we are making progress. It confirms Skybreaker as a location. When the decoding is complete, we will send a team. You will lead it, of course." You are a participant, not a leader.
+[[Wait for the final results->UnionBunker-DecodingComplete]]
+[[Try to steal the fragment back during the night->UnionBunker-Theft]]
+
+:: AshPlains-Alone
+You leave Lyra's hideout, the weight of caution heavier than the map fragment. The ash plains are vast and empty. Your journey is now truly solitary. The path to Skybreaker is perilous without a guide who can read the storms. You must rely on your own wits and luck.
+[[Head north toward the mountains->CanyonNorth]]
+[[Head south toward the salt flats->CanyonSouth]]
+
+:: AshPlains-DesperatePlan
+With the Nomad fragment denied to you, you need an edge. You remember tales of old-world weapons caches in the Forbidden Zone, or perhaps a way to turn the Ashen Choir against Hale. It is a long shot, but it is all you have.
+[[Search for a hidden weapon cache->CanyonNorth]]
+[[Seek out the Ashen Choir->CanyonSouth]]
+
+:: AshPlains-LegionSearch
+You reluctantly open your pack. The sergeant rifles through your belongings, his gloves rough. He pauses when he finds the leather-wrapped bundle. Unfolding it, he stares at the burned map. "Captain Hale will want to see this. You're coming with us."
+[[Resist arrest->AshPlains-LegionChase]]
+[[Go quietly->LegionPatrol-HasMap]]
+
+:: CanyonNorth
+The northern canyon winds through towering rock formations. The air grows cooler. You find the remains of a pre-Cataclysm survey camp, long abandoned. A locked storage crate bears the faded logo of GeoCore. It might contain useful supplies or data.
+[[Attempt to break the crate open->CanyonNorth-Crate]]
+[[Continue following the canyon->RoadToSkybreaker-HasMap]]
+
+:: CanyonSouth
+The southern canyon opens into badlands. You find a crude shrine.
+[[Investigate the shrine->CanyonSouth-Shrine]]
+[[Avoid the shrine and move on->SaltFlatsApproach-HasMap]]
+:: DustbornCaravan-Joined
+You travel with the Nomads, learning their ways.
+[[Ask the elder about the map fragments at the gathering->SaltFlatsElder-HasMap-WithCaravan]]
+:: DustbornCaravan-LegionWarning
+You rush back to the caravan, warning them of the Legion patrol. The tattooed woman, their leader, barks orders. The land-sailers change course instantly, catching a new wind and gliding silently into a hidden canyon. The Legion passes by, none the wiser.
+[[Continue traveling with the caravan->DustbornCaravan-Joined]]
+
+:: DustbornCaravan-Mission
+You thank the craft-master but explain you have a vital mission. She nods gravely. "A lone path is a hard one. May the winds guide you." The caravan provides you with supplies and directions to the Salt Flats before continuing on its way.
+[[Head for the Salt Flats->AshPlains-ToSaltFlats]]
+
+:: DustbornCaravan-Repay
+You help with chores, mending sails.
+[[Ask about the map fragments when you reach the gathering->SaltFlatsElder-HasMap-WithCaravan]]
+:: DustbornCaravan-SaltFlatsTalk
+As you travel, you ask about the gathering.
+[[Arrive at the Salt Flats with the caravan->SaltFlatsElder-HasMap-WithCaravan]]
+:: Ending-Captured
+You are dragged to a Legion labor camp. The days blend into a nightmare of hard labor, scarce rations, and the constant bite of the overseer's lash. The map fragment is lost to Hale, and your dream of Haven-0 fades in the endless gray of the ash fields.
+
+:: FloodedTunnel-Whirlpool
+You take a deep breath and plunge into the whirlpool. The current pulls you down into a submerged pipe, tumbling you through darkness. You emerge, gasping, in a flooded chamber. A rusted ladder leads up to a dry ledge and a door marked "GeoCore Vault Access."
+[[Climb the ladder->MaintenanceTunnel-HasSuit]]
+
+:: Haven0Entrance-HackAttempt
+Lyra connects her device to the hidden panel. Sparks fly as she tries to override the security. "It's a brutal system... I can't crack it without the third fragment. But I might be able to trigger a short-term power surge to open a small service hatch nearby."
+[[Attempt the power surge->Haven0Entrance-Search]]
+[[Abandon the hack and prepare for a siege->Haven0FinalShowdown]]
+
+:: Haven0Entrance-Search
+While Lyra works, you search the perimeter. Beneath a pile of scree, you find a collapsed ventilation shaft leading down into darkness. It is a tight, dangerous climb, but it might bypass the main gate entirely.
+[[Enter the ventilation shaft->Haven0ControlRoom-AllFragments]]
+[[Stay and fight at the gate->Haven0FinalShowdown]]
+
+:: LegionPatrol-HasMap
+You are given a Legion uniform and a rifle. Your first patrol is along the edge of the Forbidden Zone. You are a soldier now, your purpose dictated by Captain Hale. The map fragment is his, and your journey to Haven-0 will be at the head of an army, not as a wanderer.
+[[Lead the patrol toward Skybreaker->SkybreakerEntrance-Legion]]
+
+:: MaintenanceTunnel-HasSuit
+You pull on the hazard suit. It is bulky but intact. The schematic showed a route marked "GeoCore Access," a tunnel that likely leads deeper into the facility, possibly toward a vault or reactor core. The suit might protect you from environmental hazards.
+[[Follow the GeoCore Access tunnel->FloodedTunnel-Deep]]
+
+:: MaintenanceTunnel-MapFound
+You study the schematic closely. It details a network of tunnels, including a direct route to a place called "Primary Data Vault." This could be the archive you need. The path is marked with warning symbols, but it is a clear destination.
+[[Head for the Primary Data Vault->MaintenanceTunnel-Archive]]
+
+:: MaintenanceTunnel-Stacks
+You search through the physical archives, shelves of moldering books and crystal data chips. Most are dust, but one chip, sealed in a protective case, glows faintly. It is labeled "Project Haven-0: Initial Parameters."
+[[Take the data chip->MaintenanceTunnel-Terminal]]
+[[Leave it and check the terminal->MaintenanceTunnel-Terminal]]
+
+:: MaintenanceTunnel-Terminal
+You brush the dust from the flickering terminal. The screen stabilizes, showing a login prompt. A sticky note on the monitor has a faded password: "SKYBREAKER01". You type it in. The system grants access to a directory of files, including a map of the facility.
+[[Download the facility map->RoadToSkybreaker-HasMap]]
+
+:: RelayStationNight-Doubt
+You voice your doubts about her theory. Lyra's shoulders slump. "If you don't believe in the truth, then you are wasting my time and risking your life for a fairy tale. Keep your fragment. I cannot help someone who will not see." She extinguishes her lantern and leaves you in the dark.
+[[Leave the relay station->AshPlains-Alone]]
+:: SaltFlatsElder-WithMoth-HasMap
+Moth leads you to the elder's tent. The elder looks from you to Moth, then to the map fragment you reveal. "Moth vouches for you. That carries weight. But the fragment we hold is a great responsibility. Tell me, Wanderer, what do you intend for Haven-0?"
+[[Promise to use it for the good of all->SaltFlatsElder-PromiseKept]]
+[[State that your intentions are your own->SaltFlatsElder-PromiseBroken]]
+
+:: SkybreakerEnvironmental-HasMap-WithLyra
+The Environmental Control room is humid. Lyra studies a control panel. "The power grid is active. We can use this to find a route to the terminal."
+[[Use the power grid map to find the terminal->SkybreakerSublevel2-HasMap-WithLyra]]
+:: SkybreakerStairs-HasMap-WithLyra
+You descend the main stairwell, steps echoing in the vast silence. Halfway down, a Legion patrol emerges from a doorway below. There is no cover. They raise their weapons, shouting for you to halt. You have walked right into an ambush.
+[[Retreat back up the stairs->SkybreakerSublevel1-HasMap-WithLyra]]
+[[Charge downward, hoping to break through->SkybreakerAmbush-HasMap-WithLyra]]
+:: UnionBunker-DecodingComplete
+After a long wait, Aris returns, smiling. "The decoding is complete. The fragment points squarely to Skybreaker. A Union team is ready. You will accompany them as a guide." You are given a uniform and a assigned role. Your quest is now a Union operation.
+[[Travel to Skybreaker with the Union team->SkybreakerEntrance-Union]]
+
+:: UnionBunker-Fight
+You lunge at the nearest guard, but you are outnumbered and outgunned. A stun baton crashes into your side, and the world dissolves into pain and numbness. You wake up in a locked cell, your possessions and your map fragment gone.
+[[Ending-Captured]]
+
+:: UnionBunker-Prisoner
+You submit, seeing no way out. The guards lead you to a small but clean cell. "You will be well-treated," Aris says, "as long as you cooperate. The Union needs every capable mind." Your freedom is gone, but you are alive.
+[[Wait for an opportunity to escape->UnionBunker-Theft]]
+
+:: UnionBunker-Theft
+You wait until the middle of the night, picking the lock of your cell with a hidden shiv. You creep through the silent bunker, finding your possessions in a storage locker. You retrieve your map fragment and slip out into the night, a fugitive from the Union.
+[[Flee into the wastes->AshPlains-HaleAttention]]
+
+:: CanyonNorth-Crate
+The GeoCore crate is heavy and sealed with a magnetic lock. You search the camp for a tool and find a heavy pry bar lodged in a rock. With effort, you crack the crate open. Inside, nestled in foam, is a functioning portable water purifier and a data slate with partial schematics of the Skybreaker facility.
+[[Take the supplies and continue north->RoadToSkybreaker-HasMap]]
+
+:: CanyonSouth-Shrine
+The shrine is a disturbing collection of bones and symbols.
+[[Leave quickly before the Choir returns->SaltFlatsApproach-HasMap]]
+[[Search the altar for information->CanyonSouth-ShrineSearch]]
+:: SkybreakerAmbush-HasMap-WithLyra
+You and Lyra charge down the stairs, surprising the Legion patrol. The fight is a chaotic blur. You overcome them, but the noise has echoed through the ruins.
+[[Move quickly before more soldiers arrive->SkybreakerSublevel2-HasMap-WithLyra-Alert]]
+:: SkybreakerEntrance-Legion
+You arrive at Skybreaker at the head of your Legion patrol. Captain Hale is already here. "The past is a vault, Scout," he says. "And we are here to crack it open."
+[[Join the breach operation->SkybreakerSublevel1-Legion]]
+[[Hold back and observe->SkybreakerEntrance-LegionObserve]]
+:: SkybreakerEntrance-Union
+The Union team approaches Skybreaker with methodical caution. Aris scans the entrance. "We will use a controlled sonic resonance key to open a small entrance."
+[[Enter through the Union-made entrance->SkybreakerSublevel1-Union]]
+:: SkybreakerSublevel2-HasMap-WithLyra
+[[Head to the vault immediately->SkybreakerVault-HasMap-WithLyra-Entry]]
+:: CanyonSouth-ShrineSearch
+You search the altar, finding a fanatic's journal.
+[[Take the journal and leave->SaltFlatsApproach-HasMap]]
+[[Leave the disturbing book behind->SaltFlatsApproach-HasMap]]
+:: SkybreakerCorridor-HasMap-WithLyra
+You drag the unconscious Legion soldiers into a closet. The corridor is silent again. Lyra checks her device. "The terminal room is close. We should move quickly."
+[[Proceed to the terminal->SkybreakerSublevel2-HasMap-WithLyra]]
+:: SkybreakerEntrance-HasMap
+The colossal entrance to Skybreaker is imposing, a wall of scarred metal and stone. The giant door is sealed shut, fused by time and heat. There are no recent tracks here. The silence is absolute. Any entrance would have to be found elsewhere, through a vent or a collapse.
+[[Search the perimeter for another way in->SkybreakerVent-HasMap]]
+[[Climb the exterior to look for upper openings->SkybreakerSublevel1-HasMap]]
+:: SkybreakerVent-HasMap
+You circle the massive structure, finding a fissure in the rockface near its base. Behind a scree of loose stone is a rusted ventilation grate, its bolts eroded. You kick it loose, revealing a tight metal shaft leading up into the darkness. It is a claustrophobic but hidden entrance.
+[[Climb the vent shaft->SkybreakerSublevel1-HasMap]]
+:: SkybreakerCorridor-Legion
+You are at your post near the Legion entrance. The hall is vast and dark. The silence is broken only by the distant echoes of other patrols.
+[[Remain at your post->SkybreakerCorridor-Legion-Watch]]
+:: SkybreakerSublevel2-LegionFailure
+You look at the dead terminal, a complex web of wires and dead screens. "Captain, I'm a scout, not a technician. I don't know how to power this up." Hale's expression darkens. "Useless," he spits. He turns to his engineer. "Blast it open. We'll get the data the hard way." The engineer sets a shaped charge on the console. You are ordered to stand back as they prepare to destroy the very knowledge you sought.
+[[The charge detonates->Ending-Captured]]
+
+:: SkybreakerSublevel2-LegionTerminal
+You examine the dead terminal, a complex web of wires and dead screens. You recall scraps of old-world tech lore. After several attempts, a screen flickers, displaying a login prompt. A Legion engineer pushes you aside. "Let me handle this, Scout." He inputs a code, and the system groans to life. Hale smiles grimly. "Good. Now find me that vault location."
+[[Search the terminal data->SkybreakerSublevel2-LegionData]]
+
+:: UnionBunker
+The Union bunker is a marvel of clean lines and humming machines. Aris leads you to a scanning chamber. "If you had a fragment, we could decode it here. The encryption is military-grade. It would take time. But without it, I can only offer you standard trade." He gestures to a table of salvaged goods.
+[[Browse the goods->UnionBunker-Trade]]
+[[Leave the bunker->ScrapwallBazaar]]
+
+:: SkybreakerSublevel1-HasMap
+The corridor is dark and silent. You use your lamp to scan the area. "No life signs nearby. This level seems abandoned. According to the schematics, the central terminal is below us, but the main stairwell is likely dangerous." A side passage beckons, marked "Environmental Control."
+[[Head for Environmental Control->SkybreakerEnvironmental-HasMap]]
+[[Risk the main stairwell->SkybreakerStairs-HasMap]]
+
+:: SkybreakerAmbush-Legion
+You leave your post and sneak down a side corridor. Rounding a corner, you come face-to-face with two Legion soldiers.
+[[Attack first->SkybreakerAmbush-LegionFight]]
+[[Try to bluff your way past->SkybreakerAmbush-LegionBluff]]
+:: DustbornCaravan-MapPushed-Injured
+Despite your pain, you press the tattooed woman for information about the map. Her friendly expression hardens. "The old knowledge is not for the impatient." She turns and leaves your tent. The other Nomads become distant.
+[[Apologize and try to mend relations->DustbornCaravan-Rest-Injured]]
+[[Wait for an opportunity to leave the caravan->AshPlains-Injured]]
+:: DustbornCaravan-Repay-Injured
+You help with minor chores despite your injury.
+[[Ask about the map fragments at the gathering->SaltFlatsElder-HasMap-WithCaravan-Injured]]
+:: DustbornCaravan-SaltFlatsTalk-Injured
+You ask the Nomads about the gathering.
+[[Arrive at the Salt Flats with the caravan->SaltFlatsElder-HasMap-WithCaravan-Injured]]
+:: RelayStationNight-Wait
+You wait in the ruined control room. Just as you decide to leave, Lyra Kade steps into the light. "You're patient. That's good."
+[[Show her the map fragment->RelayStationNight-HasMap-MetLyra]]
+[[Leave without showing the map->AshPlains-Alone]]
+:: SkybreakerAmbush-LegionBluff
+You raise your hands, trying to look harmless. "Just checking the perimeter, Sergeant." The lead soldier scrutinizes you. "Your post is back at the entrance. Get back there. Now." He gestures with his rifle.
+[[Retreat back the way you came->SkybreakerSublevel1-LegionGuard-Returned]]
+:: SkybreakerAmbush-LegionFight
+You lunge at the soldiers. The fight is brief but loud.
+[[Run toward the terminal room->SkybreakerSublevel2-Legion-Alert]]
+:: SkybreakerEnvironmental-HasMap
+The Environmental Control room is humid, filled with the drip of water and the hum of failing life support. Strange, pale fungi grow in the corners. A control panel shows that the atmospheric scrubbers are offline, but the power grid is still active on this level. This could be a way to restore power or find a route to the terminal.
+[[Try to reroute power to the lower levels->SkybreakerSublevel2-HasMap]]
+[[Search for a maintenance duct leading down->SkybreakerSublevel2-HasMap]]
+
+:: SkybreakerStairs-HasMap
+You descend the main stairwell, your footsteps echoing in the vast silence. Halfway down, a Legion patrol emerges from a doorway below. There is no cover. They raise their weapons, shouting for you to halt. You have walked directly into their path.
+[[Retreat back up the stairs->SkybreakerSublevel1-HasMap]]
+[[Charge downward, hoping to surprise them->SkybreakerAmbush-HasMap]]
+
+:: UnionBunker-Trade
+Aris gestures to a table laden with salvaged goods: refurbished energy cells, filtered masks, and packets of nutrient paste. "Standard issue for survivors. Nothing of the old world, but it will keep you alive in the wastes." The offer is practical, but it does not further your quest.
+[[Purchase some supplies->ScrapwallBazaar]]
+[[Decline and leave->ScrapwallBazaar]]
+
+:: SkybreakerAmbush-HasMap
+You charge down the stairs to meet the Legion patrol head-on. The fight is brief and brutal. The clang of metal echoes through the stairwell. You overcome the two soldiers, standing over their still forms. The noise will surely attract more attention. You cannot stay here.
+[[Drag the bodies out of sight->SkybreakerCorridor-HasMap]]
+[[Rush deeper into the facility->SkybreakerSublevel2-HasMap-Alert]]
+
+:: SkybreakerSublevel2-HasMap
+The terminal room on Sublevel 2 is a cathedral of dead machines. A large console sits dormant in the center. You brush the dust from the console, but the power indicators are dark. A thick cable hangs loose from a wall socket. You reconnect it, and the console hums to life, screens flickering with corrupted data. A login prompt appears, demanding credentials you do not possess.
+[[Try to bypass the login with brute force->SkybreakerSublevel2-HasMap-Alert]]
+[[Search the room for a manual or schematic->SkybreakerSublevel2-HasMap-Search]]
+:: SkybreakerVault-Legion
+You enter the vault corridor with Hale's squad. The massive vault door is sealed. Hale's engineer examines the controls. "It's locked down tight, Captain. We'll need to cut through." Hale turns to you. "Any ideas, Scout? Did you find another way in your search?"
+[[Suggest using the evacuation route you found->SkybreakerVault-Legion-Route]]
+[[Admit you have no alternative->SkybreakerVault-Legion-Cut]]
+:: SkybreakerCorridor-HasMap
+The corridor beyond the stairwell is lined with doorways to forgotten offices. You drag the Legion soldiers' bodies into one, hiding them from immediate view. The silence that returns is heavy and precarious. Your lamp beam cuts through the dust, revealing scuff marks on the floor leading toward a heavier, reinforced door at the end of the hall.
+[[Proceed to the door at the end of the corridor->SkybreakerSublevel2-HasMap]]
+[[Check the other offices for supplies or information->SkybreakerSublevel2-HasMap-Search]]
+
+:: SkybreakerSublevel2-HasMap-Alert
+You rush into the terminal room as alarms scream. The console is active, data scrolling across a screen. You have mere moments to act before Legion soldiers arrive.
+[[Grab whatever data you can and run->SkybreakerEscape-HasMap-Data]]
+:: SkybreakerSublevel2-HasMap-Search
+You ignore the main console, searching the room's periphery. Behind a rack of dead servers, you find a wall-mounted emergency schematic. It shows the facility's layout, highlighting a network of maintenance ducts that could serve as an escape route.
+[[Use the schematic to find an escape route->SkybreakerEscape-HasMap-Data]]
+:: SkybreakerSublevel2-HasMap-Terminal
+You brush centuries of dust from the main console. The power indicators are dark. A thick cable hangs loose from a wall socket. You reconnect it, and the console hums to life, screens flickering with corrupted data. A login prompt appears, demanding credentials you do not possess.
+[[Try to bypass the login with brute force->SkybreakerSublevel2-HasMap-Alert]]
+[[Abandon the terminal and search the room->SkybreakerSublevel2-HasMap-Search]]
+
+:: SkybreakerVault-Legion-Inspect
+The vault door is a monolithic slab. The control panel is dark.
+[[Order the soldier to fetch an engineer->SkybreakerSublevel2-Legion]]
+[[Report the vault as impenetrable to Hale->SkybreakerSublevel2-Legion]]
+:: SkybreakerSublevel2-HasMap-WithLyra-Alert
+[[Grab Lyra and run with what you have->SkybreakerEscape-HasMap-WithLyra-Data-Alert-Solo]]
+:: SkybreakerEscape-HasMap-Data
+You snatch a data chip and flee into the cold night air.
+[[Head for the Salt Flats->SaltFlatsApproach-HasMap-Data]]
+:: DustbornCaravan-Rest-Injured
+You are given a cot in a softly lit tent. The gentle rocking of the land-sailer lulls you to sleep. When you wake, your ankle is much improved.
+[[Ask about the Salt Flats gathering->DustbornCaravan-SaltFlatsTalk-Injured]]
+[[Offer to help with chores to repay the kindness->DustbornCaravan-Repay-Injured]]
+
+:: SkybreakerSublevel2-LegionFragment
+Lyra traces a line on the screen. "The Legion's fragment is with Hale."
+[[Focus on the vault fragment here instead->SkybreakerSublevel2-VaultInquiry]]
+[[Plan a stealthy approach to steal Hale's fragment->SkybreakerVault-HasMap-WithLyra-MetOren-Stealth]]
+
+:: SaltFlatsElder-HasMap-WithCaravan
+The elder's tent is large and decorated. You show her your map fragment.
+[[Tell her you seek Haven-0 to heal the world->SaltFlatsElder-PromiseKept-WithCaravan]]
+[[State that your reasons are your own->SaltFlatsElder-PromiseBroken-WithCaravan]]
+
+:: SaltFlatsElder-HasMap-WithCaravan-Injured
+The elder looks at you, her eyes assessing your injured state.
+[[Promise to use Haven-0 for the good of all->SaltFlatsElder-PromiseKept-WithCaravan-Injured]]
+[[State that your intentions are your own->SaltFlatsElder-PromiseBroken-WithCaravan-Injured]]
+
+:: SaltFlatsApproach-HasMap-Data
+The Salt Flats appear on the horizon. You have data from Skybreaker.
+[[Approach the gathering openly->SaltFlatsElder-HasMap-Data]]
+:: SkybreakerSublevel2-Union
+Aris leads the team into the data archive. The terminal room is ahead.
+[[Access the central terminal->SkybreakerSublevel2-HasMap-Union]]
+
+:: SkybreakerSublevel2-Legion-Alert
+You are led to the terminal room as alarms sound. Hale is furious.
+[[Attempt to interface with the terminal under pressure->SkybreakerSublevel2-LegionTerminal-Alert]]
+[[Admit you cannot work under these conditions->SkybreakerSublevel2-LegionFailure-Alert]]
+:: SkybreakerVault-HasMap-WithLyra-MetOren-Stealth
+You follow Vale's directions, moving quietly through maintenance ducts. You drop into a silent corridor outside the vault door.
+[[Reach the vault entrance->SkybreakerVault-HasMap-WithLyra-MetOren-Entry]]
+:: SkybreakerEscape-HasMap-WithLyra-Data
+Lyra finishes downloading data from the terminal. You grab the data slate and flee into the cold night air. You have vital information but no second fragment.
+[[Head for the Salt Flats->SaltFlatsApproach-HasMap-WithLyra-Data]]
+:: SkybreakerEscape-HasMap-WithLyra-MetOren-Data-Alert
+Alarms scream as Lyra finishes the data download. You grab the slate and run, Lyra and Vale close behind. You burst out of a service exit. You have the data, but the facility is lost.
+[[Head for the Salt Flats to find the third fragment->SaltFlatsApproach-HasMap-WithLyra-MetOren-Data]]
+:: RelayStationNight-HasMap-MetLyra
+Lyra studies the fragment under the light. "The symbols are geo-coordinates."
+[[Agree to travel together->RoadToSkybreaker-HasMap-WithLyra]]
+[[Ask why she was exiled->RelayStationNight-Questions-MetLyra]]
+:: SaltFlatsElder-HasMap-Data
+The elder studies your fragment and the Skybreaker data.
+[[Promise the fragment will be used for good->SaltFlatsElder-PromiseKept-Data]]
+[[Hesitate, thinking of power->SaltFlatsElder-PromiseBroken-Data]]
+:: SaltFlatsApproach-HasMap-WithLyra-Data
+You and Lyra approach the Nomad gathering with the Skybreaker data.
+[[Enter the elder's tent->SaltFlatsElder-HasMap-WithLyra-Data]]
+
+:: SaltFlatsElder-HasMap-WithLyra-Data
+The elder's tent is filled with the scent of spice-tea. She studies your map fragment and the data slate from Skybreaker, her fingers tracing the holographic lines. "You have walked a long road and learned much. Lyra Kade walks with you. This gives me hope. But hope is not enough. What will you build with this power, Wanderer?"
+[[Promise to use Haven-0 to restore the sky for all->SaltFlatsElder-PromiseKept-Data]]
+[[State that you will decide when you have the power->SaltFlatsElder-PromiseBroken-Data]]
+
+:: SaltFlatsElder-PromiseBroken-Data
+Your hesitation is a cold wind in the tent. The elder's face hardens. "Power without purpose is a plague."
+[[Leave the Salt Flats->AshPlains-NoNomadFragment]]
+:: SaltFlatsElder-PromiseBroken-WithCaravan
+Your evasive answer hangs in the air. The elder's welcoming warmth vanishes. "You travel with us, but your heart is closed. The fragment is a responsibility, not a prize. It remains here." The Nomads who welcomed you now look at you with disappointment. You are asked to leave the caravan at the next stop.
+[[Continue your journey alone->AshPlains-NoNomadFragment]]
+
+:: SaltFlatsElder-PromiseBroken-WithCaravan-Injured
+Even from your cot, your ambiguous intentions are clear. The elder shakes her head. "The injured often seek quick fixes, not true healing. You are not ready for this burden." The Nomads provide you with supplies for your journey, but the fragment is denied to you.
+[[Travel on, weakened and without the key->AshPlains-NoNomadFragment]]
+
+:: SaltFlatsElder-PromiseKept-Data
+The elder smiles. "The data from the old world and the fire in your heart agree." She hands you the third fragment.
+[[Accept the fragment and Moth's help->RoadToHaven0-WithMoth-HasTwoFragments]]
+[[Accept the fragment but travel light->RoadToHaven0-HasTwoFragments]]
+:: SaltFlatsElder-PromiseKept-WithCaravan
+The elder places a hand on your shoulder. "You have traveled with us honestly. You have our trust." She produces the third map fragment from a carved wooden box. "Go with the wind at your back, and may your purpose be true." The Nomads see you off with gifts and blessings.
+[[Continue toward Haven-0 with the caravan's support->RoadToHaven0-WithLyra-MetOren-HasTwoFragments-WithCaravan]]
+:: SaltFlatsElder-PromiseKept-WithCaravan-Injured
+The elder nods slowly. "Even in pain, you think of the whole sky. That is the mark of a true leader." She gives you the fragment and assigns a young Nomad to assist you until you heal. "The world needs such strength."
+[[Continue the journey with your new ally->RoadToHaven0-WithLyra-MetOren-HasTwoFragments-WithCaravan]]
+:: SkybreakerSublevel2-HasMap-Union
+The Union team secures the terminal room. Aris connects a sophisticated interface to the ancient console. Data streams across multiple screens. "The vault location is confirmed. It is on this level. More importantly, the logs show a recent access by Legion codes. Hale is already inside." The team prepares for a confrontation.
+[[Advise a stealthy approach to observe Hale->SkybreakerVault-Union-Observe]]
+[[Suggest a direct assault to seize the fragment->SkybreakerVault-Union-Assault]]
+
+:: SkybreakerSublevel2-LegionFailure-Alert
+Alarms blare as you admit your inability to operate the terminal. Hale's face contorts with rage. "Useless!" He shoves you aside and signals his demolitions expert. "Blast it! We'll take the data from the rubble!" The charge is set. The explosion rocks the room, destroying the terminal and damaging the vault controls. Your failure is complete.
+[[Ending-Captured]]
+
+:: SkybreakerSublevel2-LegionTerminal-Alert
+Under the blaring alarms and Hale's impatient glare, you work at the terminal. Your hands shake, but a screen flickers to life, displaying a fragment of the vault access log. It's enough. Hale barks a laugh. "The vault! Move out!" He leaves you with the terminal as he leads the charge, your value proven for the moment.
+[[Follow Hale to the vault->SkybreakerVault-Legion]]
+
+:: RoadToHaven0-WithLyra-MetOren-HasTwoFragments-WithCaravan
+The Nomad caravan provides a mobile fortress against the wastes. Their land-sailers glide over the ash, their scouts ensuring a safe path. Lyra and Vale work together, cross-referencing the map fragments with Nomad star-charts. The elder's blessing gives your journey a sense of sacred purpose. As you near the Forbidden Zone, the air grows heavy and still. The mountains that shield Haven-0 rise like broken teeth on the horizon.
+[[Lead the caravan toward the mountain pass->Haven0Entrance-WithLyra-MetOren-HasTwoFragments-WithCaravan]]
+:: SkybreakerVault-HasMap-WithLyra-Force
+You and Lyra position a heavy hydraulic jack against the vault door's weakest hinge. The metal groans, then shears away. The door shifts, creating a narrow gap.
+[[Enter the vault->SkybreakerVault-HasMap-WithLyra]]
+:: SkybreakerVault-Union-Assault
+Aris gives the signal. The Union team moves with disciplined precision, breaching the vault corridor with stun grenades and electrostatic rifles. Legion guards are caught by surprise, overwhelmed by the coordinated attack. You follow close behind, your knowledge of the facility guiding the strike force. Inside the vault, Captain Hale stands protectively over the fragment pedestal, his own soldiers forming a defensive line.
+[[Engage Hale directly->SkybreakerVault-Fight-Union]]
+[[Order the Union team to flank the Legion position->SkybreakerVault-Flank-Union]]
+
+:: SkybreakerVault-Union-Observe
+You counsel caution. The Union team uses optical cloaking and sonic dampeners to approach the vault entrance silently. From a hidden vantage point, you watch as Hale places his fragment on the pedestal next to the one from the vault. He studies the united pieces, barking orders to his techs. He is vulnerable, distracted by his discovery. A precise, surgical strike could snatch both fragments.
+[[Signal the team to strike now->SkybreakerVault-Steal-Union]]
+[[Wait for Hale to leave the vault->SkybreakerVault-Ambush-Union]]
+
+:: Haven0Entrance-WithLyra-MetOren-HasTwoFragments-WithCaravan
+The Nomad caravan halts at the foot of the mountain pass. Before you, the sealed gate of Haven-0 rises, a seamless wall of alloy under the oppressive sky. Captain Hale's Legion forces are dug into defensive positions, their banners flying. From the opposite ridge, the Ashen Choir lights ceremonial fires, their chanting a low drone. The elder gives a signal, and the Nomad sailers form a protective semicircle around you. Lyra scans the gate. "The combined fragments are the only key," she says. Vale nods nervously. "They are all here. The final confrontation."
+[[Stand with the Nomads and prepare for battle->Haven0FinalShowdown]]
+[[Attempt a parley with Hale under the Nomad banners->Haven0ChoirNegotiation]]
+
+:: SkybreakerVault-Ambush-Union
+You and the Union team wait in the stifling darkness of a maintenance closet. Hours pass. Finally, the vault door grinds open and Captain Hale emerges, holding both map fragments. He dismisses his guards, intent on returning to the terminal room. As he passes your hiding spot, Aris gives the signal. You spring the trap, surrounding Hale before he can react. He is alone and outnumbered.
+[[Demand he surrender the fragments->SkybreakerVault-Negotiation-Union]]
+[[Take the fragments by force->SkybreakerVault-Fight-Union]]
+
+:: SkybreakerVault-Fight-Union
+The vault chamber becomes a brutal close-quarters battlefield. Union electrostatic rifles crackle against Legion armor. You target Captain Hale, who fights with ferocious strength. The fight is chaotic, but the Union's technological advantage and superior numbers begin to tell. Hale is cornered against the vault pedestal, his soldiers fallen around him.
+[[Order his surrender->SkybreakerVault-Negotiation-Union]]
+[[Press the attack to secure the fragments->SkybreakerVault-JoinedLegion]]
+
+:: SkybreakerVault-Flank-Union
+You direct the Union team to split into two fireteams. One engages the Legion head-on, while the other flanks through a side access corridor you identified. The maneuver works perfectly. Hale's soldiers are caught in a crossfire, pinned down. Hale himself is isolated near the pedestal, the two fragments within his reach but now under threat from two directions.
+[[Charge Hale's position while he is distracted->SkybreakerVault-Fight-Union]]
+[[Call for his surrender->SkybreakerVault-Negotiation-Union]]
+
+:: RoadToSkybreaker-HasMap-Alone
+You travel alone toward the Skybreaker ruins. The journey is long and perilous, with only your wits and the burned map fragment for company. The massive arcology looms on the horizon.
+[[Approach the main entrance->SkybreakerEntrance-HasMap]]
+[[Look for a hidden way in->SkybreakerVent-HasMap]]
+:: SkybreakerSublevel1-Legion
+You enter Skybreaker with the main Legion force. Captain Hale barks orders, sending teams down different corridors.
+[[Obey orders and guard the entrance->SkybreakerSublevel1-LegionGuard]]
+[[Join a sweep team->SkybreakerCorridor-Legion-Sweep]]
+:: SkybreakerTerminal-Legion
+A soldier finds you. "Captain Hale demands your presence at the central terminal. Now." You are led to a vast chamber where Hale stands before a dead console.
+[[Attempt to interface with the terminal->SkybreakerTerminal-LegionAttempt]]
+[[Admit you have no special skill->SkybreakerTerminal-LegionFailure]]
+
+:: SaltFlatsElder-HasMap-Alone
+The elder's tent is large and decorated with woven patterns telling stories of the wastes. The elder herself sits on a rug, her eyes clear and assessing. You show her your map fragment. She studies it for a long time without speaking, then looks up at you. "Why have you come here, bearer of the old fire?"
+[[Tell her you seek Haven-0 to heal the world->SaltFlatsElder-PromiseKept-Alone]]
+[[State that your reasons are your own->SaltFlatsElder-PromiseBroken-Alone]]
+
+:: SkybreakerEscape-HasMap-Alone-Data
+You snatch a data chip and flee into the cold night air. You are alone, carrying vital information.
+[[Head for the Nomads to find the third fragment->SaltFlatsApproach-HasMap-Data]]
+:: SkybreakerVault-HasMap-WithLyra-MetOren-Alert
+You follow Vale's directions to a heavy vault door. It's open a crack. Inside, on a pedestal, lies the second map fragment. But standing before it is Captain Bronn Hale. He holds the Legion's fragment in his other hand.
+[[Try to negotiate->SkybreakerVault-Negotiation]]
+[[Attack Hale->SkybreakerVault-Fight]]
+
+:: SkybreakerVault-HasMap-WithLyra-Alert
+The vault is a small, circular room. In the center, on a stone pedestal, rests the second map fragment. The air is still and cold, but the blaring alarms remind you that time is short.
+[[Take the fragment->SkybreakerVault-HasMap-WithLyra-FragmentTaken-Alert]]
+[[Wait for Lyra to ensure it's safe->SkybreakerVault-HasMap-WithLyra-Cautious-Alert]]
+:: AshPlains-Injured-Alone
+You land hard, your ankle twisting with a sickening pop. Pain lances up your leg. You've escaped the raiders, but you are now injured and exposed on the open plains. Sheltering under a rocky overhang, you bind your ankle. Movement is slow and painful.
+[[Press on toward the distant settlement->OutpostScrapwall-Injured]]
+[[Signal the Dustborn caravan for help->DustbornCaravan-Injured]]
+:: SkybreakerSublevel1-Union-Entry
+The resonance key opens a small, precise hole in the facility's skin. The Union team enters the silence, their gear humming softly. Aris turns to you. "The archives should be on Sublevel 2. Stay close."
+[[Follow the team toward the archives->SkybreakerSublevel2-Union]]
+
+:: SkybreakerSublevel1-Legion-Entry
+You enter Skybreaker with the main Legion force. Captain Hale barks orders, sending teams down different corridors.
+[[Obey orders and guard the entrance->SkybreakerSublevel1-LegionGuard-Compliant-Entry]]
+:: SkybreakerVault-HasMap-WithLyra-Entry
+The vault door is a massive circular seal. Lyra runs a scanner over its surface. "The locking mechanism is mechanical, not electronic. I can't hack it. But the hinges are rusted. A focused force might break it open." The corridor behind you is silent.
+[[Search for a tool to force the door->SkybreakerVault-HasMap-WithLyra-Force]]
+[[Abandon the vault and seek the data instead->SkybreakerEscape-HasMap-WithLyra-Data]]
+:: AshwitchHideout-HasMap-MetLyra-Entry
+Lyra's hideout is a cluttered nest of wires and old books. "Your map is a key," she says.
+[[Agree to go to Skybreaker->RoadToSkybreaker-HasMap-WithLyra]]
+[[Ask for more information first->AshwitchHideout-Questions]]
+:: AshPlains-LegionChase
+You bolt away from the skiff, kicking up plumes of ash. The soldiers open fire, energy bolts sizzling past your head. You dive into a narrow gully, the skiff unable to follow. You run, your lungs burning, until the sounds of pursuit fade. You are safe for the moment, but the Legion knows you are out here.
+[[Head for the canyons to lose any trackers->AshPlains-Canyons]]
+
+:: AshwitchHideout-Questions
+[[Agree to help her reach Skybreaker->RoadToSkybreaker-HasMap-WithLyra-FromHideout]]
+[[Remain cautious and leave->AshPlains-Alone]]
+:: DustbornCaravan-PatrolDiversion
+You decide to create a distraction. You find a precariously balanced rock spire and, using a length of cable from your pack, you create a makeshift tripwire near its base. You lure the patrol close with a shouted insult, then trigger the collapse. The spire crashes down, blocking the path and forcing the Legion to stop and clear the debris. The caravan escapes unseen.
+[[Return to the caravan as a hero->DustbornCaravan-Joined]]
+
+:: RelayStationNight
+The relay station is a lonely silhouette against the bruised twilight sky. The wind whistles through its broken girders. Inside the ruined control room, there is no sign of Lyra Kade. Only dust and the skeletons of old machines. Perhaps the rumor was wrong, or perhaps you are too early.
+[[Wait a while longer->RelayStationNight-Wait]]
+[[Leave, deciding it was a false lead->AshPlains-Alone]]
+
+:: RoadToSkybreaker-HasMap
+The mountains grow larger on the horizon, their peaks shrouded in perpetual ash-clouds. The journey is long and silent, the map fragment a heavy secret in your pack. The massive, half-buried arcology of Skybreaker finally comes into view, a tomb of forgotten technology.
+[[Approach the main entrance->SkybreakerEntrance-HasMap]]
+[[Circle the base looking for a hidden entry->SkybreakerVent-HasMap]]
+
+:: SaltFlatsElder-HasMap
+The elder's tent is spacious. The elder studies you as you present your map fragment.
+[[Swear you seek to heal the world->SaltFlatsElder-PromiseKept-Alone]]
+[[Decline to state your ultimate goal->SaltFlatsElder-PromiseBroken-Alone]]
+:: SaltFlatsElder-PromiseBroken-Alone
+Your evasiveness hangs in the air. The elder's face becomes a mask of stone. "We will not entrust our piece to a closed heart."
+[[Leave the Salt Flats alone->AshPlains-NoNomadFragment]]
+:: SaltFlatsElder-PromiseKept-Alone
+The elder listens intently. After a long silence, she nods. "Your purpose rings true." She produces a second map fragment.
+[[Continue your journey with the second fragment->RoadToHaven0-HasTwoFragments]]
+:: ScrapwallAlley
+The alley is a tight corridor between leaning metal shacks. The air is thick with the smell of ozone and decay. You hear a scuffle from a shadowed doorway. A moment later, Lyra Kade steps out, her face tense. "You're being followed. Come with me if you want to live."
+[[Follow Lyra into the hideout->AshwitchHideout-HasMap-MetLyra]]
+
+:: SkybreakerDucts-HasMap-WithLyra-MetOren
+The air ducts are a tight, dusty maze. You crawl on hands and knees, Vale wheezing behind you. Lyra leads the way, her scanner pinging softly. After a confusing climb, you drop down into a quiet, dark corridor far from the alarms. You have evaded the immediate pursuit.
+[[Find a new route to the terminal->SkybreakerCorridor-HasMap-WithLyra-MetOren]]
+
+:: SkybreakerEntrance-LegionObserve
+[[Sneak inside after the main force->SkybreakerSublevel1-Legion-Entry]]
+:: SkybreakerEntrance-UnionForce
+The Union team prepares a focused energy charge to blast a small opening in the facility's outer wall. The noise is significant, but the entrance is created.
+[[Enter through the forced entrance->SkybreakerSublevel1-Union-Alert]]
+:: SkybreakerEscape-HasMap-WithLyra-Data-Alert
+Alarms scream as Lyra finishes the data download. You grab the slate and run, Lyra and Vale close behind. You burst out of a service exit into the ash-choked night, the sounds of Legion pursuit fading as you lose yourselves in the broken terrain. You have the data, but the facility is lost to Hale.
+[[Head for the Salt Flats to find the third fragment->SaltFlatsApproach-HasMap-WithLyra-Data]]
+
+:: SkybreakerSublevel1-LegionGuard
+The hall is vast and dark. You have been ordered to guard the Legion's primary entrance point.
+[[Remain at your post->SkybreakerSublevel1-LegionGuard-Doubt]]
+[[Desert your post and seek your own path->SkybreakerVent-HasMap-LegionEscape]]
+:: SkybreakerSublevel1-Union
+The Union team moves with quiet efficiency through the sterile, dark corridors of Skybreaker. Aris checks a handheld scanner. "Life signs ahead. Legion. They are already here." The team slows, adopting stealth protocols. The air is tense with the promise of a confrontation.
+[[Advise a stealthy approach to bypass them->SkybreakerCorridor-Union]]
+[[Suggest a swift, overwhelming assault->SkybreakerAmbush-Union]]
+
+:: SkybreakerSublevel2-HasMap-WithLyra-MetOren-Alert
+The terminal room is a cathedral of dead machines under the flashing glare of alarms. Lyra works frantically at the console as you stand guard. "I'm getting fragmented data! The Legion's location... the Nomads... but the system is failing!" The clang of armored boots is getting closer.
+[[Grab Lyra and run with what you have->SkybreakerEscape-HasMap-WithLyra-MetOren-Data-Alert]]
+[[Stand and fight to give her more time->SkybreakerAmbush-HasMap-WithLyra-MetOren]]
+:: SkybreakerSublevel2-Legion
+Captain Hale stands before the dead terminal in the vast chamber. He turns to you, his impatience palpable. "The data is in this machine. Make it work." Legion soldiers flank the console, their weapons held ready. The pressure is immense.
+[[Attempt to power up the terminal->SkybreakerTerminal-LegionAttempt]]
+[[Admit you don't have the expertise->SkybreakerTerminal-LegionFailure]]
+
+:: SkybreakerSublevel2-LegionData
+The terminal screen glows, displaying a complex schematic of the facility. A red dot blinks in a sector labeled "Secure Vault." Hale leans in, a grim smile on his face. "There it is. The prize." He turns to his squad. "Move out! To the vault!" He gestures to you. "Scout, you're with me. Your knowledge of the ruins might be useful."
+[[Follow Hale to the vault->SkybreakerVault-Legion]]
+[[Stay behind to search the terminal for more data->SkybreakerSublevel2-LegionSearch]]
+:: SkybreakerSublevel2-VaultInquiry
+You focus on the vault fragment here instead of trying to confront Hale. Lyra nods, tracing the route on her data slate. "Dr. Vale's directions are our best bet. We should move quietly."
+[[Follow the path to the vault corridor->SkybreakerVault-HasMap-WithLyra-MetOren-Stealth]]
+:: SkybreakerTerminal-LegionAttempt
+You examine the complex terminal, your fingers brushing dust from the ancient keys. You recall bits of old-world lore from your travels. After several failed attempts, a sequence of commands causes a screen to flicker, displaying a corrupted directory. A Legion engineer shoves you aside. "Stand back, Scout. Let a professional handle this." He inputs a code, and the system groans to life. Hale watches, a grim satisfaction on his face.
+[[Wait for the engineer's results->SkybreakerSublevel2-LegionData]]
+:: SkybreakerTerminal-LegionFailure
+You stare at the dead console, its complexity overwhelming. "I can't do it," you admit to Hale. "This technology is beyond me." Hale's eyes narrow with contempt. "Useless." He signals his tech specialist. "Get this thing working." The specialist gets to work, ignoring you. A guard escorts you away from the terminal. "Wait here. The Captain will decide your fate."
+[[Wait for Hale's judgment->SkybreakerSublevel2-LegionPunishment]]
+[[Try to escape your guards->SkybreakerEscape-HasMap-Captured]]
+:: SkybreakerVault-BypassAttempt-Alert
+[[Quickly squeeze inside the vault->SkybreakerVault-HasMap-WithLyra-Alert]]
+:: SkybreakerVault-HasMap-WithLyra
+The vault is a small, circular room. In the center, on a stone pedestal, rests the second map fragment. The air is still and cold, but the blaring alarms remind you that time is short.
+[[Take the fragment->SkybreakerVault-HasMap-WithLyra-FragmentTaken]]
+[[Wait for Lyra to ensure it's safe->SkybreakerVault-HasMap-WithLyra-Cautious]]
+:: SkybreakerVault-HasMap-WithLyra-MetOren
+The vault is a small, circular room. In the center, on a stone pedestal, rests the second map fragment. Dr. Vale points a trembling finger. "There! The second key!" The vault is silent, the fragment waiting.
+[[Take the fragment->SkybreakerVault-HasMap-WithLyra-MetOren-FragmentTaken]]
+[[Wait for Lyra to ensure it's safe->SkybreakerVault-HasMap-WithLyra-MetOren-Cautious]]
+:: SkybreakerVault-Negotiation-Union
+You stand before the cornered Captain Hale, the Union team surrounding him. "Hale," you say, your voice steady. "The Union can offer you a role in the new order. Stand down. The fragments must be used for knowledge, not conquest." Hale's eyes dart between the electrostatic rifles aimed at him. He knows he is defeated. With a grunt of disgust, he drops the two fragments onto the floor. "Take your prize. But this isn't over." Aris motions for his troops to secure the fragments and take Hale into custody. The victory is clean, but the Captain's hatred is a lingering poison.
+[[Secure the fragments and leave Skybreaker->SkybreakerEscape-HasMap-WithLyra-Data-Union]]
+:: SkybreakerVault-Steal-Union
+On your signal, the Union team strikes with blinding speed. Two soldiers grapple Hale, disarming him before he can react. Aris snatches both map fragments from his grasp. "A clean extraction," Aris says with satisfaction. Hale snarls, struggling against his captors. "You technocrats have no vision! Only greed!" The fragments are now in Union hands, and Hale is a prisoner. The path to Haven-0 is clear, but it is a path paved with betrayal.
+[[Exit Skybreaker with the Union->SkybreakerEscape-HasMap-WithLyra-Data-Union]]
+:: RoadToHaven0-HasTwoFragments
+The Forbidden Zone is a landscape of twisted rock and shimmering heat hazes. The air is thick and hard to breathe, even through your filter. You clutch the two map fragments, feeling their weight and promise. The path is marked by the bones of old machines and the occasional, unsettling stillness that precedes a toxic storm. The mountains that guard Haven-0 are a dark line ahead.
+[[Press forward into the zone's heart->Haven0Entrance-HasTwoFragments]]
+[[Seek a safer, longer route along the edge->AshPlains-DesperatePlan]]
+:: SkybreakerAmbush-Union
+Aris signals for the assault. The Union team moves with synchronized speed, bursting into the corridor where the Legion patrol is stationed. Electrostatic rifles hum, firing pulses of energy that crackle against Legion armor. The fight is swift and clinical. The Legion soldiers are subdued before they can raise an effective alarm. The path to the terminal room is clear.
+[[Proceed to the terminal->SkybreakerSublevel2-Union]]
+
+:: SkybreakerCorridor-Union
+The Union team moves like ghosts through the dark halls, using sonic dampeners to mask their footsteps. You pass within meters of a Legion patrol, who continue their march, completely unaware. Aris points to a reinforced door ahead. "The terminal room. No signs of Legion inside. We proceed."
+[[Enter the terminal room->SkybreakerSublevel2-Union]]
+
+:: SkybreakerVault-HasMap-WithLyra-Cautious
+You hold Lyra back. "Check for traps." She scans the pedestal. "It's clean." Reassured, you carefully lift the second map fragment.
+[[Secure the fragment and leave the vault->SkybreakerEscape-HasMap-WithLyra-Data-FromVault]]
+:: SkybreakerVault-HasMap-WithLyra-FragmentTaken
+You reach out and take the fragment. As your fingers close around it, a soft chime echoes through the vault. You now hold two pieces.
+[[Retreat quickly from the vault->SkybreakerEscape-HasMap-WithLyra-Data-FromVault]]
+:: SkybreakerVault-HasMap-WithLyra-MetOren-Conflict
+You snatch the fragment from the pedestal and turn, weapon raised. Captain Hale fills the doorway, his own fragment in hand. "I should thank you for leading me here," he growls. "Now, hand over both pieces." His soldiers fan out behind him, blocking the exit.
+[[Refuse and prepare to fight->SkybreakerVault-Fight]]
+[[Try to negotiate a truce->SkybreakerVault-Negotiation]]
+
+:: SkybreakerVault-HasMap-WithLyra-MetOren-Hide
+You press deeper into the shadows, holding your breath. Hale's soldiers sweep the small vault room, their lamp beams cutting through the dust. They check behind the server racks but miss your alcove. After a tense minute, Hale barks, "They're gone! Secure this room! I want a tech team here now to study this pedestal!" He leaves two guards behind and storms out. You are trapped, but unseen.
+[[Wait for the guards to become lax, then slip out->SkybreakerCorridor-HasMap-WithLyra-MetOren]]
+[[Overpower the two guards silently->SkybreakerAmbush-HasMap-WithLyra-MetOren]]
+:: Haven0Entrance-HasTwoFragments
+The sheer wall of Haven-0 rises before you, impassive and silent. The entrance is a seamless expanse of composite alloy, reflecting the dull orange sky. You hold the two map fragments, their edges warm against your palm. They are useless without the third. The air is still and heavy, the silence broken only by the distant cry of a carrion bird. You are alone at the edge of the world.
+[[Search the perimeter for another way in->Haven0Entrance-Search]]
+[[Wait and watch for signs of other seekers->Haven0Entrance-Observe]]
+
+:: Haven0Entrance-Observe
+You find a vantage point atop a pile of rubble, overlooking the sealed gate of Haven-0. Hours pass. The sky cycles through shades of gray. Then, movement. A Legion skiff arrives, disgorging soldiers who begin setting up a perimeter. Later, from the opposite direction, robed figures of the Ashen Choir approach silently. They do not see you. You have confirmation: the final confrontation will happen here, and you are not the only one who has arrived.
+[[Wait for an opportunity to approach unseen->Haven0Entrance-Search]]
+[[Announce your presence to force a dialogue->Haven0ChoirNegotiation]]
+
+:: SkybreakerSublevel2-LegionSearch
+As Hale and his soldiers move out, you remain at the terminal. Quickly, you search the archives, looking for anything beyond the vault location—escape routes, facility weaknesses, data on the other fragments. You find a file titled "Emergency Evacuation Routes" just as a soldier returns to fetch you. "The Captain wants you now!"
+[[Go to the vault->SkybreakerVault-Legion]]
+[[Use the evacuation route to escape->SkybreakerEscape-HasMap-LegionData]]
+
+:: SkybreakerVault-Legion-Route
+You describe the maintenance duct from the evacuation plans. Hale considers it. "A flanking maneuver. Good. You take two men and go that way. We'll keep them busy here." He assigns you a small team.
+[[Lead the team through the ducts->SkybreakerVault-HasMap-LegionTeam]]
+[[Stay with the main force->SkybreakerVault-Legion-Cut]]
+
+:: SkybreakerVault-Legion-Cut
+[[Join the fight against the Union->SkybreakerVault-Fight-Union-Legion]]
+[[Use the chaos to slip away->SkybreakerEscape-HasMap-LegionData]]
+:: SkybreakerVault-HasMap-LegionTeam
+You lead your two soldiers through a tight maintenance shaft into the vault. The second fragment rests on a pedestal, unguarded.
+[[Take the fragment and signal Hale->SkybreakerVault-FragmentTaken-Legion-Secure-Team]]
+:: SkybreakerVault-FragmentTaken-Legion
+You secure the vault fragment. You signal Hale via radio. "The fragment is secure, Captain."
+[[Return to Hale with the fragment->Haven0Approach-Legion]]
+:: SkybreakerEscape-HasMap-LegionData
+[[Head for the Nomads->SaltFlatsApproach-HasMap-Data-LegionEscape]]
+:: SkybreakerEscape-HasMap-LegionData-Fragment
+You escape through the maintenance duct, emerging into a canyon. You are alone, a traitor to the Legion.
+[[Head for the Salt Flats->SaltFlatsApproach-HasMap-Data-LegionEscape]]
+:: SkybreakerSublevel2-LegionPunishment
+The guard leads you to a small, empty room. "The Captain has no use for failures." He locks the door. Hours pass. Finally, the door opens. A different soldier stands there. "You've been reassigned to latrine duty. Consider yourself lucky." Your quest for Haven-0 is over, absorbed into the Legion's machinery.
+[[Ending-Captured]]
+
+:: SkybreakerEscape-HasMap-Captured
+You make a break for it, shoving past your guard. You run down the dark corridor, but more soldiers appear ahead, cutting off your escape. You are tackled and subdued. "Foolish," your guard says, dragging you to your feet. "You'll spend the rest of your days in a labor camp."
+[[Ending-Captured]]
+
+:: RelayStationNight-Questions-WithLyra
+Lyra's shoulders slump. "The Union exiled me for believing Haven-0 was real. They called it a dangerous fantasy. I need to prove it exists." She looks at you, her expression earnest. "Will you trust me?"
+[[Accept her story and propose an alliance->RoadToSkybreaker-HasMap-WithLyra]]
+[[Question her credibility further->AshPlains-Alone]]
+
+:: RoadToSkybreaker-HasMap-WithLyra-FromHideout
+The journey to the mountains is long and arduous. Lyra predicts the ash storms with uncanny accuracy, keeping you safe. The massive, half-buried arcology of Skybreaker appears on the horizon.
+[[Approach the main entrance->SkybreakerEntrance-HasMap-WithLyra]]
+[[Look for a hidden way in->SkybreakerVent-HasMap-WithLyra]]
+
+:: SkybreakerVault-HasMap-WithLyra-MetOren-Urgent
+You rush toward the vault, Dr. Vale struggling to keep up. The heavy door is just ahead. But as you reach it, the clatter of armor echoes from a side corridor.
+[[Grab the fragment and prepare to fight->SkybreakerVault-HasMap-WithLyra-MetOren-Conflict]]
+[[Hide and see who enters->SkybreakerVault-HasMap-WithLyra-MetOren-Hide]]
+:: SkybreakerEscape-HasMap-WithLyra-Data-Union
+You escape Skybreaker with the Union team, the data slate and fragments secure. Aris looks at you with respect. "You have served the Union well. Now we go to Haven-0."
+[[Travel to the Nomads for the final fragment->SaltFlatsApproach-HasMap-WithLyra-Data-Union]]
+
+:: SkybreakerSublevel1-LegionGuard-Doubt
+The silence of your post is deafening. A side corridor, dark and unused, beckons.
+[[Remain at your post->SkybreakerSublevel1-LegionGuard-Compliant]]
+[[Desert your post and seek your own path->SkybreakerVent-HasMap-LegionEscape]]
+:: SkybreakerVent-HasMap-LegionEscape
+You slip away from your post while the hall is quiet. You find a fissure in the rockface and a rusted vent cover. You kick it loose and climb into the tight shaft, leaving the Legion behind.
+[[Climb the vent shaft->SkybreakerSublevel1-HasMap]]
+
+:: SkybreakerVault-HasMap-WithLyra-Cautious-Alert
+"Check for traps," you urge Lyra. She scans quickly. "It's clean, but we have no time!" Reassured, you lift the fragment from its pedestal just as shouts echo from the corridor.
+[[Secure the fragment and flee->SkybreakerEscape-HasMap-WithLyra-Data-Alert]]
+
+:: SkybreakerVault-HasMap-WithLyra-FragmentTaken-Alert
+You grab the fragment. A soft chime echoes, likely an alert. You now hold two pieces. Lyra pulls your arm. "They're coming! We must go!"
+[[Retreat quickly from the vault->SkybreakerEscape-HasMap-WithLyra-Data-Alert]]
+
+:: Haven0Approach-Legion-Joined
+You arrive at Haven-0 at the head of a Legion column. Hale gives the order to breach the gate. Inside, you find the control room. Vale is forced to activate the system at gunpoint. Hale turns to you. "The world is ours to command."
+[[Order the purifier activated for Legion rule->Ending-Dominion]]
+[[Turn on Hale and free Vale->Haven0ControlRoom-BetrayLegion]]
+
+:: SkybreakerVault-Fight-Union-Legion
+The vault corridor becomes a brutal close-quarters battlefield. You fight alongside Legion soldiers against the Union assault.
+[[Fight to protect the vault->SkybreakerVault-FragmentTaken-Legion-Secure-Battle]]
+[[Use the fight as cover to escape->SkybreakerEscape-HasMap-LegionData-Fragment-Betrayal]]
+:: SkybreakerSublevel2-Legion-Failure
+You step back from the terminal. Hale's eyes narrow with contempt. "Useless." He signals his tech specialist. The specialist gets to work, ignoring you.
+[[Wait for Hale's judgment->SkybreakerSublevel2-LegionPunishment]]
+[[Try to escape your guards->SkybreakerEscape-HasMap-Captured]]
+
+:: SkybreakerEscape-HasMap-WithLyra-Data-Alert-Solo
+Alarms scream as you grab Lyra. You snatch the data slate and run, Lyra close behind. You burst out of a service exit into the ash-choked night. You have the data, but Dr. Vale was separated in the chaos.
+[[Head for the Salt Flats to find the third fragment->SaltFlatsApproach-HasMap-WithLyra-Data]]
+
+:: SaltFlatsApproach-HasMap-Data-LegionEscape
+The Salt Flats appear on the horizon. You have data from Skybreaker, but you are a fugitive from the Legion.
+[[Approach the gathering openly->SaltFlatsElder-HasMap-Data]]
+:: SaltFlatsApproach-HasMap-WithLyra-Data-Union
+You and Lyra approach the Nomad gathering with the Union team close behind. Aris orders the team to hold position at a distance. "We are not here to intimidate, but to observe. Your rapport with the Nomads is our best chance to acquire the fragment peacefully." The colorful sails of the gathering ripple in the wind. Moth recognizes you and Lyra, waving enthusiastically from the edge of the camp.
+[[Enter the elder's tent with Aris->SaltFlatsElder-HasMap-WithLyra-Data-Union]]
+[[Ask Aris to let you and Lyra go alone->SaltFlatsElder-HasMap-WithLyra-Data]]
+
+:: SaltFlatsElder-HasMap-WithLyra-Data-Union
+The elder’s tent feels crowded with the presence of Aris and two Union guards standing stiffly behind him. Lyra shifts uncomfortably. The elder’s eyes move from your map fragment to the data slate, then to the Union insignia on Aris’s coat. “You bring old allies and older enemies under my roof, Wanderer. The Union’s interest in Haven-0 is well known. They seek to own the future, not share it.” Aris steps forward, his tone diplomatic. “We seek only to ensure the technology is used correctly, Elder. Under Union stewardship, it would be safe.” The elder’s gaze returns to you, the weight of the decision clearly in your hands.
+[[Vouch for the Union’s peaceful intentions->SaltFlatsElder-PromiseKept-Data-Union]]
+[[Denounce the Union’s control and speak for yourself->SaltFlatsElder-PromiseKept-Data]]
+
+:: SaltFlatsElder-PromiseKept-Data-Union
+The elder listens to your defense of the Union's intentions, her expression skeptical. She turns to Lyra. "And you, child of the Union? Do you believe this?" Lyra looks at the ground. "I believe in Haven-0. The Union... is a means to an end." The elder sighs, a sound of profound weariness. "A necessary evil, perhaps. Very well. The fragment is yours." She hands you the final piece, but her blessing feels hollow. "Go. May your alliance hold."
+[[Leave the Salt Flats with the Union team->RoadToHaven0-WithLyra-MetOren-HasTwoFragments-Union]]
+:: RoadToHaven0-WithLyra-MetOren-HasTwoFragments-Union
+The Union convoy cuts a swift path through the Forbidden Zone, its environmental seals protecting you from the worst of the toxins. Lyra and Vale work under the watchful eye of Aris, who frequently reviews their progress. The journey is efficient but cold, lacking the camaraderie of your earlier travels. The mountains that shield Haven-0 rise ahead, and with them, the sight of Legion fortifications and the eerie fires of the Ashen Choir. The final battle for the future is at hand.
+[[Approach the gate under the Union banner->Haven0Entrance-WithLyra-MetOren-HasTwoFragments-Union]]
+:: Haven0Entrance-WithLyra-MetOren-HasTwoFragments-Union
+The Union caravan of armored transports rolls to a halt a safe distance from the sealed gate of Haven-0. Captain Hale's Legion forces are already entrenched, their banners flying. The robed figures of the Ashen Choir chant around a large pyre on the opposite ridge. Aris studies the scene through binoculars. "A three-way standoff. The gate is the key." Lyra connects her scanner to the facility's external ports. "The Union's brute-force approach won't work here. The door requires the combined fragments." Vale cowers behind a transport, whispering about the Choir's fanaticism. The final decision is yours.
+[[Suggest a coordinated assault with the Legion against the Choir->Haven0FinalShowdown]]
+[[Propose a technological solution to bypass the gate->Haven0Entrance-HackAttempt-Union]]
+
+:: AshPlains-DesperatePlan-MapShown
+The wastes offer no clear alternative. Your injury makes every step a trial. The map fragment feels like a curse, drawing danger to you. In the distance, a lone figure approaches, walking with an unnatural grace through the ash. It is a pilgrim of the Ashen Choir, their robes gray with dust. They stop before you, their face hidden. "The sky speaks of a seeker. You carry a burden that belongs to the ash." They extend a hand, not in threat, but in offering.
+[[Accept the pilgrim's guidance->CanyonSouth-Shrine-MetChoir]]
+[[Reject the offer and press on alone->OutpostScrapwall-Injured-Desperate]]
+
+:: Haven0Entrance-HackAttempt-Union
+Lyra and a Union tech team set up a bank of generators and interface cables at a secondary service panel. "I'm trying to reroute auxiliary power to force a maintenance hatch," Lyra explains, her fingers flying over a console. Sparks fly from the panel. "The system is fighting back... it's a firewall from the Cataclysm era." A small hatch near the base of the gate groans open an inch, then stops. "It's not enough for the transports, but one person could squeeze through," Aris observes, looking at you.
+[[Volunteer to enter alone->Haven0ControlRoom-AllFragments-UnionSolo]]
+[[Order a Union soldier to go first->Haven0Entrance-Search-Union]]
+
+:: CanyonSouth-Shrine-MetChoir
+The pilgrim leads you through the badlands to a hidden canyon. A crude shrine of bones and ash stands at its center. Other robed figures emerge from the shadows, their faces serene and unsettling. The lead pilgrim gestures to the shrine. "The sky gave us this burden. It is not for you to lift. Leave the fragment here, and walk free into the embrace of the ash." They watch you, waiting for your decision.
+[[Place the map fragment on the altar->Ending-Ashen]]
+[[Refuse and attempt to flee->CanyonSouth-Shrine-Escape]]
+
+:: Haven0ControlRoom-AllFragments-UnionSolo
+You squeeze through the hatch into a dark maintenance corridor. Following schematics from Lyra's data, you find the pristine control room. The purifier console glows with latent power. You have the fragments, but you are utterly alone inside Haven-0. Outside, the standoff continues. You hold the future in your hands, with no one to counsel you.
+[[Activate the purifier for restoration->Ending-Restoration]]
+[[Seize control for the Union->Ending-Technocratic]]
+[[Overload the core to destroy it->Ending-Nomad]]
+
+:: Haven0Entrance-Search-Union
+A Union soldier crawls through the hatch. A moment later, a scream echoes from the opening, followed by the sizzle of energy fire. The hatch slams shut. Aris checks his comms. "He's gone. The interior defenses are active." The plan has failed, and the hatch is now sealed. The only way in is through the main gate with all three fragments.
+[[Fall back and prepare for a direct assault->Haven0FinalShowdown]]
+
+:: OutpostScrapwall-Injured-Desperate
+You limp toward Scrapwall, your body screaming in protest. The guards at the gate eye you with suspicion. "You look like death warmed over," one says. "We can't let you in without a full decon scan. That'll cost you." You have no scrap to pay, and your map is your only possession of value.
+[[Offer the map fragment as payment->ScrapwallGate-MapShown-Injured-Desperate]]
+[[Try to sneak past the guards->ScrapwallAlley-Injured]]
+
+:: CanyonSouth-Shrine-Escape
+You shove the pilgrim aside and bolt from the shrine, your injured leg screaming in protest. The cultists give chase, their chanting turning to angry shouts. You scramble up a loose scree slope, sending rocks tumbling down behind you to slow your pursuers. You lose them in the maze of canyons, but the encounter has left you shaken. The Ashen Choir knows you have the fragment, and they will not forget.
+[[Head north toward the mountains->CanyonNorth]]
+[[Press on toward the Salt Flats->SaltFlatsApproach-HasMap]]
+
+:: Ending-Ashen
+You place the map fragment on the altar of bones. The pilgrims nod in approval, their chanting becoming a soft, welcoming hum. "You have chosen wisdom over arrogance," the lead pilgrim says. "The ash is not a curse to be cleansed, but a divine blanket, a final peace for a world that fought too hard." They lead you away from the shrine, deeper into their sanctuary. You live out your days in quiet acceptance, your quest forgotten, the hope of Haven-0 buried under the eternal gray sky.
+
+:: ScrapwallAlley-Injured
+You slip into a narrow alley, hoping to find a forgotten way into Scrapwall. The pain in your ankle is excruciating. You collapse behind a stack of rotting crates, your vision blurring. The last thing you see before unconsciousness takes you is the concerned face of a young courier. "Moth... get help..." you whisper before darkness falls.
+[[Awaken in the courier's lodge->ScrapwallCourierLodge-MetMoth-Injured]]
+
+:: ScrapwallGate-MapShown-Injured-Desperate
+You weakly hold out the leather-wrapped bundle. The guard takes it, his eyes widening as he unrolls the burned parchment. He looks from the map to your broken state, a flicker of greed in his eyes. "This'll cover the toll... and then some. Get inside. But if anyone asks, you never showed me this." He pockets the fragment and waves you through the gate. You have entered Scrapwall, but you have lost your only hope. Now you must find a new reason to go on.
+[[Seek medical aid->ScrapwallClinic-NoMap]]
+[[Head to the tavern to gather your thoughts->ScrapwallTavern-NoMap]]
+:: ScrapwallClinic-NoMap
+The clinic is a harshly lit room smelling of antiseptic and despair. The medic looks at your empty hands and your obvious injury with clinical detachment. "No scrap? No trade? Then I can offer you a cot for the night, but no treatment. Your journey ends here if that ankle goes septic." You slump onto the offered cot, the weight of your lost map a heavier pain than any injury. But dying here serves no one. After a fitful sleep, the pain has dulled to a constant ache. You must find a way to survive, to perhaps find another purpose.
+[[Try to find work in Scrapwall->ScrapwallTavern-NoMap]]
+[[Beg for passage out of the outpost->AshPlains-Injured-NoMap]]
+:: ScrapwallCourierLodge-MetMoth-Injured
+You wake on a soft pallet. The pain in your ankle is a dull throb, tightly bound with clean bandages. Moth is sitting nearby, sharpening a knife. "You passed out in the alley. I brought you here. You're safe." They gesture to a cup of water. "You mumbled about a map. The Legion... Scrapwall is dangerous for you now. Rest. When you can walk, I can get you out of here." The kindness is a stark contrast to the harshness of the wastes.
+[[Accept Moth's help and rest->ScrapwallCourierLodge-WithMoth-Injured]]
+[[Insist on leaving immediately despite the pain->ScrapwallAlley-Injured-SecondCollapse]]
+
+:: ScrapwallCourierLodge-WithMoth-Injured
+Moth brings you a bowl of thin broth. "You need to rest that ankle for a day at least," they insist. "The Legion is asking questions at the gate, but they won't look for you here. The courier's lodge is neutral ground." From a hidden compartment, they take out a small, hand-drawn map. "When you're ready, I know a route out of the city that the Legion doesn't watch. We can go to the Salt Flats, if that's still your goal."
+[[Rest until morning->AshPlains-Injured-WithMoth]]
+[[Push to leave under cover of darkness->ScrapwallAlley-Injured-SecondCollapse]]
+
+:: ScrapwallAlley-Injured-SecondCollapse
+You insist on leaving immediately. Moth helps you limp into the dark alley. A sharp turn of your ankle sends fresh agony through your leg. Your vision swims, and you stumble against a rusty pipe, collapsing to the ground. Moth struggles to lift you. "It's no good," they whisper urgently. "You can't walk. We have to go back."
+[[Agree to return to the lodge->ScrapwallCourierLodge-WithMoth-Injured]]
+[[Refuse and try to crawl->AshPlains-Injured-Collapsed]]
+
+:: AshPlains-Injured-Collapsed
+You try to crawl forward, but the pain is too great. Each movement is a fresh wave of agony. You collapse face-down in the ash, unable to go further. Moth kneels beside you, their face etched with worry. "You're not going to make it like this. The night is cold, and the ash-leopards hunt after dark." The distant lights of Scrapwall seem impossibly far away.
+[[Let Moth help you back to the courier's lodge->ScrapwallCourierLodge-WithMoth-Injured]]
+[[Stubbornly refuse and try to crawl onward alone->Ending-Death]]
+
+:: AshPlains-Injured-WithMoth
+The wastes stretch before you, a sea of gray under a bruised sky. Moth supports your weight, their presence a welcome comfort. "There's a cave not far from here," they say. "We can rest there and plan our next move." The path ahead remains uncertain, but you are no longer alone.
+[[Rest in the cave->SaltFlatsApproach-WithMoth-HasMap-Injured]]
+:: ScrapwallTavern-NoMap
+The Tavern of Broken Gears is its usual cacophony, but the noise feels hollow now. You sit at a corner table, nursing your injury and your despair. A young courier with bright eyes notices your plight. "The name's Moth. You look like you've lost more than just a fight with the wastes. Need a friend?"
+[[Accept Moth's friendship->ScrapwallCourierLodge-MetMoth-NoMap]]
+[[Try to drown your sorrows alone->ScrapwallTavern-Despair]]
+
+:: ScrapwallTavern-Despair
+The harsh liquor does nothing to ease the pain in your heart. The map is gone, and with it, Haven-0. The future seems as gray as the sky outside. But a fight breaks out at the bar, and in the chaos, you see a chance to slip away unnoticed.
+[[Flee the tavern->ScrapwallAlley-NoMap]]
+
+:: ScrapwallAlley-NoMap
+You duck into a narrow alley, the sounds of the tavern fading behind you. The pain in your ankle is a sharp reminder of your vulnerability. A door creaks open nearby. "In here. Quickly." A woman with intense eyes—Lyra Kade—gestures you inside. "I heard about the guard at the gate. He's a fool. The map's power isn't in the paper, it's in the knowledge. And I have that."
+[[Follow Lyra->AshwitchHideout-NoMap-MetLyra]]
+
+:: AshwitchHideout-NoMap-MetLyra
+Lyra's hideout is a cluttered nest of wires and old books. "The guard has the fragment, but he doesn't know how to read it. I do. I memorized the Skybreaker coordinates from Union records before I was exiled. We can still find Haven-0. We just need to get to Skybreaker and access the terminal there. It's a longer shot, but it's all we have."
+[[Agree to go to Skybreaker->RoadToSkybreaker-NoMap-WithLyra]]
+[[Refuse and try to make it on your own->AshPlains-Injured-NoMap]]
+
+:: RoadToSkybreaker-NoMap-WithLyra
+The journey to the mountains is long. Lyra's predictions keep you safe from the worst storms. Without the physical map, the quest feels different—more about belief than a tangible key. The massive arcology of Skybreaker appears on the horizon, a silent challenge.
+[[Approach the main entrance->SkybreakerEntrance-NoMap-WithLyra]]
+[[Look for a hidden way in->SkybreakerVent-NoMap-WithLyra]]
+
+:: SkybreakerEntrance-NoMap-WithLyra
+The colossal door is sealed shut. Lyra scans it. "No power. But my records indicate an auxiliary ventilation intake on the north face. It's our best bet."
+[[Search for the vent->SkybreakerVent-NoMap-WithLyra]]
+:: SkybreakerVent-NoMap-WithLyra
+You find the rusted vent cover. Together, you pry it open and climb into the dark shaft, emerging into a silent corridor deep within Skybreaker.
+[[Explore the corridor->SkybreakerSublevel1-NoMap-WithLyra]]
+:: SkybreakerSublevel1-NoMap-WithLyra
+The corridor is dark and silent. Lyra uses her scanner. "The central terminal is on Sublevel 2. We need to find a way down."
+[[Head for the main stairwell->SkybreakerStairs-NoMap-WithLyra]]
+[[Search for a maintenance route->SkybreakerEnvironmental-NoMap-WithLyra]]
+:: AshPlains-Injured-NoMap
+You limp away from Scrapwall, directionless. The map is gone, and with it, your purpose. The ash plains stretch out, endless and empty. But survival is its own purpose. You need to find shelter, food, a reason to keep walking.
+[[Head toward the canyons->CanyonNorth-NoMap]]
+[[Look for signs of other travelers->AshPlains-NoMap-Wander]]
+
+:: AshPlains-NoMap-Wander
+You wander the wastes, a ghost without a goal. Days blur together. You eventually stumble upon a hidden Dustborn trail, marked by subtle stone cairns. It might lead to a settlement, or simply to a quiet place to rest.
+[[Follow the trail->DustbornCaravan-NoMap]]
+
+:: DustbornCaravan-NoMap
+The caravan is a beautiful sight. The Nomads welcome you, sensing your lost state. They offer you a place, asking only that you contribute what you can. The road is long, but it no longer feels empty.
+[[Travel with the Nomads->DustbornCaravan-Joined-NoMap]]
+
+:: DustbornCaravan-Joined-NoMap
+You travel with the Nomads, learning their ways. The quest for Haven-0 fades, replaced by the daily rhythm of survival and community. The world is still broken, but you are not alone in it.
+[[Find a new life with the caravan->Ending-Nomad]]
+
+:: ScrapwallCourierLodge-MetMoth-NoMap
+Moth helps you to the lodge. "Forget the map for now. Let's just get you healthy. Then we can figure out what's next. The wastes always have a need for a good courier." They smile, a genuine offer of a new beginning.
+[[Rest and recover->AshPlains-Injured-WithMoth-NoMap]]
+
+:: AshPlains-Injured-WithMoth-NoMap
+Moth guides you safely from Scrapwall. The journey is slow, but their company makes the road less harsh. The goal is no longer a legendary facility, but the next safe haven, the next sunrise.
+[[Travel with Moth->Ending-Nomad]]
+
+:: CanyonNorth-NoMap
+The northern canyon winds through towering rock formations, their peaks lost in the perpetual ash haze. Your injured ankle makes the climb treacherous, each step a fresh jolt of pain. Without the map, your purpose feels vague, a ghost of a quest. In the distance, you spot the wreckage of a pre-Cataclysm survey camp, its structures half-buried in the red dust. It might offer shelter or scraps to sustain you.
+[[Search the wreckage for supplies->CanyonNorth-Crate-NoMap]]
+[[Rest in the shadow of the rocks->CanyonNorth-Rest-NoMap]]
+
+:: SkybreakerEnvironmental-NoMap-WithLyra
+The Environmental Control room is humid and overgrown with pale, phosphorescent fungi. Lyra studies the control panel. "I can trace the power lines to the main data conduit on Sublevel 2."
+[[Reroute power to the lower levels->SkybreakerSublevel2-NoMap-WithLyra]]
+[[Search for a physical maintenance shaft->SkybreakerSublevel2-NoMap-WithLyra-Duct]]
+:: SkybreakerStairs-NoMap-WithLyra
+The main stairwell is a vast, echoing shaft plunging into darkness. Your footsteps sound like thunder in the silence. Lyra holds up a hand, her scanner pinging softly. "I'm picking up movement below. Legion patrols."
+[[Proceed down the stairs with caution->SkybreakerAmbush-NoMap-WithLyra]]
+[[Retreat and find another way->SkybreakerEnvironmental-NoMap-WithLyra]]
+:: CanyonNorth-Crate-NoMap
+You search the wreckage. The crate is rusted shut, but a few blows from a loose pipe break the lock. Inside, you find a dusty but intact survival kit: a water filter, some nutrient bars, and a thermal blanket. No maps, no grand purpose, but the means to live another day. The find gives you a grim sort of hope.
+[[Take the supplies and continue north->CanyonNorth]]
+[[Rest here for the night->CanyonNorth-Rest-NoMap]]
+
+:: CanyonNorth-Rest-NoMap
+You shelter in the lee of a large rock, wrapping the thermal blanket around your shoulders. The night is cold, the wind a constant whisper. Without the map, your mind is free to wander. You think not of saving the world, but of simpler things: a warm meal, a safe place to sleep. The dawn brings a clarity borne of survival.
+[[Continue your aimless journey north->CanyonNorth]]
+[[Head back toward the plains->AshPlains-NoMap-Wander]]
+
+:: SkybreakerAmbush-NoMap-WithLyra
+You descend the stairwell, step by cautious step. A flicker of movement below. Two Legion soldiers round the corner. "Halt!" one shouts.
+[[Charge the soldiers, hoping to overwhelm them->SkybreakerSublevel2-NoMap-WithLyra-Alert]]
+[[Attempt to talk your way past->SkybreakerSublevel2-Legion-Captured]]
+:: SkybreakerSublevel2-NoMap-WithLyra
+You enter the terminal room. The central console is a monolith of dead screens. Lyra connects her device to a data port. "I'm bypassing the main security. This will take time."
+[[Stand guard at the door->SkybreakerSublevel2-NoMap-WithLyra-Guard]]
+[[Help Lyra search for a manual override->SkybreakerSublevel2-NoMap-WithLyra-Search]]
+:: SkybreakerSublevel2-NoMap-WithLyra-Duct
+You find a narrow maintenance shaft that descends steeply. You slide down into a utility corridor, which leads directly into the terminal room on Sublevel 2.
+[[Enter the terminal room->SkybreakerSublevel2-NoMap-WithLyra]]
+:: SkybreakerSublevel2-NoMap-WithLyra-Alert
+You charge down the stairs, catching the Legion soldiers by surprise. The fight is brief but loud. An alarm begins to blare.
+[[Rush to the terminal room->SkybreakerSublevel2-NoMap-WithLyra-Guard]]
+:: SkybreakerSublevel2-NoMap-WithLyra-Bluff
+You raise your hands, trying to look harmless. "We're just scavengers," you call out. "We got lost." The lead soldier lowers his rifle slightly, skeptical. "Scavengers don't come this deep. You're with the Ashwitch." Lyra steps forward. "The Union will pay well for our safe return." The mention of the Union gives them pause, but only for a moment. "Take them to the Captain," the soldier orders. You are disarmed and escorted downward.
+[[Be taken to Captain Hale->SkybreakerSublevel2-Legion-Captured]]
+:: SkybreakerSublevel2-NoMap-WithLyra-Guard
+You stand guard while Lyra works frantically at the console. The blaring alarms and the sound of running boots grow louder.
+[[Defend the doorway->SkybreakerAmbush-NoMap-WithLyra]]
+[[Grab Lyra and run with what data she has->SkybreakerEscape-NoMap-WithLyra-Data]]
+:: SkybreakerSublevel2-NoMap-WithLyra-Search
+You find a secondary terminal behind a server rack. Lyra connects her device. "This is a maintenance interface! Less security!"
+[[Download the fragment locations->SkybreakerEscape-NoMap-WithLyra-Data]]
+[[Keep searching for a way to power the main console->SkybreakerSublevel2-NoMap-WithLyra-Guard]]
+:: SkybreakerEscape-NoMap-WithLyra-Data
+Lyra snatches her device from the port as Legion soldiers appear. "I have the coordinates! Run!" You burst out of a service exit into the ash-choked night, the sounds of pursuit fading behind you. The data is secure, but the physical map is lost. "We need the Nomad fragment," Lyra says, catching her breath. "The data says it's at the Salt Flats. We can still complete the map."
+[[Head for the Salt Flats->SaltFlatsApproach-HasMap-WithLyra-Data-NoMap]]
+:: SaltFlatsElder-HasMap-WithMoth-HasMap
+The elder looks from you to Moth, then to the map fragment you reveal.
+[[Promise to use it for the good of all->SaltFlatsElder-PromiseKept]]
+[[State that your intentions are your own->SaltFlatsElder-PromiseBroken]]
+:: RelayStationNight-Questions-MetLyra
+You voice your doubts about her story. Lyra's expression darkens. "My past is my burden to carry. If you cannot trust me, then our paths diverge here." She turns and disappears into the ruins. You are left alone with your fragment and your doubts.
+[[Leave the relay station->RoadToSkybreaker-HasMap-Alone]]
+:: SkybreakerSublevel1-Union-Alert
+You enter through the newly blasted opening. The corridor inside is dark, but the echoes of the explosion have drawn attention. A Legion patrol is already investigating the noise, their lamps cutting through the dust.
+[[Engage the patrol->SkybreakerAmbush-Union]]
+[[Try to evade and find a hiding place->SkybreakerCorridor-Union-Alert]]
+:: SkybreakerCorridor-Legion-Sweep
+You move with a Legion sweep team through the dark corridors.
+[[Search for the terminal room->SkybreakerSublevel2-Legion]]
+[[Check a side corridor for threats->SkybreakerAmbush-LegionSweep]]
+:: SkybreakerSublevel2-Legion-Captured
+You are brought before Captain Hale. He studies you coldly.
+[[Claim to be lost scavengers->SkybreakerSublevel2-Legion-Captured-Scavengers]]
+[[Admit you sought the terminal->SkybreakerSublevel2-Legion-Captured-Terminal]]
+:: AshPlains-ToSaltFlats
+The journey south is a test of endurance. The air grows drier, the ground turning to cracked clay and then to fine, white dust. The horizon shimmers in the heat. After days of travel, a vast, flat expanse of blinding white appears—the Salt Flats. In the distance, you see the colorful specks of the Nomad gathering.
+[[Approach the gathering cautiously->SaltFlatsApproach-HasMap]]
+:: SaltFlatsApproach-HasMap
+The Salt Flats stretch to the horizon, a stark white plain under a bleached sky. The air is still and heavy with salt. The Nomad gathering is a vibrant island of color and movement ahead.
+[[Walk openly toward the tents->SaltFlatsElder-HasMap-Alone]]
+:: SkybreakerCorridor-Union-Alert
+You and the Union team press into a dark alcove as the Legion patrol stomps past, their boots echoing loudly. They are searching for the source of the blast. Aris holds up a hand for silence until the sounds fade. "They are searching outward. The path to the terminal may now be clear."
+[[Proceed carefully toward the terminal room->SkybreakerSublevel2-Union]]
+:: SkybreakerEscape-HasMap-WithLyra-MetOren-Data
+Lyra downloads the data. Dr. Vale follows as you escape into the ash-choked night. You have the data slate, but not the vault fragment.
+[[Head for the Nomads->SaltFlatsApproach-HasMap-WithLyra-MetOren-Data]]
+:: SkybreakerSublevel2-Legion-Captured-Scavengers
+"We're just scavengers," you insist, keeping your voice low and fearful. "We heard this place was empty. We got lost in the dark." Captain Hale studies you, his gaze like a physical weight. He snorts. "Scavengers are pests. But you might be useful as laborers. Take them to the holding cell." A guard grabs your arm, leading you away from the terminal room. Your freedom is gone.
+[[Be taken to the holding cell->Ending-Captured]]
+
+:: SkybreakerSublevel2-Legion-Captured-Terminal
+"We came for the terminal," you admit, seeing no point in a lie. "We seek knowledge of the old world." Hale's eyes glitter with interest. "Knowledge? You mean Haven-0. So you have a fragment, or you know who does." He gestures to a soldier. "Search them." Finding no map on you, he nods. "You will assist my technicians. Your knowledge may prove valuable. Or you will be discarded."
+[[Be put to work under guard->SkybreakerSublevel2-Legion]]
+
+:: SaltFlatsApproach-HasMap-WithLyra-MetOren-Data
+The journey to the Salt Flats is a strange contrast of camaraderie and tension. Lyra and Dr. Vale debate the Skybreaker data constantly, their voices a low hum against the whispering salt winds. Moth's guiding presence is a steady anchor, leading you unerringly toward the Nomad gathering. The flat, white expanse opens before you, dotted with the vibrant sails and tents. Moth points ahead. "The elders are waiting. They felt the importance of your arrival on the wind."
+[[Enter the elder's tent->SaltFlatsElder-WithLyra-MetOren-Data-MetMoth]]
+
+:: SaltFlatsApproach-HasMap-WithMoth-HasMap
+[[Enter the gathering->SaltFlatsElder-HasMap-WithMoth-HasMap]]
+
+:: SaltFlatsApproach-WithMoth-HasMap-Injured
+With Moth guiding you, the journey to the Salt Flats is slow due to your injury, but their knowledge keeps you safe from dangers. The flat, white expanse of the Salt Flats appears on the horizon, dotted with the vibrant sails of the Nomad gathering. "The elder will see you," Moth says, their voice full of confidence.
+[[Enter the gathering->SaltFlatsElder-WithMoth-HasMap-Injured]]
+:: SkybreakerAmbush-LegionDeserted
+You leave your post and sneak down a side corridor. Rounding a corner, you come face-to-face with two Legion soldiers from the sweep team.
+[[Attack first->SkybreakerAmbush-LegionFight]]
+[[Try to bluff your way past->SkybreakerAmbush-LegionBluff]]
+
+:: SkybreakerAmbush-LegionSweep
+While checking a side corridor with your sweep team, you encounter a lone figure in the shadows—a scavenger or perhaps a Union spy.
+[[Attack first->SkybreakerAmbush-LegionFight]]
+[[Challenge them to identify themselves->SkybreakerSublevel2-Legion-Captured]]
+
+:: SkybreakerEscape-HasMap-WithLyra-MetOren-Data-FromTerminal
+You grab the data slate and flee into the cold night air, opting for information over immediate action.
+[[Head for the Salt Flats->SaltFlatsApproach-HasMap-WithLyra-Data]]
+
+:: SkybreakerEscape-HasMap-WithLyra-MetOren-Data-FromVault
+You and your companions escape Skybreaker, the second fragment now in your possession along with the data slate.
+[[Head for the Salt Flats->SaltFlatsApproach-HasMap-WithLyra-MetOren-Data]]
+:: SaltFlatsApproach-HasMap-WithLyra-Data-NoMap
+[[Take the crystal and return to the Salt Flats->SaltFlatsElder-WithLyra-Data-Crystal]]
+:: SaltFlatsElder-HasMap-WithLyra-Data-NoMap
+The elder's tent smells of sage and dry earth. She studies your face, then Lyra's, then the data slate you present. "You come with numbers and light, but not with the old fire itself," she says, her voice like shifting sand. "The Union's exile walks with you. This data is a ghost of the truth. Where is the key, the physical proof of your claim?" Lyra speaks up. "It was stolen. But the coordinates are real. Haven-0 is real." The elder's eyes remain clouded with doubt. "A story told on a screen is easily lied about. The fragment is a promise written in ash and blood. Without it, your words are just wind." She places a hand on the data slate. "But the winds sometimes carry truth. Moth vouches for your heart. We will give you a chance. Travel to the GeoCore vault in the northern canyons. If you can retrieve a relic of the old world from there, we will consider your plea proven."
+[[Accept the elder's challenge->RoadToGeoCoreVault-WithLyra-Data-NoMap]]
+[[Refuse and leave the Salt Flats->AshPlains-NoNomadFragment]]
+:: SaltFlatsElder-WithMoth-HasMap-Injured
+The elder's tent is cool and dim, a relief from the harsh Salt Flats sun. Moth helps you to a cushion on the floor. The elder, a woman with a face like worn leather, looks from Moth's supportive hand on your shoulder to the map fragment you place carefully before her. "Moth brings you to us, injured but unbroken. This is a heavy trust." She gently picks up the fragment, her fingers tracing its burned edges. "The road has been cruel to your body, Wanderer. But cruelty can either shatter a vessel or temper it. Tell me, what will you forge with this power if you are made whole?"
+[[Promise to use Haven-0 for the good of all->SaltFlatsElder-PromiseKept-Injured]]
+[[State that your intentions are your own->SaltFlatsElder-PromiseBroken-Injured]]
+
+:: RoadToGeoCoreVault-WithLyra-Data-NoMap
+The journey to the northern canyons is harsh. Lyra uses the Skybreaker data to navigate the toxic zones. The GeoCore vault is a scar in the mountain, its entrance hidden by a recent rockslide. "According to the data, this vault contained backup communication crystals," Lyra says. "If we can find one, it will be proof enough for the Nomads."
+[[Enter the vault->GeoCoreVault-WithLyra-Data-NoMap]]
+
+:: GeoCoreVault-WithLyra-Data-NoMap
+The vault is dark and cold, the air thick with dust. Your lamp illuminates rows of sealed storage pods. Lyra scans them with her device. "This one still has power." She pries open the pod. Inside, nestled in foam, is a glowing data crystal, perfectly preserved. "This is it. The elder cannot deny this."
+[[Take the crystal and return to the Salt Flats->SaltFlatsElder-WithLyra-Data-Crystal]]
+
+:: SaltFlatsElder-PromiseKept-Injured
+The elder smiles. "Even in pain, you think of the whole sky. That is the mark of a true leader." She gives you the second fragment. "Rest here until you are strong. Then continue your journey. Moth will guide you."
+[[Rest and recover->RoadToHaven0-WithMoth-HasTwoFragments-Injured]]
+
+:: RoadToHaven0-WithMoth-HasTwoFragments-Injured
+After several days of rest and care from the Nomads, your ankle is strong enough to travel. Moth leads you away from the Salt Flats, their knowledge of the hidden paths making the journey safer. The Forbidden Zone looms ahead, a landscape of twisted rock and shimmering hazes. The weight of the two fragments in your pack is a constant reminder of your purpose.
+[[Approach the Forbidden Zone->Haven0Entrance-WithMoth-HasTwoFragments-Injured]]
+:: Haven0Entrance-WithMoth-HasTwoFragments-Injured
+The sealed gate of Haven-0 rises before you, impassive and silent. Moth scouts the perimeter. "Legion forces are digging in to the east," they report. "And the Ashen Choir is gathering to the west." You hold the two fragments, but the third is still missing. The final confrontation is at hand.
+[[Search for a hidden entrance->Haven0Entrance-Search-Injured]]
+[[Wait and watch for an opportunity->Haven0Entrance-Observe-Injured]]
+
+:: Haven0Entrance-Search-Injured
+While Moth keeps watch, you search the base of the massive gate. Beneath a pile of scree, you find a collapsed ventilation shaft leading down into darkness. It is a tight, dangerous climb, but it might bypass the main gate entirely.
+[[Enter the ventilation shaft->Haven0ControlRoom-AllFragments-Injured]]
+
+:: Haven0ControlRoom-AllFragments-Injured
+You squeeze through the hatch into a dark maintenance corridor. Moth helps you navigate the tight spaces. You find the pristine control room. The purifier console glows with latent power. You have the two fragments, but the third is still out there. The console recognizes the partial map, but the system is inactive without the final piece. A manual override option flickers on the screen, risky and untested.
+[[Attempt the manual override->Haven0ControlRoom-OverrideAttempt]]
+[[Wait for the third fragment to arrive->Haven0ControlRoom-Wait]]
+
+:: Haven0ControlRoom-OverrideAttempt
+You initiate the manual override sequence. Alarms blare as the system strains against the incomplete data. The console screen flashes warnings. A partial purification cycle begins, but the strain is too much. The system overloads, and a containment field fails. You and Moth are forced to flee as Haven-0 begins to catastrophically fail.
+[[Escape into the wastes->Ending-Nomad]]
+
+:: Haven0ControlRoom-Wait
+You and your companions wait in the control room, watching the external sensors. Hours pass. Finally, a signal appears—a Legion transport approaching the main gate. Captain Hale has the third fragment. The final decision is upon you.
+[[Prepare to defend the control room->Haven0FinalShowdown]]
+[[Attempt to negotiate with Hale via comms->Haven0ChoirNegotiation]]
+:: SaltFlatsElder-PromiseBroken-Injured
+Your hesitation is a cold wind in the tent. The elder's face hardens. "Power without purpose is a plague, especially for the injured who seek only a cure for their own pain." She denies you the fragment. "Rest here until you can travel, then you must leave."
+[[Rest and then leave the Salt Flats->AshPlains-NoNomadFragment]]
+
+:: Haven0ChoirNegotiation-Injured
+You limp toward the chanting cultists, your injured leg a stark reminder of your vulnerability. "The ash is not a blessing," you yell, your voice strained. "It is a sickness! Haven-0 can cure it!" The High Priestess steps forward, her robes gray with dust. "You seek to undo the divine punishment in your weakened state. Your desperation is pitiable, but your blasphemy is not." She signals her acolytes, who advance with serene malice. You are forced to defend yourself on unstable footing.
+[[Fight your way back to Moth and the gate->Haven0FinalShowdown-Injured]]
+:: Haven0Entrance-Observe-Injured
+You and Moth find a sheltered vantage point among the rubble, overlooking the sealed gate. Your injured ankle throbs, making patience a necessity. Hours pass. A Legion skiff arrives, disgorging soldiers who begin setting up a perimeter. Later, the robed figures of the Ashen Choir approach silently. They do not see you in your hiding place. Moth points to a collapsed ventilation shaft partially hidden beneath scree near the gate's western edge. "That might be our only way in without a fight we can't win," they whisper.
+[[Creep toward the ventilation shaft->Haven0Entrance-Search-Injured]]
+
+:: Haven0FinalShowdown-Injured
+A three-way battle erupts before the gate. Moth supports you, helping you stay mobile despite your injury. You face Hale directly, but your movements are slow and hampered by pain. The fight is a brutal contest where every parry sends a jolt through your weakened leg. You manage to deflect a killing blow, but the struggle to secure the final fragment is desperate.
+[[Press the attack despite the pain->Haven0ControlRoom-AllFragments-Injured]]
+[[Order a retreat to the ventilation shaft->Haven0Entrance-Search-Injured]]
+
+:: SaltFlatsElder-WithLyra-MetOren-Data-Crystal
+You place the glowing data crystal before the elder. Her eyes widen in genuine surprise. She picks it up, feeling its weight and warmth. "The old world speaks through this stone. Your words were true." She hands you the Nomad fragment. "You have proven your worth through action, not just words. The third fragment is yours. Use it wisely."
+[[Accept the fragment and continue your journey->SaltFlatsElder-WithLyra-MetOren-PromiseKept]]
+
+:: SaltFlatsElder-WithLyra-MetOren-PromiseKept
+The elder smiles. "You have walked a long road and learned much. Your purpose rings true." She produces the third map fragment.
+[[Accept the fragment and Moth's help->RoadToHaven0-WithLyra-MetOren-WithMoth-HasTwoFragments]]
+[[Accept the fragment but travel light->RoadToHaven0-WithLyra-MetOren-HasTwoFragments]]
+:: SkybreakerVault-HasMap-WithLyra-MetOren-Entry
+The vault door is a massive circular seal. Dr. Vale trembles nearby. Lyra runs a scanner over its surface. "The locking mechanism is mechanical. But the hinges are rusted. A focused force might break it open." The corridor behind you is silent.
+[[Search for a tool to force the door->SkybreakerVault-HasMap-WithLyra-MetOren-Force]]
+[[Abandon the vault and seek the data instead->SkybreakerEscape-HasMap-WithLyra-MetOren-Data]]
+:: SkybreakerVault-FragmentTaken-Legion-Secure
+You secure the vault fragment. You signal Hale via radio. "The fragment is secure, Captain."
+[[Return to Hale with the fragment->Haven0Approach-Legion]]
+
+:: RoadToHaven0-WithMoth-HasTwoFragments
+The Salt Flats fade into a shimmering haze behind you. With Moth guiding the way, you travel northeast toward the Forbidden Zone. The air grows heavy and still, the sky a perpetual orange-gray. Moth points out hidden paths and safe ridges, their knowledge a shield against the treacherous landscape. The two map fragments in your pack feel like a tangible hope, their edges fitting together perfectly. The final leg of your journey lies ahead.
+[[Approach the mountains guarding Haven-0->Haven0Entrance-WithMoth-HasTwoFragments]]
+
+:: Haven0Entrance-WithMoth-HasTwoFragments
+The monolithic gate of Haven-0 rises before you, a seamless wall of ancient alloy reflecting the sickly orange sky. Moth scouts ahead, returning with a grim report. "Legion troops are entrenched to the east, and the Ashen Choir is gathered to the west around their fires. They haven't spotted us yet." You hold the two combined fragments, their joined edges warm in your hand, but the final piece is still missing. The air crackles with the tension of the impending confrontation.
+[[Search the perimeter for a hidden entrance->Haven0Entrance-Search-WithMoth]]
+[[Use the terrain for cover and observe the factions->Haven0Entrance-Observe-WithMoth]]
+
+:: Haven0Entrance-Observe-WithMoth
+You and Moth find a concealed crevice in the rockface, giving you a clear view of the gate. For hours, you watch. The Steel Legion fortifies their position with earthworks and gun emplacements. The Ashen Choir's chanting rises and falls, a hypnotic drone. Suddenly, a lone figure in a Union jacket—Lyra—emerges from the badlands, approaching the Legion lines under a white flag. Hale meets her, their conversation tense but brief. She points toward the western ridge, toward the Choir. A temporary, dangerous alliance is forming. Moth whispers, "They're going to attack the cultists first. This is our chance."
+[[Use the distraction to search for an entrance->Haven0Entrance-Search-WithMoth]]
+[[Approach Lyra under cover of the coming battle->Haven0ChoirNegotiation]]
+
+:: Haven0Entrance-Search-WithMoth
+While the Legion and Choir prepare for conflict, you and Moth scramble along the base of the massive gate, hidden in its deep shadow. Moth's sharp eyes spot a seam in the alloy—not a door, but a maintenance access panel, nearly invisible. The locking mechanism is simple but sturdy. "I can probably pick this," Moth says, pulling tools from their pack. "But it will take a few minutes, and we are completely exposed here."
+[[Stand guard while Moth works on the lock->Haven0Entrance-PanelEntry]]
+[[Abandon the attempt and fall back to observe->Haven0Entrance-Observe-WithMoth]]
+
+:: Haven0Entrance-PanelEntry
+The sounds of the impending battle between the Legion and the Choir are a distant roar. You stand with your back to Moth, weapon drawn, watching the shadows for any movement. The click and scrape of Moth's tools against the lock is the loudest sound in the world. Minutes stretch like hours. Finally, a soft click. "Got it," Moth whispers. The panel swings inward, revealing a dark, narrow service tunnel.
+[[Enter the tunnel->Haven0ControlRoom-AllFragments]]
+
+:: RoadToHaven0-WithLyra-MetOren-HasTwoFragments-Desperate
+The journey through the Forbidden Zone is tense and treacherous. Without the Nomad guide or the third fragment, Lyra's predictions are your only shield against the violent storms. Vale grows more withdrawn, haunted by memories of this place. When Haven-0 finally appears, it is a silent, gleaming promise amid the desolation, heavily guarded by Legion and Choir.
+[[Approach the main gate->Haven0Entrance-WithLyra-MetOren-HasTwoFragments-Desperate]]
+
+:: Haven0Entrance-WithLyra-MetOren-HasTwoFragments-Desperate
+The monolithic gate of Haven-0 stands impregnable. Hale's Legion forces are entrenched, and the Ashen Choir chants on the opposite ridge. You hold two fragments, but the third is out of reach. The situation seems hopeless.
+[[Search for a hidden entrance->Haven0Entrance-Search-Desperate]]
+[[Wait and watch for an opportunity->Haven0Entrance-Observe-Desperate]]
+
+:: SkybreakerVault-HasMap-WithLyra-MetOren-Entry-ViaTerminal
+You rush to the vault corridor, the urgency of the terminal data pushing you forward. The massive door is just ahead. Lyra scans it. "It's secure, but we have the location confirmed. We need to find a way in."
+[[Search for a tool to force the door->SkybreakerVault-HasMap-WithLyra-Force]]
+[[Try to find a bypass in the nearby maintenance room->SkybreakerVault-HasMap-WithLyra-MetOren-Bypass]]
+
+:: SkybreakerVault-HasMap-WithLyra-MetOren-Bypass
+A small maintenance alcove off the main corridor contains tools and a terminal showing the vault's internal security status. "I can temporarily disable the internal alarms from here," Lyra says, "but the door mechanism is still manual."
+[[Proceed with forcing the door, now with alarms disabled->SkybreakerVault-HasMap-WithLyra-Force-AlarmsOff]]
+
+:: SkybreakerSublevel1-LegionGuard-Returned
+You return to your assigned post. The silence of the corridor is oppressive.
+[[Remain at your post->SkybreakerSublevel1-LegionGuard-Compliant]]
+:: SkybreakerSublevel1-LegionGuard-Compliant
+The hall is vast and dark. You have been ordered to guard the Legion's primary entrance point.
+[[Remain at your post->SkybreakerSublevel1-LegionGuard-Doubt]]
+[[Desert your post and seek your own path->SkybreakerVent-HasMap-LegionEscape]]
+:: SkybreakerSublevel1-LegionGuard-Compliant-Entry
+The hall is vast and dark. You have been ordered to guard the Legion's primary entrance point.
+[[Remain at your post->SkybreakerSublevel1-LegionGuard-Doubt]]
+[[Desert your post and seek your own path->SkybreakerVent-HasMap-LegionEscape]]
+:: SkybreakerVault-FragmentTaken-Legion-Secure-Team
+You secure the vault fragment. You signal Hale via radio. "The fragment is secure, Captain."
+[[Return to Hale with the fragment->Haven0Approach-Legion]]
+
+:: SkybreakerVault-FragmentTaken-Legion-Secure-Battle
+After a fierce fight, you secure the vault area. The fragment is in your hands. You report to Hale. "The fragment is secure, Captain. The Union has been repelled."
+[[Return to Hale with the fragment->Haven0Approach-Legion]]
+
+:: SkybreakerEscape-HasMap-LegionData-Fragment-Betrayal
+In the chaos of the battle, you seize the vault fragment and bolt for a maintenance duct. Your Legion comrades shout in surprise and betrayal. You scramble through the darkness, emerging into a canyon, a fugitive with a priceless prize.
+[[Head for the Salt Flats->SaltFlatsApproach-HasMap-Data-LegionEscape]]
+
+:: Haven0Entrance-Observe-Desperate
+You and your companions find a precarious vantage point on a collapsed walkway overlooking the sealed gate of Haven-0. The wait is agonizing. Legion patrols march below, and the Ashen Choir's pyre burns brighter. Hours pass. Then, a disturbance. A Legion skiff arrives, and Captain Hale himself disembarks, holding up a glittering object—the third fragment. He strides toward the gate, his soldiers forming a protective cordon. The Choir's chanting intensifies. They are all here, and you are outnumbered.
+[[Use the distraction to search for another entrance->Haven0Entrance-Search-Desperate]]
+[[Attempt a desperate charge to intercept Hale->Haven0FinalShowdown]]
+
+:: Haven0Entrance-Search-Desperate
+While Hale's attention is fixed on the gate and the Choir prepares their ritual, you scramble along the base of the mountain, searching for any weakness. Behind a curtain of toxic ivy, you find a fissure in the rock—a natural fault line leading down into darkness. It is not an entrance, but a descent into the mountain's roots. It might connect to the facility's foundations.
+[[Enter the fissure->Haven0ControlRoom-AllFragments]]
+[[Decide the risk is too great and fall back->Haven0Entrance-Observe-Desperate]]
+
+:: SkybreakerVault-HasMap-WithLyra-Force-AlarmsOff
+With the internal alarms disabled, you position the hydraulic jack against the vault door's weakest hinge. The metal groans in protest, but this time there is no accompanying siren. With a final, grating shriek, the rusted hinge shears away. The door shifts, creating a narrow gap just wide enough to squeeze through. The dark interior of the vault awaits, silent and waiting.
+[[Enter the vault->SkybreakerVault-HasMap-WithLyra-MetOren-AlarmsOff]]
+:: SaltFlatsElder-PromiseKept-WithLyra-MetOren-Data
+The elder smiles. "The data from the old world and the fire in your heart agree." She hands you the third fragment.
+[[Accept the fragment and Moth's help->RoadToHaven0-WithLyra-MetOren-WithMoth-HasTwoFragments]]
+[[Accept the fragment but travel light->RoadToHaven0-WithLyra-MetOren-HasTwoFragments]]
+:: SkybreakerVault-HasMap-WithLyra-MetOren-Force
+You and Lyra position a heavy hydraulic jack against the vault door's weakest hinge. The metal groans, then shears away. The door shifts, creating a narrow gap.
+[[Enter the vault->SkybreakerVault-HasMap-WithLyra-MetOren]]
+
+:: SkybreakerVault-HasMap-WithLyra-MetOren-FragmentTaken
+You reach out and take the fragment. As your fingers close around it, a soft chime echoes through the vault. You now hold two pieces of the puzzle. Lyra smiles grimly. "Halfway there. But we need to move. That sound might have been an alert."
+[[Retreat quickly from the vault->SkybreakerEscape-HasMap-WithLyra-MetOren-Data-FromVault]]
+
+:: SkybreakerVault-HasMap-WithLyra-MetOren-Cautious
+You hold Lyra back. "Check for traps." She nods, scanning the pedestal. "Energy readings are stable. No security triggers. It's clean." Reassured, you carefully lift the second map fragment. It feels warm in your hand.
+[[Secure the fragment and leave the vault->SkybreakerEscape-HasMap-WithLyra-MetOren-Data-FromVault]]
+
+:: SkybreakerEscape-HasMap-WithLyra-Data-FromVault
+You and Lyra escape Skybreaker, the second fragment now in your possession.
+[[Head for the Salt Flats->SaltFlatsApproach-HasMap-WithLyra-Data]]
+
+:: SkybreakerVault-HasMap-WithLyra-MetOren-AlarmsOff
+The vault is a small, circular room. In the center, on a stone pedestal, rests the second map fragment. Dr. Vale points a trembling finger. "There! The second key!" The vault is silent, the fragment waiting.
+[[Take the fragment->SkybreakerVault-HasMap-WithLyra-MetOren-FragmentTaken]]
+[[Wait for Lyra to ensure it's safe->SkybreakerVault-HasMap-WithLyra-MetOren-Cautious]]
+
+:: SaltFlatsElder-WithLyra-Data-Crystal
+You place the glowing data crystal before the elder. Her eyes widen in genuine surprise. She picks it up, feeling its weight and warmth. "The old world speaks through this stone. Your words were true." She hands you the Nomad fragment. "You have proven your worth through action, not just words. The third fragment is yours. Use it wisely."
+[[Accept the fragment and Moth's help->SaltFlatsElder-WithLyra-MetOren-Data-Crystal-PromiseKept]]
+[[Accept the fragment and travel with Lyra and Oren->SaltFlatsElder-WithLyra-MetOren-Data-Crystal-PromiseKept]]
+:: SkybreakerCorridor-Legion-Watch
+You stand your post in the dark corridor. The silence is heavy. A distant clang echoes through the ruins.
+[[Investigate the noise->SkybreakerAmbush-Legion]]
+[[Remain at your post->SkybreakerSublevel1-LegionGuard]]
+
+:: SaltFlatsElder-WithLyra-MetOren-Data-Crystal-PromiseKept
+The elder smiles. "The data from the old world and the fire in your heart agree." She hands you the Nomad fragment.
+[[Accept the fragment and Moth's help->RoadToHaven0-WithLyra-MetOren-WithMoth-HasTwoFragments]]
+[[Accept the fragment but travel light->RoadToHaven0-WithLyra-MetOren-HasTwoFragments]]

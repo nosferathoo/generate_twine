@@ -582,7 +582,7 @@ def detect_symmetries(passages, graph):
     return symmetries
 
 
-def detect_asymmetries(passages, graph):
+def detect_asymmetries(passages, graph, detect_weak_symmetries: bool = False):
     """
     Detect naming-based asymmetries.
 
@@ -592,11 +592,10 @@ def detect_asymmetries(passages, graph):
        - For a given target, different sources have different-size overlaps
          with target's token set (some "probable", some "suspect").
 
-    2) New case: shared source tokens missing in target:
+    2) (Optional) Weak symmetry / missing target tokens:
        - All incoming sources share at least one token X
        - but the target's name does NOT contain X.
-       This means the target's state under-specifies or contradicts what
-       is guaranteed by all incoming branches.
+       Enabled only when detect_weak_symmetries=True.
        NOTE: this new case is NOT applied to targets whose name starts with "Ending-".
     """
     reverse_graph = defaultdict(list)
@@ -607,8 +606,10 @@ def detect_asymmetries(passages, graph):
     asymmetries = []
 
     for target, sources in reverse_graph.items():
-        # At least two incoming sources needed to talk about convergence
         if len(sources) < 2:
+            continue
+            
+        if target.startswith("Ending-"):
             continue
 
         target_tokens = _tokens_from_name(target)
@@ -625,14 +626,10 @@ def detect_asymmetries(passages, graph):
                 common = target_tokens & src_tokens
                 common_map[src] = (common, len(common))
 
-            # Sets of common tokens (with target) across sources
             common_sets = {frozenset(v[0]) for v in common_map.values()}
 
-            # If everyone has exactly the same overlap, no asymmetry of this kind
             if len(common_sets) > 1:
                 max_common_size = max(count for (_, count) in common_map.values())
-                # If nobody shares anything with the target, this particular
-                # asymmetry type doesn't apply
                 if max_common_size > 0:
                     probable = []
                     suspect = []
@@ -647,26 +644,23 @@ def detect_asymmetries(passages, graph):
                         recorded = True
 
         # ----------------------------------------------------------
-        # 2) NEW CASE: sources share tokens that target does NOT have
-        #    (skipping Ending- targets)
+        # 2) OPTIONAL CASE: weak symmetry (sources share tokens missing in target)
         # ----------------------------------------------------------
-        # Only look for this if we haven't already recorded target above
-        # and if target is NOT an ending.
-        if not recorded and not target.startswith("Ending-"):
+        if (
+            detect_weak_symmetries
+            and (not recorded)
+        ):
             shared_tokens = None
-            for src, toks in src_tokens_map.items():
+            for _, toks in src_tokens_map.items():
                 if shared_tokens is None:
                     shared_tokens = set(toks)
                 else:
                     shared_tokens &= toks
 
-            # shared_tokens = tokens present in *all* sources
             if shared_tokens:
-                # Tokens guaranteed by all sources but missing in target
                 missing_in_target = shared_tokens - target_tokens
                 if missing_in_target:
-                    # Here all sources are "probable" (they agree on state),
-                    # and the target under-specifies / contradicts that state.
+                    # "probable" empty, "suspect" = all sources (as in your current behaviour)
                     asymmetries.append((target, [], sorted(sources)))
 
     return asymmetries
@@ -674,7 +668,7 @@ def detect_asymmetries(passages, graph):
 
 SPECIAL_META_PASSAGES = {"StoryTitle", "StoryData"}
 
-def analyze_twee(text: str):
+def analyze_twee(text: str, detect_weak_symmetries: bool = False):
     spans, links = parse_passages_and_links(text)
 
     # Wszystkie znalezione nagłówki
@@ -703,7 +697,7 @@ def analyze_twee(text: str):
 
     cycles = find_cycles(graph)
     endings, dead_ends = compute_dead_ends(passages, graph)
-    asymmetries = detect_asymmetries(passages, graph)
+    asymmetries = detect_asymmetries(passages, graph, detect_weak_symmetries)
 
     return passages, link_targets, undefined, graph, endings, cycles, dead_ends, asymmetries
 
@@ -772,7 +766,7 @@ def apply_structural_patch(current_twee: str, patch_twee: str) -> str:
 #  FIX REQUESTS
 # ============================================================
 
-def request(model: str, prompt: str) -> str:
+def request(model: str, prompt: str, print_response: bool = False) -> str:
     url = "http://localhost:11434/api/generate"
     payload = {"model": model, "prompt": prompt, "stream": False}
 
@@ -792,43 +786,47 @@ def request(model: str, prompt: str) -> str:
         print("Invalid JSON returned.", file=sys.stderr)
         return ""
 
-    return data.get("response", "")
+    resp = data.get("response", "")
+    if print_response:
+        print(resp)
+        #sys.exit(0)
+    return resp
 
 
-def request_missing_passages(model, description, current, missing, min_passages, print_prompt_only):
+def request_missing_passages(model, description, current, missing, min_passages, print_prompt, print_response):
     prompt = build_fix_prompt(description, current, missing, min_passages)
-    if print_prompt_only:
+    if print_prompt:
         print(prompt)
-        sys.exit()
+        #sys.exit()
     print("\n--- Requesting missing passages...", file=sys.stderr)
-    return request(model, prompt)
+    return request(model, prompt, print_response)
 
 
-def request_cycles_fix(model, description, current, cycles, min_passages, print_prompt_only):
+def request_cycles_fix(model, description, current, cycles, min_passages, print_prompt, print_response):
     prompt = build_cycles_fix_prompt(description, current, cycles, min_passages)
-    if print_prompt_only:
+    if print_prompt:
         print(prompt)
-        sys.exit()
+        #sys.exit()
     print("\n--- Requesting CYCLES structural patch...", file=sys.stderr)
-    return request(model, prompt)
+    return request(model, prompt, print_response)
 
 
-def request_dead_fix(model, description, current, dead, min_passages, print_prompt_only):
+def request_dead_fix(model, description, current, dead, min_passages, print_prompt, print_response):
     prompt = build_dead_fix_prompt(description, current, dead, min_passages)
-    if print_prompt_only:
+    if print_prompt:
         print(prompt)
-        sys.exit()
+        #sys.exit()
     print("\n--- Requesting DEAD-ENDS structural patch...", file=sys.stderr)
-    return request(model, prompt)
+    return request(model, prompt, print_response)
 
 
-def request_asym_fix(model, description, current, asymmetries, min_passages, print_prompt_only):
+def request_asym_fix(model, description, current, asymmetries, min_passages, print_prompt, print_response):
     prompt = build_asym_fix_prompt(description, current, asymmetries, min_passages)
-    if print_prompt_only:
+    if print_prompt:
         print(prompt)
-        sys.exit()
+        #sys.exit()
     print("\n--- Requesting ASYMMETRY structural patch...", file=sys.stderr)
-    return request(model, prompt)
+    return request(model, prompt, print_response)
 
 
 # ============================================================
@@ -937,7 +935,17 @@ def main():
     p.add_argument("-o", "--output", default="output.twee")
     p.add_argument("--min-passages", type=int, default=10)
     p.add_argument("--max-fix-rounds", type=int, default=3)
-    p.add_argument("--print-prompt-only", action="store_true")
+    p.add_argument("--print-prompt", action="store_true")
+    p.add_argument(
+        "--print-response",
+        action="store_true",
+        help="Print the raw LLM response for the initial request and exit (no files, no analysis)."
+    )
+    p.add_argument(
+        "--detect-weak-symmetries",
+        action="store_true",
+        help="Enable optional detection of weak symmetries (tokens shared by all sources but missing in target)."
+    )
     p.add_argument(
         "--continue",
         dest="continue_mode",
@@ -996,9 +1004,9 @@ def main():
         # --- INITIAL GENERATION ---
         prompt = build_prompt(description, args.min_passages)
 
-        if args.print_prompt_only:
+        if args.print_prompt:
             print(prompt)
-            return
+            #return
 
         print("\n--- Generating initial story ---", file=sys.stderr)
         out_chunks = []
@@ -1013,6 +1021,9 @@ def main():
         except Exception as e:
             print(f"Initial generation failed: {e}", file=sys.stderr)
             sys.exit(1)
+        if args.print_response:
+            print(story)
+            #return
         with open(args.output, "w", encoding="utf8") as outf:
             outf.write(story)
         current = story
@@ -1026,7 +1037,7 @@ def main():
          endings,
          cycles,
          dead,
-         asymmetries) = analyze_twee(current)
+         asymmetries) = analyze_twee(current, detect_weak_symmetries=args.detect_weak_symmetries)
 
         print_report(
             passages,
@@ -1072,18 +1083,20 @@ def main():
                 current,
                 undefined,
                 args.min_passages,
-                args.print_prompt_only,
+                args.print_prompt,
+                args.print_response,
             )
             if not fix.strip():
                 print("Missing-passages fix returned nothing.", file=sys.stderr)
                 break
 
-            fix = "\n" + fix.lstrip("\n")
-            current += fix
-
+            current = apply_structural_patch(current, fix)
+            with open(args.output, "w", encoding="utf8") as outf:
+                outf.write(current)
+                
             try:
-                with open(args.output, "a", encoding="utf8") as outf:
-                    outf.write(fix)
+                with open(args.output, "w", encoding="utf8") as outf:
+                    outf.write(current)
             except Exception as e:
                 print(f"Error writing missing passages: {e}", file=sys.stderr)
                 break
@@ -1099,7 +1112,8 @@ def main():
                 current,
                 cycles,
                 args.min_passages,
-                args.print_prompt_only,
+                args.print_prompt,
+                args.print_response,                
             )
         elif dead:
             patch = request_dead_fix(
@@ -1108,7 +1122,8 @@ def main():
                 current,
                 dead,
                 args.min_passages,
-                args.print_prompt_only,
+                args.print_prompt,
+                args.print_response,                
             )
         elif asymmetries:
             patch = request_asym_fix(
@@ -1117,7 +1132,8 @@ def main():
                 current,
                 asymmetries,
                 args.min_passages,
-                args.print_prompt_only,
+                args.print_prompt,
+                args.print_response,                
             )
 
         if not patch or not patch.strip():
@@ -1142,7 +1158,7 @@ def main():
      endings,
      cycles,
      dead,
-     asymmetries) = analyze_twee(current)
+     asymmetries) = analyze_twee(current, detect_weak_symmetries=args.detect_weak_symmetries)
 
     print_report(
         passages,
