@@ -1,0 +1,800 @@
+:: StoryTitle
+Haven-0
+
+:: StoryData
+{
+
+}
+
+:: StoryStart
+The world is grey. For ten years, the sky has been a ceiling of churning ash, a permanent twilight lit only by the dull red glow of volcanic vents on the horizon. The air carries the constant, acrid taste of sulfur, a reminder of the Ashfall Cataclysm that shattered the old world. You are a Wanderer, shaped by the harshness of this new existence. Your past is a ghost—scavenger, soldier, scientist—it matters less now than the dust on your boots. Your immediate future, however, holds a flicker of hope, clutched in your gloved hand.
+
+It's a charred piece of synthetic parchment, a map fragment you pried from the ruins of a data vault protected by a skeleton. The lines are faded, but one symbol is clear: the symbol of Haven-0. Legends whisper of it, a pre-Cataclysm facility built deep within the mountains, a place with the power to cleanse the sky. To see the sun again. This fragment is the key, but it's incomplete. The whispers say three other fragments exist, scattered across the hostile territories of the wasteland.
+
+Your journey begins at the edge of the Shattered Plains, a vast expanse of cracked earth and jagged rock formations. Before you, a weathered sign, half-buried in dust, points towards two possibilities. To the west lies the Rust-Town Bazaar, a notorious trading post where information and danger are the only currencies. To the east, the terrain rises sharply towards the Fume-Pit Mines, where the desperate dig for salvage under the watchful eyes of a brutal faction. Your canteen is half-full, your energy rifle low on charge. The choice is yours.
+[[Scout the path to Rust-Town Bazaar->ShatteredPlainsCrossroads]]
+[[Risk the ascent towards the Fume-Pit Mines->ShatteredPlainsCrossroads-MapKnown]]
+[[Examine the map fragment more closely->ShatteredPlainsCrossroads-MapStudied]]
+
+:: ShatteredPlainsCrossroads
+The wind howls across the plains, whipping fine ash into stinging clouds. You pull your scarf tighter, squinting at the two paths. The trail to the bazaar is well-trodden but exposed, offering little cover. The mine road is steep and treacherous, winding through unstable-looking cliffs. A sudden glint of reflected light catches your eye from a pile of rubble nearby—something metallic.
+[[Head west towards the bazaar->RustTownOutskirts]]
+[[Take the eastern road to the mines->FumePitApproach]]
+[[Investigate the glint in the rubble->ShatteredPlainsCrossroads-HasItemScrapDrone]]
+
+:: ShatteredPlainsCrossroads-MapKnown
+Pulling out the map fragment, you trace the lines with a finger. You recall a crucial detail you'd almost missed: a small annotation near the mine symbol, a mark that could signify a hidden supply cache or a deathtrap. This knowledge changes the risk calculus. The mine path might hold more than just danger.
+[[Proceed to the mines with this new insight->FumePitApproach-MapKnown]]
+[[Stick to the original plan and go to the bazaar->RustTownOutskirts]]
+[[Look for the source of a glinting light in the rubble->ShatteredPlainsCrossroads-HasItemScrapDrone]]
+
+:: ShatteredPlainsCrossroads-MapStudied
+Kneeling, you spread the fragment on a flat rock. Under the grim light, you notice faint, almost invisible script along one edge. It's a warning: "Beware the Silent Blades." You've heard that name muttered in fear—a sect of fanatical raiders who value silence and stealth. They are known to patrol the routes to the mines. This information is as valuable as a weapon.
+[[Continue to the bazaar, now wary of the raiders->RustTownOutskirts-MapStudied]]
+[[Approach the mines, prepared for an ambush->FumePitApproach-MapStudied]]
+[[Search the immediate area for signs of danger->ShatteredPlainsCrossroads-HasItemScrapDrone]]
+
+:: ShatteredPlainsCrossroads-HasItemScrapDrone
+You carefully move aside sharp chunks of concrete and rebar. Half-buried lies the wreckage of a small reconnaissance drone. Its camera eye is cracked, but its memory core appears intact. You pry it loose—a small, metallic cube. This could contain useful territorial data or pre-Cataclysm records. You stash it in your pack.
+[[Now, head west to the bazaar->RustTownOutskirts-HasItemScrapDrone]]
+[[Now, take the eastern road to the mines->FumePitApproach-HasItemScrapDrone]]
+
+:: RustTownOutskirts
+A cacophony of noise and smell hits you long before the bazaar comes into view. Rust-Town is a sprawling shantytown built around the carcass of a pre-Cataclysm transport hub. The air is thick with the smoke of cookfires and the tang of cheap fuel. Guards perched on watchtowers eye you with a mix of boredom and suspicion as you approach the main gate, a chaotic opening in a wall of welded scrap metal.
+[[Enter the bazaar main gate->RustTownGate]]
+[[Look for a less conspicuous way in, along the perimeter->RustTownAlleyway]]
+
+:: RustTownOutskirts-MapStudied
+A cacophony of noise and smell hits you long before the bazaar comes into view. Rust-Town is a sprawling shantytown. The air is thick with smoke and the tang of fuel. Guards on watchtowers eye you suspiciously. Remembering the map's warning about the Silent Blades, you scan the crowd at the gate more carefully, looking for the tell-tale signs of the stealthy raiders—padded gear, hushed conversations.
+[[Enter the bazaar main gate, staying alert->RustTownGate-MapStudied]]
+[[Seek a quieter entrance to avoid attention->RustTownAlleyway-MapStudied]]
+
+:: RustTownOutskirts-HasItemScrapDrone
+A cacophony of noise and smell hits you long before the bazaar comes into view. Rust-Town is a sprawling shantytown. The air is thick with smoke and the tang of fuel. Guards on watchtowers eye you suspiciously. The scrap drone core in your pack feels heavy. Perhaps someone inside can decipher its data.
+[[Enter the bazaar main gate->RustTownGate-HasItemScrapDrone]]
+[[Look for a tech-scavenger's entrance->RustTownAlleyway-HasItemScrapDrone]]
+
+:: RustTownGate
+You merge with the flow of traders, scavengers, and beggars pushing through the gate. The interior is a labyrinth of stalls and haphazard shelters. A large market square opens up ahead, but your attention is drawn to a commotion near a fortified building labeled "Information Broker." A tall woman with a cybernetic arm is arguing loudly with a guard.
+[[Approach the Information Broker's post->RustTownBroker-MetKaela]]
+[[Avoid the drama and explore the market square->RustTownMarket]]
+[[Slip into a side alley to get your bearings->RustTownAlleyway]]
+
+:: RustTownGate-MapStudied
+You merge with the flow of people. The interior is a labyrinth. Your eyes, sharpened by the map's warning, pick out a pair of figures leaning in a shadowed doorway. They move with a fluid quietness, their clothes muted. Silent Blades. They haven't spotted you yet. A commotion near the "Information Broker" draws a crowd, providing potential cover.
+[[Use the crowd to approach the Broker->RustTownBroker-MetKaela-MapStudied]]
+[[Head to the market square, keeping distance from the Blades->RustTownMarket-MapStudied]]
+[[Quickly disappear into a side alley->RustTownAlleyway-MapStudied]]
+
+:: RustTownGate-HasItemScrapDrone
+You merge with the flow of people into the chaotic bazaar. The scrap drone core in your pack feels like a lead weight. You need someone who can read old tech, not a general broker. Near a stall selling salvaged electronics, a thin man with magnifying goggles is meticulously sorting circuits.
+[[Go to the general Information Broker->RustTownBroker-MetKaela-HasItemScrapDrone]]
+[[Approach the tech-specialist at the electronics stall->RustTownMarket-HasItemScrapDrone]]
+
+:: RustTownAlleyway
+You duck into a narrow alley, away from the main thoroughfare. It's quieter here, filled with the stench of decay and the scuttling of vermin. A rusted fire escape leads upwards to the rooftops. At the alley's end, a heavy metal door stands ajar, revealing a dimly lit room humming with power—a makeshift tech den.
+[[Climb the fire escape to the rooftops for a view->RustTownRoof]]
+[[Enter the tech den->RustTownTechDen]]
+:: RustTownAlleyway-MapStudied
+You duck into a narrow, foul-smelling alley. It's quieter, but you instantly notice a figure melting back into the shadows at the far end. A Silent Blade scout. They're watching the alleys too. The fire escape looks like a quick way up, while the humming tech den offers potential sanctuary.
+[[Climb the fire escape quickly->RustTownRoof-MapStudied]]
+[[Rush into the tech den and shut the door->RustTownTechDen-MapStudied]]
+
+:: RustTownAlleyway-HasItemScrapDrone
+You duck into a narrow alley. The hum of power from the tech den at the end is unmistakable. This is exactly the kind of place that could decipher your drone core. The fire escape leads to the roofs, which might offer a safer route to the market.
+[[Enter the tech den->RustTownTechDen-HasItemScrapDrone]]
+[[Go to the rooftops first to scout->RustTownRoof-HasItemScrapDrone]]
+
+:: RustTownBroker-MetKaela
+The woman with the cybernetic arm—Kaela, as the guard calls her—turns to you as you approach. "You look like you've seen things," she says, her voice a low rasp. "Information is survival. What are you seeking?" Her eyes are sharp, missing nothing. You have a decision to make.
+[[Show her the Haven-0 map fragment->RustTownBroker-MetKaela-MapKnown]]
+[[Ask about the factions controlling the wasteland->RustTownBroker-MetKaela-FactionInfo]]
+[[Inquire about the Silent Blades raiders->RustTownBroker-MetKaela-BladeInfo]]
+
+:: RustTownBroker-MetKaela-MapKnown
+Kaela's cybernetic hand whirs softly as she examines the fragment. "Haven-0," she whispers, a rare hint of awe in her voice. "I thought it was a myth. One fragment... the others are fiercely guarded. The Mine Guild at Fume-Pit has one, locked in the Overseer's vault. Showing me this makes you a target. But it also makes you interesting." She leans closer. "I can help, for a price."
+[[Agree to her terms, whatever they are->RustTownBroker-MetKaela-WithKaela]]
+[[Politely decline and leave->RustTownMarket]]
+
+:: RustTownBroker-MetKaela-FactionInfo
+Kaela snorts. "Factions? The Mine Guild bleeds the earth for scrap, ruled by Overseer Grath. The Silent Blades bleed travelers for fun, led by a ghost called Shade. Then there's the Grove, a sect of nature-worshippers in the dead forests. They're all dangerous. Choose your poison, Wanderer."
+[[Now, show her the map->RustTownBroker-MetKaela-MapKnown]]
+[[Ask about the Grove specifically->RustTownBroker-MetKaela-GroveInfo]]
+[[Thank her and go to the market->RustTownMarket]]
+
+:: RustTownBroker-MetKaela-BladeInfo
+A grim smile touches Kaela's lips. "The Blades? They are the reason quiet places are feared. They don't take prisoners. They're hunters. Rumor says they seek Haven-0 too, to claim its power for themselves. If they know you have that map..." she trails off, letting the threat hang in the air.
+[[Reveal you have the map and need protection->RustTownBroker-MetKaela-MapKnown]]
+[[Decide this is too dangerous and leave town->Ending-Fled]]
+
+:: RustTownBroker-MetKaela-GroveInfo
+"The Grove," Kaela says, her tone shifting to something almost respectful. "They live in the Ash-Tangle, a forest petrified by the fallout. They don't trade with outsiders often. But they are said to hold a fragment of the map, treating it as a holy relic. Reaching them is a journey in itself."
+[[Show her your map, suggesting an alliance->RustTownBroker-MetKaela-MapKnown]]
+[[Head out immediately to find the Grove->Ending-Lost]]
+
+:: RustTownBroker-MetKaela-WithKaela
+"Good," Kaela says, slinging a pack over her shoulder. "The Mine Guild is our first stop. I have... history with Grath. Stay close, and watch your back. The road to Fume-Pit is crawling with Blades." She leads you out of the bazaar, moving with a purpose that suggests she's more than just a broker.
+[[Follow Kaela towards the mines->FumePitApproach-MetKaela-WithKaela]]
+
+:: RustTownMarket
+The market square is a riot of barter and chaos. Vendors hawk everything from clean water to salvaged weapons. In the center, a cage fight draws a roaring crowd. You see opportunities for trade, information, and trouble in equal measure. Your canteen is nearly empty.
+[[Attempt to trade for supplies->RustTownMarket-Traded]]
+[[Listen for rumors in the crowd->RustTownMarket-Rumors]]
+[[Approach the fighting pit for quick credits->RustTownMarket-PitFight]]
+:: RustTownMarket-MapStudied
+The market square is chaotic. You keep to the edges, your senses alert. You spot two more Silent Blades moving through the crowd like sharks. They haven't seen you yet. The noise of the fighting pit provides cover, but also distraction.
+[[Try to trade quickly and leave->RustTownMarket-Traded-MapStudied]]
+[[Eavesdrop near the pit for Blade rumors->RustTownMarket-Rumors-MapStudied]]
+[[Confront the Blades directly->Ending-Ambushed]]
+
+:: RustTownMarket-HasItemScrapDrone
+The market square is chaotic. Your goal is the tech-specialist. You find him at his stall, still sorting components. He looks up as you approach, his goggles glinting. "Rare to see intact cores from the Fall," he murmures, eyeing your drone cube. "What's it worth to you?"
+[[Ask him to decode it for a share of the data->RustTownTechDen-HasItemScrapDrone-Decoded]]
+[[Sell it to him outright for credits->RustTownMarket-HasItemScrapDrone-Sold]]
+[[Decode it yourself later and leave->RustTownMarket]]
+
+:: RustTownTechDen-MapStudied
+Inside the tech den, the humming servers are a welcome sound. The tattooed woman looks up, wary. Before you can speak, you hear a soft thud on the roof above. The Silent Blades have tracked you. The woman's eyes dart upwards, then back to you, wide with alarm.
+[[Warn her and help barricade the door->RustTownTechDen-MetLyra-UnderSiege]]
+[[Try to escape out the back->Ending-Ambushed]]
+
+:: RustTownTechDen-HasItemScrapDrone
+Inside the tech den, the tattooed woman looks at the drone core in your hand. "A Series-7 scout drone core," she says, impressed. "My name is Lyra. I can extract its data. It might have Haven-0 coordinates, or it might have just scanned old weather patterns. It's a gamble."
+[[Ask her to proceed with the data extraction->RustTownTechDen-MetLyra-HasItemScrapDrone-Decoding]]
+[[Decide it's too risky and leave->RustTownAlleyway-HasItemScrapDrone]]
+
+:: RustTownTechDen-MetLyra
+At the mention of Haven-0, Lyra's demeanor changes. She lowers her soldering iron. "The myth-become-real," she says softly. "The Guild would kill for that knowledge. The Blades would torture for it. My family... they worked on the project. I have theories. But I need data. A map fragment?"
+[[Show her the map fragment->RustTownTechDen-MetLyra-MapKnown]]
+[[Ask about her family's history first->RustTownTechDen-MetLyra-History]]
+[[Thank her and decide to leave->RustTownAlleyway]]
+:: RustTownTechDen-MetLyra-MapKnown
+Lyra studies the fragment with a scholar's intensity. "It's genuine," she confirms. "The alignment is correct. The next fragment is in Fume-Pit, but the mine is a fortress. I have a plan to bypass their security, but it requires a distraction. And trust."
+[[Agree to work with her->RustTownTechDen-MetLyra-WithLyra]]
+[[Take your map and leave->RustTownAlleyway]]
+
+:: RustTownTechDen-MetLyra-WithLyra
+"Good," Lyra says, grabbing a data-slug and a portable terminal. "We'll need to move fast. The Guild's communications are primitive, but their guards aren't. We approach from the old ventilation shafts. Follow me." She leads you out a hidden back exit into the alleys.
+[[Follow Lyra to the mines->FumePitApproach-MetLyra-WithLyra]]
+
+:: RustTownTechDen-MetLyra-UnderSiege
+"Blades!" Lyra hisses. Together, you shove a heavy server rack against the door. A blade thuds into the metal from outside. "The back exit is sealed from the last raid," she says, frantic. "There's one way out: the maintenance conduit under the floor. It's tight and leads to the ruins beneath the bazaar."
+[[Crawl into the conduit with Lyra->RustTownUndershaft-MetLyra-WithLyra]]
+[[Stay and fight to give her time to escape->Ending-Sacrifice]]
+
+:: RustTownTechDen-HasItemScrapDrone-Decoding
+Lyra hooks the core to her terminal. Data streams across the screen. "Incredible," she breathes. "It's a survey log of the mountain region near Fume-Pit. It shows a weakness in the mine's perimeter wall, a collapsed section marked as 'structurally unsound'. This is our way in."
+[[This changes everything. Propose an alliance->RustTownTechDen-MetLyra-HasItemScrapDrone-WithLyra]]
+[[Take the data and leave to go alone->FumePitApproach-HasItemScrapDrone]]
+
+:: RustTownTechDen-MetLyra-HasItemScrapDrone-WithLyra
+"An alliance? Against the Guild and the Blades? I'm in," Lyra says, shouldering a pack. "With this data, we can bypass the main gate. But we need to go now, before the Guild detects the data pulse I just sent." She leads you to the hidden exit.
+[[Follow Lyra into the underworld->RustTownUndershaft-MetLyra-WithLyra-HasItemScrapDrone]]
+
+:: FumePitApproach
+The path to the mines climbs steeply into the foothills. The air grows thicker with toxic fumes, forcing you to use your filter mask. The Fume-Pit facility is a massive industrial scar on the mountainside, surrounded by a high wall of rusted metal. The main gate is heavily guarded by brutish figures in reinforced gear—the Mine Guild. A convoy of haulers is being processed for entry.
+[[Approach the main gate directly->FumePitGate]]
+[[Scout along the perimeter wall for another way in->FumePitPerimeter]]
+[[Wait for nightfall to attempt a stealthy entry->FumePitNightApproach]]
+:: FumePitApproach-MetKaela-WithKaela
+Kaela points to a watchtower overlooking the gate. "Grath's men. They know me. A direct approach is suicide. But I know a secret: the old waste outflow tunnel. It's flooded and dangerous, but unguarded. It's that or find a way to create a major distraction at the gate."
+[[Risk the waste outflow tunnel->FumePitTunnel-MetKaela-WithKaela]]
+[[Have Kaela cause a distraction at the gate->FumePitGate-Distraction]]
+
+:: FumePitApproach-MetLyra-WithLyra
+Lyra consults her data-slug. "The main gate is a choke point. But the survey data from your drone core indicated a structural weakness to the north, near the old smelting tower. The wall there is crumbling. It's a climb, but it's our best shot."
+[[Head for the weakened north wall->FumePitNorthWall-MetLyra-WithLyra]]
+[[Stick to Lyra's original plan of the vents->FumePitVents-MetLyra-WithLyra]]
+
+:: FumePitApproach-HasItemScrapDrone
+The path to the mines is steep and fume-choked. You review the drone's data on your portable screen. It clearly highlights a collapsed section of the northern perimeter wall, marked as unstable. The main gate is heavily guarded, but this weak point offers a potential stealth entry.
+[[Circle around to the north wall->FumePitNorthWall-HasItemScrapDrone]]
+[[Stick to the main approach and try to talk your way in->FumePitGate]]
+
+:: FumePitGate
+You walk calmly towards the gate. Two Guild guards step forward, their rifles held ready. "State your business, scrap," one grunts. His eyes are cold. Behind him, you see the massive gates, and beyond, the grim interior of the mining compound. Overseer Grath's domain.
+[[Claim you are a freelance scavenger looking for work->FumePitGate-Arrested]]
+[[Mention you have information about Haven-0->FumePitGate-TakenToGrath]]
+[[Attempt to bribe the guards->FumePitGate-Bribed]]
+
+:: FumePitGate-Distraction
+Kaela nods. "Alright. When I give the signal, run for the gate." She moves off to the side, towards a parked hauler filled with volatile mining explosives. A few moments later, a deafening explosion rocks the courtyard! Guards shout and run towards the blaze. The gate is momentarily unguarded.
+[[Sprint through the open gate->FumePitCompound-MetKaela-WithKaela-DistractedEntry]]
+[[Hesitate, and get caught in the ensuing chaos->Ending-Captured-MetKaela-WithKaela]]
+:: FumePitNorthWall-MetLyra-WithLyra
+You and Lyra reach the northern section. The wall here is indeed a mess of collapsed plates and twisted supports. It's a difficult, noisy climb, but feasible. You help each other over the jagged metal and drop down into a deserted alley between mine worksheds. You're inside.
+[[Move quietly towards the Overseer's compound->FumePitCompound-MetLyra-WithLyra]]
+
+:: FumePitNorthWall-HasItemScrapDrone
+The drone's data was accurate. The northern wall is a wreck. You scramble over the unstable debris, your heart pounding. You drop down inside the compound, landing in a shadowy area between storage sheds. You're in, but alone and deep in enemy territory.
+[[Search for the Overseer's vault->FumePitCompound-HasItemScrapDrone]]
+[[Look for a way to disguise yourself among the workers->FumePitCompound-Disguised]]
+
+:: FumePitTunnel-MetKaela-WithKaela
+The waste tunnel is a pitch-black, ankle-deep stream of foul-smelling sludge. You and Kaela wade through the darkness, your lamp the only light. After what feels like an hour, you see a grate ahead. Kaela pries it open, revealing a basement level of the mine's processing plant. You've infiltrated the heart of the facility.
+[[Climb out into the processing plant->FumePitCompound-MetKaela-WithKaela]]
+
+:: FumePitCompound-MetKaela-WithKaela
+You're in a cavernous room filled with roaring machinery. Conveyor belts carrying raw ore shake the floor. "Grath's office is upstairs, overlooking the main pit," Kaela shouts over the din. "The vault is inside. But he's always there, surrounded by guards."
+[[Storm the office directly->FumePitOffice-MetKaela-WithKaela-Confrontation]]
+[[Use the machinery as cover to sneak closer->FumePitOffice-MetKaela-WithKaela-Stealth]]
+
+:: FumePitCompound-MetLyra-WithLyra
+You're in a quiet alley between worksheds. Lyra points to a fortified structure on a higher level. "The Overseer's office. The vault is there. The regular guards patrol in set patterns. If we time it right, we can slip in during a shift change."
+[[Wait for the shift change and move->FumePitOffice-MetLyra-WithLyra-Infiltrated]]
+[[Create a diversion to draw the guards away->FumePitOffice-MetLyra-WithLyra-Diversion]]
+
+:: FumePitCompound-HasItemScrapDrone
+You're inside, but exposed. Workers shuffle past, ignoring you. You need to find the Overseer's vault. The central compound is a multi-level structure. The drone data didn't have interior blueprints. You'll have to rely on observation and luck.
+[[Head towards the most heavily fortified building->FumePitOffice-SneakAttempt]]
+[[Try to blend in with a group of workers->FumePitOffice-Captured]]
+
+:: FumePitOffice-MetKaela-WithKaela-Confrontation
+You and Kaela burst into the office. Overseer Grath, a mountain of a man with a crude cybernetic jaw, looks up from his desk, not surprised. "Kaela. I knew you'd crawl back." His guards raise their weapons. On his desk, next to a heavy pistol, lies a second map fragment.
+[[Kaela fights the guards while you grab the map->FumePitOffice-MetKaela-WithKaela-FragmentObtained]]
+[[Try to reason with Grath->Ending-Betrayed]]
+
+:: FumePitOffice-MetKaela-WithKaela-Stealth
+Using the noise and movement of the machinery, you slip past the outer guards and up the stairs to Grath's office door. It's slightly ajar. Peering in, you see Grath is alone, studying a large schematic. The map fragment is on a shelf behind him. This is your chance.
+[[Kaela creates a noise downstairs while you sneak in->FumePitOffice-MetKaela-WithKaela-FragmentObtained]]
+[[Charge in and try to overpower him quickly->FumePitOffice-MetKaela-WithKaela-Struggle]]
+
+:: FumePitOffice-MetKaela-WithKaela-FragmentObtained
+While Kaela distracts Grath, you snatch the fragment from the shelf. "THIEF!" Grath bellows. Kaela shoves a grenade into a machinery control panel. "Run!" she yells. The room erupts in sparks and smoke. You both dash out, fragments in hand, as alarms blare.
+[[Escape back through the plant->FumePitEscape-MetKaela-WithKaela-HasFragment2]]
+
+:: FumePitOffice-MetLyra-WithLyra-Infiltrated
+Timing your move perfectly, you and Lyra slip into the outer office as the guards change shifts. The vault door is a massive, old-world relic. Lyra connects her data-slug to a terminal. "It's a biometric lock. Grath's print. But I can bypass it... it'll take ninety seconds. Watch the door."
+[[Stand guard while Lyra works->FumePitOffice-MetLyra-WithLyra-FragmentObtained]]
+[[Help Lyra with the bypass to speed it up->FumePitOffice-MetLyra-WithLyra-AlarmTriggered]]
+
+:: FumePitOffice-MetLyra-WithLyra-FragmentObtained
+The vault door clicks open. Inside, on a pedestal, lies the second map fragment. Lyra grabs it just as you hear boots approaching. "The shift is starting early!" You slam the vault shut and flee out a window onto a gantry, the new fragment secure.
+[[Make for the perimeter wall->FumePitEscape-MetLyra-WithLyra-HasFragment2]]
+
+:: FumePitEscape-MetKaela-WithKaela-HasFragment2
+Alarms wail across the compound. You and Kaela run through the chaotic plant, workers scattering around you. You reach the main yard. The gate is sealed, but the explosion Kaela caused has created a hole in the wall. You scramble through, back into the toxic freedom of the mountains. You have two fragments. The Grove is the next rumored location.
+[[Begin the journey to the Ash-Tangle forest->AshTangleEdge-MetKaela-WithKaela-HasFragment2]]
+
+:: FumePitEscape-MetLyra-WithLyra-HasFragment2
+Pursued by shouts and gunfire, you and Lyra sprint along the gantry and leap onto the roof of a shed, then down to the ground. You race to the north wall and climb back out the way you came, collapsing on the other side, gasping. You have two fragments. The path to the Grove beckons.
+[[Start the trek to the petrified forest->AshTangleEdge-MetLyra-WithLyra-HasFragment2]]
+
+:: AshTangleEdge-MetKaela-WithKaela-HasFragment2
+The Ash-Tangle is a haunting sight. Once a lush forest, now a field of stone trees, their branches frozen in eternal agony against the grey sky. The air is still and silent. "The Grove dwellers are somewhere in the heart of this," Kaela says, her voice low. "They don't welcome outsiders. We need to prove we're not a threat."
+[[Call out, announcing your peaceful intent->AshTangleHeart-MetKaela-WithKaela-HasFragment2-Accepted]]
+[[Try to sneak in to find their village->AshTangleHeart-MetKaela-WithKaela-HasFragment2-Captured]]
+
+:: AshTangleEdge-MetLyra-WithLyra-HasFragment2
+The petrified forest is a stark, beautiful, and deadly landscape. Lyra studies the stone trees. "The Grove sees this as a sacred place. They believe the Cataclysm was a purification. We must approach with respect. Our map fragments are symbols of the old world's ambition—they may see that as a sin or a sign."
+[[Enter the forest slowly, showing respect->AshTangleHeart-MetLyra-WithLyra-HasFragment2-Accepted]]
+[[Use tech to scan for life signs, risking offense->AshTangleHeart-MetLyra-WithLyra-HasFragment2-Captured]]
+
+:: AshTangleHeart-MetKaela-WithKaela-HasFragment2-Accepted
+Your voice echoes strangely in the stone canopy. Figures emerge from behind the petrified trunks, silent and clad in robes of rough-spun ash-colored cloth. An elder steps forward. "You carry the fragments of the Great Machine," she says, her eyes ancient. "Why do you seek it? To repeat the old world's arrogance, or to atone?"
+[[Say you seek to heal the world->AshTangleHeart-MetKaela-WithKaela-HasFragment2-JoinedGrove]]
+[[Say you seek its power for yourself->Ending-Outcast]]
+
+:: AshTangleHeart-MetLyra-WithLyra-HasFragment2-Accepted
+Figures melt out of the stillness. An elder greets you. Lyra bows deeply. "We seek Haven-0 not to control it, but to understand it," Lyra says. "To use its knowledge for renewal, not power." The elder listens, then extends a hand. "The Grove has protected the third fragment for generations. You may yet be worthy."
+[[Join the Grove for the final journey->AshTangleHeart-MetLyra-WithLyra-HasFragment2-JoinedGrove]]
+
+:: AshTangleHeart-MetKaela-WithKaela-HasFragment2-JoinedGrove
+The elder nods. "Atonement is the only path." She leads you to their village, built within a massive, hollowed-out stone tree. She presents you with the third map fragment. "The final fragment is held by the Silent Blades. Their leader, Shade, dwells in the Skybreaker Spire, a needle of rock piercing the clouds. That is your final trial."
+[[Prepare to assault the Spire->SkybreakerBase-MetKaela-WithKaela-HasFragment3-JoinedGrove]]
+
+:: AshTangleHeart-MetLyra-WithLyra-HasFragment2-JoinedGrove
+The elder gives you the third fragment. "The last piece is with the Blades, in the Skybreaker Spire. They seek to use Haven-0 to dominate the wastes. You must stop them. Our warriors will create a diversion at the base of the spire while you ascend."
+[[Begin the final ascent with Grove support->SkybreakerBase-MetLyra-WithLyra-HasFragment3-JoinedGrove]]
+
+:: SkybreakerBase-MetKaela-WithKaela-HasFragment3-JoinedGrove
+The Skybreaker Spire is a terrifying pinnacle of black rock, its peak lost in the ash clouds. The base is a chaotic battle between Grove warriors and Silent Blades. Kaela points to a narrow elevator shaft running up the inside of the spire. "That's our way up. Shade will be at the top."
+[[Take the elevator to the summit->SkybreakerSummit-MetKaela-WithKaela-HasFragment3-Confrontation]]
+
+:: SkybreakerBase-MetLyra-WithLyra-HasFragment3-JoinedGrove
+The base of the spire is a warzone. Lyra spots a maintenance ladder bolted to the outside of the rock, leading upwards into the mist. "The elevator is a death trap. The ladder is exposed, but unseen. It's our best chance."
+[[Climb the treacherous exterior ladder->SkybreakerSummit-MetLyra-WithLyra-HasFragment3-Confrontation]]
+
+:: SkybreakerSummit-MetKaela-WithKaela-HasFragment3-Confrontation
+The elevator opens onto a circular platform at the spire's peak. Shade, a figure clad in black armour and a featureless mask, stands waiting. The fourth and final map fragment is on a stand behind him. "I expected you," a synthesized voice whispers. "The machine will be ours."
+[[Kaela engages Shade while you go for the fragment->SkybreakerSummit-MetKaela-WithKaela-HasFragment4-Victory]]
+[[Talk, trying to find a reason not to fight->Ending-Deceived]]
+
+:: SkybreakerSummit-MetLyra-WithLyra-HasFragment3-Confrontation
+You haul yourselves over the edge of the summit platform. Shade is there, silent and still. Lyra aims her energy pistol. "It's over, Shade." Shade tilts his head. On a pedestal behind him lies the final fragment. "The cleansing will be a purge," his voice rasps. "The strong will inherit."
+[[Lyra provides covering fire as you advance->SkybreakerSummit-MetLyra-WithLyra-HasFragment4-Victory]]
+[[Attempt to hack Shade's armour systems->SkybreakerSummit-MetLyra-WithLyra-HasFragment4-HackVictory]]
+
+:: SkybreakerSummit-MetKaela-WithKaela-HasFragment4-Victory
+While Kaela and Shade clash in a whirlwind of blades and gunfire, you dash to the pedestal and grab the final fragment. As the four pieces connect in your hands, they glow with a soft light, merging into a complete map. Kaela delivers a final blow, and Shade falls. You have all the pieces. The path to Haven-0 is clear.
+[[Follow the map to its destination->Ending-Haven0]]
+
+:: SkybreakerSummit-MetLyra-WithLyra-HasFragment4-Victory
+Under Lyra's covering fire, you secure the final fragment. The map whole, Shade is defeated. Lyra looks at the completed chart. "The coordinates... it's not far from here. In a hidden valley. We've done it."
+[[Journey to the hidden valley->Ending-Haven0]]
+
+:: SkybreakerSummit-MetLyra-WithLyra-HasFragment4-HackVictory
+Lyra plugs her data-slug into a port on Shade's armour. "Override initiated!" she shouts. The armour seizes up, locking Shade in place. You take the final fragment. The map is complete. You have neutralized the threat without further bloodshed.
+[[With the map complete, descend to find Haven-0->Ending-Haven0]]
+
+:: Ending-Fled
+You turn your back on Rust-Town and the promise of Haven-0. The wasteland is vast and unforgiving. You wander for months, then years, until the ash and the hunger claim you. The sun remains a forgotten memory.
+
+:: Ending-Lost
+The Ash-Tangle is a maze of stone. Without a guide, you quickly become disoriented. You are never seen again. The Grove keeps its secret, and the world remains shrouded.
+
+:: Ending-Ambushed
+The Silent Blades are upon you before you can draw your weapon. Their attack is swift and silent. Your journey, and your hope, ends in a dark alley.
+
+:: Ending-Sacrifice
+You hold the door as the Blades beat against it, giving Lyra time to escape. She survives to continue the fight. You fall, but your sacrifice is remembered in the whispers of the bazaar.
+
+:: Ending-Captured
+The guards overwhelm you and Kaela. Despite her ferocity, you are both overpowered. Grath looks down at you with contempt. "The traitor and the fool," he sneers. You are executed together, your fragments adding to the Overseer's hoard.
+:: Ending-Betrayed
+Grath laughs at your attempt to reason. He signals his guards. Kaela is overpowered. You are both executed. The fragments remain with the Guild.
+
+:: Ending-Outcast
+The Grove elder shakes her head in sorrow. "The old arrogance still lives in you." You are cast out of the forest, left to wander the wastes without purpose, forever an outcast.
+
+:: Ending-Deceived
+Shade's words are clever, playing on your doubts. While you hesitate, he strikes. Kaela falls. You are disarmed. Haven-0 becomes a tool for tyranny.
+
+:: Ending-Haven0
+Following the completed map, you find the hidden valley. There, nestled against a mountain, is Haven-0. It is real. With your companion's help, you activate the ancient machinery. Slowly, gloriously, the great fans begin to turn, pulling the ash from the sky. It will take years, but for the first time in a decade, a sliver of pure blue appears on the horizon. You have given the world a future.
+
+:: FumePitApproach-MapKnown
+The path to the mines is steep and shrouded in toxic fumes. You pull up your filter mask, the map's annotation about a hidden cache near the mine symbol giving you a specific goal. You scan the rugged terrain ahead, looking for any landmark that might match the vague mark on the parchment. The main gate is heavily guarded, but the cache might offer an alternative entry point or supplies.
+[[Search the cliffs near the mine for the cache->FumePitPerimeter-MapKnown]]
+[[Approach the main gate, using the cache as a bargaining chip->FumePitGate-MapKnown]]
+[[Wait for darkness to search under cover of night->FumePitNightApproach-MapKnown]]
+
+:: FumePitApproach-MapStudied
+The air grows thick with poison as you ascend. Your grip tightens on your weapon, the map's warning about the Silent Blades fresh in your mind. Every shadow in the jagged rocks seems to hold a threat. The main gate of the Fume-Pit facility is visible ahead, but the path to it feels like a perfect ambush site.
+[[Advance cautiously, watching for raiders->FumePitGate-MapStudied]]
+[[Leave the path and scramble up the cliffs to avoid the road->FumePitPerimeter-MapStudied]]
+[[Find a hiding spot and wait to observe patrols->FumePitNightApproach-MapStudied]]
+
+:: FumePitPerimeter
+You leave the main road, climbing the unstable scree slopes alongside the perimeter wall. The rusted metal barrier is immense, showing signs of neglect in places. You spot a few potential weaknesses: a collapsed section too small to enter, a ventilation grate rusted through, and a storm drain blocked by debris.
+[[Investigate the collapsed section of the wall->FumePitNorthWall]]
+[[Try to pry open the ventilation grate->FumePitVents]]
+[[Clear the debris from the storm drain->FumePitTunnel]]
+
+:: FumePitNightApproach
+Night falls, deepening the gloom but also providing cover. The mine's floodlights carve sharp cones of visibility, leaving deep pools of shadow between them. Guard patrols are visible on the walls, their movements predictable. The cover of darkness makes every option riskier but potentially more successful.
+[[Attempt a silent approach to the main gate under darkness->FumePitGate-Night]]
+[[Use the shadows to reach the perimeter wall unseen->FumePitPerimeter-Night]]
+[[Climb the cliffs above the mine for a俯瞰 view->FumePitOverview]]
+
+:: FumePitGate-Arrested
+The guard snarls, "Work? We don't need your kind." Before you can react, two others grab you. Your weapons are confiscated. You are thrown into a holding cell deep within the mine, your fate now in the hands of Overseer Grath. The map fragment is lost.
+[[Wait for judgment->Ending-Captured-MetKaela-WithKaela]]
+:: FumePitGate-Bribed
+You offer a handful of precious energy cells. The guards look at each other, then one pockets the bribe. "Fine. Get lost in there. But if Grath finds you, we never saw you." They wave you through the gate into the oppressive interior of the compound.
+[[Enter the compound, now inside but marked->FumePitCompound-Disguised]]
+
+:: FumePitGate-TakenToGrath
+[[Try to negotiate with Grath->FumePitOffice-Confrontation]]
+:: FumePitCompound-Disguised
+You grab a grimy worker's coat from a hook and pull it on, keeping your head down. You blend into the stream of exhausted laborers trudging towards the central processing plant. No one gives you a second glance. You are inside, but vulnerable. The Overseer's office looms ahead.
+[[Follow the workers into the plant->FumePitOffice-SneakAttempt]]
+[[Break away and search for the vault alone->FumePitOffice-Captured]]
+
+:: FumePitOffice-MetKaela-WithKaela-Struggle
+You charge in, hoping to catch Grath by surprise. He is faster than he looks, meeting your attack with a crushing blow. Kaela engages the guards, but Grath overpowers you, pinning you to the floor. "Foolish," he grunts, reaching for his pistol.
+[[Fight back desperately->Ending-Betrayed]]
+
+:: FumePitOffice-MetLyra-WithLyra-AlarmTriggered
+You try to help Lyra, but your fumbling on the terminal triggers a silent alarm. Boots thunder down the hall. The vault door slams shut, still locked. You are surrounded by Guild guards, weapons raised. There is no escape.
+[[Surrender->Ending-Captured-MetLyra-WithLyra]]
+:: FumePitOffice-MetLyra-WithLyra-Diversion
+Lyra nods and hacks a nearby comms panel. A moment later, a false alarm blares from the far side of the compound, shouting about a tunnel collapse. Guards rush away from the office. The path to the vault is clear for a precious few moments.
+[[Rush inside the now-unguarded office->FumePitOffice-MetLyra-WithLyra-FragmentObtained]]
+
+:: FumePitOffice-SneakAttempt
+You slip through the crowded plant, avoiding the foremen's gaze. You reach the stairs to the Overseer's office. The door is locked. Peering through a window, you see the vault inside, unguarded for a moment. This is your only chance.
+[[Try to pick the lock->FumePitOffice-Captured]]
+[[Smash the window and climb in->FumePitOffice-FragmentObtained]]
+
+:: FumePitVents-MetLyra-WithLyra
+Lyra leads you to a rusted ventilation grate. She loosens the bolts with a tool from her pack. You crawl into the tight, dark metal shaft, the hum of the mine surrounding you. After a long, claustrophobic crawl, you drop into a quiet storage room within the compound.
+[[Exit the storage room into the compound->FumePitCompound-MetLyra-WithLyra]]
+
+:: RustTownBroker-MetKaela-HasItemScrapDrone
+Kaela looks at the drone core in your hand. "Scrap-tech," she says, unimpressed. "Data cores like that are junk. The Guild dumps them. If you want real information, it'll cost you. What are you really after?"
+[[Ask about Haven-0->RustTownBroker-MetKaela-MapKnown-HasItemScrapDrone]]
+[[Ask about the Silent Blades->RustTownBroker-MetKaela-BladeInfo-HasItemScrapDrone]]
+[[Sell the core to her for a pittance->RustTownMarket-HasItemScrapDrone-Sold]]
+
+:: RustTownBroker-MetKaela-MapStudied
+You approach Kaela, the warning about the Silent Blades heavy on your mind. "You look worried," she notes. "The wasteland will do that. Especially if you have something valuable. What's troubling you, Wanderer?"
+[[Tell her about the map and the Blades->RustTownBroker-MetKaela-BladeInfo-MapStudied]]
+[[Ask her for protection->RustTownBroker-MetKaela-WithKaela-MapStudied]]
+[[Keep your concerns to yourself and ask about factions->RustTownBroker-MetKaela-FactionInfo-MapStudied]]
+
+:: RustTownMarket-PitFight
+You push through the crowd around the fighting pit. A scarred bookie takes your bet. The fight is brutal and short. You win a handful of credits, but draw the attention of some unsavory characters in the crowd. Your pockets are heavier, but so is the threat.
+[[Use the credits to buy supplies->RustTownMarket-Traded]]
+[[Get out of the crowd quickly->RustTownAlleyway]]
+
+:: RustTownMarket-Rumors
+You lean against a wall, listening to the chatter of the crowd. You hear snippets about Guild patrols being doubled, about a "ghost" haunting the mines, and about a group of outsiders seeking a "key to the sky." The rumors are conflicting and vague.
+[[Approach someone who mentioned the "key to the sky"->RustTownBroker-MetKaela]]
+[[Head to the tech den to see if Lyra knows more->RustTownTechDen]]
+[[Ignore the rumors and focus on trade->RustTownMarket-Traded]]
+
+:: RustTownMarket-Rumors-MapStudied
+You listen carefully, your awareness of the Silent Blades making you filter every word. You overhear two traders talking in hushed tones about "quiet men" buying up all the stealth gear. Another mentions a recent disappearance near the mines. The Blades are active.
+[[Confront the traders about the Blades->RustTownBroker-MetKaela-MapStudied]]
+[[Take this information to the tech den->RustTownTechDen-MapStudied]]
+[[Decide to leave Rust-Town immediately->Ending-Fled]]
+:: RustTownMarket-Traded
+You barter your few possessions for a full canteen and a handful of energy cells. You feel slightly more prepared for the journey ahead, but you are no closer to your goal. The market's chaos continues around you.
+[[Go to the Information Broker->RustTownBroker-MetKaela]]
+[[Explore the alleyways->RustTownAlleyway]]
+[[Head towards the mines->FumePitApproach]]
+
+:: RustTownMarket-Traded-MapStudied
+You complete a quick trade for supplies, your eyes constantly scanning for Silent Blades. You see a suspicious figure watching you from a stall. You have what you need, but you've also drawn attention. It's time to move.
+[[Make for the Broker's post, using the crowd as cover->RustTownBroker-MetKaela-MapStudied]]
+[[Slip into the alleys to lose your tail->RustTownAlleyway-MapStudied]]
+[[Head for the relative safety of the tech den->RustTownTechDen-MapStudied]]
+
+:: RustTownMarket-HasItemScrapDrone-Sold
+The tech-specialist offers you a meager sum of credits for the drone core. It's not much, but it's certain. You take the money, the potential data lost forever. You have credits, but no new leads.
+[[Spend the credits on supplies->RustTownMarket-Traded-HasItemScrapDrone]]
+[[Go to the Information Broker->RustTownBroker-MetKaela-HasItemScrapDrone]]
+
+:: RustTownRoof
+The fire escape leads to a flat roof littered with communication dishes and old satellite hardware. The view over Rust-Town is vast and depressing. You can see the market square, the main gate, and the routes leading out into the wastes. You also spot a way to traverse the rooftops towards the center of town.
+[[Cross the rooftops towards the market->RustTownMarket]]
+[[Climb down into a different alley->RustTownAlleyway]]
+[[Scan the horizon for threats->RustTownRoof-Scouted]]
+
+:: RustTownRoof-HasItemScrapDrone
+From the rooftop, you see the entirety of the bazaar. You spot the tech-specialist's stall in the market and the location of the tech den below you. The drone core feels heavy in your pack. The roof route offers a stealthy path to either destination.
+[[Descend into the alley near the tech den->RustTownTechDen-HasItemScrapDrone]]
+[[Jump to a roof near the market and climb down->RustTownMarket-HasItemScrapDrone]]
+
+:: RustTownRoof-MapStudied
+The rooftop gives you a commanding view. Your heart sinks as you spot not one, but three separate pairs of Silent Blades moving through the streets below, converging vaguely on the market and the alley you just left. You are surrounded. The rooftops might be your only safe path.
+[[Move quietly across the roofs to the far side of town->RustTownOutskirts-MapStudied]]
+[[Drop down into a seemingly empty alley->RustTownAlleyway-MapStudied]]
+[[Stay on the roof and wait for nightfall->RustTownRoof-Night]]
+
+:: RustTownTechDen-MetLyra-Theories
+Lyra leans in. "My theory is that Haven-0 wasn't a power source. It was a terraforming regulator. The Cataclysm wasn't an accident; it was a failsafe triggered when the system was abused. The map fragments might be access codes, not coordinates. But without a fragment, it's just a theory."
+[[Show her your map fragment->RustTownTechDen-MetLyra-MapKnown]]
+[[Ask how she knows this->RustTownTechDen-MetLyra-History]]
+[[Thank her and leave, pondering this->RustTownAlleyway]]
+
+:: RustTownTechDen-HasItemScrapDrone-Decoded
+Lyra successfully extracts the data. "It's a survey log," she says, pointing to the screen. "It shows a structural weakness in the Fume-Pit mine's north wall. This is invaluable. With this, we could get inside."
+[[Propose an alliance to use this information->RustTownTechDen-MetLyra-HasItemScrapDrone-WithLyra]]
+[[Take the data and leave to attempt the infiltration alone->FumePitApproach-HasItemScrapDrone]]
+
+:: RustTownUndershaft-MetLyra-WithLyra
+You and Lyra drop into a tight, dark conduit. It's a crawl through dust and cobwebs. After a long descent, you emerge into a wider tunnel, part of the old pre-Cataclysm transit system buried beneath Rust-Town. Lyra checks her device. "This tunnel leads east, towards the mountains. We can bypass the surface roads entirely."
+[[Follow the underground tunnel towards the mines->FumePitApproach-MetLyra-WithLyra]]
+
+:: RustTownUndershaft-MetLyra-WithLyra-HasItemScrapDrone
+You crawl through the dark conduit with Lyra, emerging into the ancient underground tunnels. Lyra consults the decoded drone data on her terminal. "The survey log matches these old maps. We can follow this route all the way to the foothills below Fume-Pit. We'll come up right near the weak point in the wall."
+[[Journey through the underworld towards the mine->FumePitApproach-MetLyra-WithLyra-HasItemScrapDrone]]
+
+:: AshTangleHeart-MetKaela-WithKaela-HasFragment2-Captured
+You try to move silently through the stone forest, but every step echoes. Suddenly, nets drop from the petrified branches, entangling you and Kaela. Grove warriors emerge, their faces stern. You are disarmed and led to their village as prisoners, your intentions misunderstood.
+[[Plead your case as captives->AshTangleHeart-MetKaela-WithKaela-HasFragment2-Accepted]]
+[[Attempt to escape->Ending-Outcast]]
+
+:: AshTangleHeart-MetLyra-WithLyra-HasFragment2-Captured
+Your scanning device pings, and instantly, the forest comes alive. Grove warriors surround you, their weapons aimed. "You defile the silence with your machines," the elder says, her voice cold. You and Lyra are captured, your technology confiscated.
+[[Try to explain your purpose->AshTangleHeart-MetLyra-WithLyra-HasFragment2-Accepted]]
+[[Resist capture->Ending-Outcast]]
+
+:: FumePitApproach-MetLyra-WithLyra-HasItemScrapDrone
+The path to the mines climbs steeply into the foothills, the air thick with toxic fumes. Lyra walks beside you, checking her data-slug. "The drone's survey data confirms the weak point in the north wall," she says. "It's our best way in, but we'll need to be careful. The Guild patrols this area, and the Silent Blades are never far." The massive Fume-Pit facility looms ahead, a scar on the mountain.
+[[Head for the north wall using the drone's data->FumePitNorthWall-MetLyra-WithLyra]]
+
+:: FumePitGate-MapKnown
+You walk towards the main gate, the map's annotation about a hidden cache giving you a potential bargaining chip. Two Guild guards step forward, rifles ready. "Halt, scrap." You mention your knowledge of a supply cache near the mine, hoping it will grant you entry. The guards exchange a glance. "Grath might be interested in that. Empty your pockets first."
+[[Comply and be taken to Grath->FumePitOffice-Confrontation]]
+[[Refuse and attempt to fight->FumePitGate-Arrested]]
+
+:: FumePitGate-MapStudied
+You approach the gate with caution, every sense alert for the Silent Blades. The guards notice your wariness. "You look jumpy," one says, raising his weapon. "Blades got you spooked? They don't come this close to the mine. But you... you're a different story." They block the gate, suspicious of your tense demeanor.
+[[Try to talk your way past->FumePitGate-TakenToGrath]]
+[[Back away and retreat from the gate->FumePitApproach-MapStudied]]
+
+:: FumePitGate-Night
+Under the cover of darkness, you creep towards the main gate. The floodlights create stark shadows. You see two guards leaning against the gate, half-asleep. The entrance is slightly ajar for ventilation. This might be your only chance for a silent entry.
+[[Sneak through the gap in the gate->FumePitCompound-Disguised]]
+[[Create a diversion to draw the guards away->FumePitGate-Distraction]]
+
+:: FumePitNightApproach-MapKnown
+Night has fallen, the mine's lights piercing the gloom. You use the map's clue about the cache to guide your search, scanning the darkened cliffs for the annotated landmark. The cover of night makes the search dangerous, but also hides you from patrols. You think you see a likely crevice near a distinctive rock formation.
+[[Investigate the crevice->FumePitPerimeter-MapKnown]]
+[[Abandon the search and focus on infiltrating the mine->FumePitPerimeter-Night]]
+
+:: FumePitNightApproach-MapStudied
+The night is deep and silent, perfect for an ambush. You remember the map's warning about the Silent Blades and move like a ghost, using every shadow for cover. The mine's perimeter is a wall of light and noise ahead. You need to find a way in without alerting the guards or the raiders.
+[[Attempt a silent approach to the perimeter wall->FumePitPerimeter-Night]]
+[[Climb the cliffs to get a better vantage point->FumePitOverview]]
+
+:: FumePitNorthWall
+You reach a collapsed section of the perimeter wall. The metal is twisted and unstable, but there is a narrow gap you might be able to squeeze through. It looks treacherous, and the climb is risky. Beyond the wall, you can see the dark shapes of mine buildings.
+[[Attempt to climb through the gap->FumePitCompound-Disguised]]
+[[Decide it is too dangerous and look for another way->FumePitPerimeter]]
+
+:: FumePitOffice-Captured
+Your attempt to enter the office fails. Guards pour into the room, weapons aimed. You are overpowered and dragged before Overseer Grath. "Another fool seeking glory," he growls. "You will dig in the deep pits until the fumes claim you." Your map fragment is lost.
+[[Resign yourself to your fate->Ending-Captured]]
+
+:: FumePitOffice-Confrontation
+[[Hand over the map fragment->Ending-Captured-NoFragment]]
+[[Refuse and make a stand->Ending-Betrayed]]
+:: FumePitOffice-FragmentObtained
+You smash the window and climb into the Overseer's office. It is empty. On a shelf behind the large desk, you see it—a second map fragment. You grab it just as you hear boots approaching the door. You have the fragment, but you are trapped.
+[[Hide behind the desk->FumePitOffice-Captured]]
+[[Jump back out the window and run->FumePitEscape-HasFragment2]]
+
+:: FumePitOverview
+You climb high above the mine, finding a precarious perch on the cliffs. From here, you have a sweeping view of the entire Fume-Pit compound. You see guard patrol routes, the main gate, the processing plant, and a few potential weak points in the perimeter. The information is valuable, but the climb down will be just as dangerous.
+[[Descend towards the north wall->FumePitNorthWall]]
+[[Descend towards the main gate area->FumePitGate]]
+[[Stay and watch for a shift change->FumePitNightApproach]]
+
+:: FumePitPerimeter-MapKnown
+You search the perimeter near the cliffs, looking for the cache marked on your map. In the shadow of a large boulder, you find a hidden niche. Inside is a pre-Cataclysm survival kit: a few energy cells, a water filter, and a vital schematic of the mine's ventilation system. This could be key to getting inside.
+[[Take the schematic and look for the vents->FumePitVents]]
+[[Take the supplies and head for the main gate->FumePitGate]]
+
+:: FumePitPerimeter-MapStudied
+You move carefully along the perimeter wall, watching for ambush. The Silent Blades favor such places. You find a section where the wall has collapsed, creating a possible entry point. But as you approach, you see faint footprints in the ash—someone else has been here recently. Raiders or Guild scouts?
+[[Investigate the footprints->FumePitPerimeter-Night]]
+[[Avoid the area and continue searching for another way->FumePitVents]]
+
+:: FumePitPerimeter-Night
+Using the deep night shadows, you reach the perimeter wall unseen. The darkness hides you but also makes it hard to see details. You feel your way along the rusted metal, searching for a weakness—a grate, a crack, a collapsed section. The sound of a nearby patrol echoes in the stillness.
+[[Try to find a ventilation shaft->FumePitVents]]
+[[Search for a collapsed part of the wall->FumePitNorthWall]]
+[[Wait for the patrol to pass->FumePitNightApproach]]
+
+:: FumePitTunnel
+You clear the debris from the storm drain, revealing a dark, wet tunnel leading under the wall. It smells of stagnant water and rot. The tunnel is narrow and pitch black, but it is an unguarded way into the compound. It is a gamble.
+[[Crawl into the drain tunnel->FumePitCompound-Disguised]]
+[[Decide against it and look for a drier entry->FumePitPerimeter]]
+
+:: FumePitVents
+You find a large ventilation grate, rusted but still solid. With effort, you manage to loosen the bolts and pry it open. The shaft inside is dark and narrow, filled with the hum of machinery. It is a tight, claustrophobic crawl, but it leads into the heart of the mine.
+[[Crawl into the ventilation shaft->FumePitCompound-Disguised]]
+[[Abandon the vent and try the drain tunnel->FumePitTunnel]]
+
+:: RustTownBroker-MetKaela-BladeInfo-HasItemScrapDrone
+Kaela glances at the drone core dismissively. "The Blades don't care about junk data. They care about power. If they know you have a map, that core won't save you. They are hunters. They will find you." She leans closer. "Your only hope is to be faster, or smarter."
+[[Ask for her help to be smarter->RustTownBroker-MetKaela-WithKaela-HasItemScrapDrone]]
+[[Decide to leave town immediately->Ending-Fled]]
+
+:: RustTownBroker-MetKaela-BladeInfo-MapStudied
+"The Blades are the real threat," you say. Kaela nods grimly. "They are. And if your map is real, they will be hunting you. Rust-Town isn't safe for you anymore. You need to move, and you need an ally who knows their patterns. I can be that ally."
+[[Accept her offer of help->RustTownBroker-MetKaela-WithKaela-MapStudied]]
+[[Decline and try to hide in the town->RustTownMarket-MapStudied]]
+
+:: RustTownBroker-MetKaela-FactionInfo-MapStudied
+You ask about the factions, keeping your knowledge of the Blades to yourself for now. Kaela lists them off: "The Guild, the Blades, the Grove. All dangerous. With the Blades active, your choice of ally is more critical than ever. An enemy of your enemy might be your only friend."
+[[Ask her which faction opposes the Blades->RustTownBroker-MetKaela-BladeInfo-MapStudied]]
+[[Show her your map and seek a specific alliance->RustTownBroker-MetKaela-MapKnown]]
+
+:: RustTownBroker-MetKaela-MapKnown-HasItemScrapDrone
+You show Kaela the map fragment. She studies it, then looks at the drone core. "The map is valuable. The core is trash. But together... they suggest you're a scavenger who finds things. That's a useful skill. I might have a use for someone like you. If you're willing to take risks."
+[[Agree to work with her->RustTownBroker-MetKaela-WithKaela-HasItemScrapDrone]]
+[[Politely decline and leave->RustTownMarket-HasItemScrapDrone]]
+
+:: RustTownBroker-MetKaela-WithKaela-MapStudied
+"Good," Kaela says, slinging her pack. "The Blades are hunting you, so we hunt them first. Or we avoid them. My choice is avoid. We head for the mines now, before their net closes around this town." She leads you out, moving with urgent purpose.
+[[Follow Kaela out of Rust-Town->FumePitApproach-MetKaela-WithKaela-MapStudied]]
+
+:: RustTownMarket-Traded-HasItemScrapDrone
+With the credits from selling the drone core, you buy essential supplies: water, food, and energy cells. You are better equipped for the journey, but you have lost the potential intelligence the core held. The market continues its chaotic dance around you.
+[[Go to the Information Broker->RustTownBroker-MetKaela-HasItemScrapDrone]]
+[[Head towards the mines->FumePitApproach-HasItemScrapDrone]]
+[[Explore the alleyways->RustTownAlleyway-HasItemScrapDrone]]
+
+:: RustTownRoof-Night
+You wait on the roof as night falls over Rust-Town. The lights of the bazaar glow below, and the Silent Blades become harder to spot. The cover of darkness might allow you to move without being seen. The night air is cold and still.
+[[Cross the rooftops under cover of darkness->RustTownMarket]]
+[[Climb down into a dark alley->RustTownAlleyway]]
+[[Stay on the roof until dawn->RustTownRoof-Scouted]]
+
+:: RustTownRoof-Scouted
+From the rooftop, you carefully scan the entire horizon. You see the routes to the mines and the forest, and you note the patterns of the town guards. You see no immediate signs of the Silent Blades from this high vantage. You have a better understanding of the landscape.
+[[Descend into the market square->RustTownMarket]]
+[[Descend into the alley near the tech den->RustTownTechDen]]
+[[Head back the way you came->RustTownOutskirts]]
+
+:: RustTownTechDen-MetLyra-HasItemScrapDrone-Decoding
+Lyra connects the drone core to her terminal. Wires snake from the cube to her screens. "The encryption is tough, pre-Cataclysm military grade. This will take a moment." She works silently, her face lit by the scrolling data. "Almost there... the log is compiling."
+[[Wait for the results->RustTownTechDen-HasItemScrapDrone-Decoded]]
+[[Grow impatient and take the core back->RustTownAlleyway-HasItemScrapDrone]]
+
+:: RustTownTechDen-MetLyra-History
+[[Show her your map fragment->RustTownTechDen-MetLyra-MapKnown]]
+[[Express sympathy but remain cautious->RustTownTechDen-MetLyra-Sympathy]]
+:: FumePitApproach-MetKaela-WithKaela-MapStudied
+The path to the mines climbs steeply, the air thick with toxic fumes. Kaela moves with a quiet intensity, her eyes constantly scanning the jagged rocks. "The map's warning about the Blades is real," she mutters. "They love these heights. They'll be watching the roads. We need to get off this path before they decide we're worth ambushing." The massive Fume-Pit facility looms ahead, its gates a distant goal.
+[[Leave the road and climb the scree slopes to the perimeter->FumePitPerimeter-MetKaela-WithKaela-MapStudied]]
+[[Quickly advance to the gate, trusting speed over stealth->FumePitGate-MetKaela-WithKaela-MapStudied]]
+[[Find a concealed overlook to watch for patrols->FumePitOverview-MetKaela-WithKaela-MapStudied]]
+
+:: FumePitEscape-HasFragment2
+Alarms blare across the compound as you sprint from the Overseer's office, the second map fragment clutched in your hand. You dash through the chaotic yard, workers scattering in confusion. You spot the hole in the north wall you used to enter and scramble through it, tearing your clothes on the jagged metal. You collapse on the other side, gasping in the foul air, but free. You have two fragments. The world feels both larger and more dangerous.
+[[Head towards the Ash-Tangle forest alone->AshTangleEdge-HasFragment2]]
+[[Return to Rust-Town to seek an ally for the next leg->RustTownOutskirts-HasFragment2]]
+
+:: RustTownBroker-MetKaela-WithKaela-HasItemScrapDrone
+Kaela looks from the map fragment to the drone core in your hand. "The map is the prize," she says. "But this core... it might have its uses. Guild tech often has backdoors. We'll hold onto it. Now, our priority is the mine. Grath has a fragment, and my history with him gives us an edge. But we move fast." She shoulders her pack, ready to depart.
+[[Follow Kaela to the Fume-Pit mines->FumePitApproach-MetKaela-WithKaela-HasItemScrapDrone]]
+[[Ask if the drone data can be decoded first->RustTownTechDen-MetKaela-WithKaela-HasItemScrapDrone]]
+
+:: AshTangleEdge-HasFragment2
+The Ash-Tangle stands before you, a forest turned to stone by the Cataclysm. The silence is profound, broken only by the wind whistling through petrified branches. You clutch the two map fragments, feeling their weight. The third is said to be here, guarded by the reclusive Grove. Without a guide, the stone maze seems impenetrable. You must choose your approach with care.
+[[Announce your presence, hoping for a peaceful audience->AshTangleHeart-HasFragment2-Accepted]]
+[[Attempt to stealthily navigate the stone trees->AshTangleHeart-HasFragment2-Captured]]
+
+:: FumePitApproach-MetKaela-WithKaela-HasItemScrapDrone
+The toxic path to the mines climbs steeply. Kaela walks beside you, her cybernetic arm whirring softly. "The map is our goal," she says, "but that drone core might be a useful distraction if we need it. Guild tech is full of surprises." She scans the fume-choked cliffs ahead. "The main gate is a fortress. We need a smarter way in than a frontal assault."
+[[Suggest using the waste outflow tunnel Kaela mentioned->FumePitTunnel-MetKaela-WithKaela-HasItemScrapDrone]]
+[[Head for the perimeter to scout for a weak point->FumePitPerimeter-MetKaela-WithKaela-HasItemScrapDrone]]
+
+:: FumePitGate-MetKaela-WithKaela-MapStudied
+You and Kaela approach the main gate. The guards tense up immediately, recognizing Kaela. "You," one snarls. "Grath said you'd show up." Kaela remains calm, but her hand rests on her weapon. "We're just passing through," she says. The guards aren't buying it. They know about the Blades, and they know you're a target. The situation is volatile.
+[[Try to talk your way past quickly->FumePitGate-TakenToGrath-MetKaela-WithKaela]]
+[[Back away and retreat to find another route->FumePitApproach-MetKaela-WithKaela-MapStudied]]
+
+:: FumePitOverview-MetKaela-WithKaela-MapStudied
+You and Kaela climb high onto the cliffs overlooking the mine. The view is commanding. Kaela points out patrol routes and weak spots. "There, the north wall," she says. "It's collapsed. And look, a patrol of Silent Blades moving along the ridge. They're hunting, but they haven't seen us yet. We have the advantage of height, for now."
+[[Descend towards the weak north wall->FumePitNorthWall-MetKaela-WithKaela]]
+[[Plan a route to avoid the Blades and reach the perimeter->FumePitPerimeter-MetKaela-WithKaela-MapStudied]]
+
+:: FumePitPerimeter-MetKaela-WithKaela-MapStudied
+You leave the road, moving stealthily along the perimeter wall with Kaela. Your shared awareness of the Silent Blades makes every shadow a potential threat. Kaela spots a recent set of footprints in the ash near a collapsed section of the wall. "Blades," she whispers. "They're using this entrance too. We can follow them in, or find another way."
+[[Risk following the Blades' path into the compound->FumePitCompound-MetKaela-WithKaela]]
+[[Search for the waste outflow tunnel Kaela knows->FumePitTunnel-MetKaela-WithKaela-MapStudied]]
+
+:: RustTownOutskirts-HasFragment2
+You return to the edge of Rust-Town, the two map fragments a heavy secret in your pack. The shantytown is as noisy and chaotic as ever. You need information on the location of the third fragment, rumored to be with the Grove in the Ash-Tangle. The bazaar is your best bet, but entering again carries risks.
+[[Enter the bazaar to seek a guide to the Grove->RustTownGate-HasFragment2]]
+[[Avoid the town and head directly towards the petrified forest->AshTangleEdge-HasFragment2]]
+
+:: RustTownTechDen-MetKaela-WithKaela-HasItemScrapDrone
+You enter the tech den with Kaela. Lyra looks up, surprised to see the broker. "Kaela? What brings you here?" Kaela holds up the drone core. "We need this decoded, fast. Guild tech. Might have useful schematics." Lyra nods, taking the core. "I can try. But it will take a few minutes. The Guild might detect the data pulse."
+[[Wait for Lyra to decode the core->RustTownTechDen-MetKaela-WithKaela-HasItemScrapDrone-Decoded]]
+[[Decide it's too risky and leave for the mines immediately->FumePitApproach-MetKaela-WithKaela-HasItemScrapDrone]]
+
+:: AshTangleHeart-HasFragment2-Accepted
+Your call into the stillness echoes through the petrified trees. For a long moment, there is only the wind. Then, figures clad in rough, ash-colored robes emerge silently from behind the stone trunks. An elder steps forward, her face a mask of weathered lines. She looks at you, then at the fragments in your hand. "You carry pieces of the Great Machine," she says, her voice like grinding stone. "Why have you come to this sacred place? Do you seek to repeat the folly that created this silence, or to break it?"
+[[State that you wish to heal the sky->AshTangleHeart-HasFragment2-JoinedGrove]]
+[[Claim the power of Haven-0 for yourself->Ending-Outcast]]
+
+:: AshTangleHeart-HasFragment2-Captured
+You move silently between the stone trees, trying to find the Grove's village without being detected. But the forest has eyes. A net of woven thorn-vines drops from above, ensnaring you. Grove warriors appear, their expressions stern and unforgiving. You are disarmed and your map fragments are taken. They lead you, bound, deeper into the stone forest. Your fate is now in their hands.
+[[Try to explain your mission->AshTangleHeart-HasFragment2-Accepted]]
+[[Attempt to break free->Ending-Outcast]]
+
+:: FumePitGate-TakenToGrath-MetKaela-WithKaela
+The guards march you and Kaela at gunpoint through the noisy compound to the Overseer's office. Grath looks up from his desk, a cruel smile spreading across his face when he sees Kaela. "The traitor returns," he growls. "And she brings a friend with a map. How... convenient." He leans forward, his cybernetic jaw clicking. "You have something I want. And I have something you want. Let's discuss terms."
+[[Try to negotiate with Grath->FumePitOffice-MetKaela-WithKaela-Confrontation]]
+[[Signal to Kaela to make a move->FumePitOffice-MetKaela-WithKaela-Struggle]]
+
+:: FumePitNorthWall-MetKaela-WithKaela
+You and Kaela reach the collapsed section of the north wall. The climb is treacherous over the jagged metal. Kaela gives you a boost, then you help pull her up. You both drop down into a shadowy area between mine sheds. You are inside the compound, unseen. Kaela points towards the central plant. "Grath's office is that way. Now comes the hard part."
+[[Move quietly towards the Overseer's compound->FumePitCompound-MetKaela-WithKaela]]
+
+:: FumePitPerimeter-MetKaela-WithKaela-HasItemScrapDrone
+You and Kaela scout the perimeter wall, the drone core a potential tool in your pack. Kaela spots a sealed maintenance hatch. "This leads to the internal comms network," she says. "If that core has any Guild access codes, we might be able to use it to open this hatch and get inside without a climb." It's a risk—the core's data is unknown.
+[[Try to use the drone core to access the hatch->FumePitCompound-MetKaela-WithKaela-HasItemScrapDrone]]
+[[Abandon the tech approach and find a physical breach->FumePitNorthWall-MetKaela-WithKaela]]
+
+:: FumePitTunnel-MetKaela-WithKaela-HasItemScrapDrone
+The waste outflow tunnel is a dark, foul-smelling passage. You and Kaela wade through the sludge, your lamp flickering. The drone core feels heavy in your pack. "If this thing shorts out in the water, we're blind," Kaela mutters. The tunnel seems to go on forever, a claustrophobic journey into the heart of the mine.
+[[Press on through the tunnel->FumePitCompound-MetKaela-WithKaela-HasItemScrapDrone]]
+
+:: FumePitTunnel-MetKaela-WithKaela-MapStudied
+You and Kaela enter the dark outflow tunnel, the map's warning making every sound seem like a threat. The silence is broken only by your sloshing steps and the distant hum of machinery. Kaela moves with practiced stealth, her cybernetic arm providing a steady light. "The Blades prefer clean kills," she whispers. "They won't follow us in here. The filth is our cover."
+[[Continue the slow, careful wade->FumePitCompound-MetKaela-WithKaela-MapStudied]]
+
+:: RustTownGate-HasFragment2
+You approach the main gate of Rust-Town, the two map fragments a secret weight. The guards look you over with the same bored suspicion. The bazaar within is as loud as ever. You need to find someone who knows the way to the Grove, but entering this den of thieves with your treasure is a tremendous risk.
+[[Enter the bazaar to find a guide->RustTownMarket-HasFragment2]]
+[[Avoid the gate and skirt the town towards the Ash-Tangle->AshTangleEdge-HasFragment2]]
+
+:: RustTownTechDen-MetKaela-WithKaela-HasItemScrapDrone-Decoded
+Lyra works quickly, her screens flashing. "Got it," she says. "The core contained old schematics of the mine's ventilation control system. There's a maintenance override here. We can trigger a system-wide vent purge from a terminal inside. It would create chaos, a perfect diversion." Kaela smiles. "That's better than a distraction. That's a weapon."
+[[Use this new plan to infiltrate the mine->FumePitApproach-MetKaela-WithKaela-HasItemScrapDrone-Decoded]]
+[[Stick to the original plan without using the purge->FumePitApproach-MetKaela-WithKaela-HasItemScrapDrone]]
+
+:: AshTangleHeart-HasFragment2-JoinedGrove
+The elder listens to your plea for healing, her expression unreadable. After a long silence, she nods. "Atonement is the path. You seek not to command the machine, but to unleash its purpose. This is acceptable." She leads you to their village, hidden within a giant hollowed-out stone tree. There, she presents you with the third map fragment, a piece of polished obsidian. "The final fragment is with the Silent Blades, in the Skybreaker Spire. Their leader, Shade, wishes to use Haven-0 to dominate, not cleanse. This is your final trial, Wanderer. You must succeed where we cannot."
+[[Prepare for the assault on the Spire alone->SkybreakerBase-HasFragment3-JoinedGrove]]
+
+:: FumePitApproach-MetKaela-WithKaela-HasItemScrapDrone-Decoded
+The path to the mines is steep and fume-choked. Kaela walks with a new confidence. "Lyra's decoding gave us a key," she says, tapping the drone core in her pack. "The ventilation purge. We trigger it from a terminal inside, and the whole mine will be coughing and blind for minutes. We get in, get the fragment, and get out in the chaos. Our entry point is the waste tunnel—it leads directly to a terminal room."
+[[Enter the waste outflow tunnel to begin the plan->FumePitTunnel-MetKaela-WithKaela-HasItemScrapDrone-Decoded]]
+
+:: FumePitCompound-MetKaela-WithKaela-HasItemScrapDrone
+You emerge from the maintenance hatch or tunnel into a dimly lit service corridor deep within the mine. The hum of machinery is deafening. Kaela checks the drone core's data on a portable screen. "The terminal for the ventilation system is on this level, two corridors over. If we can reach it undetected, we can create our diversion and then head for Grath's office during the panic."
+[[Move stealthily towards the ventilation control terminal->FumePitOffice-MetKaela-WithKaela-HasItemScrapDrone-PurgeReady]]
+[[Head directly for the Overseer's office, abandoning the purge plan->FumePitCompound-MetKaela-WithKaela]]
+
+:: FumePitCompound-MetKaela-WithKaela-MapStudied
+You climb out of the foul outflow tunnel into a dusty basement storage area. The silence here is a stark contrast to the tunnel's drip and slosh. Kaela wipes sludge from her arm. "The Blades wouldn't soil their silks in that muck. We're clean, for now. Grath's office is upstairs. We need to move before a patrol finds us down here." The memory of the map's warning keeps your senses on a razor's edge.
+[[Ascend to the main plant level->FumePitCompound-MetKaela-WithKaela]]
+
+:: RustTownMarket-HasFragment2
+You merge into the market square's chaos, acutely aware of the two map fragments hidden in your pack. You need a guide to the Ash-Tangle, but anyone you ask could be a Blade informant or a greedy thief. Near a stall selling dried fungus, you overhear a grizzled scout talking about a "safe path to the stone forest." He seems genuine, but in Rust-Town, nothing is certain.
+[[Approach the scout and inquire about the Grove->RustTownMarket-HasFragment2-ScoutMet]]
+[[Decide the risk is too great and leave town immediately->AshTangleEdge-HasFragment2]]
+[[Head to the tech den to see if Lyra has geographic data->RustTownTechDen-HasFragment2]]
+
+:: FumePitTunnel-MetKaela-WithKaela-HasItemScrapDrone-Decoded
+The outflow tunnel is a river of black sludge, but Kaela moves with purpose, the decoded drone core's data guiding you. "The terminal room is just ahead," she says, her light illuminating a rusted metal door set in the tunnel wall. "This purge will give us the chaos we need." She connects the core to a terminal port beside the door, her fingers flying across the interface. A low rumble begins to build deep within the facility.
+[[Enter the terminal room to trigger the purge->FumePitOffice-MetKaela-WithKaela-HasItemScrapDrone-PurgeReady]]
+
+:: FumePitOffice-MetKaela-WithKaela-HasItemScrapDrone-PurgeReady
+You are in a small, loud room filled with blinking control panels. Kaela finishes the sequence on the terminal. "Ready?" she asks. With a final keystroke, a deafening alarm blares through the entire mine. Through the grimy window, you see vents erupting with thick dust, and guards stumbling, coughing. The diversion is underway. The path to Grath's office is now shrouded in chaos.
+[[Rush towards the Overseer's office in the confusion->FumePitCompound-MetKaela-WithKaela-HasItemScrapDrone]]
+
+:: RustTownMarket-HasFragment2-ScoutMet
+The grizzled scout eyes you warily. "The Ash-Tangle? That's a death wish for most," he grunts. "But the Grove... they're not monsters. They just value silence. There's a path, along the dry riverbed to the east. It avoids the worst of the raider patrols. But you didn't hear it from me." He turns back to his fungus, the conversation clearly over. You have a direction.
+[[Follow the scout's advice and take the dry riverbed path->AshTangleEdge-HasFragment2]]
+[[Seek more detailed maps from the tech den->RustTownTechDen-HasFragment2]]
+
+:: RustTownTechDen-HasFragment2
+Lyra looks up from her work as you enter. She sees the tension in your posture. "You have them," she states, not a question. "Two fragments. The Grove holds the third." She pulls up a holographic display of the region. "The Ash-Tangle is here. The safe routes shift with the toxic storms. My data is old, but it's better than nothing. I can mark the last known paths."
+[[Accept Lyra's map data and head out->AshTangleEdge-HasFragment2]]
+[[Ask if she will join you for the final leg->RustTownTechDen-MetLyra-HasFragment2-WithLyra]]
+
+:: SkybreakerBase-HasFragment3-JoinedGrove
+The Skybreaker Spire is a monolith of black rock, its peak lost in the perpetual ash clouds. At its base, a silent war rages between Grove warriors and the fanatical Silent Blades. You clutch the three map fragments. The Grove elder's words echo in your mind: this is the final trial. The elevator shaft is a obvious death trap. A maintenance ladder on the exterior seems the only viable, if terrifying, path upward.
+[[Climb the treacherous exterior ladder to the summit->SkybreakerSummit-HasFragment3-Confrontation]]
+
+:: RustTownTechDen-MetLyra-HasFragment2-WithLyra
+Lyra looks from the holographic map to your determined face. "You want me to come with you? To the Ash-Tangle?" She pauses, then a resolute look replaces her surprise. "My family's legacy is tied to Haven-0. I can't let you face the Grove and the Blades alone. And my tech might be the key to convincing the Grove we're not a threat." She quickly packs a bag with her data-slug and tools. "Let's go. The longer we wait, the more time the Blades have to prepare."
+[[Follow Lyra out of Rust-Town towards the stone forest->AshTangleEdge-MetLyra-WithLyra-HasFragment2]]
+
+:: SkybreakerSummit-HasFragment3-Confrontation
+You haul yourself over the edge of the spire's summit, your muscles screaming. The peak is a flat circle of wind-scoured rock, shrouded in mist. Shade stands in the center, a figure of absolute stillness in black armour, the final map fragment on a stand behind him. "I knew you would come, bearer of fragments," a synthetic voice whispers from his mask. "You bring the keys to me. The purification will be a storm of steel, and a new order will rise from the ashes."
+[[Charge forward to seize the fragment->SkybreakerSummit-HasFragment4-Victory]]
+[[Try to reason with the fanatical leader->Ending-Deceived]]
+
+:: SkybreakerSummit-HasFragment4-Victory
+You rush forward as Shade raises his weapon. A shot rings out, but you duck under it, your hand closing around the final fragment. As the four pieces connect in your grasp, they merge with a soft, warm light, becoming one complete map. Shade lets out a rasp of fury, but the unity of the map seems to disarm his purpose. He hesitates, and in that moment, you shove past him and leap from the summit, catching the exterior ladder. You climb down through the mist, the battle below fading. The path to Haven-0 is now clear and yours alone.
+[[Follow the complete map to the hidden valley->Ending-Haven0]]
+
+:: Ending-Captured-MetKaela-WithKaela
+The guards swarm you and Kaela. Despite her ferocity, you are both overpowered. Grath looks down at you with contempt. "The traitor and the fool," he sneers. You are executed together, your fragments adding to the Overseer's hoard.
+
+:: Ending-Captured-MetLyra-WithLyra
+The alarm brings a flood of guards. You and Lyra are surrounded, weapons clattering to the floor. Dragged before Grath, you meet a swift end. The mine consumes another dream of Haven-0.
+
+:: FumePitCompound-MetKaela-WithKaela-DistractedEntry
+You sprint through the chaotic gateway, Kaela right behind you. You plunge into the noisy, dusty interior of the mining compound. The diversion has worked, but the guards will reorganize quickly. You are inside Grath's domain.
+[[Move quickly towards the Overseer's office->FumePitCompound-MetKaela-WithKaela]]
+
+:: Ending-Captured-NoFragment
+The guards swarm you. Despite your struggles, you are overpowered. Grath looks down at you with contempt. "Another fool seeking glory," he sneers. You are thrown into the deep pits, your fragment lost. The mine consumes another dream of Haven-0.
+
+:: RustTownTechDen
+You enter the tech den, a small room humming with the sound of active electronics. A woman with intricate circuit-board tattoos covering her arms looks up from a disassembled terminal. "This is my workshop," she says, her voice calm but firm. "State your business."
+[[Ask if she knows about Haven-0->RustTownTechDen-MetLyra]]
+[[Inquire about buying information or tech->RustTownTechDen-Trade]]
+[[Leave the den->RustTownAlleyway]]
+:: RustTownTechDen-Trade
+You enter the tech den. The tattooed woman looks up from her work. "I sell tech, not gossip," she says, gesturing to her wares. "Energy cells, scrap parts, the occasional weapon. If you have something to trade, we can talk. Otherwise, you're wasting my time."
+[[Trade for supplies->RustTownMarket-Traded]]
+[[Ask about Haven-0 anyway->RustTownTechDen-MetLyra]]
+[[Leave the den->RustTownAlleyway]]
+
+:: RustTownTechDen-MetLyra-Sympathy
+You express sympathy for her family's story, but something holds you back from showing her the map. Lyra senses your hesitation. "Caution is smart in the wastes," she says, returning to her work. "But certainty is rare. If you find any proof of Haven-0, you know where to find me."
+[[Leave the tech den->RustTownAlleyway]]

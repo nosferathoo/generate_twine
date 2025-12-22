@@ -1,0 +1,918 @@
+:: StoryData
+:: StoryStart
+The wind howls across the desolate plains, a gritty symphony of a dead world. Ash falls like a constant, grey snow, coating the ruins of the old civilization in a fine powder that chokes the lungs and stings the eyes. You are the Wanderer, a survivor etched by this harsh reality. In your pack, wrapped in oilcloth, lies your most precious possession: a charred fragment of a map, snatched from a ruined library. The fragment hints at a legend, a whispered hope—Haven-0, an old-world facility said to possess the power to cleanse the sky itself.
+
+But your fragment is incomplete. Three others are scattered across this toxic expanse, each one a key to a future free from the ash. Your goal is clear, yet the path is shrouded in peril. To the north, the jagged skyline of a derelict metropolis, the Rust, promises danger and forgotten secrets. To the east, the nomad caravans of the Dustborn occasionally trail through the canyons, rumors walking on two legs. And somewhere out there, the Steel Legion patrols, their iron discipline a threat to any lone traveler.
+
+You adjust the scarf over your face and look out from your current shelter, a crumbling overpass. The air crackles with the tension of an approaching storm. It is time to move. Do you brave the open wastes toward the city, seek the trade routes of the nomads, or attempt to find a more sheltered path through the treacherous sublevels?
+[[Head north, into the skeletal embrace of the Rust city.->RustOutskirts]]
+[[Follow the eastern canyon, hoping to find nomad tracks.->EasternCanyon]]
+[[Descend into the nearest access point for the old transit sublevels.->TransitAccessRuins]]
+
+:: RustOutskirts
+The Rust is a tomb of steel and concrete. Towering husks of buildings claw at the ash-grey sky. Your footsteps echo in the unnatural silence, broken only by the skittering of irradiated vermin. Ahead, a wide boulevard is choked with the rusted skeletons of ancient vehicles. Movement flickers in a second-story window—a scouting party? Raiders? Or something worse. You need to cross this open ground to reach the deeper, potentially richer ruins, but exposure is a gamble.
+[[Cross the boulevard quickly, risking visibility.->BoulevardCrossing]]
+[[Skirt the edges, using the collapsed storefronts for cover.->StorefrontAlley]]
+
+:: EasternCanyon
+The canyon walls rise like ragged sentinels, their striated rock stained with mineral veins. The air is clearer here, the ashfall less severe. Soon, you find what you were hoping for: the distinct pattern of recent foot traffic and the wide, shallow ruts of wagon wheels. The Dustborn have passed through recently. The trail leads deeper into the canyon, where the shadows grow long. Following it could lead to a caravan... or an ambush.
+[[Follow the trail cautiously.->CanyonTrail]]
+[[Climb the canyon wall for a better vantage point.->CanyonVantage]]
+
+:: TransitAccessRuins
+A collapsed entrance, half-buried by a landslide, reveals a staircase leading down into darkness. The air that wafts up is stale but breathable, a relic of old filtration systems. Faint, flickering emergency lights cast long shadows on the grimy tiles below. This sublevel was part of the old transit network. It promises shelter from the storms and a direct route under the wasteland, but the deep dark hides unknown dangers.
+[[Venture down into the sublevels.->TransitPlatform]]
+
+:: BoulevardCrossing
+You sprint across the open asphalt, your heart pounding. Halfway across, a sharp whistle cuts the air. A shot ricochets off a car door near your feet. Steel Legion scouts are on the rooftop opposite, their rifles trained on you. Their leader, a grim-faced man with a captain's insignia, shouts a demand. "Halt! Identify yourself and surrender your belongings for inspection!"
+[[Stand your ground and refuse.->RustConfrontation-WithBronn]]
+[[Try to reason with them, offering a trade.->RustConfrontation-WithBronn]]
+[[Turn and flee back the way you came.->RustOutskirts]]
+
+:: StorefrontAlley
+You move like a ghost along the crumbling facades, staying in the shadows. The movement in the window doesn't react. Peering into a shattered display window, you see a small, sealed compartment behind a fallen counter. It looks like an old security box, possibly untouched. Getting to it would mean making noise inside the unstable structure.
+[[Ignore the box and continue toward the city center.->RustCityCenter]]
+[[Attempt to pry open the box.->StorefrontBox]]
+
+:: CanyonTrail
+The trail winds along a dry riverbed. Around a bend, you come upon a scene of recent violence. A small wagon lies on its side, its contents scattered. A lone figure is hunched over a wounded draft animal, trying to calm it. It's a young person, their face streaked with dust and tears. They look up, startled by your approach. This must be Moth, the Dustborn courier you've heard of, and they've been ambushed.
+[[Approach slowly, offering help.->CanyonAmbush-MetMoth]]
+[[Stay hidden and observe, assessing the danger.->CanyonAmbushObservation]]
+
+:: CanyonVantage
+Climbing the rugged wall is treacherous, but the view from the top is revealing. You can see the canyon system sprawling out. The trail you were following continues to a small oasis with a few figures gathered. Further east, a massive, dark cloud churns on the horizon—an ash storm of immense size, moving faster than any you've seen. It will be here in hours. You also spot a lone figure tending to a wounded animal near an overturned wagon below.
+[[Descend quickly to warn the figure about the storm.->CanyonAmbush-MetMoth-WithMoth]]
+[[Head towards the oasis to seek shelter.->DesertOasis]]
+
+:: TransitPlatform
+You emerge onto a vast, dark platform. A single ghost train sits dormant on the tracks, its windows dark. The air is cold and still. A terminal screen flickers weakly, displaying a corrupted schematic of the network. One line is highlighted: "Skybreaker Sublevel 2 - Authorized Personnel Only." A low hum emanates from a maintenance hatch nearby, a sign of possible power.
+[[Investigate the humming maintenance hatch.->MaintenanceHatch]]
+[[Board the ghost train to see if it can be activated.->GhostTrain]]
+
+:: RustConfrontation-WithBronn
+Captain Bronn Hale descends from the rooftop, his soldiers forming a perimeter around you. His eyes are hard, calculating. "A lone wolf in the Rust. Dangerous place. You look like you've been traveling long. That fragment you carry... we know of it. The Legion seeks all pieces of the Haven map. Join us. Contribute to the new order. Or be relieved of your burden." He offers a stark choice: subjugation or confiscation.
+[[Reluctantly agree to join the Steel Legion.->LegionCamp-JoinedLegion]]
+[[Refuse and attempt to fight your way out.->RustConfrontationFight]]
+[[Try to bluff, claiming you have information they need.->RustConfrontationBluff]]
+
+:: StorefrontBox
+You carefully shift the debris and pry at the box with your knife. It creaks open. Inside, nestled in foam, is a second map fragment, surprisingly pristine. You quickly secure it in your pack. Now you have two of the four fragments. A sound from above—a piece of concrete falls. This place is not stable.
+[[Exit the storefront quickly and head deeper into the city.->RustCityCenter-HasMapFragment2]]
+
+:: RustCityCenter
+The heart of the Rust is a plaza dominated by a fractured monument. The silence here is deeper, more profound. On the monument's base, someone has scratched a series of complex equations and diagrams. They look like atmospheric energy calculations. This is the work of a knowledgeable mind, recently left. A scrap of cloth, cleaner than the environment, is caught on a sharp edge. It smells of ozone and old books.
+[[Follow the clues, looking for the author of the equations.->MonumentEquations]]
+[[Search the surrounding buildings for supplies or danger.->CityCenterRuins]]
+:: CanyonAmbush-MetMoth
+You approach the overturned wagon slowly, hands raised to show you mean no harm. Moth watches you, their fear easing slightly as you get closer. The wounded animal lets out a soft whimper. The air grows heavy, and the first gritty flakes of the ash storm begin to swirl in the canyon. "We can't stay here," Moth says, their voice tight with urgency. "The storm will be here soon. I know a place, but it's... strange."
+[[Follow Moth to the relay station.->RelayStationApproach-MetMoth]]
+[[Ask Moth about the Ravens and the captured nomads first.->CanyonAmbushDiscussion-MetMoth]]
+:: CanyonAmbushObservation
+From your hiding spot, you watch as the young courier, Moth, finally manages to calm the animal. They then begin gathering scattered supplies with a desperate efficiency. They are alone and vulnerable. The approaching storm clouds are now visible from the canyon floor, a dark smear advancing quickly. Moth seems unaware of the imminent danger.
+[[Reveal yourself and warn them about the storm.->CanyonAmbush-MetMoth]]
+[[Continue to watch, waiting to see if the raiders return.->CanyonAmbushWait]]
+:: DesertOasis
+The oasis is a small cluster of hardy, mutated trees around a contaminated pool. A few Dustborn nomads are securing their tents against the approaching storm you spotted. They are wary of you, a stranger. Their elder points to the black sky. "The Ashwitch's storm. She calls it. No natural cloud moves so fast. You seek shelter? We have little to spare. But you have strong arms. Help us secure the camp, and you can stay."
+[[Agree to help the nomads secure their camp.->OasisShelter]]
+[[Decline and rush to find your own shelter elsewhere.->OasisRefusal]]
+
+:: MaintenanceHatch
+The hatch leads to a narrow utility corridor buzzing with power. The walls are lined with thick cables. At the end of the corridor, a woman with tools is interfacing with a junction box, her hands glowing with subtle energy. She turns, startled. Her eyes are sharp, intelligent. "Who are you? The substation hasn't had visitors in a decade." This is Lyra Kade, the Ashwitch. She seems to be rerouting power, but for what purpose?
+[[Greet her cautiously, asking about her work.->SubstationCorridor-MetLyra]]
+[[Assume she is a threat and prepare to defend yourself.->SubstationConfrontation-MetLyra]]
+
+:: GhostTrain
+The train car is dark and cold. The control panel is dead. As you move through the passenger car, a figure stirs in a seat at the far end. An old man, hunched and muttering to himself, clutches a data-slate. "The ratios are wrong... the purification matrix will overload..." He looks up, his eyes wild with a mix of genius and madness. "You! Are you from the committee? I told them! Haven-0 requires synchronication! Four keys!" This is Dr. Oren Vale.
+[[Calmly try to engage the old scientist.->GhostTrain-MetOren]]
+[[Back away slowly, fearing his instability.->GhostTrainRetreat]]
+
+:: LegionCamp-JoinedLegion
+The Legion camp is a rigid grid of tents and prefab structures. You are given a standard-issue uniform and your map fragment is "logged for the cause." Captain Bronn assigns you to a scavenging unit. The mission: raid a known Technic Union outpost for potential intel on the other fragments. You are now part of the machine, your personal goal subsumed by the Legion's ambition.
+[[Follow orders and prepare for the raid.->LegionRaidPrep-JoinedLegion]]
+[[Question the morality of raiding the Technic Union.->LegionCampDoubt-JoinedLegion]]
+
+:: RustConfrontationFight
+You draw your weapon. The fight is swift and brutal. Outnumbered and outgunned, you manage to wound two soldiers before a rifle butt to the head sends you sprawling. Your last sight is Captain Bronn standing over you, picking up your map fragment from the dust. "A waste of potential."
+[[->Ending-LegionExecution]]
+
+:: RustConfrontationBluff
+"You're too late," you say, staring down Bronn. "The Technic Union already has the other fragments. I was just a scout. Attack me, and you'll trigger their retaliation." Bronn studies you, a slow smile spreading across his face. "A bold lie. The Union is in disarray. But I appreciate audacity. Disarm him. He'll be useful for interrogation."
+[[->Ending-LegionInterrogation]]
+
+:: RustCityCenter-HasMapFragment2
+You search the plaza tirelessly, but the ash and debris have buried your lost fragment. It is gone forever. With only the fourth fragment, your quest for Haven-0 is over.
+[[->Ending-IncompleteMap]]
+:: MonumentEquations
+Following the direction implied by the equations, you find a hidden entrance behind a collapsed wall, leading into a pre-Cataclysm research bunker. Inside, the air is clean. A figure is hunched over a workstation—Dr. Oren Vale, his hands shaking as he inputs data. He mutters about "calibration" and "the great filter." He hasn't noticed you yet.
+[[Announce your presence calmly.->ResearchBunker-MetOren]]
+[[Observe him silently to understand his goal.->ResearchBunkerObservation]]
+
+:: CityCenterRuins
+Searching a nearby administrative building, you find little of value except for a dated logbook. The last entry describes the evacuation of a key science team to a facility called "Haven-0" just before the Cataclysm. The entry is signed by a Dr. Vale. A loud crash echoes from the plaza—the monument has partially collapsed. You are not alone here.
+[[Investigate the noise at the monument.->MonumentCollapse]]
+[[Use the distraction to leave the city center.->RustExit]]
+
+:: RelayStationApproach-MetMoth-WithMoth
+Moth leads you to the relay station. The storm is now a deafening roar.
+[[Enter the relay station.->RelayStationInside-MetMoth-WithMoth]]
+[[Suggest finding a different shelter.->CanyonAlternative-MetMoth-WithMoth]]
+:: CanyonAmbushDiscussion-MetMoth-WithMoth
+Moth explains that the Ravens are a brutal gang that preys on caravans. They took the other nomads as prisoners, likely to sell to the Legion or the Technic Union as labor. Moth's knowledge of hidden paths is extensive. The storm is intensifying, and the first gusts of ash-filled wind whip through the canyon. Shelter is now urgent.
+[[Ask Moth to lead you to the nearest safe shelter.->RelayStationApproach-MetMoth-WithMoth]]
+[[Propose tracking the Ravens to rescue the captured nomads.->RavenTrackProposal-MetMoth-WithMoth]]
+
+:: CanyonAmbushWait
+You wait as the storm front hits. The canyon becomes a maelstrom of choking ash and howling wind. Moth and their animal are swallowed by the gloom, their fate unknown. You are forced to retreat, finding meager shelter under a rock overhang. You survive the storm, but alone, and having failed to act.
+[[->Ending-AloneInTheStorm]]
+
+:: OasisShelter
+You work tirelessly with the nomads, anchoring tents and securing supplies. The storm hits with fury, but the camp holds. In gratitude, the elder shares a rumor: a technomancer exiled from the Union, called the Ashwitch, was seen near the old transit lines. She is said to understand the storms and the old tech. She might know about the map fragments.
+[[Ask for directions to the transit lines after the storm.->OasisAftermath]]
+[[Stay with the nomads for a while, learning their ways.->OasisStay]]
+
+:: OasisRefusal
+You turn away from the oasis, seeking shelter in a small cave you spotted. The storm is vicious, and the cave offers poor protection. You survive, but are weakened by ash inhalation. Emerging, you see the nomad camp intact in the distance. Your path is now harder.
+[[->WastelandWeakened]]
+
+:: SubstationCorridor-MetLyra
+Lyra Kade lowers her tools. "I'm diverting residual power to a weather array," she explains. "Trying to predict the storm patterns. You're not Legion. Not Union. Who are you?" You mention your search for Haven-0. Her eyes narrow with interest. "The fairy tale. I've seen data... contradictory data. If you're serious, I might be able to help. But my help has a price. The Union exiled me for a reason."
+[[Ask what her price is.->SubstationDeal-MetLyra]]
+[[Express skepticism about her motives.->SubstationDoubt-MetLyra]]
+
+:: SubstationConfrontation-MetLyra
+You raise your weapon. Lyra sighs, not with fear, but with annoyance. A surge of energy arcs from the junction box to your weapon, overloading it and throwing you back against the wall. "A blunt approach," she says, standing over you. "I have no quarrel with wanderers. But you've made one with me." She leaves you stunned in the corridor, taking your pack with the map fragment.
+[[->Ending-DisarmedAndStranded]]
+
+:: GhostTrain-MetOren
+Dr. Vale looks at you, a spark of clarity in his eyes. "The keys... the fragments! You have one? I have one! But the other two... the synchronization must be perfect!" He frantically shows you his data-slate. He possesses a third map fragment and a deep, if fractured, understanding of Haven-0's systems. But he is paranoid, fearful of both the Legion and the Technic Union.
+[[Propose working together to find the final fragment.->GhostTrainAlliance-MetOren-WithOren]]
+[[Try to take his fragment by force, fearing his instability.->GhostTrainTheft-MetOren]]
+
+:: GhostTrainRetreat
+You back away towards the train door. Dr. Vale's pleading turns to anger. "Running away! Just like the committee! Cowards!" He throws his data-slate at the door as it closes. You escape, but leave behind a potential ally and a crucial piece of the puzzle. The ghost train whirs to life momentarily, then falls dark again, sealing him inside.
+[[->TransitPlatform]]
+
+:: LegionRaidPrep-JoinedLegion
+You gear up with the Legion squad. The raid is a success, a swift, violent takeover of the small outpost. In the comms room, you find a data-chip containing logs. One log mentions a sighting: "Ashwitch activity detected near Skybreaker Ridge. Possible connection to Haven myth." Bronn assigns you to a new mission: find and capture Lyra Kade.
+[[Accept the mission to capture the Ashwitch.->SkybreakerRaid-JoinedLegion]]
+[[Sabotage the mission data and desert the Legion.->LegionDesertion-JoinedLegion]]
+
+:: LegionCampDoubt-JoinedLegion
+You voice your concerns to Bronn. He listens coldly. "Doubt is a luxury we cannot afford. Order is built on obedience. Your assignment is rescinded. Report to the quartermaster for reassignment to waste disposal." You are sidelined, your skills wasted on menial tasks. Your dream of Haven-0 fades within the Legion's rigid structure.
+[[->Ending-CogInTheMachine]]
+
+:: SkybreakerApproach-HasMapFragment2
+The journey to Skybreaker Ridge is long. The ridge is a monstrous wall of rock, its peak shrouded in perpetual storm clouds. At its base, you find signs of recent activity: a hidden entrance to a facility, its door slightly ajar. Faint sounds of machinery come from within. This must be the place.
+[[Enter the Skybreaker facility.->SkybreakerEntrance-HasMapFragment2]]
+
+:: CityCenterSearch-HasMapFragment2
+Your search reveals a hidden lift behind a power conduit. It descends deep underground into a pristine laboratory. Dr. Oren Vale is here, connected to a complex console. "At last!" he cries. "The second key! Now we can begin the calibration!" He is so focused on your fragment that he doesn't notice the Legion patrol that has followed you down.
+[[->LaboratoryConfrontation-HasMapFragment2]]
+:: ResearchBunker-MetOren
+You watch as Dr. Vale works himself into a frenzy, inputting flawed data. Alarms blare on his console. "No! The cascade is beginning! It's all wrong!" He grabs a third map fragment from his desk and runs from the bunker in a panic, leaving the systems on the verge of catastrophic failure.
+[[Chase after Dr. Vale to stop him.->ValeChase]]
+[[Attempt to shut down the failing systems.->BunkerShutdown]]
+:: ResearchBunkerObservation
+You watch as Dr. Vale works himself into a frenzy, inputting flawed data. Alarms blare on his console. "No! The cascade is beginning! It's all wrong!" He grabs a third map fragment from his desk and runs from the bunker in a panic, leaving the systems on the verge of catastrophic failure.
+[[Chase after Dr. Vale to stop him.->ValeChase]]
+[[Attempt to shut down the failing systems.->BunkerShutdown]]
+:: MonumentCollapse
+The monument has crumbled, revealing a hidden compartment underneath. Inside is a skeleton clutching a sealed tube. Inside the tube is the fourth and final map fragment. But as you take it, the ground trembles. The collapse has attracted a pack of large, mutated predators that now surround the plaza.
+[[Stand and fight the creatures.->PlazaFight]]
+[[Try to flee with the fragment.->PlazaEscape]]
+
+:: RustExit
+You leave the city center as the storm finally breaks. Ash falls thick and fast, reducing visibility to zero. You become disoriented, lost in the skeletal ruins. Your supplies run low. The map fragment feels like a curse, leading you nowhere.
+[[->Ending-LostInTheRust]]
+
+:: RelayStationInside-MetMoth-WithMoth
+Inside, a hologram of Lyra Kade appears. She transmits coordinates to a bunker.
+[[Follow the coordinates.->AshwitchBunker-MetMoth-WithMoth-MetLyra]]
+[[Stay in the station.->RelayStationStorm-MetMoth-WithMoth]]
+:: CanyonAlternative-MetMoth-WithMoth
+You find a narrow cave. It's cramped but safe. Moth shares stories. The storm passes.
+[[Travel with Moth to find the mad scientist.->TransitAccessSearch-MetMoth-WithMoth]]
+:: RavenTrackProposal-MetMoth-WithMoth
+Moth explains that the Ravens are a brutal gang that preys on caravans. They took the other nomads as prisoners, likely to sell to the Legion or the Technic Union as labor. Moth's knowledge of hidden paths is extensive. The storm is intensifying, and the first gusts of ash-filled wind whip through the canyon. Shelter is now urgent.
+[[Ask Moth to lead you to the nearest safe shelter.->RelayStationApproach-MetMoth-WithMoth]]
+:: OasisAftermath
+The elder points you towards the ruined metro entrance. You travel for two days. Approaching the entrance, you see a figure standing guard—a Steel Legion scout. The Legion has found the location. You can try to circumvent them or attempt to negotiate.
+[[Sneak past the Legion scout.->TransitAccessSneak]]
+[[Approach the scout under a flag of parley.->TransitAccessParley]]
+
+:: OasisStay
+You spend weeks with the nomads, learning their resilience. They become your family. The quest for Haven-0 slowly fades into a distant dream, replaced by the daily struggle for survival. You find a different kind of peace.
+[[->Ending-FoundFamily]]
+
+:: WastelandWeakened
+Coughing and weak, you press on. Your judgment is clouded. You stumble into a contested zone between the Legion and the Ravens. Captured without a fight, you are stripped of your belongings and thrown into a labor gang. The fragment is lost.
+[[->Ending-Captured]]
+
+:: SubstationDeal-MetLyra
+"My price is protection," Lyra says. "The Union wants me silenced. Help me deal with a Union strike team that's been tracking me, and I'll give you the data I have on Haven-0's location—and help you read the atmospheric signs to reach it safely." It's a dangerous bargain.
+[[Accept Lyra's deal.->SubstationAmbush-MetLyra-WithLyra]]
+[[Refuse, unwilling to fight her battles.->SubstationRefusal-MetLyra]]
+
+:: SubstationDoubt-MetLyra
+"You expect me to trust an exile?" you ask. Lyra's face hardens. "Trust is a commodity no one can afford. Then you have no business with the old world's secrets." She seals the junction box and vanishes down a dark corridor, leaving you alone with the hum of the machinery.
+[[->SubstationDeadEnd]]
+
+:: GhostTrainAlliance-MetOren-WithOren
+Dr. Vale clutches his fragment and slate, agreeing to join you. "We must go to Skybreaker! The central terminal is there!" He leads you out of the train and into the tunnels. He knows a secure route through the sublevels, avoiding the main dangers. He talks incessantly about synchronization protocols.
+[[Follow Oren to the Skybreaker facility.->SkybreakerEntrance-MetOren-WithOren-HasMapFragment2]]
+:: GhostTrainTheft-MetOren
+You lunge for the data-slate. Oren fights back with surprising strength, screaming about saboteurs. In the struggle, the data-slate is damaged, and the third fragment falls into a grating and is lost. Oren collapses into sobs. You have gained nothing and destroyed a crucial hope.
+[[->Ending-BrokenAlliance]]
+
+:: SkybreakerRaid-JoinedLegion
+You lead the Legion squad to the coordinates near Skybreaker Ridge. You find Lyra's bunker. The assault is fierce. Lyra fights with summoned arcs of energy, but is overwhelmed. As she is captured, she looks at you with contempt. "You traded a chance at salvation for a tyrant's praise." Bronn congratulates you, but the victory feels hollow.
+[[->Ending-LegionVictory]]
+
+:: LegionDesertion-JoinedLegion
+You alter the mission logs and slip away from the camp under cover of darkness. You are a deserter, hunted by the very force you joined. Your path is now far more dangerous, but your will is your own again. You head towards Skybreaker, hoping to find answers before the Legion finds you.
+[[->SkybreakerApproach-HasMapFragment2]]
+
+:: SkybreakerEntrance-HasMapFragment2
+The facility entrance opens into a vast cavern dominated by ancient machinery. In the center, a control console awaits, with four empty slots. You have two fragments. Suddenly, a door hisses open on the far side. Lyra Kade steps out, holding a third fragment. "I see our goals align, Wanderer," she says. But then, from behind you, Captain Bronn and his soldiers enter, aiming their weapons. "Stand down. The facility is Legion property now."
+[[->FinalConfrontation-HasMapFragment2-MetLyra]]
+
+:: LaboratoryConfrontation-MetOren-HasMapFragment2
+The Legion patrol storms in. Dr. Vale panics and activates a defense protocol. Energy shields seal the room. "We're trapped!" he yells. The Legion commander gives an ultimatum: surrender the fragments or be sealed in forever. Oren whispers, "The console... we can overload it. A final act."
+[[Surrender the fragments to the Legion.->Ending-LegionControl]]
+[[Help Oren overload the console, destroying the lab.->Ending-Sacrifice]]
+:: BunkerAlliance-MetOren-WithOren
+The two of you carefully study the map data pointing to Skybreaker Ridge. Dr. Vale, stabilized by your partnership, helps plan the journey. "We must avoid Legion patrols," he murmurs. "The primary routes will be watched." You gather supplies and prepare for the final, dangerous trek to the heart of the old world's hope.
+[[Begin the journey to Skybreaker.->SkybreakerEntrance-MetOren-WithOren-HasMapFragment2]]
+:: BunkerShutdown
+You manage to input a shutdown sequence, but it requires a manual valve turn in a radioactive chamber. You succeed, saving the bunker from explosion, but absorb a lethal dose of radiation. As you fade, you see Dr. Vale's data on the screen, the location of Haven-0 clear but now useless to you.
+[[->Ending-HeroicDeath]]
+
+:: ValeChase
+You chase Dr. Vale through the ruins. He is fast and desperate. He leads you to a unstable ledge high above the city. He trips and falls, dropping the fragment. You catch it, but cannot save him. You have the third fragment, but the loss of his knowledge is a heavy price.
+[[->RustCityCenter-HasMapFragment2-HasMapFragment3]]
+:: PlazaFight
+The fight is brutal. You defeat the creatures, but are severely wounded. With your last strength, you take the fourth fragment. But you cannot travel. You sit against the broken monument, clutching the complete set of maps, as the ash continues to fall.
+[[->Ending-FutileVictory]]
+
+:: PlazaEscape
+You run, the creatures in hot pursuit. You manage to lose them in the tight alleyways, but in your panic, you drop your original map fragment. You escape with the new fourth fragment, but now you are missing a crucial piece of the puzzle.
+[[->RustOutskirts-HasMapFragment4]]
+
+:: AshwitchBunker-MetMoth-WithMoth-MetLyra
+You reach the bunker. Lyra lets you in. She has the third fragment.
+[[Join forces.->SkybreakerEntrance-MetMoth-WithMoth-MetLyra-WithLyra-HasMapFragment3]]
+:: RelayStationStorm-MetMoth-WithMoth
+You ignore the coordinates. The storm strikes the station directly. A power surge arcs through the building.
+[[->Ending-TragicLoss]]
+:: TransitAccessSearch-MetMoth-WithMoth
+Moth leads you to the transit access. Descending, you find the path blocked by rubble.
+[[->SublevelsBlocked-MetMoth-WithMoth]]
+:: CanyonParting-MetMoth
+You part ways with Moth, who heads back to find their people. You continue your quest alone, the memory of their hope a small comfort in the bleakness.
+[[->EasternCanyon-MetMoth]]
+
+:: RavenCampDiversion-MetMoth-WithMoth
+You create a noise distraction at one end of the camp. While the guards investigate, Moth sneaks in and frees the captives. The escape is chaotic, but successful. The freed nomads offer you their eternal gratitude and a secret they've guarded: the location of the fourth map fragment, hidden in a sacred cave.
+[[Travel to the sacred cave with the nomads.->SacredCave-MetMoth-WithMoth]]
+:: RavenCampStealth-MetMoth-WithMoth
+Under cover of night and storm, you sneak into the camp. You free the nomads silently. But as you escape, a guard sounds the alarm. A chase ensues through the canyon. Moth is hit by a stray shot and falls. You escape with the other nomads, but without your young guide.
+[[Travel to the sacred cave with the nomads.->SacredCave-MetMoth]]
+:: TransitAccessSneak
+You manage to sneak past the scout and descend into the sublevels. You are back on the path, but the Legion now knows someone is using this entrance.
+[[->TransitPlatform]]
+
+:: TransitAccessParley
+The scout is suspicious but allows you to pass when you mention the Ashwitch. "She's a person of interest. If you see her, report to the Legion." You agree, a lie on your lips, and descend.
+[[->TransitPlatform]]
+
+:: SubstationAmbush-MetLyra-WithLyra
+The Union strike team arrives. The fight is intense. Using the substation's terrain, you and Lyra defeat them. True to her word, Lyra gives you the data and agrees to guide you. "The final fragment is with a scientist, Oren Vale. He's unstable. We must be careful."
+[[Travel with Lyra to find Dr. Vale.->ValeHunt-MetLyra-WithLyra]]
+:: SubstationRefusal-MetLyra
+You leave the substation. Without Lyra's help, the path to Skybreaker is fraught with unpredictable storms. Your journey is slow and perilous. You arrive at the facility weakened and alone, only to find it already occupied by the Legion.
+[[->SkybreakerEntrance-HasMapFragment2-LegionControlled]]
+:: SubstationDeadEnd
+The corridor leads to a dead end. The power fails, plunging you into darkness. You are forced to retrace your steps, having wasted precious time.
+[[->TransitPlatform]]
+
+:: SkybreakerEntrance-MetOren-WithOren-HasMapFragment2
+The massive door to the facility is sealed. Dr. Vale examines the console beside it. "The lock is keyed to the fragments. With two, we can partially bypass it." He inputs a sequence, and a smaller maintenance hatch hisses open nearby. "This will lead us inside, but we must be cautious. The main chamber may be occupied."
+[[Enter through the maintenance hatch.->SkybreakerInterior-MetOren-WithOren-HasMapFragment2]]
+:: RustCityCenter-HasMapFragment2-HasMapFragment3
+With three fragments, the map is almost whole. It clearly points to Skybreaker. But you are wounded and alone. The journey will be a test of endurance.
+[[Begin the arduous trek to Skybreaker Ridge.->SkybreakerApproach-HasMapFragment2-HasMapFragment3]]
+
+:: RustOutskirts-HasMapFragment4
+You have the fourth fragment, but not the first. The map is useless without all pieces. Your quest is stalled. You must retrace your steps or find new information.
+[[Return to the city center to search for your lost fragment.->RustCityCenter-HasMapFragment4]]
+
+:: SkybreakerEntrance-MetMoth-WithMoth-MetLyra-WithLyra-HasMapFragment3
+Your group arrives at the facility. With Lyra's third fragment, you have three. The console awaits. But the final fragment is missing. Moth remembers a story about a fragment held sacred by the nomads, hidden in a cave. That must be the fourth.
+[[Send the group to the nomad sacred cave.->SacredCave-MetMoth-WithMoth-MetLyra-WithLyra-HasMapFragment3]]
+:: SublevelsBlocked-MetMoth-WithMoth
+The path is blocked. You and Moth seek another route.
+[[->TransitAccessRuins-MetMoth-WithMoth]]
+:: EasternCanyon-MetMoth
+You travel on, alone again. The canyon seems emptier without Moth's presence. The memory of their hope fuels your determination.
+[[->CanyonTrail-MetMoth]]
+:: SacredCave-MetMoth-WithMoth
+The sacred cave is a place of quiet beauty, untouched by the ash. The fourth fragment is resting on a natural stone altar. As you take it, a sense of peace fills you. You now have all four pieces.
+[[Travel to the Skybreaker facility with the complete map.->SkybreakerEntrance-MetMoth-WithMoth-HasMapFragment4]]
+:: CanyonEscape-MetMoth
+You help the nomads reach safety. They are grateful, but mourn the loss of Moth. They offer you the location of the fourth fragment as a reward for your bravery. Your quest continues, but with a heavy heart.
+[[Travel to the sacred cave to retrieve the fragment.->SacredCave-MetMoth]]
+:: ValeHunt-MetLyra-WithLyra
+Lyra and Dr. Vale agree to join you. Your group now has the third fragment. Dr. Vale leads you through the sublevels toward the facility, his knowledge of the old systems proving invaluable. The path is secure but long.
+[[Proceed to the Skybreaker facility.->SkybreakerEntrance-MetLyra-WithLyra-MetOren-WithOren-HasMapFragment2-HasMapFragment3]]
+:: FinalAlliance-MetOren-WithOren-MetLyra-WithLyra-HasMapFragment2-HasMapFragment3
+Lyra studies the partial map. "The fourth fragment... the Rust city monument. It's the most logical location." She looks at you and Oren. "I can get there fastest, using the old transit lines to avoid the storm brewing to the east. I'll retrieve it." Oren nods, his hands trembling with anticipation. "Yes... yes! We will prepare the console. Go, quickly!"
+[[Wait with Oren at the facility for Lyra's return.->SkybreakerWait-MetOren-WithOren-MetLyra-HasMapFragment2-HasMapFragment3]]
+[[Accompany Lyra back to the Rust city to help.->MonumentExpedition-MetLyra-WithLyra-MetOren-HasMapFragment2-HasMapFragment3]]
+:: SkybreakerApproach-HasMapFragment2-HasMapFragment3
+The trek is punishing. You arrive at the facility exhausted. The entrance is unguarded. Inside, the console waits. You place your two fragments. The machine activates partially, but without all four, it cannot achieve full power. It's a start, but the work is not finished.
+[[->Ending-PartialSuccess]]
+
+:: RustCityCenter-HasMapFragment4
+You search the plaza tirelessly, but find nothing. With only the fourth fragment, your quest for Haven-0 is over.
+[[->Ending-IncompleteMap]]
+:: SacredCave-MetMoth-WithMoth-MetLyra-WithLyra-HasMapFragment3
+The journey to the cave is peaceful. You retrieve the fourth fragment. Your group is now complete, as is the map. The path to salvation is clear.
+[[Return to Skybreaker with the final key.->SkybreakerFinale-MetMoth-WithMoth-MetLyra-WithLyra-HasMapFragment3-HasMapFragment4]]
+
+:: TransitAccessRuins-MetMoth-WithMoth
+You emerge from the sublevels. Together, you plan your next move.
+[[->EasternCanyon-MetMoth-WithMoth]]
+:: CanyonTrail-MetMoth
+The trail feels familiar. You move with purpose, driven by the memory of your allies and the goal that unites you all.
+[[->DesertOasis-MetMoth]]
+
+:: SacredCave-MetMoth
+The sacred cave is a place of quiet beauty. The fourth fragment rests on a natural stone altar. You take it.
+[[Travel to the Skybreaker facility.->SkybreakerApproach-MetMoth-HasMapFragment4]]
+:: SkybreakerEntrance-MetLyra-WithLyra-MetOren-WithOren-HasMapFragment3
+Your group arrives at the Skybreaker facility. With three fragments, you need the fourth. The entrance is sealed, but Dr. Vale's bypass works. The maintenance hatch hisses open.
+[[Enter through the maintenance hatch.->SkybreakerInterior-MetLyra-WithLyra-MetOren-WithOren-HasMapFragment3]]
+:: SkybreakerFinale-MetMoth-WithMoth-MetLyra-WithLyra-HasMapFragment3-HasMapFragment4
+The four map fragments slot into the console. The machinery of Haven-0 awakens with a deep, resonant hum. Lights cascade across the vast chamber. Lyra and Oren work in tandem, calibrating the atmospheric purifiers. Moth watches in awe. A beam of pure energy shoots into the sky, beginning to disperse the ash clouds. For the first time in generations, a patch of blue sky becomes visible. The long winter is ending.
+[[->Ending-NewDawn]]
+
+:: SkybreakerFinale-MetOren-WithOren-MetLyra-WithLyra-HasMapFragment4
+With the four fragments in place, Haven-0 activates. Dr. Vale's hands are steady now, his mind clear as he directs the purification sequence. Lyra manages the power flow. The great work begins. The atmosphere slowly starts to clear. It will take years, but the world has been given a second chance. You stand together, architects of a future.
+[[->Ending-Redemption]]
+:: SacredCaveFinal-MetLyra-WithLyra-MetOren-WithOren
+Lyra and Oren return with the final fragment. The set is complete. The activation sequence is initiated. Haven-0 comes to life, its purpose fulfilled. The healing of the world begins.
+[[->SkybreakerFinale-MetLyra-WithLyra-MetOren-WithOren-HasMapFragment4]]
+:: Ending-NewDawn
+The light from Haven-0 spreads across the horizon. The ash storms cease. The Wanderer, Lyra, Moth, and the nomads become the founders of a new society, one built on cooperation and the hope you fought to restore. The wasteland begins to heal, and life slowly returns to the planet.
+
+:: Ending-Redemption
+Haven-0 works as intended. The toxic skies begin to clear. Dr. Oren Vale is redeemed, his life's work finally achieving its purpose. Lyra Kade is pardoned and hailed as a hero. The Wanderer's name is remembered as the one who brought the keys together. A new age of science and recovery dawns.
+
+:: Ending-PartialSuccess
+The partial activation of Haven-0 creates a stable, clean zone around Skybreaker Ridge. A new settlement grows there, a beacon of safety in the wasteland. It is not the global salvation you hoped for, but it is a beginning. Future generations may complete the work.
+
+:: Ending-LegionExecution
+Captain Bronn Hale gives the order. Your journey ends in the dust of the Rust, another ghost added to the multitude. The Legion continues its grim search for the fragments, seeking control rather than salvation.
+
+:: Ending-LegionInterrogation
+The Legion interrogators are thorough. You break, revealing everything you know. The Legion uses your information to secure the other fragments faster. Haven-0 becomes a weapon of control under Bronn's command, a new tyranny under a cleansed sky.
+
+:: Ending-AloneInTheStorm
+You survive the storm, but the guilt of inaction haunts you. The map fragment feels like a curse. You wander the wastes alone, a specter of missed opportunities, until the ash claims you.
+
+:: Ending-FoundFamily
+You find contentment with the nomads. The quest for Haven-0 becomes a campfire story you tell the children, a legend of what might have been. Your family is your haven.
+
+:: Ending-Captured
+Your strength fails. You spend your remaining days in a labor gang, the dream of a clean sky a distant memory. The fragments are lost to the petty wars of the wasteland.
+
+:: Ending-DisarmedAndStranded
+Lyra leaves you wounded and disarmed in the sublevels. You eventually find your way out, but your spirit is broken. The map is gone. You become a scavenger, surviving day to day, all higher purpose extinguished.
+
+:: Ending-BrokenAlliance
+The loss of the third fragment and Dr. Vale's sanity is a blow from which the quest cannot recover. The path to Haven-0 is lost forever. You wander, knowing you shattered the world's best hope.
+
+:: Ending-LegionVictory
+The Legion controls Haven-0. They use it to create a clean atmosphere only over their territories, consolidating their power. The wasteland for everyone else remains. You are a hero of the Legion, but you have saved the world only for a select few.
+
+:: Ending-CogInTheMachine
+You fade into the ranks of the Legion. Your unique skills are wasted on mundane tasks. The map fragment is used by others. You follow orders until the day you die, a number in a system, your dream unfulfilled.
+
+:: Ending-LegionControl
+You surrender the fragments. The Legion secures Haven-0. Under their control, the technology is used to enforce a brutal peace. You are granted a comfortable prison, a witness to a salvation that became another form of damnation.
+
+:: Ending-Sacrifice
+You and Oren overload the core. The explosion destroys the lab and the Legion squad, but also vaporizes the fragments and the knowledge of Haven-0. You die knowing you denied the Legion ultimate power, but at the cost of the world's last hope.
+
+:: Ending-HeroicDeath
+You save the bunker and its data, a heroic act that will allow future explorers a chance. But you do not live to see it. Your death is not in vain, but it is an end.
+
+:: Ending-FutileVictory
+You die clutching the complete map, a cruel irony. The ash continues to fall. Your body is eventually found by scavengers, the maps scattered once more, the cycle beginning again.
+
+:: Ending-IncompleteMap
+With only one fragment, your quest is impossible. You live out your life in the wasteland, the symbol of hope forever out of reach. The ash never stops falling.
+
+:: Ending-TragicLoss
+The death of Moth and the loss of the map break you. You become a hermit, haunted by ghosts, a warning against mistrust and inaction in the face of offered help.
+
+:: CanyonAmbush-MetMoth-WithMoth
+You approach the overturned wagon slowly, hands raised to show you mean no harm. Moth watches you, their fear easing slightly as you get closer. The wounded animal lets out a soft whimper. The air grows heavy, and the first gritty flakes of the ash storm begin to swirl in the canyon. "We can't stay here," Moth says, their voice tight with urgency. "The storm will be here soon. I know a place, but it's... strange."
+[[Follow Moth to the relay station.->RelayStationApproach-MetMoth-WithMoth]]
+[[Ask Moth about the Ravens and the captured nomads first.->CanyonAmbushDiscussion-MetMoth-WithMoth]]
+
+:: DesertOasis-MetMoth
+The familiar sight of the oasis brings a pang of memory. The Dustborn nomads are there, preparing for a storm. They recognize you and Moth, and the elder nods in greeting. "The Ashwitch's storm approaches," the elder says, pointing to the darkening sky. "You have returned with a friend. There is room in the shelter if you help."
+[[Agree to help secure the camp.->OasisShelter-MetMoth]]
+[[Politely decline and seek shelter elsewhere with Moth.->OasisRefusal-MetMoth]]
+
+:: EasternCanyon-MetMoth-WithMoth
+You and Moth travel the canyon trail together.
+[[Continue following the trail.->CanyonTrail-MetMoth-WithMoth]]
+[[Climb to a vantage point.->CanyonVantage-MetMoth-WithMoth]]
+:: Ending-LostInTheRust
+The Rust becomes your eternal prison. The ash-filled corridors and collapsed buildings twist into an inescapable maze. Your supplies run out, your strength fails. You eventually succumb to the silence and the dust, another forgotten soul in the graveyard of the old world. The map fragment lies somewhere nearby, buried by the relentless fall of grey snow.
+
+:: FinalConfrontation-HasMapFragment2-MetLyra
+Captain Bronn gestures at the console. "Place your fragments. Now." Lyra stands defiant, her own fragment held tight. You are trapped between the Legion's brute force and Lyra's unpredictable power. The fate of Haven-0 hangs on your next move in this standoff.
+[[Side with Lyra against the Legion.->FinalConfrontationFight-HasMapFragment2-MetLyra-WithLyra]]
+[[Comply with Bronn's order, handing over your fragment.->Ending-LegionControl-HasMapFragment2]]
+[[Attempt to reason with both parties, proposing a truce.->FinalConfrontationTruce-HasMapFragment2-MetLyra]]
+
+:: SkybreakerApproach-MetMoth-HasMapFragment4
+The journey to the ridge is long. You arrive at the facility entrance.
+[[Enter the Skybreaker facility.->SkybreakerEntrance-MetMoth-HasMapFragment4]]
+:: SkybreakerEntrance-MetMoth-WithMoth-HasMapFragment4
+You and Moth stand before the massive door of the Skybreaker facility. You hold all four map fragments. The door opens silently, revealing the great chamber within. The purification console stands ready, bathed in a soft, waiting light. The machinery hums with anticipation.
+[[Enter the chamber and activate Haven-0.->SkybreakerFinale-MetMoth-WithMoth-HasMapFragment4]]
+:: SkybreakerEntrance-MetOren-WithOren
+Dr. Vale leads you to the facility entrance, his knowledge of the old systems allowing him to bypass security. The door slides open. The chamber inside is vast and silent, the immense machinery dormant. The console for the fragments is the room's centerpiece. "We need the other keys," Oren whispers, his eyes fixed on the empty slots.
+[[Search the facility for clues to the other fragments.->SkybreakerSearch-MetOren-WithOren]]
+:: SkybreakerFinale-MetLyra-WithLyra-MetOren-WithOren-HasMapFragment4
+The four fragments click into place. The chamber thrums. The purifiers awaken. The sky begins to clear.
+[[->Ending-Redemption]]
+:: CanyonTrail-MetMoth-WithMoth
+You and Moth follow the winding trail. Moth points out safe paths. The trail leads to a fork.
+[[Take the high path for a better view.->CanyonVantage-MetMoth-WithMoth]]
+[[Descend into the gorge.->CanyonGorge-MetMoth-WithMoth]]
+:: CanyonVantage-MetMoth-WithMoth
+Climbing alongside Moth, you reach a high ledge. You see the relay station and the approaching storm.
+[[Head for the relay station.->RelayStationApproach-MetMoth-WithMoth]]
+[[Search for a closer shelter.->CanyonShelterSearch-MetMoth-WithMoth]]
+:: Ending-LegionControl-HasMapFragment2
+You slowly place your two map fragments into Captain Bronn's outstretched hand. A grim smile of triumph spreads across his face. Lyra curses your name as Legion soldiers seize her fragment as well. With all three pieces in their possession, the Legion gains control of Haven-0. The facility is activated, but its cleansing power is directed only over Legion territories, creating a paradise for the chosen few while the rest of the world suffocates. You are granted a life of comforted captivity, a permanent reminder of the salvation you helped deliver into the hands of a tyrant.
+
+:: FinalConfrontationFight-HasMapFragment2-MetLyra-WithLyra
+You step beside Lyra, your decision made. Energy crackles around her hands as you draw your weapon. Captain Bronn barks an order, and his soldiers open fire. The chamber becomes a chaotic battlefield of gunfire and arcing energy. Lyra's power shorts out Legion rifles, and you fight with desperate strength. It is a fierce, close-quarters struggle for the future of the world.
+[[->Ending-StandoffVictory-HasMapFragment2-MetLyra-WithLyra]]
+
+:: FinalConfrontationTruce-HasMapFragment2-MetLyra
+You raise your hands, calling for a pause. "This isn't about control," you shout over the hum of the machinery. "It's about survival. Our survival. All of us." You propose a temporary alliance—use Haven-0 to cleanse the skies for everyone, then decide its future together. Bronn scoffs, but Lyra considers it. The tense silence stretches, filled with the thrum of the dormant machine.
+[[->Ending-UnlikelyTruce-HasMapFragment2-MetLyra]]
+
+:: OasisRefusal-MetMoth
+You and Moth thank the elder but explain you must move on. You find a small, secluded cave away from the oasis. The storm rages outside, but you are safe. In the quiet, Moth shares more about the nomad beliefs and the location of their sacred cave. When the storm passes, you have a new potential lead.
+[[Travel with Moth to the sacred cave.->SacredCave-MetMoth]]
+[[Head towards the transit lines to continue the original plan.->TransitAccessSearch-MetMoth]]
+:: OasisShelter-MetMoth
+You and Moth help the nomads batten down the camp, working quickly as the storm winds rise. The shelter holds firm. In gratitude, the elders share a meal and stories. They confirm the location of the sacred cave and hint that the fourth fragment might be found there.
+[[Ask for directions to the sacred cave after the storm.->SacredCave-MetMoth]]
+:: SkybreakerFinale-MetMoth-WithMoth-HasMapFragment4
+The four map fragments slot into the console. The machinery of Haven-0 awakens with a deep, resonant hum. Lights cascade across the vast chamber. A beam of pure energy shoots into the sky, beginning to disperse the ash clouds. For the first time in generations, a patch of blue sky becomes visible. The long winter is ending. You have achieved this with Moth, your journey shared.
+[[->Ending-NewDawn]]
+:: SkybreakerPlan-MetOren-WithOren
+Dr. Vale paces before the silent console. "The Legion will have one fragment. The Ashwitch, Lyra Kade, is rumored to have another. The fourth... the fourth is the mystery." He suggests a two-pronged approach: he will stay to study the facility's systems and prepare for activation, while you must venture out to find and secure the remaining fragments through diplomacy or force.
+[[Agree to leave Oren and search for the fragments.->SkybreakerDeparture-MetOren]]
+:: SkybreakerSearch-MetOren-WithOren
+You and Oren search the facility's control rooms and archives. You find damaged logs speaking of a "central archive" in the Rust city and of a "rogue operator" who diverted power to a substation—Lyra. The logs also mention a "fail-safe fragment" entrusted to the Dustborn nomads. The path is clear, but fraught with danger.
+[[Head to the Rust city to find the archive.->RustCityCenter-MetOren-WithOren]]
+:: CanyonGorge-MetMoth-WithMoth
+The gorge is deep and shadowed. A rockslide blocks the path. A mutated predator emerges.
+[[Stand your ground and fight.->GorgeConfrontation-MetMoth-WithMoth]]
+[[Climb the rockfall to escape.->GorgeEscape-MetMoth-WithMoth]]
+:: CanyonShelterSearch-MetMoth-WithMoth
+You find a narrow fissure leading to a small, dry cave. You are safe from the storm.
+[[Study the cave paintings.->CavePaintingStudy-MetMoth-WithMoth]]
+[[Wait out the storm.->CanyonShelterWait-MetMoth-WithMoth]]
+:: Ending-StandoffVictory-HasMapFragment2-MetLyra-WithLyra
+The last Legion soldier falls. The chamber is quiet save for the hum of the machinery and Captain Bronn's labored breathing, wounded but alive. Lyra secures the Legion's fragment. With three pieces, you activate Haven-0. The purification begins, but the victory is marred. The Legion will regroup, and the world's salvation is born from bloodshed. You and Lyra become the guardians of a fragile new beginning, forever watching the horizon for Bronn's return.
+
+:: Ending-UnlikelyTruce-HasMapFragment2-MetLyra
+To your astonishment, both Bronn and Lyra agree to a temporary truce. The fragments are placed. Haven-0 activates, its cleansing waves spreading impartially. The sky begins to clear. This fragile coalition holds long enough to see the first blue sky in generations, but the underlying tensions remain. The future is uncertain, but for now, the world has been given a chance.
+
+:: OasisStay-MetMoth
+Weeks turn into months. You learn the nomad ways, their songs, their resilience. Moth becomes a close friend. The quest for Haven-0 fades into a shared dream, less urgent than the daily rhythm of survival and community. You find a deep contentment in this simple, connected life, a different kind of haven built not on technology, but on trust.
+[[Continue the journey to find the fragments.->EasternCanyon-MetMoth]]
+:: RustCityCenter-MetOren-WithOren
+Dr. Vale leads you through the ruined plaza with a strange confidence, heading directly for the fractured monument. "The archive access is here," he mutters, brushing dust from the base. He presses a hidden sequence on the stone, and a section of the monument slides open, revealing a stairway descending into the earth. "The primary data core. If any fragment data remains, it will be here."
+[[Descend into the archive.->ResearchBunker-MetOren-WithOren]]
+:: SkybreakerDeparture-MetOren
+You leave Dr. Vale at the facility, his figure small against the vast machinery. "Be swift," he calls after you. "The Legion's sensors may detect the residual power soon." You descend the ridge alone, the weight of the quest now squarely on your shoulders. You must find Lyra and the final fragments before the Legion secures the area completely.
+[[Search for Lyra at the substation.->SubstationCorridor]]
+[[Head to the Rust city to find the archive.->RustCityCenter]]
+:: SubstationCorridor-MetOren-WithOren
+You and Dr. Vale descend into the substation. The humming corridor is just as you remember, but now Lyra Kade is not alone. A Technic Union strike team has pinned her down near the junction box. She is holding them off with arcs of energy, but she is outnumbered. She spots you and Oren, her expression shifting from desperation to grim hope. "A little help would be appreciated!" she shouts over the crackle of energy.
+[[Help Lyra fight the Union team.->SubstationAlliance-MetLyra-WithLyra-MetOren-WithOren]]
+:: CanyonShelterWait-MetMoth-WithMoth
+You wait out the storm. When it passes, an eerie quiet descends.
+[[Exit the cave.->CanyonTrail-MetMoth-WithMoth]]
+[[Examine the cave paintings.->CavePaintingStudy-MetMoth-WithMoth]]
+:: CavePaintingStudy-MetMoth-WithMoth
+The paintings depict a machine beneath a mountain with four symbols. Moth traces one. "The mark of the Dustborn."
+[[Head towards Skybreaker Ridge.->SkybreakerApproach-MetMoth-WithMoth]]
+:: GorgeConfrontation-MetMoth-WithMoth
+The creature lunges. You fight it off. The path is clear.
+[[Press on over the rockfall.->GorgeEscape-MetMoth-WithMoth]]
+:: GorgeEscape-MetMoth-WithMoth
+You scramble over the rocks. The relay station is visible in the distance.
+[[Head towards the station.->RelayStationApproach-MetMoth-WithMoth]]
+[[Avoid the station.->CanyonAlternative-MetMoth-WithMoth]]
+:: CaveSearch-MetMoth-WithMoth
+You search the cave. Moth finds a leather-wrapped bundle with a hide map pointing to Skybreaker.
+[[Follow the map to the ridge.->SkybreakerApproach-MetMoth-WithMoth]]
+:: SkybreakerApproach-MetMoth-WithMoth
+The journey is long. You approach the facility entrance.
+[[Enter the facility.->SkybreakerEntrance-MetMoth-WithMoth]]
+:: SkybreakerEntrance-MetMoth-WithMoth
+You and Moth stand before the massive door of the Skybreaker facility. The console is active, waiting for a key, but you do not have all four fragments. The door remains sealed. Legion patrols are likely converging on your location. You must find another way inside or secure the missing fragments before attempting entry.
+[[Search for a secondary entrance.->SkybreakerEntranceSearch-MetMoth-WithMoth]]
+[[Fortify your position and prepare for the Legion's arrival.->SkybreakerSiege-MetMoth-WithMoth]]
+:: SkybreakerEntranceSearch-MetMoth-WithMoth
+You find a narrow fissure high on the left. An old ventilation shaft.
+[[Attempt to climb to the fissure.->SkybreakerVentEntry-MetMoth-WithMoth]]
+:: SkybreakerVentEntry-MetMoth-WithMoth
+You climb to the fissure and force the grate. A shaft leads down.
+[[Descend into the shaft.->SkybreakerInterior-MetMoth-WithMoth]]
+:: SkybreakerInterior-MetMoth-WithMoth
+You emerge onto the main chamber's balcony. The console is below, its slots empty. You do not have all four fragments. The activation of Haven-0 is impossible at this moment. The facility hums with dormant power, a promise unfulfilled.
+[[Search the facility archives for clues to the remaining fragments.->SkybreakerSearch-MetMoth-WithMoth]]
+[[Attempt to secure the chamber against Legion intrusion.->SkybreakerSiege-MetMoth-WithMoth]]
+:: SubstationAlliance-MetLyra-WithLyra-MetOren-WithOren
+You help Lyra fight the Union team. She holds up a third fragment.
+[[Combine forces and head to Skybreaker.->SkybreakerEntrance-MetLyra-WithLyra-MetOren-WithOren-HasMapFragment3]]
+:: ResearchBunker-MetOren-WithOren
+Dr. Vale leads you down the hidden staircase into a pristine pre-Cataclysm archive. The air is cool and filtered. Banks of dormant servers line the walls, and a central terminal glows with a soft light. Oren immediately goes to the terminal, his fingers flying across the keyboard. "The primary data core... intact! The logs here will confirm the location of the final fragment. It was given to the Dustborn for safekeeping." He pulls up a file, showing a clear image of the fourth fragment alongside a map of the canyon lands.
+[[Study the data with Oren to plan the next move.->SkybreakerPlan-MetOren-WithOren-HasMapFragment2]]
+:: SubstationCorridor
+The narrow utility corridor buzzes with residual power. Thick cables line the walls, humming with energy. The air smells of ozone and aged metal. At the far end, a junction box flickers with strange, unnatural light. The corridor is empty now, but recent scuff marks on the dusty floor suggest someone was here not long ago. The path leads deeper into the substation's heart.
+[[Follow the humming corridor to the junction box.->SubstationJunction]]
+[[Retreat back to the transit platform.->TransitPlatform]]
+
+:: SubstationJunction
+You reach the humming junction box at the corridor's end. The air crackles with static. Panels are open, revealing complex wiring that seems to have been recently altered. A dropped multi-tool lies on the floor, and a faint trail of footprints leads towards a heavy metal door marked "Primary Relay." The door is slightly ajar, and from beyond it, you hear the faint sound of someone moving.
+[[Push the door open and investigate the relay room.->SubstationCorridor-MetLyra]]
+[[Retreat quietly, avoiding a confrontation.->TransitPlatform]]
+
+:: SkybreakerWait-MetOren-WithOren-MetLyra-HasMapFragment2-HasMapFragment3
+Hours pass in the humming chamber. Dr. Vale works at the console, running diagnostics. Suddenly, alarms blare on a security monitor. A Legion patrol has breached the perimeter! They must have followed your trail. Captain Bronn strides into the chamber, his weapon raised. "A reunion! Hand over the fragments, or we'll take them from your corpses."
+[[Stand and fight alongside Oren.->LaboratoryConfrontation-MetOren-WithOren-HasMapFragment2-HasMapFragment3]]
+[[Attempt to negotiate with Bronn.->FinalConfrontationTruce-HasMapFragment2-MetLyra]]
+:: MonumentExpedition-MetLyra-WithLyra-MetOren-HasMapFragment2-HasMapFragment3
+You and Lyra travel swiftly through the sublevels, emerging near the Rust city. The monument plaza is eerily quiet. As Lyra retrieves the fourth fragment from the hidden compartment, a Legion sniper's shot rings out! Lyra shoves you behind cover as return fire peppers their position. You have the fragment, but escaping the city will be a fight.
+[[Fight your way back to the sublevels.->RustEscape-MetLyra-WithLyra-HasMapFragment2-HasMapFragment3-HasMapFragment4]]
+[[Use Lyra's knowledge of the ruins to lose your pursuers.->RustEscapeStealth-MetLyra-WithLyra-HasMapFragment2-HasMapFragment3-HasMapFragment4]]
+
+:: RustEscape-MetLyra-WithLyra-HasMapFragment2-HasMapFragment3-HasMapFragment4
+The firefight is intense. Lyra's energy blasts provide cover as you fall back to the transit entrance. You both make it inside, sealing the heavy door behind you. The Legion does not follow into the dark. You have all four fragments. The path back to Skybreaker is clear.
+[[Return to the facility.->SkybreakerFinale-MetLyra-WithLyra-MetOren-HasMapFragment4]]
+
+:: RustEscapeStealth-MetLyra-WithLyra-HasMapFragment2-HasMapFragment3-HasMapFragment4
+Lyra leads you through a maze of collapsed buildings and underground passages, expertly avoiding the Legion patrols. After a tense, silent journey, you reach the safe transit tunnel. You have all four fragments, and the Legion is left searching the ruins above.
+[[Return to the facility.->SkybreakerFinale-MetLyra-WithLyra-MetOren-HasMapFragment4]]
+
+:: SkybreakerInterior-MetOren-WithOren-HasMapFragment2
+You emerge into a network of maintenance corridors high above the main control chamber. Peering over a railing, you see the great console below. It is unguarded. A single figure stands before it—Lyra Kade, studying the empty slots. She looks up, sensing your presence. "I wondered who would come," she calls out. "I have the third key. Do we work together, or do we fight for the console?"
+[[Call out to Lyra, proposing an alliance.->SkybreakerAllianceProposal-MetOren-WithOren-HasMapFragment2-MetLyra]]
+[[Prepare for a confrontation.->FinalConfrontation-HasMapFragment2-MetLyra]]
+:: SkybreakerEntrance-MetOren-WithOren-MetLyra-HasMapFragment2-HasMapFragment3
+You call out to Lyra, proposing an alliance. Dr. Vale nods frantically beside you. Lyra considers your words, her gaze shifting from you to the nervous scientist. "An alliance with the architect of this place and the wanderer who brought the keys? A compelling proposition. The Legion is closing in. We must find the final fragment, and quickly."
+[[Combine forces and search the facility archives for clues to the last fragment.->SkybreakerSearch-MetOren-WithOren-MetLyra-WithLyra-HasMapFragment2-HasMapFragment3]]
+:: SkybreakerFinale-MetLyra-WithLyra-MetOren-HasMapFragment4
+With the four fragments in place, Haven-0 activates. Dr. Vale's hands are steady now, his mind clear as he directs the purification sequence. Lyra manages the power flow. The great work begins. The atmosphere slowly starts to clear. It will take years, but the world has been given a second chance. You stand together, architects of a future.
+[[->Ending-Redemption]]
+:: SkybreakerSiege-MetOren-WithOren-MetLyra-WithLyra-HasMapFragment2-HasMapFragment3
+The heavy blast doors slam shut as the first Legion charges echo through the mountain. Lyra reroutes power to the external defenses, creating shimmering energy barriers across the entrance. Oren nervously monitors the console. "The structural integrity will hold, but not indefinitely. We have bought time, but the final fragment remains out of reach." The three of you stand ready, the fate of Haven-0 balanced on a knife's edge between the Legion's siege and your missing key.
+[[Make a desperate attempt to contact the Dustborn nomads for help.->SiegeCommunication-MetOren-WithOren-MetLyra-WithLyra-HasMapFragment2-HasMapFragment3]]
+[[Prepare for a last stand, using the facility's partial power to maximum effect.->SiegeLastStand-MetOren-WithOren-MetLyra-WithLyra-HasMapFragment2-HasMapFragment3]]
+:: SacredCaveExpedition-MetOren-WithOren-MetLyra-WithLyra
+The hidden transit pod accelerates through the mountain. You emerge into a cavern. A path leads to the surface.
+[[Follow the path to locate the cave.->SacredCave-MetOren-WithOren-MetLyra-WithLyra-HasMapFragment2-HasMapFragment3]]
+:: SiegeCommunication-MetOren-WithOren-MetLyra-WithLyra-HasMapFragment2-HasMapFragment3
+While Oren monitors the straining barriers and Lyra manages the power flow, you access an old communications array. You broadcast a desperate plea on all known nomad frequencies, describing the siege and the need for the final fragment. The static-filled silence that follows is agonizing. Then, a faint, filtered voice responds. "Wanderer. We hear you. The sacred cave is two hours' ride from your location. A storm is rising. We will try to reach you. Hold fast."
+[[Wait for the nomad response, defending the facility.->SiegeHold-MetOren-WithOren-MetLyra-WithLyra-HasMapFragment2-HasMapFragment3]]
+
+:: SiegeLastStand-MetOren-WithOren-MetLyra-WithLyra-HasMapFragment2-HasMapFragment3
+The main blast door groans under a sustained Legion assault. "The barriers are failing!" Oren shouts. Lyra makes a grim decision. "We can't wait. We'll use the three fragments to initiate a localized purification burst. It will drain the core and may not be sustainable, but it could scatter the Legion long enough for us to escape." She begins rerouting all available power into the console, a risky, all-or-nothing gambit.
+[[Activate the emergency purification burst.->Ending-DesperateGambit]]
+
+:: SacredCave-MetOren-WithOren-MetLyra-WithLyra
+You find the sacred cave. The fourth fragment rests on the altar.
+[[Take the fragment and return.->SkybreakerFinale-MetLyra-WithLyra-MetOren-HasMapFragment4]]
+:: SiegeHold-MetOren-WithOren-MetLyra-WithLyra-HasMapFragment2-HasMapFragment3
+The Legion's bombardment is a constant thunder against the mountain. The energy barriers flicker, but they hold. Dr. Vale nervously watches the power levels. Lyra stands ready, fingers crackling with energy. Just as a major barrier fails, a new sound joins the fray—the sharp reports of nomad rifles from behind the Legion lines. The Dustborn have arrived! Their distraction allows you to momentarily reinforce the main door. But they have not brought the fragment; they have come to fight.
+[[Coordinated by the nomad attack, launch a counter-assault.->SiegeCounterattack-MetOren-WithOren-MetLyra-WithLyra-HasMapFragment2-HasMapFragment3]]
+
+:: Ending-DesperateGambit
+Lyra channels all of Haven-0's power into a single, massive burst. A blinding wave of cleansing energy erupts from the facility, scouring the mountainside. The Legion forces are thrown back, their equipment fried. The ash clouds part for miles around, revealing a stunning blue sky. But the energy drain is catastrophic. The console goes dark, the hum of the machinery ceases. Haven-0 is permanently offline, its core shattered. You have saved the facility from capture and cleared the skies over Skybreaker, but the chance for a global purification is gone. This pocket of clean air is your legacy.
+
+:: SiegeCounterattack-MetOren-WithOren-MetLyra-WithLyra-HasMapFragment2-HasMapFragment3
+Taking advantage of the nomad assault from the rear, you burst from the main entrance. Lyra unleashes torrents of energy, disrupting Legion formations. Dr. Oren stays at the console, using the facility's external defense systems to target Legion vehicles. The nomads, led by a determined elder, press their attack. The Legion is caught in a pincer movement. In the chaos, Captain Bronn retreats with his core troops, leaving the perimeter shattered. The immediate threat is broken, but the final fragment is still missing. The nomad elder approaches, their face grim. "We could not retrieve the key from the sacred cave. The Legion had already posted guards there. The way is blocked."
+[[Send a combined force to assault the Legion position at the sacred cave.->SacredCaveAssault-MetOren-WithOren-MetLyra-WithLyra-HasMapFragment2-HasMapFragment3]]
+
+:: SacredCaveAssault-MetOren-WithOren-MetLyra-WithLyra-HasMapFragment2-HasMapFragment3
+The combined force of nomad warriors, Lyra, and you moves swiftly toward the sacred cave. Legion guards have fortified the entrance, setting up a perimeter with spotlights and automated turrets. The canyon echoes with the whine of their generators. Lyra studies the defenses. "A direct assault will be costly. I can create a diversion with an energy surge, but it will draw their full attention." The nomad elder signals his warriors to take up flanking positions. The final fragment is so close, but protected by steel and fire.
+[[Initiate Lyra's diversion and attack from the flanks.->SacredCaveVictory-MetOren-WithOren-MetLyra-WithLyra-HasMapFragment2-HasMapFragment3]]
+[[Attempt a stealthy infiltration under cover of darkness.->SacredCaveStealth-MetOren-WithOren-MetLyra-WithLyra-HasMapFragment2-HasMapFragment3]]
+
+:: SacredCaveStealth-MetOren-WithOren-MetLyra-WithLyra-HasMapFragment2-HasMapFragment3
+You signal the nomad warriors to hold. As darkness falls, you and Lyra move like shadows along the canyon wall, avoiding the harsh glare of the Legion spotlights. Dr. Oren stays with the nomads, his knowledge of Legion patrol patterns proving invaluable. You find a narrow fissure behind a waterfall of black ivy, an entrance the Legion missed. The path inside is tight and dark, but it bypasses the main defenses. The sacred chamber is just ahead, its silence a stark contrast to the fortified entrance outside.
+[[Enter the sacred chamber to retrieve the fragment.->SacredCaveVictory-MetOren-WithOren-MetLyra-WithLyra-HasMapFragment2-HasMapFragment3]]
+
+:: SacredCaveVictory-MetOren-WithOren-MetLyra-WithLyra-HasMapFragment2-HasMapFragment3
+The sacred chamber is untouched, a pocket of pre-Cataclysm serenity. The fourth map fragment rests on its stone altar, pulsing with a soft light. As you take it, a deep hum resonates through the cave. Outside, the Legion guards, confused by the energy signature, turn their attention inward. Your stealth team regroups, now holding the final key. The path back to Skybreaker is clear, and the facility awaits its completion.
+[[Return to the Skybreaker facility with the final fragment.->SkybreakerFinale-MetLyra-WithLyra-MetOren-HasMapFragment4]]
+
+:: RelayStationApproach-MetMoth
+The squat, windowless relay station bristles with broken antennas. Faint blue light flickers under the door. Moth shivers. "The lights... they started after the last big storm. No one comes here." The approaching storm is now a deafening roar of wind outside. You need to get inside.
+[[Enter the relay station.->RelayStationInside-MetMoth]]
+[[Suggest finding a different, more natural shelter.->CanyonAlternative-MetMoth]]
+:: CanyonAmbushDiscussion-MetMoth
+Moth explains that the Ravens are a brutal gang that preys on caravans. They took the other nomads as prisoners, likely to sell to the Legion or the Technic Union as labor. Moth's knowledge of hidden paths is extensive. The storm is intensifying, and the first gusts of ash-filled wind whip through the canyon. Shelter is now urgent.
+[[Ask Moth to lead you to the nearest safe shelter.->RelayStationApproach-MetMoth]]
+[[Propose tracking the Ravens to rescue the captured nomads.->RavenTrackProposal-MetMoth]]
+
+:: RavenTrackProposal-MetMoth
+Moth explains that the Ravens are a brutal gang that preys on caravans. The storm is intensifying. Shelter is now urgent.
+[[Ask Moth to lead you to the nearest safe shelter.->RelayStationApproach-MetMoth]]
+:: RelayStationApproach
+Moth leads you to the squat, windowless building bristling with broken antennas. True to their word, faint blue light flickers under the door. Moth shivers. "The lights... they started after the last big storm. No one comes here." The approaching storm is now a deafening roar of wind outside. You need to get inside.
+[[Enter the relay station.->RelayStationInside]]
+[[Suggest finding a different, more natural shelter.->CanyonAlternative]]
+:: RelayStationInside-MetMoth
+Inside, the station is a maze of dead servers. A hologram flickers to life—Lyra Kade. She warns of the storm and transmits coordinates to a safe bunker.
+[[Follow the coordinates to Lyra's bunker.->AshwitchBunker-MetMoth-MetLyra]]
+[[Stay in the relay station, distrusting the message.->RelayStationStorm-MetMoth]]
+:: AshwitchBunker-MetMoth-MetLyra
+You reach the bunker just as the storm hits its peak. Lyra Kade lets you in. She studies your map fragment. "I have the third," she reveals. "We need to move quickly. The Legion is converging on Skybreaker."
+[[Join forces with Lyra.->SkybreakerEntrance-MetMoth-MetLyra-HasMapFragment3]]
+:: RelayStationStorm-MetMoth
+The station offers no sanctuary. A violent power surge erupts. You and Moth are thrown back, stunned. The storm rages on outside.
+[[Venture back out into the storm.->CanyonAlternativeSurvival-MetMoth]]
+:: CanyonAlternative
+The canyon offers few options. You find a shallow overhang, barely deep enough to provide cover. The storm hits with brutal force, the wind howling like a dying beast. The air fills with stinging, toxic ash. You huddle against the rock face, your scarf tight over your mouth, but the protection is minimal. The storm feels endless, a suffocating blanket of grey.
+[[Endure the storm and hope for the best.->CanyonAlternativeSurvival]]
+:: CanyonAlternative-MetMoth
+The canyon offers few options. You find a shallow overhang, barely deep enough to provide cover. The storm hits with brutal force. You and Moth huddle against the rock face. The storm feels endless, a suffocating blanket of grey.
+[[Endure the storm and hope for the best.->CanyonAlternativeSurvival-MetMoth]]
+:: RelayStationInside
+Inside, the relay station is a tomb of dead technology. The air smells of ozone and dust. The mysterious blue light emanates from a single flickering terminal screen, displaying corrupted glyphs. A low hum pulses through the floor. Suddenly, the terminal screen flashes brightly, then dies completely, plunging the room into darkness. The storm outside rages, but the station offers no further guidance.
+[[Wait out the storm in the dark.->RelayStationStorm]]
+[[Venture back outside into the storm.->CanyonAlternativeSurvival]]
+:: SkybreakerEntrance-MetMoth-MetLyra-HasMapFragment3
+You and Lyra arrive at the Skybreaker facility. The door is sealed. "Three fragments," Lyra says. "But the final key is missing." Legion patrols are converging.
+[[Search the area for another way inside.->SkybreakerEntranceSearch-MetMoth-MetLyra-HasMapFragment3]]
+[[Fortify your position and prepare for the Legion's arrival.->SkybreakerSiege-MetMoth-MetLyra-HasMapFragment3]]
+:: CanyonAlternativeSurvival
+The storm’s fury is absolute. The overhang provides scant protection from the choking ash and screaming wind. You huddle against the cold stone, each breath a struggle. Hours stretch into an eternity of grit and darkness. When the storm finally passes, the world is transformed, buried under a deep, fine grey powder. You are alive, but weakened, your supplies contaminated. The path ahead is obscured, your immediate goal reduced to simple survival.
+[[Search for a landmark to reorient yourself.->EasternCanyon]]
+[[Try to find traces of the nomad trail under the fresh ash.->CanyonTrail]]
+:: CaveSearch-MetMoth
+You search the small cave carefully, brushing away dust and debris from the corners. Behind a loose stone, you find a small, leather-wrapped bundle. Unfolding it reveals a carefully drawn symbol on cured hide—a Dustborn mark. On the reverse, a simple, stylized map points toward the Skybreaker Ridge. It is not a fragment, but it is a clear confirmation and a guide. "The elders were right," you whisper, holding the hide map. "The way is marked."
+[[Leave the cave and follow the hide map to the ridge.->SkybreakerApproach-MetMoth-HasMapFragment4]]
+:: RelayStationStorm
+The station offers no sanctuary. A violent power surge erupts from the ancient machinery, arcing through the control room. You are thrown against a wall, stunned. When you regain your senses, the station is dark and silent, filled with the smell of burnt electronics. The storm rages on outside, but the building itself has become a deathtrap. You must brave the elements to survive.
+[[Venture back out into the storm.->CanyonAlternativeSurvival]]
+:: SkybreakerEntranceSearch-MetMoth-MetLyra-HasMapFragment3
+You find a narrow fissure high on the left. "An old air vent," Moth says. It leads into the facility.
+[[Attempt the climb to the ventilation shaft.->SkybreakerVentEntry-MetMoth-WithMoth-MetLyra-WithLyra-HasMapFragment3]]
+:: SkybreakerSiege-MetMoth-MetLyra-HasMapFragment3
+You barricade yourselves. Lyra erects energy barriers. The Legion squad arrives. The fight is desperate.
+[[Fight to the last.->Ending-HeroicLastStand]]
+[[Attempt a fighting retreat.->SkybreakerRetreat-MetMoth-MetLyra-HasMapFragment3]]
+:: Ending-HeroicLastStand
+The Legion's fire is relentless. Lyra's barriers fail. Moth falls. Lyra unleashes a final surge. You stand alone, the fragments burning in your hands.
+:: SkybreakerRetreat-MetMoth-MetLyra-HasMapFragment3
+You retreat from the facility. The Legion now controls it. You must find another way.
+[[Search for the Dustborn nomads for help.->NomadRefuge-MetMoth-WithMoth-MetLyra-WithLyra-HasMapFragment3]]
+:: SkybreakerVentEntry-MetMoth-WithMoth-MetLyra-WithLyra-HasMapFragment3
+You emerge into maintenance corridors. Dr. Oren Vale is below at the console. "The Legion is at the gates! We must find the final key!"
+[[Combine your knowledge to find a clue.->SkybreakerUrgentSearch-MetMoth-WithMoth-MetLyra-WithLyra-MetOren-WithOren-HasMapFragment3]]
+:: NomadRefuge-MetMoth-WithMoth-MetLyra-WithLyra-HasMapFragment3
+Your group finds shelter with the Dustborn. The elder confirms the sacred cave holds the final fragment. "The Legion guards the front, but we know another path."
+[[Rest and prepare for the journey.->NomadRefugeRest-MetMoth-WithMoth-MetLyra-WithLyra-HasMapFragment3]]
+[[Set out immediately for the secret cave entrance.->SacredCaveBackdoor-MetMoth-WithMoth-MetLyra-WithLyra-HasMapFragment3]]
+:: LegionSupplyRaid-MetMoth-WithMoth-MetLyra-WithLyra-HasMapFragment3
+Your raid on the Legion supply convoy is a success! You capture explosives and intelligence revealing Captain Bronn is personally overseeing the excavation of the sacred cave. This is your chance to strike.
+[[Ambush Bronn's team at the sacred cave.->SacredCaveAmbush-MetMoth-WithMoth-MetLyra-WithLyra-HasMapFragment3]]
+:: FragmentsActivation-MetMoth-WithMoth-MetLyra-WithLyra-HasMapFragment3-HasMapFragment4
+Lyra and the nomad elders work together, channeling the natural energy of the cave and the combined power of the four fragments. The air in the chamber crackles, and the fragments glow brightly. A beam of light shoots upward through a natural chimney in the rock, striking the ash clouds above. The purification begins on a small scale, creating a stable clean zone around the canyon. It is not the global solution of Haven-0, but it is a sanctuary, a seed from which the world can slowly regrow.
+[[->Ending-Sanctuary]]
+
+:: SkybreakerNegotiation-MetMoth-WithMoth-MetLyra-WithLyra-HasMapFragment3-HasMapFragment4
+With Captain Bronn as your prisoner, you approach the Legion-held facility. The garrison commander, faced with the loss of his leader and the complete set of fragments, agrees to a truce. The fragments are placed in the console under a shared guardianship. Haven-0 activates, its power shared between your alliance and the disciplined order of the Legion. The future is a tense, negotiated peace, but the sky begins to clear for all.
+[[->Ending-NegotiatedPeace]]
+
+:: SkybreakerUrgentSearch-MetMoth-WithMoth-MetLyra-WithLyra-MetOren-WithOren-HasMapFragment3
+Oren frantically pulls up schematics on a nearby terminal. "The archives indicate the fourth fragment was stored in a secure vault on Sublevel 3, behind a radiation shield! The shield can be bypassed, but it will take time we don't have!" The sound of heavy blows against the main door echoes through the chamber. The Legion is trying to break through.
+[[Lyra and Moth will hold the door while you and Oren retrieve the fragment.->Sublevel3Descent-MetMoth-WithMoth-MetLyra-WithLyra-MetOren-WithOren-HasMapFragment3]]
+
+:: Sublevel3Descent-MetMoth-WithMoth-MetLyra-WithLyra-MetOren-WithOren-HasMapFragment3
+You and Oren race down a service ladder to Sublevel 3. The vault is behind a shimmering energy field. Oren works quickly at a control panel, diverting power. The field drops. Inside, the fourth fragment rests on a pedestal. You grab it just as an explosion rocks the facility above—the main door has been breached! You rush back to the main chamber.
+[[Return to the chamber for the final activation.->SkybreakerFinalConfrontation-MetMoth-WithMoth-MetLyra-WithLyra-MetOren-WithOren-HasMapFragment3-HasMapFragment4]]
+
+:: SkybreakerFinalConfrontation-MetMoth-WithMoth-MetLyra-WithLyra-MetOren-WithOren-HasMapFragment3-HasMapFragment4
+You burst into the main chamber as Legion soldiers pour through the shattered door. Lyra and Moth are fighting a desperate holding action. You sprint to the console, placing all four fragments as Oren begins the activation sequence. The chamber floods with light and power. The Legion soldiers are thrown back by the energy wave. Haven-0 awakens, its purifiers firing. The fight is over; the great work has begun.
+[[->Ending-NewDawn]]
+
+:: Ending-NegotiatedPeace
+The activation of Haven-0 proceeds under the watchful eyes of both your alliance and the Steel Legion. The cleansing energy spreads across the sky, a shared victory born from a necessary, uneasy truce. The Legion maintains its discipline and order, while your group ensures the technology is used for the benefit of all. It is not a perfect peace, and tensions simmer, but the world is given a chance to heal. Cooperation, however fragile, has defeated absolute control. A new era of cautious rebuilding begins.
+
+:: Ending-Sanctuary
+The four fragments glow with incandescent light in the heart of the sacred cave. Lyra channels the latent energy, and a beam of pure light ascends through a natural fissure in the ceiling, striking the atmosphere above. The ash clouds part over the canyon, creating a permanent zone of clean air and fertile ground. This sanctuary becomes a beacon of hope, a place where the Dustborn and other survivors can thrive. While the global Cataclysm persists, you have carved out a haven, proving that the world can heal, one small patch at a time.
+
+:: CanyonAlternativeSurvival-MetMoth
+The storm’s fury is absolute. You and Moth huddle under the shallow overhang, a desperate shelter against the choking ash and screaming wind. The wounded animal whimpers, and Moth tries to calm it. Hours stretch into an eternity of grit and darkness. When the storm finally passes, the world is transformed, buried under a deep, fine grey powder. You are alive, but weakened, your supplies contaminated. Moth looks at you with grim determination. "We must find my people."
+[[Search for a landmark to reorient yourself.->EasternCanyon-MetMoth]]
+[[Try to find traces of the nomad trail under the fresh ash.->CanyonTrail-MetMoth]]
+:: SkybreakerEntrance-MetMoth-HasMapFragment4
+You stand before the massive door of the Skybreaker facility. You hold all four map fragments. The door opens silently, revealing the great chamber within. The purification console stands ready, bathed in a soft, waiting light. The machinery hums with anticipation.
+[[Enter the chamber and activate Haven-0.->SkybreakerFinale-MetMoth-HasMapFragment4]]
+:: SkybreakerFinale-MetMoth-HasMapFragment4
+The four map fragments slot into the console. The machinery of Haven-0 awakens with a deep, resonant hum. Lights cascade across the vast chamber. A beam of pure energy shoots into the sky, beginning to disperse the ash clouds. For the first time in generations, a patch of blue sky becomes visible. The long winter is ending. You have achieved this alone, a solitary savior.
+[[->Ending-NewDawn]]
+
+:: SkybreakerEntrance-HasMapFragment2-LegionControlled
+The entrance to the facility is heavily fortified with Legion barricades and patrols. Spotlights sweep the area. Your approach is immediately detected. A squad of soldiers, led by a sergeant, surrounds you. "Halt! The facility is under Legion control. Surrender your belongings." They have seen your pack.
+[[Surrender the fragment.->Ending-LegionControl-HasMapFragment2]]
+[[Attempt to flee.->Ending-LegionExecution]]
+:: LaboratoryConfrontation-HasMapFragment2
+The Legion patrol storms in. Dr. Vale panics and activates a defense protocol. Energy shields seal the room. "We're trapped!" he yells. The Legion commander gives an ultimatum: surrender the fragments or be sealed in forever. Oren whispers, "The console... we can overload it. A final act."
+[[Surrender the fragments to the Legion.->Ending-LegionControl]]
+[[Help Oren overload the console, destroying the lab.->Ending-Sacrifice]]
+:: LaboratoryConfrontation-MetOren-WithOren-HasMapFragment2-HasMapFragment3
+The Legion patrol storms in. Dr. Vale panics and activates a defense protocol. Energy shields seal the room. "We're trapped!" he yells. The Legion commander gives an ultimatum: surrender the fragments or be sealed in forever. Oren whispers, "The console... we can overload it. A final act."
+[[Surrender the fragments to the Legion.->Ending-LegionControl]]
+[[Help Oren overload the console, destroying the lab.->Ending-Sacrifice]]
+:: SacredCaveFinal-MetLyra-WithLyra-MetOren-WithOren-HasMapFragment3
+Lyra and Oren return with the final fragment. The set is complete. The activation sequence is initiated. Haven-0 comes to life, its purpose fulfilled. The healing of the world begins.
+[[->SkybreakerFinale-MetLyra-WithLyra-MetOren-WithOren-HasMapFragment4]]
+:: SacredCaveExpedition-MetOren-WithOren-MetLyra-WithLyra-HasMapFragment2-HasMapFragment3
+The hidden transit pod accelerates through the mountain. You emerge into a cavern. A path leads to the surface.
+[[Follow the path to locate the cave.->SacredCave-MetOren-WithOren-MetLyra-WithLyra]]
+:: SkybreakerSearch-MetOren-WithOren-MetLyra-WithLyra-HasMapFragment2-HasMapFragment3
+Descending to the main floor, your new alliance moves with urgency. Lyra accesses a terminal while Dr. Vale scans the archival glyphs. "The fourth key," Oren mutters. "The logs here speak of a dispersal protocol. One fragment was entrusted to the nomadic tribes." Lyra's screen flashes. "The canyons. A cave system the Dustborn consider sacred."
+[[Access the facility's old transit line for a quick route to the canyons.->SacredCaveExpedition-MetOren-WithOren-MetLyra-WithLyra-HasMapFragment2-HasMapFragment3]]
+:: TransitAccessSearch-MetMoth
+Moth leads you to the transit access point. Descending, you find not the mad scientist, but signs of a recent battle. The path is blocked by rubble. Your lead is dead.
+[[->SublevelsBlocked-MetMoth]]
+:: SublevelsBlocked-MetMoth
+The blocked path is impassable. You and Moth are forced to turn back.
+[[->TransitAccessRuins-MetMoth]]
+:: TransitAccessRuins-MetMoth
+You emerge from the sublevels. Together, you plan your next move.
+[[->EasternCanyon-MetMoth]]
+:: SkybreakerSiege-MetMoth-WithMoth
+You barricade yourselves inside the main chamber. Lyra erects energy barriers. The Legion squad arrives. The fight is desperate.
+[[Fight to the last.->Ending-HeroicLastStand]]
+[[Attempt a fighting retreat.->SkybreakerRetreat-MetMoth-WithMoth]]
+:: SkybreakerRetreat-MetMoth-WithMoth
+You fall back from Skybreaker. The door is sealed against you.
+[[Seek refuge with the Dustborn nomads.->NomadRefuge-MetMoth-WithMoth]]
+:: SkybreakerSearch-MetMoth-WithMoth
+You and Moth search the facility's control rooms and archives. You find damaged logs speaking of a "central archive" in the Rust city and of a "rogue operator" who diverted power to a substation—Lyra. The logs also mention a "fail-safe fragment" entrusted to the Dustborn nomads. The path is clear, but fraught with danger.
+[[Head to the Rust city to find the archive.->RustCityCenter-MetMoth-WithMoth]]
+[[Head towards the canyons to find the nomads.->EasternCanyon-MetMoth-WithMoth]]
+:: LegionSupplyRaid-MetMoth-WithMoth
+You and Moth observe the Legion convoy from the ridge. The guards are too numerous for a direct assault. You need a different approach.
+[[Fall back and seek help from the Dustborn nomads.->NomadRefuge-MetMoth-WithMoth]]
+[[Attempt to sabotage the convoy's route ahead.->ConvoySabotage-MetMoth-WithMoth]]
+:: NomadRefuge-MetMoth-WithMoth
+Moth leads you to a hidden Dustborn camp. The nomads welcome you and offer shelter. The elder listens to your story. "The sacred cave is guarded, but we know a secret way. With your fragment, there is hope."
+[[Rest and plan your next move with the nomads.->NomadRefugeRest-MetMoth-WithMoth]]
+[[Ask the nomads to guide you to the cave's backdoor immediately.->SacredCaveBackdoor-MetMoth-WithMoth]]
+:: RustCityCenter-MetMoth-WithMoth
+You and Moth stand in the vast, silent plaza of the Rust city center. The fractured monument looms before you. Moth points to the strange equations carved into its base. "These symbols... our elders speak of them. They point to knowledge buried deep." Following Moth's interpretation of the markings, you find a hidden pressure plate near the monument's foundation. Pressing it, a section of the ground slides away, revealing a staircase descending into darkness.
+[[Descend the newly revealed staircase into the archive below.->ResearchBunker-MetMoth-WithMoth]]
+[[Search the surrounding ruins for supplies before venturing down.->CityCenterRuins-MetMoth-WithMoth]]
+
+:: SkybreakerInterior-MetLyra-WithLyra-MetOren-WithOren-HasMapFragment3
+You emerge from the maintenance hatch onto a gantry overlooking the vast main chamber of the Skybreaker facility. Dr. Oren Vale is below, frantically working at the central console. Lyra calls out to him, and he looks up, his eyes wide with a mixture of fear and hope. "You have the third key! But the Legion is minutes away! The final fragment is the only missing piece!" The great machine hums with potential, its empty slots a silent plea for completion.
+[[Combine your knowledge to find a rapid solution for locating the last fragment.->SkybreakerUrgentSearch-MetMoth-WithMoth-MetLyra-WithLyra-MetOren-WithOren-HasMapFragment3]]
+[[Prepare defensive positions at the main entrance to hold back the Legion.->SkybreakerSiege-MetOren-WithOren-MetLyra-WithLyra-HasMapFragment2-HasMapFragment3]]
+
+:: CityCenterRuins-MetMoth-WithMoth
+You and Moth search the skeletal administrative buildings surrounding the plaza. The air is thick with ancient dust. Moth finds a small, sealed crate tucked beneath a collapsed desk. Inside, you discover a stash of pre-Cataclysm medical supplies and a journal detailing the last days of the Rust. The journal speaks of a "mass evacuation to the mountain facility" but offers no new clues to the fragments. A low rumble echoes from the plaza—the ground trembles slightly. Your search has disturbed the precarious stability of the ruins.
+[[Return to the plaza to investigate the tremor.->MonumentCollapse-MetMoth-WithMoth]]
+[[Quickly leave the city center with your newfound supplies.->RustExit-MetMoth-WithMoth]]
+
+:: LegionSupplyRaidWait-MetMoth-WithMoth
+You wait too long. The convoy moves past your position, strengthening the Legion garrison. You need a new plan.
+[[Retreat and seek help from the nomads.->NomadRefuge-MetMoth-WithMoth]]
+:: NomadRefugeRest-MetMoth-WithMoth
+You rest in the nomad camp, regaining strength. At dawn, a guide is ready to lead you to the sacred cave's hidden entrance.
+[[Follow the guide to the sacred cave.->SacredCaveBackdoor-MetMoth-WithMoth]]
+:: ResearchBunker-MetMoth-WithMoth
+The staircase descends into a cool, clean archive. Banks of dormant servers hum softly. Moth looks around in awe, tracing the symbols on the walls that match their people's oldest stories. You access a central terminal, its screen flickering to life. It displays a map of the region, with Skybreaker Ridge highlighted. A log entry pops up: "Fragment Four - Entrusted to Dustborn custodians. Location: Sacred Cave, Canyon System Gamma." The path forward is now unmistakably clear.
+[[Study the terminal's data more closely to plan your route.->SkybreakerPlan-MetMoth-WithMoth]]
+[[Exit the bunker and begin the journey to the canyons.->EasternCanyon-MetMoth-WithMoth]]
+
+:: MonumentCollapse-MetMoth-WithMoth
+The ground shudders violently as a section of the monument collapses into a hidden compartment below. Moth grabs your arm to steady themselves. Amidst the settling dust, a skeleton is revealed, clutching a sealed tube. Inside lies the fourth map fragment, pristine and waiting. But the noise has attracted attention. A pack of large, mutated predators, their hides crusted with ash, emerge from the surrounding ruins, surrounding the plaza with low growls. Moth draws a small knife, their eyes wide but determined.
+[[Stand and fight the creatures together.->PlazaFight-MetMoth-WithMoth]]
+[[Grab the fragment and try to flee with Moth.->PlazaEscape-MetMoth-WithMoth]]
+
+:: RustExit-MetMoth-WithMoth
+You and Moth leave the city center as the ash storm finally breaks. The world vanishes behind a wall of grey, reducing visibility to near zero. Moth stays close, their knowledge of reading the land useless in this blinding fury. You become utterly disoriented, wandering lost through the skeletal ruins for days. Your supplies run dangerously low. The map fragment feels like a heavy burden leading you in circles.
+[[Press on, hoping to stumble upon a landmark.->EasternCanyon-MetMoth-WithMoth]]
+[[Seek immediate shelter and wait for the storm to fully pass.->RustOutskirts-MetMoth-WithMoth]]
+
+:: SkybreakerPlan-MetMoth-WithMoth
+Studying the archive data with Moth, the path becomes clear. The logs confirm the fourth fragment is held by the Dustborn in a sacred cave. Moth traces the route on the screen. "I know this way," they say softly. "But the Legion will be watching the main paths. We should travel through the high canyons, using the old game trails. It will be slower, but safer." They look at you, their hope renewed. "We can do this. We can bring the keys together."
+[[Agree to Moth's plan and head for the high canyons.->EasternCanyon-MetMoth-WithMoth]]
+[[Suggest a faster, more direct route, despite the risk.->CanyonTrail-MetMoth-WithMoth]]
+
+:: PlazaEscape-MetMoth-WithMoth
+You grab the fragment from the skeleton's grasp and shout for Moth to run. The mutated creatures snarl and give chase, their heavy footsteps pounding on the rubble-strewn ground. You and Moth dart through narrow alleyways, the beasts close behind. You manage to duck under a collapsed archway too small for them to follow, their furious roars echoing in the confined space. You have the fourth fragment, but the escape has cost you precious time and left you breathless in the heart of the dangerous ruins.
+[[Find a way out of the Rust city.->RustExit-MetMoth-WithMoth]]
+
+:: PlazaFight-MetMoth-WithMoth
+The creatures charge. Moth fights with a surprising ferocity, using their small knife to strike at vulnerable legs and eyes while you engage the larger ones. The fight is a chaotic whirl of claws and desperation. You defeat the pack, but not without cost; you are badly wounded, and Moth has a deep gash on their arm. Leaning against the broken monument, you clutch the complete set of maps. But the injuries are severe, and the ash continues to fall unabated.
+[[->Ending-FutileVictory]]
+
+:: RustOutskirts-MetMoth-WithMoth
+You and Moth find shelter under the same crumbling overpass where your journey began. The storm rages for hours, a deafening torrent of ash. When it finally subsides, the world is buried under a deep, grey blanket. You are both weakened and low on supplies, but alive. The skeletal city looms ahead, its secrets still waiting. Moth looks at you, their expression resolute. "The map points forward. We should keep moving."
+[[Head back into the Rust city to continue the search.->RustCityCenter-MetMoth-WithMoth]]
+[[Follow the canyon trail instead, seeking a different path.->EasternCanyon-MetMoth-WithMoth]]
+
+:: NomadRefugeRest-MetMoth-WithMoth-MetLyra-WithLyra-HasMapFragment3
+You spend a night in the safety of the camp. At first light, a nomad guide is prepared to lead your party to the secret path.
+[[Set out for the sacred cave's backdoor.->SacredCaveBackdoor-MetMoth-WithMoth-MetLyra-WithLyra-HasMapFragment3]]
+:: SacredCaveAmbush-MetMoth-WithMoth-MetLyra-WithLyra-HasMapFragment3
+Lyra overloads the generator, causing chaos. You ambush Bronn's team and secure the area. Entering the sacred cave, you find the fourth fragment on the altar.
+[[Take the fragment and return to Skybreaker.->SkybreakerFinale-MetMoth-WithMoth-MetLyra-WithLyra-HasMapFragment4]]
+:: SacredCaveBackdoor-MetMoth-WithMoth-MetLyra-WithLyra-HasMapFragment3
+Your party enters the sacred chamber via the secret path. The fourth fragment is there.
+[[Take the fragment and return to Skybreaker.->SkybreakerFinale-MetMoth-WithMoth-MetLyra-WithLyra-HasMapFragment4]]
+:: SacredCaveVictory-MetMoth-WithMoth-MetLyra-WithLyra-HasMapFragment3
+You have the final fragment. The path to Skybreaker is clear.
+[[Return to the facility to complete the activation.->SkybreakerFinale-MetMoth-WithMoth-MetLyra-WithLyra-HasMapFragment4]]
+:: SacredCave-MetOren-WithOren-MetLyra-WithLyra-HasMapFragment2-HasMapFragment3
+You find the sacred cave. The fourth fragment rests on the altar.
+[[Take the fragment and return.->SkybreakerFinale-MetLyra-WithLyra-MetOren-HasMapFragment4]]
+
+:: SkybreakerFinale-MetMoth-WithMoth-MetLyra-WithLyra-HasMapFragment4
+The four fragments slot into the console. Haven-0 awakens, cleansing the sky. A new dawn begins.
+[[->Ending-NewDawn]]
+
+:: SacredCaveBackdoor-MetMoth-WithMoth
+The nomad guide leads you to a hidden tunnel. You emerge in the sacred chamber and retrieve the fourth fragment.
+[[Travel to Skybreaker to activate Haven-0.->SkybreakerEntrance-MetMoth-WithMoth-HasMapFragment4]]
+:: ConvoySabotage-MetMoth-WithMoth
+You cause a rockslide, blocking the convoy's path and creating confusion. This weakens the Legion's position at the sacred cave.
+[[Use the distraction to infiltrate the cave.->SacredCaveBackdoor-MetMoth-WithMoth]]
+
+:: SkybreakerAllianceProposal-MetOren-WithOren-HasMapFragment2-MetLyra
+You call out to Lyra, proposing an alliance. Dr. Vale nods frantically beside you. Lyra considers your words, her gaze shifting from you to the nervous scientist. "An alliance with the architect of this place and the wanderer who brought the keys? A compelling proposition. The Legion is closing in. We must find the final fragment, and quickly."
+[[Combine forces and search the facility archives for clues to the last fragment.->SkybreakerSearch-MetOren-WithOren-MetLyra-WithLyra-HasMapFragment2-HasMapFragment3]]
+
+:: SkybreakerPlan-MetOren-WithOren-HasMapFragment2
+Dr. Vale paces before the silent console. "The Legion will have one fragment. The Ashwitch, Lyra Kade, is rumored to have another. The fourth... the fourth is the mystery." He suggests a two-pronged approach: he will stay to study the facility's systems and prepare for activation, while you must venture out to find and secure the remaining fragments through diplomacy or force.
+[[Agree to leave Oren and search for the fragments.->SkybreakerDeparture-MetOren-HasMapFragment2]]
+
+:: SkybreakerDeparture-MetOren-HasMapFragment2
+You leave Dr. Vale at the facility, his figure small against the vast machinery. "Be swift," he calls after you. "The Legion's sensors may detect the residual power soon." You descend the ridge alone, the weight of the quest now squarely on your shoulders. You must find Lyra and the final fragments before the Legion secures the area completely.
+[[Search for Lyra at the substation.->SubstationCorridor-HasMapFragment2]]
+[[Head to the Rust city to find the archive.->RustCityCenter-HasMapFragment2]]
+
+:: SkybreakerEntrance-MetLyra-WithLyra-MetOren-WithOren-HasMapFragment2-HasMapFragment3
+The massive door to the Skybreaker facility is sealed, a monolithic barrier of aged metal. Dr. Vale runs his hands over a console beside it, muttering about lock protocols. Lyra stands watch, her gaze flicking towards the ridge line. "The Legion is close. I can feel the vibration of their vehicles." Oren inputs a complex sequence. A smaller maintenance hatch hisses open nearby. "This bypass will get us inside, but we must be quick. The main chamber awaits the final key." The hum of the facility is a palpable force, promising salvation or ruin.
+[[Enter through the maintenance hatch.->SkybreakerInterior-MetLyra-WithLyra-MetOren-WithOren-HasMapFragment2-HasMapFragment3]]
+
+:: SubstationCorridor-HasMapFragment2
+The narrow utility corridor buzzes with power, thick cables lining the walls. The air smells of ozone. At the far end, the junction box flickers, but the technomancer is gone. Scuff marks on the dusty floor lead towards a heavy metal door marked "Primary Relay," which stands slightly ajar. From beyond it, you hear faint, hurried movements. Your map fragment feels heavy in your pack, a beacon in the silent, humming dark.
+[[Push open the relay room door to investigate the sounds.->SubstationCorridor-MetLyra]]
+[[Retreat quietly back to the transit platform.->TransitPlatform-HasMapFragment2]]
+:: SkybreakerInterior-MetLyra-WithLyra-MetOren-WithOren-HasMapFragment2-HasMapFragment3
+You emerge through the maintenance hatch onto a high gantry overlooking the heart of the Skybreaker facility. The air hums with immense, dormant power. Below, the central console stands with its four empty slots, a silent plea for completion. Dr. Oren Vale immediately scrambles down a ladder to the console, his hands trembling as he interfaces with the ancient terminals. Lyra Kade remains on the gantry with you, her sharp eyes scanning the cavernous chamber for threats. "The Legion will be here soon," she states flatly. "We have three keys. The final piece must be close. Oren, what does the system indicate?"
+[[Search the facility's upper-level archives for data on the final fragment.->SkybreakerUrgentSearch-MetMoth-WithMoth-MetLyra-WithLyra-MetOren-WithOren-HasMapFragment3]]
+[[Begin fortifying the main entrance against the impending Legion assault.->SkybreakerSiege-MetOren-WithOren-MetLyra-WithLyra-HasMapFragment2-HasMapFragment3]]
+
+:: TransitPlatform-HasMapFragment2
+You stand alone on the vast, dark transit platform. The ghost train sits silently on its tracks, a relic of a buried world. The air is cold and stale. The single flickering terminal screen now shows a completely corrupted schematic. Your map fragment feels like the only point of certainty in this subterranean tomb. The maintenance hatch from which you came remains open, humming faintly. The path back to the substation corridor is available, but the primary relay door within is now sealed tight.
+[[Investigate the ghost train once more for any overlooked clues.->GhostTrain-HasMapFragment2]]
+[[Venture back into the substation corridor, hoping the relay room is now accessible.->SubstationCorridor-HasMapFragment2]]
+
+:: GhostTrain-HasMapFragment2
+The interior of the ghost train is just as you left it, dark and still. Your footsteps echo in the empty passenger car. The control panel remains dead. The seat where you first encountered Dr. Oren Vale is vacant, but on the floor nearby lies the data-slate he threw in his fury. Its screen is cracked, but a faint glow persists, showing a fragment of a schematic—a map of the transit lines leading towards Skybreaker Ridge. The train offers no further secrets, but the slate confirms your destination.
+[[Take the data-slate and return to the platform.->TransitPlatform-HasMapFragment2-HasMapFragment3]]
+[[Leave the slate and descend further into the sublevels via the maintenance hatch.->SubstationCorridor-HasMapFragment2]]
+
+:: TransitPlatform-HasMapFragment2-HasMapFragment3
+You stand on the silent transit platform, the ghost train a hulking shadow beside you. In your possession are two of the four map fragments, their combined weight a tangible promise. The cracked data-slate from the train confirms the route to Skybreaker Ridge. The path forward is clear, but the deep hum from the maintenance hatch suggests the substation's power is still active, a potential resource or a lingering danger. The decision of which route to take to the surface, and ultimately to the facility, is now yours.
+[[Take the data-slate and ascend via the old transit stairs towards the Rust city.->RustCityCenter-HasMapFragment2-HasMapFragment3]]
+[[Venture back into the powered substation corridor, seeking a more direct route.->SubstationCorridor-HasMapFragment2-HasMapFragment3]]
+
+:: SubstationCorridor-HasMapFragment2-HasMapFragment3
+The narrow utility corridor buzzes with a steady, powerful hum. Thick cables pulse with energy along the grimy walls, and the air crackles with ozone. In your pack, you feel the combined weight of two map fragments, a growing key to a future hope. The heavy metal door to the Primary Relay room is now sealed shut, its locking mechanism glowing with a soft blue light. The path back to the transit platform is open, but the mysteries of the substation seem to have been temporarily secured against you. The decision of where to take your precious fragments next is critical.
+[[Return to the transit platform to plan your ascent to the surface.->TransitPlatform-HasMapFragment2-HasMapFragment3]]
+[[Attempt to bypass the sealed relay door using tools found in the corridor.->SubstationJunction-HasMapFragment2-HasMapFragment3]]

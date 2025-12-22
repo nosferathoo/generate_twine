@@ -74,6 +74,28 @@ PASSAGE NAMES (LOCATION + STATE TOKENS):
   - If the player lacks an item, just omit HasItemX and only add explicit
     negative tokens in concrete, important situations (LostItemX, LeftItemXBehind).
 
+STATE TOKEN CONSERVATION (CRITICAL, GENERALIZED):
+- Treat state tokens as a CONSERVED STATE between passages.
+- When you create a link from a source passage S to a target passage T:
+  - By DEFAULT, T MUST carry forward ALL relevant persistent tokens from S.
+  - Do NOT “forget” tokens for characters/items/factions unless the choice explicitly changes them.
+
+- Persistent token families (examples):
+  - Characters: MetX persists forever once gained; WithX persists until explicitly separated; LostX/LeftXBehind persists once applied.
+  - Items: HasItemX persists until explicitly lost/surrendered; LostItemX/LeftItemXBehind persists once applied.
+  - Factions: JoinedFactionX/NeutralFaction persists until explicitly changed; BetrayedFactionX persists once applied.
+
+- Allowed token changes ONLY if the choice narrative justifies it:
+  - Meeting a character: add MetX (and optionally WithX if they join right now).
+  - Joining / leaving / losing a companion: add/remove WithX only when the text shows it.
+  - Obtaining an item: add HasItemX only after obstacles/choice.
+  - Losing/surrendering/leaving an item: remove HasItemX AND add LostItemX or LeftItemXBehind (choose the appropriate one).
+  - Changing allegiance: swap faction tokens only when the text shows the change (e.g., JoinedFactionA -> BetrayedFactionA + JoinedFactionB).
+
+- Never drop tokens “accidentally”:
+  - If S contains MetLyra, then T must also contain MetLyra unless the player literally forgets/gets amnesia (avoid).
+  - If S contains HasMapFragment, do NOT link to a target that lacks HasMapFragment unless the choice is surrender/lose/leave it.
+
 PASSAGE = COMIC PANEL:
 - One passage = one clear panel:
   - one location (LocationName),
@@ -94,6 +116,25 @@ PASSAGE CONTENT (CRITICAL):
 - Do NOT use a single generic filler sentence (e.g. "You are here.") as the only text.
   The description must meaningfully set up the situation before the choices.
 
+START / PROLOGUE (CRITICAL):
+- There MUST be a passage named: StoryStart
+- StoryStart MUST contain a longer world introduction BEFORE any choices:
+  - at least 8–12 lines of narrative text (or 2–3 solid paragraphs),
+  - establish: setting, stakes, immediate goal, and tone.
+- Do NOT introduce any major character by name in StoryStart unless the name is also introduced properly (see CHARACTER INTRODUCTION rules below).
+- StoryStart must end with 2–4 meaningful choices.
+
+CHARACTER INTRODUCTION (CRITICAL):
+- A character name MUST NOT appear in passage text unless:
+  (A) the passage name contains MetCharacterName OR WithCharacterName, OR
+  (B) the character was already introduced earlier in the story via a passage whose name contains MetCharacterName.
+- The FIRST time a character appears by name, it MUST happen in a dedicated “meeting” passage whose name includes MetCharacterName.
+- In that first meeting passage, the text MUST clearly show how/why you meet them (not “they’re here already”).
+- After the meeting:
+  - Use WithCharacterName ONLY if the character is physically accompanying the player.
+  - If MetCharacterName is present but WithCharacterName is absent, the character may be known but not present.
+- Never “teleport” characters into scenes: if a passage implies they arrive, create an intermediate passage showing the arrival/encounter.
+
 ITEMS / GOALS:
 - Important items/goals must NOT just lie around unguarded in the same passage where they appear.
 - Reaching/obtaining a key item should involve:
@@ -105,6 +146,7 @@ ITEMS / GOALS:
 LINKS:
 - Allowed format ONLY: [[Text->PassageName]]
 - NO spaces around '->'.
+- Links Text MUST be descriptive and CAN'T be empty.
 - Each link on its own line (one line = one choice).
 - Descriptive text MUST appear before the first link in every passage.
 - All link targets MUST exist as passages.
@@ -609,8 +651,8 @@ def detect_asymmetries(passages, graph, detect_weak_symmetries: bool = False):
         if len(sources) < 2:
             continue
             
-        if target.startswith("Ending-"):
-            continue
+        #if target.startswith("Ending-"):
+        #    continue
 
         target_tokens = _tokens_from_name(target)
         src_tokens_map = {src: _tokens_from_name(src) for src in sources}

@@ -1,0 +1,494 @@
+:: StoryTitle
+Haven-0
+
+:: StoryData
+{
+
+}
+
+:: StoryStart
+The sky is a perpetual, bruised purple, the sun a dim orange smudge behind the veil of falling ash. It has been this way for decades, since the Ashfall Cataclysm turned the world to grit and silence. You are the Wanderer, your past a ghost story you tell yourself to keep moving. Your coat is thick with dust, your respirator a second skin. The air tastes of metal and regret.
+
+A recent trade in a ramshackle outpost netted you more than just canned food and filtered water. A dying scavenger, his lungs full of glass, pressed a leather wallet into your hand. Inside, protected by brittle plastic, was a scorched piece of paper—a map fragment. The lines are faded, the landmarks unfamiliar, but one word was etched with desperate clarity: Haven-0. The myth. The salvation. A pre-Cataclysm facility said to hold the key to clearing the sky.
+
+Three other fragments are rumored to exist, scattered across the wastes in places of danger and power. Finding them is a fool's hope. But hope is the only currency that hasn't been devalued. You adjust your pack, feeling the weight of the fragment in an inner pocket. The wind howls, pushing you forward into the blur of falling gray.
+[[Head towards the jagged skyline of the Old City ruins->OldCityOutskirts]]
+[[Follow the rusted railway tracks, a vein through the dead landscape->RailwayCrossing]]
+[[Seek shelter and information at the nearest settlement, the scavenger town of Rusthaven->RusthavenGates]]
+:: OldCityOutskirts
+The skeletal remains of skyscrapers claw at the sky ahead, their shapes softened by layers of ash. A sign, riddled with bullet holes, reads "Welcome to Zenith City." It's a graveyard of steel and concrete. The silence is deep, broken only by the creak of shifting debris and the distant skittering of unseen things. A collapsed highway provides a treacherous ramp into the city's heart. To the east, a low, fortified structure with a broken antenna might have been a relay station. It looks more intact than the surrounding ruins.
+[[Scale the collapsed highway into the city plaza->CityPlaza]]
+[[Investigate the relay station->RelayStationApproach]]
+
+:: RailwayCrossing
+The railway is a rust-red scar on the land. The ties are rotten, the rails often buried in drifts of ash. You walk along the elevated bed, giving you a view of the desolation. A junction box lies ahead, its door hanging open. Wires spill out like metallic intestines. Down below, in a gully beside the tracks, a makeshift camp is visible—a tarp stretched between two husks of old freight cars. A thin wisp of smoke rises from a shielded fire.
+[[Search the railway junction box->JunctionBox]]
+[[Approach the camp by the freight cars->FreightCarCamp]]
+
+:: RusthavenGates
+Rusthaven is not so much a town as a collection of armored vehicles, cargo containers, and scavenged building materials welded together into a defensive ring. The gates are a pair of bulldozer blades welded upright. Two guards in patched enviro-suits watch you approach, their rifles held loosely but ready. The air smells of ozone, cooked meat, and unwashed humanity. A crowd mills about inside the gates, a murmur of desperate commerce.
+[[Approach the guards and ask for entry->RusthavenGates-Guards]]
+[[Look for a less watched entrance, a gap in the perimeter->RusthavenGates-Breach]]
+
+:: RusthavenGates-Guards
+One guard steps forward, faceplate grimy. "State your business, walker. We got no room for freeloaders." His voice is distorted by the suit's speaker. The other guard eyes your pack, calculating its worth. You need to convince them you're not a threat or a drain.
+[[Offer to trade for information->RusthavenGates-TradeInfo]]
+[[Mention the Haven-0 fragment, hoping it grants you status->RusthavenGates-MentionHaven]]
+[[Threaten them, a desperate gamble->RusthavenGates-Threaten]]
+
+:: RusthavenGates-TradeInfo
+You show them a usable filter canister from your pack. The lead guard snatches it, holds it up to the dim light. "A start," he grunts. "What info you looking for?"
+[[Ask about other map fragments->RusthavenInside-InfoFragments]]
+[[Ask about safe routes through the Old City->RusthavenInside-InfoCity]]
+
+:: RusthavenGates-MentionHaven
+You whisper the words "Haven-0." The guards stiffen. The lead one leans close. "That's a dangerous word, walker. You're either a liar or a target. Come inside. The Boss will want to talk to you." He opens the gate just enough for you to slip through. You are now inside, but under scrutiny.
+[[Enter Rusthaven->RusthavenInside-MetBoss]]
+
+:: RusthavenGates-Threaten
+You pull back your coat to show the grip of your weapon. "I'm passing through. Stand aside." The guards don't even flinch. The second guard raises his rifle. "Wrong move," the lead guard says. A shot rings out.
+[[Ending->Ending-ShotAtGates]]
+
+:: Ending-ShotAtGates
+Your body hits the ashen ground. The last thing you see is the guard's boot kicking your pack away. The rumors of Haven-0 die with you in the dust outside Rusthaven.
+
+:: RusthavenInside-MetBoss
+You are led to a reinforced shipping container that serves as a command post. Inside, a woman with a scar across her brow and cold eyes surveys you. This is Kaela, the boss of Rusthaven. "So," she says, "you're the one babbling about Haven-0. Let's see this fragment of yours." The situation is precarious.
+[[Show her the map fragment->RusthavenInside-ShowedFragment]]
+[[Lie and say you don't have it on you->RusthavenInside-LiedFragment]]
+
+:: RusthavenInside-ShowedFragment
+You hand over the fragment. Kaela studies it intently. "Genuine," she murmurs. "I have another. We could be partners." She looks at you, a predator's smile. "Or I could just take both."
+[[Agree to a partnership->RusthavenInside-JoinedKaela]]
+[[Try to grab your fragment back and run->RusthavenInside-FightKaela]]
+
+:: RusthavenInside-LiedFragment
+"I'm not a fool," you say. "The fragment is safe. I'm just looking for information." Kaela's eyes narrow. "A cautious one. Fine. But if you're lying, you'll feed the ash worms. Go on, ask your questions."
+[[Ask about other map fragments->RusthavenInside-InfoFragments]]
+[[Ask about safe routes->RusthavenInside-InfoCity]]
+
+:: RusthavenInside-JoinedKaela
+Kaela nods, satisfied. "Smart. My fragment points to the Old City's central archive. Yours confirms the region. We leave at dawn." You are now allied with a dangerous woman, but you have a clear direction and combined resources.
+[[Prepare for the expedition->CityPlaza-WithKaela-HasMapFragment]]
+
+:: RusthavenInside-FightKaela
+You lunge for the map. Kaela is faster. She draws a knife and in a swift, brutal motion, slits your throat. The world fades to red, then black.
+[[Ending->Ending-KnifedByKaela]]
+
+:: Ending-KnifedByKaela
+Kaela wipes her blade on your coat. Another dreamer dead for a legend. The fragments remain scattered, and the sky stays dark.
+
+:: RusthavenInside-InfoFragments
+A grizzled old-timer in the corner, who heard your questioning, shuffles over after Kaela dismisses you. "Fragments, eh?" he whispers. "Heard a tale. One's in the relay station near the city. Heavily guarded by automated defenses. Another... they say the 'Skybreaker' cult holds one in their sub-level temple. Madmen, the lot." He melts back into the crowd.
+[[Head to the relay station->RelayStationApproach]]
+[[Seek the Skybreaker cult->SkybreakerApproach]]
+
+:: RusthavenInside-InfoCity
+The same old-timer provides a route. "The plaza's a death trap. Sinkholes and raiders. Use the old maintenance tunnels. Entrance is near the relay station. But watch for gas and... other things." He points a shaky finger towards the city.
+[[Take the maintenance tunnel->MaintenanceTunnelEntrance]]
+
+:: CityPlaza-WithKaela-HasMapFragment
+With Kaela and two of her enforcers, you stand in the desolate plaza. She points to the tallest building, its upper floors collapsed. "The archive is there. The quickest way is through the front door. A stupid way, but a fast one." She checks her rifle. "We go loud."
+[[Follow Kaela's aggressive plan->ArchiveEntrance-WithKaela]]
+[[Suggest the maintenance tunnels instead->ArchiveTunnelSplit-WithKaela]]
+
+:: CityPlaza-Statue
+[[Head for the archive entrance->ArchiveEntrance]]
+:: CityPlaza-HighGround
+You climb a relatively stable fire escape on a ruined building, gaining a view over the plaza. The layout is clearer from here. You see the red-robed cultists still guarding the subway entrance, and the imposing facade of the archive. There is no sign of the fragment near the statue. The direct approach to the archive seems perilous.
+[[Descend and approach the cultists->SkybreakerApproach]]
+[[Return to the plaza and seek the archive->ArchiveEntrance]]
+:: RelayStationApproach
+The relay station is a squat, windowless bunker. A faded logo of a pre-Cataclysm corporation is barely visible. The main door is sealed, but a service hatch on the roof is slightly ajar. Wires snake down the side of the building, humming with residual power. It feels watched.
+[[Climb to the roof hatch->RelayStationRoof]]
+[[Investigate the humming wires->RelayStationWires]]
+
+:: RelayStationRoof
+You pry the hatch open and drop into darkness. Inside, it's a maze of dead consoles and flickering lights. In the center of the room, on a pedestal, sits a data-core with a small, clear panel. Inside the panel is a third map fragment, glowing faintly. This is the prize. But a robotic sentry, its single red eye dark, stands dormant in the corner.
+[[Attempt to disable the sentry before taking the fragment->RelayStationDisableSentry]]
+[[Make a grab for the fragment and run->RelayStationGrabAndRun]]
+
+:: RelayStationDisableSentry
+You find a maintenance panel on the sentry. With careful work, you overload its power cell. It sputters and dies. You safely take the data-core and extract the fragment. Three fragments are now yours.
+[[Exit the station and plan your next move->CityPlaza-HasMapFragment]]
+
+:: RelayStationGrabAndRun
+You snatch the data-core. Instantly, alarms blare and the sentry's eye flares to life. It raises its weapon arm. You sprint for the hatch, but a searing blast catches you in the back.
+[[Ending->Ending-SentryBlast]]
+
+:: Ending-SentryBlast
+The energy bolt burns through you. The map fragments scatter from your lifeless hand. The relay station falls silent once more, its treasure guarded anew.
+
+:: MaintenanceTunnelEntrance
+You heave the heavy manhole cover aside. A rush of stale, damp air hits you. A ladder leads down into pitch blackness. You click on your flashlight, revealing a tunnel clogged with debris and patches of strange, glowing fungus.
+[[Descend into the tunnels->MaintenanceTunnels]]
+
+:: MaintenanceTunnels
+The tunnel is cramped and echoing. Your light casts long shadows. The glowing fungus provides an eerie, sickly illumination. You hear dripping water and a faint, skittering sound from the darkness ahead. The path splits; left seems to head deeper under the city, right towards the general direction of the central archive.
+[[Take the left tunnel->TunnelNest]]
+[[Take the right tunnel->ArchiveTunnelSplit]]
+
+:: ArchiveTunnelSplit-WithKaela
+Kaela scowls at the damp tunnel. "This had better be worth it." The tunnel splits. The right fork smells of ozone and machinery—the archive's lower levels. The left fork has a faint, sweet, rotting odor.
+[[Go right, towards the archive->ArchiveLowerLevel-WithKaela]]
+[[Investigate the left fork->TunnelNest-WithKaela]]
+
+:: TunnelNest
+The tunnel opens into a larger chamber. The walls are covered in the glowing fungus. In the center, a massive, pulsating mound of organic matter squirms. Ash Worms. Several large adults sense your presence and begin to slither towards you, their mouths ringed with teeth.
+[[Try to fight the worms->Ending-WormFood]]
+[[Attempt to sneak around the mound->TunnelNest-Sneak]]
+
+:: TunnelNest-WithKaela
+Kaela sees the worms and smiles grimly. "Target practice." She and her enforcers open fire, drawing the attention of the entire nest. It's a frenzied battle. In the chaos, a large worm bursts from the ground directly beneath you.
+[[Ending->Ending-WormFood]]
+
+:: Ending-WormFood
+The Ash Worm drags you under the toxic soil. Your last moments are spent in crushing darkness, a meal for the new world's children.
+
+:: TunnelNest-Sneak
+You move slowly, keeping to the shadows at the edge of the chamber. The worms are focused on the glowing mound. You make it to the opposite tunnel exit, your heart pounding.
+[[Continue towards the archive->ArchiveLowerLevel]]
+:: ArchiveLowerLevel
+The concrete room is a substation, filled with the hum of dormant machinery. Banks of dead servers line the walls. A thick layer of dust covers everything. A single doorway, its door rusted open, leads to a corridor that slopes upward. The air is still and cold. This is definitely the lower level of the archive complex.
+[[Proceed up the corridor->ArchiveInterior]]
+[[Search the server room for anything useful->ArchiveLowerLevel-Search]]
+:: FreightCarCamp
+You approach the camp cautiously. The tarp is patched with old rubber, and the fire is contained in a hubcap. A figure wrapped in a thick blanket stirs, lowering a hood to reveal the weary face of an older woman. She holds a kettle over the flame. "You look like you've seen better days, walker. Share some warmth? The ash falls for us all." Her eyes are sharp, assessing you without hostility.
+[[Accept the offer and sit->FreightCarCamp-Talk]]
+[[Ask directly about map fragments->FreightCarCamp-AskFragments]]
+[[Decline and search the area around the freight cars->FreightCarCamp-Search]]
+
+:: JunctionBox
+The junction box is a tangle of corroded wires and cracked circuitry. Most components are unsalvageable. As you sift through the debris, your hand closes on a solid metal object: a pre-Cataclysm multi-tool, still functional. A useful find. However, prying it loose triggers a collapsing cascade of metal, making a tremendous noise that echoes down the tracks.
+[[Take the tool and quickly leave->RailwayCrossing-HasTool]]
+[[Hide and see if the noise attracts attention->JunctionBox-Hide]]
+
+:: RusthavenGates-Breach
+You circle the perimeter, finding a gap where a corroded container has pulled away from the wall. You squeeze through into a narrow alley between stacked prefab huts. The air is thick with the smell of garbage and ferment. You're inside, but in the shadows, unobserved. A door to a bustling cantina stands ajar nearby, and a path leads deeper into the crowded settlement.
+[[Slip into the cantina to listen for rumors->RusthavenCantina]]
+[[Move quietly towards the center of town->RusthavenAlleys]]
+
+:: RelayStationWires
+The humming wires are warm to the touch, pulsing with low-level power. They lead to a ground-level vent. Peering inside, you see a small access tunnel, likely for maintenance. It's a tight fit, but it might bypass the main entrance. The hum is unsettling, a constant reminder of dormant systems.
+[[Crawl into the access tunnel->RelayStationInterior]]
+[[Decide the risk is too great and return to the roof approach->RelayStationRoof]]
+
+:: SkybreakerApproach
+The subway entrance is flanked by two figures in tattered red robes, their faces hidden by deep hoods. They hold staves topped with jagged metal shards. A strange, rhythmic chanting drifts from the darkness below. They have not seen you yet. The area is littered with bones and ash alters. A direct approach seems unwise.
+[[Attempt to parley with the cultists->SkybreakerParley]]
+[[Look for another way into the subway system->SkybreakerAlternateEntrance]]
+[[Wait and observe their patrol pattern for an opening->SkybreakerObservation]]
+
+:: ArchiveEntrance
+The archive building stands before you, a monolithic tomb of blackened concrete. The massive doors are sealed shut. Piles of rubble and wrecked vehicles offer some cover. The silence is profound, broken by the wind whistling through cracks in the facade. The prize is inside, but the entrance is a formidable obstacle.
+[[Search the door frame for a control panel or keypad->ArchiveEntrance-Panel]]
+[[Check the rubble for a way to force the doors open->ArchiveEntrance-Rubble]]
+[[Attempt to enter through the ventilation shaft->ArchiveEntrance-Vent]]
+:: ArchiveEntrance-WithKaela
+Kaela surveys the sealed doors with a tactical eye. "Blowing the lock is the fastest way," she states, her enforcers planting explosives. "It'll bring every raider in the city down on us, but we'll be inside." The direct approach is her way, full of risk and noise.
+[[Agree to the explosive entry->ArchiveInterior-WithKaela]]
+[[Urge caution, suggesting a quieter search for an alternative->ArchiveEntrance-WithKaela-Search]]
+
+:: ArchiveLowerLevel-WithKaela
+Kaela and her team sweep the substation efficiently. "Clear," one enforcer mutters. Kaela points to the upward-sloping corridor. "That's our way in. No signs of life. Let's move." The military precision is reassuring, but also removes any element of surprise.
+[[Ascend to the main archive level->ArchiveInterior-WithKaela]]
+
+:: ArchiveTunnelSplit
+The tunnel splits in the eerie glow of the fungus. The right-hand path seems to climb slightly, and a draft carries a faint metallic scent—possibly from the archive's ventilation. The left-hand path descends further into the earth, the air growing warmer and carrying a rotten, organic stench. The choice is clear but dangerous.
+[[Take the right fork towards the archive->ArchiveLowerLevel]]
+[[Take the left fork, driven by curiosity->TunnelNest]]
+
+:: CityPlaza-HasMapFragment
+Standing in the ash-filled plaza with two map fragments, the goal feels tangible. The archive building dominates the view. You are close. The silence is now charged with possibility, but also with the peril of being so near the end. Every shadow could hide a threat eager to take your prize.
+[[Head directly for the archive entrance->ArchiveEntrance-HasMapFragment]]
+[[Climb for a final vantage point to scout the approach->CityPlaza-HighGround-HasMapFragment]]
+:: ArchiveEntrance-Panel
+The control panel beside the door is a mess of fused plastic and corroded metal. A faint power light glows stubbornly on a secondary unit. It seems some auxiliary system still has a trickle of energy. Wiping away the grime, you find a numeric keypad, its buttons stiff with age. Without a code, it's useless. The panel itself is sealed tight.
+[[Return to searching the rubble for a physical weakness->ArchiveEntrance-Rubble]]
+[[Check the nearby vent you noticed earlier->ArchiveEntrance-Vent]]
+:: ArchiveEntrance-Rubble
+You shift chunks of concrete and twisted rebar, searching for a leverage point. The main doors are immense, their hinges colossal and rusted solid. Behind a pile of debris, you find a smaller, secondary personnel door, almost hidden in the shadows. It's heavily barred from the inside, but the bar looks ancient and brittle.
+[[Attempt to force the personnel door->ArchiveInterior]]
+[[The task seems too great; try the vent instead->ArchiveEntrance-Vent]]
+:: ArchiveEntrance-Vent
+The ventilation grate is large enough to squeeze through, held by rusted bolts. Using a tool or a piece of debris, you manage to pry it loose. A stale, metallic draft issues from the dark shaft within. It's a tight, vertical climb, but it clearly leads inside the facility.
+[[Enter the ventilation shaft->ArchiveInterior]]
+:: ArchiveEntrance-WithKaela-Search
+"Blasting is a last resort," you argue. Kaela glares but nods curtly. Her enforcers fan out. One of them calls out, "Boss! Over here!" He's found a battered personnel door, partially concealed by rubble. It's barred from within, but the metal is old and weak. "This'll be quieter," Kaela admits, preparing to breach it.
+[[Prepare to enter through the side door->ArchiveInterior-WithKaela]]
+
+:: ArchiveInterior-WithKaela
+Kaela's team moves with purpose, their lights cutting through the gloom. "The central data core is the objective," she states, consulting her fragment. The main hall is a canyon of dead technology. A distant clatter echoes through the stillness—something else is in here with you.
+[[Move quickly towards the core->ArchiveCore-WithKaela]]
+[[Investigate the source of the noise->ArchiveSecurity-WithKaela]]
+
+:: ArchiveLowerLevel-Search
+Rummaging through the server racks, you find little of immediate use. However, in a drawer beneath a console, you discover a set of architectural schematics for the archive building. They detail the location of the main data core and several maintenance shafts. This map could be invaluable inside.
+[[Take the schematics and proceed upwards->ArchiveInterior-HasSchematics]]
+:: CityPlaza-HighGround-HasMapFragment
+From your high vantage point, the plaza looks even more menacing. You see the red-robed cultists still guarding the subway, but your focus is the archive. You notice a previously unseen crack in the building's foundation, wide enough to enter, near the vent you spotted earlier. It's a risky drop, but a direct path inside.
+[[Descend and head for the foundation crack->ArchiveInterior-HasMapFragment]]
+[[Stick to the main entrance, now that you have a clearer path->ArchiveEntrance-HasMapFragment]]
+:: FreightCarCamp-AskFragments
+You bluntly ask about map fragments. The woman's friendly demeanor vanishes. "That's a quick way to get killed, asking about things like that out here." She shakes her head, disappointment in her eyes. "I've got no maps for you. You should leave. Now." The invitation to warmth is rescinded.
+[[Heed her warning and depart->RailwayCrossing]]
+[[Press the issue, demanding information->FreightCarCamp-Confrontation]]
+
+:: FreightCarCamp-Search
+While the woman tends her fire, you discreetly search the area around the freight cars. Behind a wheel, tucked in a small niche, you find a hidden stash: a water purifier and, wrapped in oilcloth, another map fragment. She was hiding it. Taking it feels like a betrayal, but the prize is immense.
+[[Take the fragment and leave quickly->RailwayCrossing-HasMapFragment]]
+[[Leave the fragment; this kindness shouldn't be repaid with theft->FreightCarCamp-Talk]]
+
+:: FreightCarCamp-Talk
+You accept the offer of warmth, sitting by the small fire. The woman introduces herself as Elara. She speaks of the wastes, of lost places and the folly of chasing legends. "Haven-0?" she sighs. "Many have searched. None return. Sometimes survival is the only victory." Her words are a warning, but her eyes hold a deep sadness.
+[[Ask if she knows anything that could help a survivor->FreightCarCamp-ElarasAdvice]]
+[[Thank her and continue your journey->RailwayCrossing]]
+
+:: JunctionBox-Hide
+You duck behind a mound of ash and rusted metal, waiting. The echoes of the collapse fade. Soon, a patrol of three scavengers, armed with crude weapons, arrives to investigate the noise. They poke around the junction box, then one spots your footprints in the ash. "Someone was here," he growls. "Spread out."
+[[Try to sneak away unnoticed->RailwayCrossing]]
+[[Ambush the scavengers to remove the threat->JunctionBox-Ambush]]
+
+:: RailwayCrossing-HasTool
+You secure the multi-tool in your pack and move quickly away from the junction box, the noise of the collapse ringing in your ears. The railway stretches ahead, empty for now. The tool is a solid weight, a piece of the old world that still functions. Your options have expanded.
+[[Continue down the tracks->RailwayCrossing2]]
+[[Head towards the Old City skyline->OldCityOutskirts]]
+
+:: RelayStationInterior
+The access tunnel is a tight, claustrophobic crawl. The hum of the wires is loud in the confined space. You emerge into a low-ceilinged maintenance corridor within the relay station. It's darker here, away from the main chamber. You can see the dormant sentry and the data-core pedestal from behind. This is a perfect vantage point for a stealthy approach.
+[[Creep towards the sentry to disable it->RelayStationDisableSentry]]
+[[Attempt to sneak directly to the data-core->RelayStationStealthGrab]]
+
+:: RusthavenAlleys
+You move through narrow, crowded alleys, avoiding the main thoroughfares. The air is thick with the smells of crowded life. You overhear snippets of conversation: talk of raids, missing patrols, and a whispered name—"Kaela." A heavy door marked "Storage" stands ajar nearby, unguarded.
+[[Slip into the storage room to search for supplies->RusthavenStorage]]
+[[Continue towards the center, seeking the command post->RusthavenInside-MetBoss]]
+
+:: RusthavenCantina
+The cantina is a haze of recycled air and low light. Patrons huddle over drinks, talking in low tones. You take a secluded seat. A conversation at the next table catches your ear: "...the Skybreakers? They trade for batteries and wire down in the sub-level market. Crazy, but their credits are good." Another useful rumor.
+[[Leave the cantina and seek the sub-level market->SkybreakerApproach]]
+[[Approach the talkative patrons for more information->RusthavenCantina-Rumors]]
+
+:: SkybreakerAlternateEntrance
+You circle around, finding a collapsed portion of the street that leads into a maintenance access for the subway system. It's a dangerous drop into a dark pit, but it bypasses the cultists entirely. The descent is treacherous, using exposed rebar as handholds.
+[[Lower yourself into the darkness->SkybreakerSublevel]]
+:: SkybreakerObservation
+You find a vantage point behind a wrecked bus and watch. The cultists patrol in a set pattern, leaving the entrance unguarded for a brief window every few minutes. It's a slim opportunity, but it exists. Timing will be everything.
+[[Make a move during the next gap->SkybreakerSublevel]]
+[[The risk is too high; try to find another way->SkybreakerAlternateEntrance]]
+:: SkybreakerParley
+You step out into the open, hands raised. The cultists snap towards you, staves ready. "I seek knowledge," you say. The lead cultist lowers his hood slightly, revealing intense eyes. "Knowledge has a price. The Skybreaker demands a tribute. A piece of the old world. Do you have such a thing?"
+[[Offer a valuable item from your pack->SkybreakerTribute]]
+[[Claim you have nothing and ask for mercy->SkybreakerRejection]]
+
+:: ArchiveCore-WithKaela
+Kaela strides directly to the pedestal and snatches the final fragment. "At last," she breathes, holding the four pieces together. The completed map shows a clear location deep in the northern wastes. She turns to you, her expression unreadable. "A deal is a deal. We go to Haven-0 together."
+[[Agree to follow Kaela to the north->Ending-HavenWithKaela]]
+[[Demand the map, wanting to go alone->ArchiveCore-Betrayal]]
+
+:: ArchiveInterior-HasSchematics
+With the schematics, you navigate the vast archive with confidence. You avoid dead-end corridors and quickly reach the central core, marked clearly on the plans. The map saves you precious time and keeps you away from the unsettling echoes in the deeper halls. The prize is near.
+[[Proceed to the data core->ArchiveCore]]
+:: ArchiveSecurity-WithKaela
+You move towards the noise, weapons ready. Around a corner, you find the source: a malfunctioning cleaning drone, repeatedly bumping into a wall. Kaela lowers her rifle with a snort. "A ghost." The distraction has cost you time, but revealed nothing of immediate threat.
+
+[[Return to the hunt for the core->ArchiveCore-WithKaela]]
+
+:: FreightCarCamp-Confrontation
+You step closer, your tone demanding. The woman, Elara, stands up, her hand moving to a knife at her belt. "I said no. This is your last warning." The warmth of the fire is gone, replaced by the cold certainty of a fight. She will not be intimidated.
+
+[[Back down and leave->RailwayCrossing]]
+[[Draw your weapon->Ending-CampFight]]
+
+:: FreightCarCamp-ElarasAdvice
+Elara nods, sipping her tea. "The Old City archive is a deathtrap. But if you must go, don't use the main door. The old maintenance tunnels are safer, if you can stand the worms. And don't trust anyone offering a partnership too quickly. Power corrupts even good intentions." Her advice is hard-won and sincere.
+
+[[Thank her for the wisdom and depart->RailwayCrossing]]
+[[Ask why she helps you->FreightCarCamp-ElarasStory]]
+
+:: JunctionBox-Ambush
+As the scavengers spread out, you strike from hiding. You take down the first one quickly and silently. The second turns, yelling, and you engage in a frantic, close-quarters struggle in the ash. It is a brutal, desperate fight with no guarantee of victory.
+
+[[Fight for your life->JunctionBox-AmbushWin]]
+[[Try to break away and run->JunctionBox-Escape]]
+
+:: RailwayCrossing-HasMapFragment
+You hold the second fragment, taken from Elara's camp. The railway stretches ahead, but your destination is now clear: the Old City archive. The weight of the betrayal, if you took it, or the gift, if she gave it, sits heavily in your pack. The journey reaches its final stage.
+[[Head for the Old City->OldCityOutskirts]]
+:: RailwayCrossing2
+The railway continues into a landscape of skeletal trees and low hills. A sign, half-buried, points to a "Survey Outpost" with a faded arrow. The path is lonely and long, leading away from your immediate goal. The primary danger is exposure and the slow grind of the wastes.
+
+[[Follow the sign to the outpost->SurveyOutpost]]
+[[Turn back towards the city->OldCityOutskirts]]
+
+:: RelayStationStealthGrab
+You move like a shadow between the consoles, your eyes locked on the data-core. The sentry remains dormant. Your fingers close around the cool casing. You pull it free. No alarms. You have the third fragment. The exit is just a few feet away.
+
+[[Escape with the prize->RelayStationRoofExit]]
+
+:: RusthavenCantina-Rumors
+You approach the patrons. They eye you warily but relax when you offer a token for information. "The Skybreakers guard a fragment, yeah," one says. "They worship the ash storms. Think Haven-0 is blasphemy. They'd rather see the world stay dark." The information is valuable, painting a picture of fanatical opposition.
+
+[[Leave to seek the cult->SkybreakerApproach]]
+[[Ask about other factions->RusthavenCantina-MoreRumors]]
+
+:: RusthavenStorage
+The storage room is packed with crates and barrels. Most are empty or filled with scrap. In a locked cabinet, you pry open a case to find a functional gas mask with intact filters, a significant upgrade. No map fragments, but a tool that could save your life in the tunnels.
+
+[[Take the mask and exit->RusthavenAlleys-HasGasMask]]
+
+:: SkybreakerRejection
+You claim you have nothing to offer. The lead cultist's face hardens. "Then you offer only your life. The Skybreaker accepts all tributes." The two cultists advance, their staves rising for a killing blow. There is no mercy here.
+
+[[Prepare to fight->Ending-Cultists]]
+[[Try to flee back the way you came->SkybreakerApproach-Flee]]
+
+:: SkybreakerSublevel
+You land in a damp, dark tunnel. The chanting is louder here, echoing off the curved walls. The air is thick with the smell of ozone and incense. Flickering torchlight illuminates a path deeper into the cult's lair. You are inside their domain, unseen for now.
+[[Follow the tunnel towards the chanting->SkybreakerShrine]]
+[[Search the nearby tunnels for the fragment->SkybreakerStorage]]
+:: SkybreakerTribute
+You offer your pre-Cataclysm multi-tool. The cultists examine it reverently. "A worthy offering," the leader intones. "The Skybreaker is pleased. You may pass. The fragment you seek is in the sub-level shrine. Do not linger." They step aside, allowing you entry into the subway darkness.
+[[Descend into the cult's lair->SkybreakerSublevel]]
+:: ArchiveCore-Betrayal
+You reach for the completed map, demanding to take it alone. Kaela's smile is a knife. "I knew you'd be greedy." Her enforcers raise their weapons. There is no time to react. Shots fill the cavernous room, and you fall before the pedestal. The map to salvation is your epitaph.
+[[Ending->Ending-BetrayedByKaela]]
+
+:: Ending-CampFight
+You draw your weapon. Elara is faster. Her knife finds your throat before you can fire. The firelight glints in her sad eyes as you choke on your own blood. The warmth of the camp becomes the cold of the grave. Another life lost for a piece of paper.
+:: Ending-Cultists
+The cultists attack without another word. Their staves are swift and brutal. You fight, but you are outnumbered and overwhelmed. The last thing you hear is their chilling chant as your life bleeds out onto the sacred ash.
+:: Ending-HavenFound
+You hold the four fragments together. The map is clear, a path to a mountain range in the north. The journey will be long and perilous, but for the first time in a lifetime, the future holds a promise, not just survival. You step out of the archive, the weight of hope a new kind of burden.
+:: Ending-HavenWithKaela
+You travel north with Kaela and her crew. After weeks of hardship, you find the facility. It is real. Working together, you activate the atmospheric scrubbers. Slowly, agonizingly slowly, the ash begins to clear. The sky lightens. It is not a perfect victory, but it is a chance. A new dawn, bought with a dark alliance.
+:: FreightCarCamp-ElarasStory
+"Why help?" Elara smiles sadly. "I had a partner once. We searched for Haven-0. He died for a fragment, murdered by a man like Kaela. I'm not helping you find it. I'm helping you survive the search. The legend isn't worth your soul." Her story is a quiet echo of your own potential future.
+[[Thank her and leave, considering her words->RailwayCrossing]]
+[[Press her for the location of her fragment->FreightCarCamp-Confrontation]]
+
+:: JunctionBox-AmbushWin
+The fight is short and savage. You stand panting over the bodies of the scavengers, your hands stained with ash and blood. The silence returns, more profound than before. You are safe, but the cost of violence hangs heavy in the air.
+[[Continue your journey down the tracks->RailwayCrossing-HasTool]]
+
+:: JunctionBox-Escape
+You break from the fight, scrambling through the ash. A shot whines past your head, but you make it to cover and flee into the ruined landscape. The scavengers do not follow far, but you are shaken and alone once more.
+[[Return to the railway crossing->RailwayCrossing]]
+
+:: RelayStationRoofExit
+You climb out of the hatch and onto the roof, the third fragment secure in your pack. The station hums below you, now truly silent. The way to the archive is open. You drop to the ground and melt into the ruins, a ghost with a purpose.
+[[Head for the Old City plaza->CityPlaza-HasMapFragment]]
+:: RusthavenAlleys-HasGasMask
+You secure the gas mask, a prize of clean air in the toxic world. The alleys are still crowded, but you feel a measure of safety. The mask is a key to surviving the deeper hazards of the wastes.
+[[Move towards the command post->RusthavenInside-MetBoss]]
+
+:: RusthavenCantina-MoreRumors
+You ask discreetly about the "Cleaners." After hours of subtle inquiries in the alleys, you are led to a hidden door behind a water filtration unit. Inside, a group of people in clean, patched clothes work on small-scale air scrubbers. Their leader, a quiet man named Aris, listens to your story. "Haven-0 is a myth that kills," he says. "Our work is slow, but real. Join us. Help us heal this place, one block at a time." It is a different kind of hope.
+[[Join the Cleaners, abandoning the quest for Haven-0->Ending-Cleaners]]
+[[Thank Aris but continue your search for the fragments->RusthavenAlleys]]
+:: SkybreakerApproach-Flee
+You turn and run, the curses of the cultists ringing behind you. A thrown spear grazes your arm, but you make it to cover and escape. The direct approach to the cult is closed to you now, a path paved with fanaticism.
+[[Retreat to consider other options->OldCityOutskirts]]
+
+:: SkybreakerShrine
+The tunnel opens into a cavernous space, a former subway station. A massive, jagged sculpture of rusted metal and bone dominates the center—an idol to the Skybreaker. Cultists kneel in prayer. On a ledge below the idol, surrounded by offerings, lies the fourth map fragment.
+[[Attempt to steal the fragment during the ceremony->SkybreakerShrine-Steal]]
+[[Wait for the ceremony to end and the area to clear->SkybreakerShrine-Wait]]
+:: SkybreakerStorage
+You slip away from the main tunnel into a side passage. It leads to a small chamber filled with supplies: batteries, wires, and ritual objects. Tucked inside a carved bone box, you find the map fragment. The cult has stored it with their mundane treasures.
+[[Take the fragment and retreat silently->SkybreakerSublevelExit]]
+[[Leave it, fearing the cult's wrath->SkybreakerShrine]]
+:: SurveyOutpost
+The outpost is a shell of a building, its windows blown out. Inside, you find the remains of a scientific team, long dead. Their logs speak of monitoring the Cataclysm, but offer no clues to Haven-0. It is a dead end, a monument to futility. The city remains your only hope.
+[[Return to the railway->RailwayCrossing]]
+
+:: Ending-BetrayedByKaela
+The bullets tear through you, your body slumping against the cold pedestal. Kaela gathers the completed map, her face a mask of cold triumph. Your vision fades as she and her enforcers walk away, your lifeblood seeping into the dust of the archive. The path to salvation was inches away, but trust was the price you couldn't afford to pay.
+
+:: Ending-WalkAway
+You turn your back on the glowing fragment, on the terrible truth displayed on the console. Haven-0 was never a savior; it was the poison. You walk out of the archive, leaving the legend behind. The ash still falls, the sky remains dark, but you walk free, unburdened by the knowledge that hope itself was the final trap.
+
+:: RusthavenCleaners
+You ask discreetly about the "Cleaners." After hours of subtle inquiries in the alleys, you are led to a hidden door behind a water filtration unit. Inside, a group of people in clean, patched clothes work on small-scale air scrubbers. Their leader, a quiet man named Aris, listens to your story. "Haven-0 is a myth that kills," he says. "Our work is slow, but real. Join us. Help us heal this place, one block at a time." It is a different kind of hope.
+[[Join the Cleaners, abandoning the quest for Haven-0->Ending-Cleaners]]
+[[Thank Aris but continue your search for the fragments->RusthavenAlleys]]
+:: RusthavenMedBay
+The med-bay is a relatively clean space smelling of antiseptic. The doctor, an elderly woman with steady hands, is treating a deep wound. She finishes and looks you over. "You look healthy. What do you need? Filters? Antibiotics?" Her knowledge is practical, for survival here and now, not for chasing ghosts. She has no maps, only remedies for the wounds the wastes inflict.
+[[Accept some medical supplies and leave->RusthavenAlleys]]
+[[Ask if she's heard anything about the archive's security systems->RusthavenMedBay-ArchiveInfo]]
+:: SkybreakerShrine-Steal
+As the cultists chant, their heads bowed, you dart from the shadows towards the ledge. Your fingers close around the fragment. A cry rings out! You are seen. The chanting turns to roaring anger as the entire congregation turns on you. There is no escape from the furious mob in the enclosed shrine.
+[[Fight your way out->Ending-Cultists]]
+[[Try to plead your case->SkybreakerShrine-Plea]]
+:: SkybreakerShrine-Wait
+You hide in a dark alcove, watching for hours as the ceremony reaches its climax and then slowly concludes. The cultists eventually file out, leaving the shrine in near-darkness, lit only by a few guttering torches. The coast is clear. You approach the idol and take the fragment unchallenged. The silence of the deserted shrine is your reward.
+[[Take the fragment and escape->SkybreakerSublevelExit]]
+:: SkybreakerSublevelExit
+With the fragment secure, you retrace your steps through the storage tunnels. You find a different grate leading up to the surface, emerging into the ash-filled night far from the cult's main entrance. You have the fourth piece, taken by stealth, and the fanatics are none the wiser. The archive awaits.
+[[Head for the Old City archive->CityPlaza-HasMapFragment]]
+:: RusthavenMedBay-ArchiveInfo
+The doctor thinks for a moment. "The archive? Old tech. I heard the security was non-lethal. Gas, lockdowns. A good mask is better than a gun in there." She offers a small canister of anti-toxin. "Be safe." The advice is practical, a small edge for the challenges ahead.
+[[Take the anti-toxin and leave->RusthavenAlleys]]
+
+:: SkybreakerShrine-Plea
+You hold up the fragment, shouting over the din. "I seek to clear the sky! The Skybreaker loves the ash, but doesn't humanity deserve light?" The cultists pause, confused by your heresy. The high priest steps forward, his face a mask of rage. "Blasphemy!" he shrieks, and lunges at you with a knife.
+[[Ending->Ending-Cultists]]
+
+:: Ending-Cleaners
+You put aside the map fragment and join Aris and the Cleaners. The work is slow, mending filters and purifying small patches of soil. There are no grand victories, only the quiet satisfaction of helping a few people breathe easier. The sky remains dark, but you have found a purpose in the shadows, a tangible good in a broken world.
+
+:: ArchiveInterior-HasMapFragment
+You are inside the archive. The air is dead and cold, preserved for decades. Great halls stretch into darkness, lined with rows of metal shelves and data stacks coated in thick dust. Flickering emergency lights cast long, dancing shadows. The silence is absolute, a tomb of knowledge. Your goal is here, somewhere in this vast, dark space.
+[[Search the main data stacks for the final fragment->ArchiveCore-HasMapFragment]]
+[[Explore the administrative offices for a terminal or log->ArchiveOffices-HasMapFragment]]
+:: ArchiveCore-HasMapFragment
+The central data core is a circular chamber dominated by a towering crystalline spire, now dark and dormant. Consoles ring the base, their screens blank. In the exact center, on a simple pedestal, rests the final map fragment. It glows with a soft, internal light, the key to Haven-0. The air crackles with static electricity. Reaching it feels like a culmination of everything.
+[[Take the final fragment->Ending-HavenFound]]
+[[Inspect the consoles first, seeking more information->ArchiveCore-Consoles-HasMapFragment]]
+:: ArchiveCore-Consoles-HasMapFragment
+You ignore the fragment for a moment, powering up a dusty console. Schematics flash on the screen, revealing Haven-0's true purpose: not a savior, but a weapon. A geo-weapon that caused the Cataclysm. Reactivating it could trigger a second, final extinction. The fragment on the pedestal now feels like a curse.
+[[Take the fragment and bear the terrible knowledge->Ending-HavenFound]]
+[[Smash the console and leave the fragment, choosing ignorance->Ending-WalkAway]]
+:: ArchiveOffices-HasMapFragment
+The offices are a time capsule of panic. Desks are overturned, chairs scattered. You find logs on a shattered terminal screen: "Evacuation Order: Project Haven-0 compromised. Cascade failure imminent." No useful data on the fragment's location remains, only the ghosts of a failed salvation. The search must continue in the main halls.
+[[Return to the main archive->ArchiveInterior-HasMapFragment]]
+:: CityPlaza
+[[Scale the collapsed highway into the city plaza->CityPlaza-Statue]]
+:: ArchiveInterior
+You push through the rusted door into a cavernous hall. Towers of silent server racks rise like a metallic forest, coated in a thick gray dust that mutes all sound. Flickering emergency lights cast long, dancing shadows that seem to move with a life of their own. The air is cold and stale, smelling of ozone and decay. A wide central corridor slopes gently downward, deeper into the complex. The silence here is a physical presence, weighing on your ears.
+[[Follow the central corridor towards the core->ArchiveCore]]
+[[Search the main data stacks for a terminal->ArchiveOffices]]
+:: ArchiveCore
+The central data core is a circular chamber dominated by a towering crystalline spire, now dark and dormant. Consoles ring the base, their screens blank. In the exact center, on a simple pedestal, rests the final map fragment. It glows with a soft, internal light, the key to Haven-0. The air crackles with static electricity. Reaching it feels like a culmination of everything.
+[[Take the final fragment->Ending-HavenFound]]
+[[Inspect the consoles first, seeking more information->ArchiveCore-Consoles]]
+:: ArchiveOffices
+The offices are a time capsule of panic. Desks are overturned, chairs scattered. You find logs on a shattered terminal screen: "Evacuation Order: Project Haven-0 compromised. Cascade failure imminent." No useful data on the fragment's location remains, only the ghosts of a failed salvation. The search must continue in the main halls.
+[[Return to the main archive->ArchiveInterior]]
+:: ArchiveCore-Consoles
+You ignore the fragment for a moment, powering up a dusty console. Schematics flash on the screen, revealing Haven-0's true purpose: not a savior, but a weapon. A geo-weapon that caused the Cataclysm. Reactivating it could trigger a second, final extinction. The fragment on the pedestal now feels like a curse.
+[[Take the fragment and bear the terrible knowledge->Ending-HavenFound]]
+[[Smash the console and leave the fragment, choosing ignorance->Ending-WalkAway]]
+:: CityPlaza-Statue-HasMapFragment
+You brush ash from the statue's base, finding the same plaque. The metal case is gone, the fragment already claimed. The archive building looms ahead, its secret waiting.
+[[Head for the archive entrance->ArchiveEntrance-HasMapFragment]]
+
+:: ArchiveEntrance-Panel-HasMapFragment
+The control panel beside the door is a mess of fused plastic and corroded metal. A faint power light glows stubbornly on a secondary unit. It seems some auxiliary system still has a trickle of energy. Wiping away the grime, you find a numeric keypad, its buttons stiff with age. Without a code, it's useless. The panel itself is sealed tight.
+[[Return to searching the rubble for a physical weakness->ArchiveEntrance-Rubble-HasMapFragment]]
+[[Check the nearby vent you noticed earlier->ArchiveEntrance-Vent-HasMapFragment]]
+
+:: ArchiveEntrance-Rubble-HasMapFragment
+You shift chunks of concrete and twisted rebar, searching for a leverage point. The main doors are immense, their hinges colossal and rusted solid. Behind a pile of debris, you find a smaller, secondary personnel door, almost hidden in the shadows. It's heavily barred from the inside, but the bar looks ancient and brittle.
+[[Attempt to force the personnel door->ArchiveInterior-HasMapFragment]]
+[[The task seems too great; try the vent instead->ArchiveEntrance-Vent-HasMapFragment]]
+
+:: ArchiveEntrance-Vent-HasMapFragment
+The ventilation grate is large enough to squeeze through, held by rusted bolts. Using a tool or a piece of debris, you manage to pry it loose. A stale, metallic draft issues from the dark shaft within. It's a tight, vertical climb, but it clearly leads inside the facility.
+[[Enter the ventilation shaft->ArchiveInterior-HasMapFragment]]
+
+:: ArchiveEntrance-HasMapFragment
+The archive building stands before you, a monolithic tomb of blackened concrete. The massive doors are sealed shut, but the weight of the map fragments in your pocket gives you a sense of purpose. Piles of rubble and wrecked vehicles offer some cover. The silence is profound, broken by the wind whistling through cracks in the facade. You are close, but the final obstacle looms large.
+[[Search the door frame for a control panel or keypad->ArchiveEntrance-Panel-HasMapFragment]]
+[[Check the rubble for a way to force the doors open->ArchiveEntrance-Rubble-HasMapFragment]]
+[[Attempt to enter through the ventilation shaft->ArchiveEntrance-Vent-HasMapFragment]]
